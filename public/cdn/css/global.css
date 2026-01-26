@@ -1,0 +1,256 @@
+/**
+ * Stealth Labz - Global Styles
+ * Base styles for non-landing pages (blog, legal, etc.)
+ */
+
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-tertiary: #1a1a25;
+    --bg-card: #16161f;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    --text-muted: #6a6a7a;
+    --accent-pink: #e91e8c;
+    --accent-purple: #8b5cf6;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --gradient-pink: linear-gradient(135deg, #e91e8c 0%, #8b5cf6 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container-xl {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-pink);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.btn-nav {
+    background: var(--gradient-pink);
+    color: white !important;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem !important;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--bg-primary);
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: var(--text-primary);
+}
+
+/* Legal Pages */
+.legal-page {
+    padding: 8rem 0 4rem;
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-page .effective-date {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.legal-page section {
+    margin-bottom: 2rem;
+}
+
+.legal-page h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent-pink);
+}
+
+.legal-page p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Blog */
+.blog-index {
+    padding: 8rem 0 4rem;
+}
+
+.blog-header {
+    margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-header p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.blog-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.blog-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    border-color: rgba(233, 30, 140, 0.3);
+    transform: translateY(-3px);
+}
+
+.blog-category {
+    display: inline-block;
+    background: var(--bg-tertiary);
+    color: var(--accent-pink);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.blog-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.blog-card h2 a:hover {
+    color: var(--accent-pink);
+}
+
+.blog-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.blog-card time {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
