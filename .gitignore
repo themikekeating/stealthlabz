@@ -26,4 +26,5 @@ cache/
 tmp/
 
 # Sensitive
+config/secrets.php
 config/database.local.php

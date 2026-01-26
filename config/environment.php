@@ -86,3 +86,6 @@ function canonicalUrl(): string
     }
     return PROTOCOL . BASE_DOMAIN . $uri;
 }
+
+// Load database configuration
+require_once ROOT_PATH . '/config/database.php';
