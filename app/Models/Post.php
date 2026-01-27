@@ -197,7 +197,7 @@ class Post
     }
 
     /**
-     * Get paginated posts by category
+     * Get paginated posts by category (using WordPress taxonomy)
      */
     public static function paginateByCategory(int $categoryId, int $page = 1, int $perPage = 12): array
     {
@@ -208,25 +208,34 @@ class Post
 
         $offset = ($page - 1) * $perPage;
 
+        // Get term_taxonomy_id for this category
+        $ttStmt = $pdo->prepare("SELECT term_taxonomy_id FROM couk_term_taxonomy WHERE term_id = :term_id AND taxonomy = 'category'");
+        $ttStmt->execute(['term_id' => $categoryId]);
+        $termTaxonomyId = $ttStmt->fetchColumn();
+
+        if (!$termTaxonomyId) {
+            return ['posts' => [], 'total' => 0, 'pages' => 0];
+        }
+
         // Get total count
         $countStmt = $pdo->prepare("
             SELECT COUNT(*) FROM posts p
-            INNER JOIN post_categories pc ON p.ID = pc.post_id
-            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+            INNER JOIN couk_term_relationships tr ON p.ID = tr.object_id
+            WHERE tr.term_taxonomy_id = :tt_id AND p.post_status = 'publish' AND p.post_type = 'post'
         ");
-        $countStmt->execute(['category_id' => $categoryId]);
+        $countStmt->execute(['tt_id' => $termTaxonomyId]);
         $total = (int) $countStmt->fetchColumn();
 
         // Get posts
         $stmt = $pdo->prepare("
             SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_excerpt as excerpt, p.post_date as published_at
             FROM posts p
-            INNER JOIN post_categories pc ON p.ID = pc.post_id
-            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+            INNER JOIN couk_term_relationships tr ON p.ID = tr.object_id
+            WHERE tr.term_taxonomy_id = :tt_id AND p.post_status = 'publish' AND p.post_type = 'post'
             ORDER BY p.post_date DESC
             LIMIT :limit OFFSET :offset
         ");
-        $stmt->bindValue(':category_id', $categoryId, \PDO::PARAM_INT);
+        $stmt->bindValue(':tt_id', $termTaxonomyId, \PDO::PARAM_INT);
         $stmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
         $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
         $stmt->execute();
@@ -247,7 +256,7 @@ class Post
     }
 
     /**
-     * Get categories for a specific post
+     * Get categories for a specific post (from WordPress taxonomy)
      */
     public static function getCategoriesForPost(int $postId): array
     {
@@ -257,11 +266,12 @@ class Post
         }
 
         $stmt = $pdo->prepare("
-            SELECT c.id, c.name, c.slug
-            FROM categories c
-            INNER JOIN post_categories pc ON c.id = pc.category_id
-            WHERE pc.post_id = :post_id
-            ORDER BY c.name ASC
+            SELECT t.term_id as id, t.name, t.slug
+            FROM couk_terms t
+            INNER JOIN couk_term_taxonomy tt ON t.term_id = tt.term_id
+            INNER JOIN couk_term_relationships tr ON tt.term_taxonomy_id = tr.term_taxonomy_id
+            WHERE tr.object_id = :post_id AND tt.taxonomy = 'category'
+            ORDER BY t.name ASC
         ");
         $stmt->execute(['post_id' => $postId]);
         return $stmt->fetchAll();
