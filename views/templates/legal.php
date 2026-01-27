@@ -31,9 +31,11 @@ ob_start();
             <h2 class="h5 text-accent-pink mb-3"><?= htmlspecialchars($section['title']) ?></h2>
             <div class="text-secondary">
                 <?php if (is_array($section['content'])): ?>
-                    <?php foreach ($section['content'] as $paragraph): ?>
-                    <p><?= htmlspecialchars($paragraph) ?></p>
+                <ul class="list-unstyled">
+                    <?php foreach ($section['content'] as $item): ?>
+                    <li class="mb-2 ps-3 border-start border-2 border-secondary"><?= htmlspecialchars($item) ?></li>
                     <?php endforeach; ?>
+                </ul>
                 <?php else: ?>
                     <p><?= htmlspecialchars($section['content']) ?></p>
                 <?php endif; ?>
