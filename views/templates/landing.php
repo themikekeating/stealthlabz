@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#e91e8c">
+    <meta name="theme-color" content="#e5025d">
     <title>Stealth Labz | Built Different. Ships Fast.</title>
     <meta name="description" content="15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.">
     <link rel="canonical" href="https://stealthlabz.com/">
@@ -177,8 +177,8 @@
                                     <svg class="chart-svg" viewBox="0 0 300 100" preserveAspectRatio="none">
                                         <defs>
                                             <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                <stop offset="0%" style="stop-color:#e91e8c;stop-opacity:0.3" />
-                                                <stop offset="100%" style="stop-color:#e91e8c;stop-opacity:0" />
+                                                <stop offset="0%" style="stop-color:#e5025d;stop-opacity:0.3" />
+                                                <stop offset="100%" style="stop-color:#e5025d;stop-opacity:0" />
                                             </linearGradient>
                                         </defs>
                                         <path class="chart-area" d="M0,80 Q30,75 60,65 T120,50 T180,35 T240,25 T300,10 L300,100 L0,100 Z" />

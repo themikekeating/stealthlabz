@@ -23,7 +23,7 @@ $ogType = $page['type'] ?? 'website';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#e91e8c">
+    <meta name="theme-color" content="#e5025d">
     <meta name="description" content="<?= htmlspecialchars($page['description'] ?? '') ?>">
     <title><?= htmlspecialchars($page['title'] ?? 'Stealth Labz') ?></title>
     <link rel="canonical" href="<?= canonicalUrl() ?>">

@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0f;
+            --bg-primary: #0a0a0a;
             --text-primary: #ffffff;
-            --text-secondary: #a0a0b0;
-            --accent-pink: #e91e8c;
+            --text-secondary: #a0a0a0;
+            --accent-pink: #e5025d;
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -29,7 +29,7 @@
         h1 {
             font-size: 8rem;
             margin: 0;
-            background: linear-gradient(135deg, #e91e8c 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #e5025d 0%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -40,7 +40,7 @@
         }
         a {
             display: inline-block;
-            background: linear-gradient(135deg, #e91e8c 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #e5025d 0%, #8b5cf6 100%);
             color: white;
             text-decoration: none;
             padding: 1rem 2rem;
@@ -50,7 +50,7 @@
         }
         a:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(233, 30, 140, 0.4);
+            box-shadow: 0 15px 40px rgba(229, 2, 93, 0.4);
         }
     </style>
 </head>
