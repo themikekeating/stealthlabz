@@ -18,7 +18,8 @@ class BlogController
 
         $page = [
             'title' => 'Insights | Stealth Labz',
-            'description' => 'Technical insights on AI development, lead generation, and performance marketing.'
+            'headerDescription' => 'Technical deep-dives on AI development, lead generation, and performance marketing.',
+            'metaDescription' => 'Technical insights on AI development, lead generation, and performance marketing.'
         ];
 
         $posts = $data['posts'];
@@ -28,7 +29,7 @@ class BlogController
             'count' => $data['total']
         ];
 
-        include ROOT_PATH . '/views/templates/blog/index.php';
+        include ROOT_PATH . '/views/templates/hub.php';
     }
 
     public function show(string $slug): void
@@ -44,14 +45,9 @@ class BlogController
         // Clean WordPress block markup
         $post['content'] = Post::cleanContent($post['content']);
 
-        $page = [
-            'title' => $post['title'] . ' | Stealth Labz',
-            'description' => $post['excerpt'] ?? ''
-        ];
-
         // Get related posts
         $recentPosts = Post::recent(5);
 
-        include ROOT_PATH . '/views/templates/blog/post.php';
+        include ROOT_PATH . '/views/templates/article.php';
     }
 }
