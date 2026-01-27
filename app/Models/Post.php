@@ -166,38 +166,29 @@ class Post
     }
 
     /**
-     * Generate AI featured image URL for a post
+     * Generate featured image URL for a post
+     * Using Pollinations.ai for AI-generated images
      */
     public static function getFeaturedImage(string $title, string $slug): string
     {
-        // Clean title for prompt
-        $context = preg_replace('/[^a-zA-Z0-9\s]/', '', $title);
-        $context = substr($context, 0, 80);
+        $secretsPath = defined('ROOT_PATH') ? ROOT_PATH . '/config/secrets.php' : dirname(__DIR__, 2) . '/config/secrets.php';
+        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
+        $apiKey = $secrets['pollinations_key'] ?? null;
 
-        // Use slug for consistent seed
+        $prompt = "Professional blog header image for article about: {$title}. Modern, vibrant, tech aesthetic.";
+        $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug);
 
-        // Brand style prompt
-        $basePrompt = "abstract futuristic technology illustration, dark background, pink and purple neon glow, minimal geometric shapes, professional digital art";
-
-        $prompt = $context . ", " . $basePrompt;
-        $encodedPrompt = urlencode($prompt);
-
-        // Load API key from secrets
-        $secretsPath = ROOT_PATH . '/config/secrets.php';
-        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
-        $token = $secrets['pollinations_key'] ?? '';
-
-        $url = "https://image.pollinations.ai/prompt/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
-        if ($token) {
-            $url .= "&token={$token}";
+        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
+        if ($apiKey) {
+            $url .= "&key={$apiKey}";
         }
 
         return $url;
     }
 
     /**
-     * Get colorful fallback image URL
+     * Get fallback image URL
      */
     public static function getFallbackImage(string $slug): string
     {
