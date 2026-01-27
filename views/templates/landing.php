@@ -87,10 +87,7 @@
         <div class="container-xl">
             <div class="d-flex justify-content-between align-items-center w-100">
                 <a class="navbar-brand" href="#">
-                    <div class="brand-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                    </div>
-                    STEALTH LABZ
+                    <img src="/cdn/images/logo.svg" alt="Stealth Labz" height="28">
                 </a>
                 <div class="d-none d-md-flex align-items-center gap-2">
                     <a class="nav-link" href="#portfolio">Portfolio</a>
