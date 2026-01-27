@@ -21,14 +21,15 @@ class Post
         $offset = ($page - 1) * $perPage;
 
         // Get total count
-        $countStmt = $pdo->query("SELECT COUNT(*) FROM posts");
+        $countStmt = $pdo->query("SELECT COUNT(*) FROM posts WHERE post_status = 'publish' AND post_type = 'post'");
         $total = (int) $countStmt->fetchColumn();
 
-        // Get posts
+        // Get posts (WordPress column names)
         $stmt = $pdo->prepare("
-            SELECT id, title, slug, excerpt, published_at
+            SELECT ID as id, post_title as title, post_name as slug, post_excerpt as excerpt, post_date as published_at
             FROM posts
-            ORDER BY published_at DESC
+            WHERE post_status = 'publish' AND post_type = 'post'
+            ORDER BY post_date DESC
             LIMIT :limit OFFSET :offset
         ");
         $stmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
@@ -54,9 +55,9 @@ class Post
         }
 
         $stmt = $pdo->prepare("
-            SELECT id, title, slug, content, excerpt, published_at, updated_at
+            SELECT ID as id, post_title as title, post_name as slug, post_content as content, post_excerpt as excerpt, post_date as published_at, post_modified as updated_at
             FROM posts
-            WHERE slug = :slug
+            WHERE post_name = :slug AND post_status = 'publish' AND post_type = 'post'
             LIMIT 1
         ");
         $stmt->execute(['slug' => $slug]);
@@ -76,9 +77,10 @@ class Post
         }
 
         $stmt = $pdo->prepare("
-            SELECT id, title, slug, excerpt, published_at
+            SELECT ID as id, post_title as title, post_name as slug, post_excerpt as excerpt, post_date as published_at
             FROM posts
-            ORDER BY published_at DESC
+            WHERE post_status = 'publish' AND post_type = 'post'
+            ORDER BY post_date DESC
             LIMIT :limit
         ");
         $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
@@ -98,10 +100,10 @@ class Post
         }
 
         $stmt = $pdo->prepare("
-            SELECT id, title, slug, excerpt, published_at
+            SELECT ID as id, post_title as title, post_name as slug, post_excerpt as excerpt, post_date as published_at
             FROM posts
-            WHERE title LIKE :query OR content LIKE :query
-            ORDER BY published_at DESC
+            WHERE (post_title LIKE :query OR post_content LIKE :query) AND post_status = 'publish' AND post_type = 'post'
+            ORDER BY post_date DESC
             LIMIT :limit
         ");
         $stmt->bindValue(':query', '%' . $query . '%', \PDO::PARAM_STR);
