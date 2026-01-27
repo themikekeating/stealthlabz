@@ -175,9 +175,8 @@ class Post
         $secrets = file_exists($secretsPath) ? require $secretsPath : [];
         $apiKey = $secrets['pollinations_key'] ?? null;
 
-        // Use slug (already URL-safe) for prompt
-        $slugWords = str_replace('-', ' ', $slug);
-        $prompt = "Professional blog header image about {$slugWords}, modern vibrant tech aesthetic";
+        // Generic prompt - seed makes each image unique per post
+        $prompt = "Abstract digital marketing technology blog header, neon gradients, dark background, professional";
         $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug);
 
