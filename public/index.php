@@ -46,6 +46,7 @@ $router->get('/', [LandingController::class, 'index']);
 
 // Blog
 $router->get('/insights', [BlogController::class, 'index']);
+$router->get('/insights/category/{slug}', [BlogController::class, 'category']);
 $router->get('/insights/{slug}', [BlogController::class, 'show']);
 
 // Legal

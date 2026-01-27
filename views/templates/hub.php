@@ -3,7 +3,7 @@
  * Hub Template
  *
  * Content listing page with card grid and pagination.
- * Used for: Insights hub, Trends hub, category pages, etc.
+ * Used for: Insights hub, category pages, etc.
  *
  * Variables:
  *   $page['title']       - Hub title
@@ -11,24 +11,48 @@
  *   $page['metaDescription'] - SEO meta description
  *   $posts               - Array of posts
  *   $pagination          - Pagination data (current, total, count)
+ *   $categories          - Array of all categories (optional)
+ *   $currentCategory     - Current category being viewed (optional)
  */
 
 $page['bodyClass'] = 'page-hub';
 $page['description'] = $page['metaDescription'] ?? $page['description'] ?? '';
 
+// Determine base URL for pagination
+$paginationBase = isset($currentCategory)
+    ? 'insights/category/' . $currentCategory['slug']
+    : 'insights';
+
 ob_start();
 ?>
 
 <div class="container py-5 mt-5">
-    <header class="mb-5">
+    <header class="mb-4">
         <h1 class="display-5 fw-bold mb-2"><?= htmlspecialchars($page['title'] ?? 'Articles') ?></h1>
-        <?php if (!empty($page['description'])): ?>
-        <p class="lead text-secondary"><?= htmlspecialchars($page['headerDescription'] ?? $page['description']) ?></p>
-        <?php endif; ?>
-        <?php if (isset($pagination['count'])): ?>
-        <span class="text-muted small"><?= number_format($pagination['count']) ?> articles</span>
+        <?php if (!empty($page['headerDescription'])): ?>
+        <p class="lead text-secondary"><?= htmlspecialchars($page['headerDescription']) ?></p>
         <?php endif; ?>
     </header>
+
+    <?php if (!empty($categories)): ?>
+    <nav class="mb-4 pb-4 border-bottom border-subtle">
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            <a href="<?= siteUrl('insights') ?>"
+               class="btn btn-sm <?= !isset($currentCategory) ? 'btn-outline-pink' : 'btn-outline-secondary' ?>">
+                All
+            </a>
+            <?php foreach ($categories as $cat): ?>
+            <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
+               class="btn btn-sm <?= (isset($currentCategory) && $currentCategory['id'] === $cat['id']) ? 'btn-outline-pink' : 'btn-outline-secondary' ?>">
+                <?= htmlspecialchars($cat['name']) ?>
+            </a>
+            <?php endforeach; ?>
+        </div>
+        <?php if (isset($pagination['count'])): ?>
+        <span class="text-muted small mt-2 d-block"><?= number_format($pagination['count']) ?> articles</span>
+        <?php endif; ?>
+    </nav>
+    <?php endif; ?>
 
     <?php if (!empty($posts)): ?>
     <div class="row g-4">
@@ -40,8 +64,15 @@ ob_start();
                      alt="<?= htmlspecialchars($post['title']) ?>"
                      style="height: 180px; object-fit: cover;">
                 <div class="card-body d-flex flex-column">
-                    <?php if (!empty($post['category'])): ?>
-                    <span class="badge bg-tertiary text-accent-pink mb-2 align-self-start"><?= htmlspecialchars($post['category']) ?></span>
+                    <?php if (!empty($post['categories'])): ?>
+                    <div class="mb-2 d-flex flex-wrap gap-1" style="position: relative; z-index: 2;">
+                        <?php foreach ($post['categories'] as $cat): ?>
+                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
+                           class="badge bg-tertiary text-secondary text-decoration-none">
+                            <?= htmlspecialchars($cat['name']) ?>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
                     <?php endif; ?>
                     <h2 class="h5 card-title">
                         <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>" class="text-decoration-none text-white stretched-link">
@@ -65,7 +96,7 @@ ob_start();
     <?php if (isset($pagination) && $pagination['total'] > 1): ?>
     <nav class="d-flex justify-content-center align-items-center gap-4 mt-5 pt-4 border-top border-subtle">
         <?php if ($pagination['current'] > 1): ?>
-        <a href="<?= siteUrl('insights?page=' . ($pagination['current'] - 1)) ?>" class="btn btn-outline-pink">
+        <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] - 1)) ?>" class="btn btn-outline-pink">
             &larr; Previous
         </a>
         <?php endif; ?>
@@ -73,7 +104,7 @@ ob_start();
         <span class="text-muted">Page <?= $pagination['current'] ?> of <?= $pagination['total'] ?></span>
 
         <?php if ($pagination['current'] < $pagination['total']): ?>
-        <a href="<?= siteUrl('insights?page=' . ($pagination['current'] + 1)) ?>" class="btn btn-outline-pink">
+        <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] + 1)) ?>" class="btn btn-outline-pink">
             Next &rarr;
         </a>
         <?php endif; ?>

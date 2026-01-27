@@ -38,9 +38,10 @@ class Post
 
         $posts = $stmt->fetchAll();
 
-        // Add featured image to each post
+        // Add featured image and categories to each post
         foreach ($posts as &$post) {
             $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+            $post['categories'] = self::getCategoriesForPost($post['id']);
         }
 
         return [
@@ -193,6 +194,77 @@ class Post
         }
 
         return $posts;
+    }
+
+    /**
+     * Get paginated posts by category
+     */
+    public static function paginateByCategory(int $categoryId, int $page = 1, int $perPage = 12): array
+    {
+        $pdo = getDbConnection();
+        if (!$pdo) {
+            return ['posts' => [], 'total' => 0, 'pages' => 0];
+        }
+
+        $offset = ($page - 1) * $perPage;
+
+        // Get total count
+        $countStmt = $pdo->prepare("
+            SELECT COUNT(*) FROM posts p
+            INNER JOIN post_categories pc ON p.ID = pc.post_id
+            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+        ");
+        $countStmt->execute(['category_id' => $categoryId]);
+        $total = (int) $countStmt->fetchColumn();
+
+        // Get posts
+        $stmt = $pdo->prepare("
+            SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_excerpt as excerpt, p.post_date as published_at
+            FROM posts p
+            INNER JOIN post_categories pc ON p.ID = pc.post_id
+            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+            ORDER BY p.post_date DESC
+            LIMIT :limit OFFSET :offset
+        ");
+        $stmt->bindValue(':category_id', $categoryId, \PDO::PARAM_INT);
+        $stmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        $posts = $stmt->fetchAll();
+
+        foreach ($posts as &$post) {
+            $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+            $post['categories'] = self::getCategoriesForPost($post['id']);
+        }
+
+        return [
+            'posts' => $posts,
+            'total' => $total,
+            'pages' => ceil($total / $perPage),
+            'current_page' => $page
+        ];
+    }
+
+    /**
+     * Get categories for a specific post
+     */
+    public static function getCategoriesForPost(int $postId): array
+    {
+        $pdo = getDbConnection();
+        if (!$pdo) {
+            return [];
+        }
+
+        $stmt = $pdo->prepare("
+            SELECT c.id, c.name, c.slug
+            FROM categories c
+            INNER JOIN post_categories pc ON c.id = pc.category_id
+            WHERE pc.post_id = :post_id
+            ORDER BY c.name ASC
+        ");
+        $stmt->execute(['post_id' => $postId]);
+        return $stmt->fetchAll();
     }
 
     /**
