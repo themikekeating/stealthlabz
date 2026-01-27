@@ -175,7 +175,9 @@ class Post
         $secrets = file_exists($secretsPath) ? require $secretsPath : [];
         $apiKey = $secrets['pollinations_key'] ?? null;
 
-        $prompt = "Professional blog header image for article about: {$title}. Modern, vibrant, tech aesthetic.";
+        // Clean title for prompt - remove special chars that might break API
+        $cleanTitle = preg_replace('/[^a-zA-Z0-9\s]/', '', $title);
+        $prompt = "Professional blog header image about {$cleanTitle}, modern vibrant tech aesthetic, digital art";
         $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug);
 
