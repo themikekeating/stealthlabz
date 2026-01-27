@@ -5,7 +5,7 @@
 ?>
 <div class="card bg-card border-subtle mb-4">
     <div class="card-body text-center">
-        <h5 class="text-accent-pink mb-2">Ready to Build?</h5>
+        <h5 class="text-white mb-2">Ready to Build?</h5>
         <p class="small text-secondary mb-3">See what Stealth Portal can do for your business.</p>
         <a href="https://portal.stealthlabz.com" target="_blank" class="btn btn-outline-pink w-100">
             Explore Portal

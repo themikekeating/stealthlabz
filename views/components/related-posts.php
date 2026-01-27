@@ -12,7 +12,7 @@ $relatedPosts = $relatedPosts ?? [];
 <?php if (!empty($relatedPosts)): ?>
 <div class="card bg-card border-subtle mb-4">
     <div class="card-body">
-        <h5 class="text-accent-pink mb-3">Related Articles</h5>
+        <h5 class="text-white mb-3">Related Articles</h5>
         <ul class="list-unstyled mb-0">
             <?php foreach ($relatedPosts as $related): ?>
             <li class="mb-3 pb-3 border-bottom border-subtle last-child-no-border">

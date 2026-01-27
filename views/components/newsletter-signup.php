@@ -6,7 +6,7 @@
 ?>
 <div class="card bg-card border-subtle mb-4">
     <div class="card-body">
-        <h5 class="text-accent-pink mb-2">Stay Updated</h5>
+        <h5 class="text-white mb-2">Stay Updated</h5>
         <p class="small text-secondary mb-3">Get insights on AI, marketing, and growth delivered to your inbox.</p>
         <form id="newsletter-form" class="d-flex flex-column gap-2">
             <input type="email"
