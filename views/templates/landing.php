@@ -2131,40 +2131,25 @@
                     <h2 class="section-title">Insights</h2>
                     <p class="section-subtitle mb-0">Thoughts on building, scaling, and shipping.</p>
                 </div>
-                <a href="/blog" class="btn-outline">View All Posts</a>
+                <a href="/insights" class="btn-outline">View All Posts</a>
             </div>
             
             <div class="blog-grid">
-                <a href="#" class="blog-card fade-up stagger-1" style="text-decoration: none; color: inherit;">
-                    <div class="blog-card-image">
-                        <span>Featured Image</span>
+                <?php if (!empty($recentPosts)): ?>
+                    <?php foreach ($recentPosts as $i => $post): ?>
+                <a href="/insights/<?= htmlspecialchars($post['slug']) ?>" class="blog-card fade-up stagger-<?= $i + 1 ?>" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>'); background-size: cover; background-position: center;">
                     </div>
                     <div class="blog-card-body">
-                        <div class="blog-card-date">2026-01-20</div>
-                        <h4>How I Built an Enterprise CDP in 60 Days With No Coding Experience</h4>
-                        <p>The process, tools, and mindset behind shipping Stealth Portal.</p>
+                        <div class="blog-card-date"><?= date('Y-m-d', strtotime($post['published_at'])) ?></div>
+                        <h4><?= htmlspecialchars($post['title']) ?></h4>
+                        <p><?= htmlspecialchars(substr($post['excerpt'] ?? '', 0, 100)) ?>...</p>
                     </div>
                 </a>
-                <a href="#" class="blog-card fade-up stagger-2" style="text-decoration: none; color: inherit;">
-                    <div class="blog-card-image">
-                        <span>Featured Image</span>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-card-date">2026-01-15</div>
-                        <h4>Config-Driven Architecture: One Codebase, Infinite Verticals</h4>
-                        <p>Why GoQuoteRocket can launch a new insurance vertical with zero code changes.</p>
-                    </div>
-                </a>
-                <a href="#" class="blog-card fade-up stagger-3" style="text-decoration: none; color: inherit;">
-                    <div class="blog-card-image">
-                        <span>Featured Image</span>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-card-date">2026-01-10</div>
-                        <h4>The Acquisition Model: Reducing Blended CPA by 25%+</h4>
-                        <p>Layering remarketing on paid funnels to compound profitability.</p>
-                    </div>
-                </a>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                <p class="text-secondary">No posts yet.</p>
+                <?php endif; ?>
             </div>
         </div>
     </section>
