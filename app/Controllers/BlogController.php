@@ -45,8 +45,8 @@ class BlogController
         // Clean WordPress block markup and strip inline images
         $post['content'] = Post::cleanContent($post['content']);
 
-        // Get related posts
-        $recentPosts = Post::recent(5);
+        // Get related posts (excluding current)
+        $relatedPosts = Post::recentExcluding($slug, 4);
 
         include ROOT_PATH . '/views/templates/article.php';
     }

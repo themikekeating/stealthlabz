@@ -166,6 +166,45 @@ class Post
     }
 
     /**
+     * Get recent posts excluding a specific slug
+     */
+    public static function recentExcluding(string $excludeSlug, int $limit = 4): array
+    {
+        $pdo = getDbConnection();
+        if (!$pdo) {
+            return [];
+        }
+
+        $stmt = $pdo->prepare("
+            SELECT ID as id, post_title as title, post_name as slug, post_excerpt as excerpt, post_date as published_at
+            FROM posts
+            WHERE post_status = 'publish' AND post_type = 'post' AND post_name != :exclude_slug
+            ORDER BY post_date DESC
+            LIMIT :limit
+        ");
+        $stmt->bindValue(':exclude_slug', $excludeSlug, \PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        $posts = $stmt->fetchAll();
+
+        foreach ($posts as &$post) {
+            $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+        }
+
+        return $posts;
+    }
+
+    /**
+     * Calculate read time in minutes
+     */
+    public static function getReadTime(string $content): int
+    {
+        $wordCount = str_word_count(strip_tags($content));
+        return max(1, (int) ceil($wordCount / 200));
+    }
+
+    /**
      * Generate featured image URL for a post
      * Using Pollinations.ai for AI-generated images
      */
