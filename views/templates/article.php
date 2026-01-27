@@ -48,8 +48,7 @@ ob_start();
     <img src="<?= htmlspecialchars($post['featured_image']) ?>"
          class="w-100 rounded mb-4"
          alt="<?= htmlspecialchars($post['title']) ?>"
-         style="max-height: 400px; object-fit: cover;"
-         onerror="this.onerror=null; this.src='https://picsum.photos/seed/<?= htmlspecialchars($post['slug']) ?>/1200/630'">
+         style="max-height: 400px; object-fit: cover;">
 
     <header class="mb-4 pb-4 border-bottom border-subtle">
         <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>

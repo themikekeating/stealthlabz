@@ -187,11 +187,4 @@ class Post
         return $url;
     }
 
-    /**
-     * Get fallback image URL
-     */
-    public static function getFallbackImage(string $slug): string
-    {
-        return "https://picsum.photos/seed/{$slug}/1200/630";
-    }
 }

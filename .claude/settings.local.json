@@ -13,7 +13,8 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd AI-generated featured images via Pollinations\n\n- Strip all inline stock images from post content\n- Generate featured image per post using title + branded prompt\n- Display featured images in hub cards \\(180px thumbnails\\)\n- Display hero image in article pages \\(400px max\\)\n- Add image to article schema markup for SEO\n- Seed based on slug for consistent images\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd GitHub webhook for automatic deployment\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit:*)",
-      "WebFetch(domain:stealthlabz.com)"
+      "WebFetch(domain:stealthlabz.com)",
+      "Bash(git push:*)"
     ]
   }
 }
