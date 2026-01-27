@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(git push)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd comprehensive Basecamp-style legal pages\n\n- Privacy Policy: data collection, rights, security, retention\n- Terms of Service: client responsibilities, IP, liability, FL law\n- Cookie Policy: types, third-party, management options\n- Disclaimer: no guarantees, external links, liability limits\n- Update template to display list items with styled borders\n- Company address: Jacksonville, FL\n\nContent adapted from Basecamp''s open source policies \\(CC-BY\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "WebFetch(domain:www.stealthlabz.com)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd AI-generated featured images via Pollinations\n\n- Strip all inline stock images from post content\n- Generate featured image per post using title + branded prompt\n- Display featured images in hub cards \\(180px thumbnails\\)\n- Display hero image in article pages \\(400px max\\)\n- Add image to article schema markup for SEO\n- Seed based on slug for consistent images\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd GitHub webhook for automatic deployment\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "WebFetch(domain:stealthlabz.com)"
+    ]
+  }
+}

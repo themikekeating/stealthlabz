@@ -43,7 +43,9 @@ ob_start();
                      class="card-img-top"
                      alt="<?= htmlspecialchars($post['title']) ?>"
                      style="height: 180px; object-fit: cover;"
-                     onerror="this.onerror=null; this.src='<?= $fallbackUrl ?>'">
+                     data-fallback="<?= $fallbackUrl ?>"
+                     onerror="this.onerror=null; this.src=this.dataset.fallback"
+                     onload="if(this.naturalWidth<100)this.src=this.dataset.fallback">
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['category'])): ?>
                     <span class="badge bg-tertiary text-accent-pink mb-2 align-self-start"><?= htmlspecialchars($post['category']) ?></span>

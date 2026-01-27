@@ -53,7 +53,9 @@ ob_start();
          class="w-100 rounded mb-4"
          alt="<?= htmlspecialchars($post['title']) ?>"
          style="max-height: 400px; object-fit: cover;"
-         onerror="this.onerror=null; this.src='<?= $fallbackUrl ?>'">
+         data-fallback="<?= $fallbackUrl ?>"
+         onerror="this.onerror=null; this.src=this.dataset.fallback"
+         onload="if(this.naturalWidth<100)this.src=this.dataset.fallback">
 
     <header class="mb-4 pb-4 border-bottom border-subtle">
         <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>
