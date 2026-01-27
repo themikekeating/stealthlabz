@@ -38,7 +38,8 @@ ob_start();
                 <img src="<?= htmlspecialchars($post['featured_image']) ?>"
                      class="card-img-top"
                      alt="<?= htmlspecialchars($post['title']) ?>"
-                     style="height: 180px; object-fit: cover;">
+                     style="height: 180px; object-fit: cover;"
+                     onerror="this.onerror=null; this.src='https://picsum.photos/seed/<?= htmlspecialchars($post['slug']) ?>/600/400'">
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['category'])): ?>
                     <span class="badge bg-tertiary text-accent-pink mb-2 align-self-start"><?= htmlspecialchars($post['category']) ?></span>
