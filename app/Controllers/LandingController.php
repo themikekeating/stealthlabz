@@ -22,4 +22,15 @@ class LandingController
 
         include ROOT_PATH . '/views/templates/landing.php';
     }
+
+    public function tech(): void
+    {
+        $page = [
+            'title' => 'Our Tech | Stealth Labz',
+            'description' => 'The technology stack powering Stealth Labz platforms.',
+            'keywords' => 'technology, tech stack, Laravel, PHP, AI development'
+        ];
+
+        include ROOT_PATH . '/views/templates/tech.php';
+    }
 }

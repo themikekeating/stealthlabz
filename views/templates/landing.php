@@ -91,9 +91,10 @@
                 </a>
                 <div class="d-none d-md-flex align-items-center gap-2">
                     <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="/tech">Our Tech</a>
                     <a class="nav-link" href="#methodology">Process</a>
                     <a class="nav-link" href="#about">About</a>
-                    <a class="nav-link" href="#blog">Insights</a>
+                    <a class="nav-link" href="/insights">Insights</a>
                     <a class="nav-link btn-nav ms-2" href="#contact">Get in Touch</a>
                 </div>
             </div>
@@ -107,7 +108,7 @@
                 <div class="col-lg-6">
                     <div class="hero-badge">
                         <span class="dot"></span>
-                        Global Operations • AI-Native Execution
+                        AI-Accelerated Development • Global Operations
                     </div>
                     
                     <h1 class="hero-title">
@@ -116,7 +117,7 @@
                     </h1>
                     
                     <p class="hero-subtitle">
-                        15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.
+                        Performance marketing, product development, and global operations — now accelerated by AI. We build platforms that compete in billion-dollar categories.
                     </p>
                     
                     <div class="hero-cta">
@@ -129,16 +130,20 @@
                     
                     <div class="hero-stats">
                         <div class="hero-stat">
-                            <div class="hero-stat-value">$<span class="counter" data-target="35">0</span>M+</div>
-                            <div class="hero-stat-label">Revenue Generated</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="300">0</span>K+</div>
-                            <div class="hero-stat-label">Paid Subscribers</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="12">0</span>+</div>
+                            <div class="hero-stat-value"><span class="counter" data-target="6">0</span></div>
                             <div class="hero-stat-label">Live Platforms</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value"><span class="counter" data-target="2">0</span></div>
+                            <div class="hero-stat-label">Continents</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value"><span class="counter" data-target="351">0</span>K+</div>
+                            <div class="hero-stat-label">Lines Shipped</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">$<span class="counter" data-target="750">0</span>K+</div>
+                            <div class="hero-stat-label">Built Value</div>
                         </div>
                     </div>
                 </div>
@@ -284,7 +289,7 @@
         <div class="container-xl">
             <div class="fade-up">
                 <h2 class="section-title">What's Live</h2>
-                <p class="section-subtitle">Production platforms across SaaS, lead generation, content, and DTC — all built lean, all shipping.</p>
+                <p class="section-subtitle">Production platforms across SaaS, lead generation, content, and DTC. Every property connects through Portal.</p>
             </div>
             
             <div class="portfolio-grid">
@@ -316,6 +321,10 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                                     Multi-Tenant
                                 </div>
+                            </div>
+                            <div class="build-stats">
+                                <div class="build-stat"><strong>60 Days</strong> / ~$500 / 150K Lines</div>
+                                <div class="build-traditional">Traditional: $300K–$450K / 6-12 months / 4-6 person team</div>
                             </div>
                         </div>
                         <div class="flagship-visual">
@@ -359,6 +368,10 @@
                             <div class="portfolio-metric-label">SEO Pages</div>
                         </div>
                     </div>
+                    <div class="build-stats-small">
+                        <span class="build-stat-item"><strong>17 Days</strong> / $100</span>
+                        <span class="build-traditional-small">Traditional: $38K–$60K / 12 weeks</span>
+                    </div>
                     <p>Config-driven insurance lead generation. Auto, life, medicare, credit cards. One codebase, infinite verticals.</p>
                     <a href="https://goquoterocket.com" class="portfolio-card-link" target="_blank">
                         goquoterocket.com
@@ -383,6 +396,10 @@
                             <div class="portfolio-metric-value">10</div>
                             <div class="portfolio-metric-label">Articles</div>
                         </div>
+                    </div>
+                    <div class="build-stats-small">
+                        <span class="build-stat-item"><strong>5 Days</strong> / $100</span>
+                        <span class="build-traditional-small">Traditional: $45K–$75K / 12-16 weeks</span>
                     </div>
                     <p>12-vertical insurance platform. Car, life, health, funeral, pet, business, debt, loans — all live.</p>
                     <a href="https://quoterocket.co.za" class="portfolio-card-link" target="_blank">
@@ -409,6 +426,10 @@
                             <div class="portfolio-metric-label">Categories</div>
                         </div>
                     </div>
+                    <div class="build-stats-small">
+                        <span class="build-stat-item"><strong>2 Days</strong> / $100 / 5.9K Lines</span>
+                        <span class="build-traditional-small">Traditional: $15K–$25K / 6 weeks</span>
+                    </div>
                     <p>Zero-dependency PHP MVC platform. Complete WordPress replacement built for affiliate monetization.</p>
                     <a href="https://customer-reports.org" class="portfolio-card-link" target="_blank">
                         customer-reports.org
@@ -434,9 +455,13 @@
                             <div class="portfolio-metric-label">Step Checkout</div>
                         </div>
                     </div>
+                    <div class="build-stats-small">
+                        <span class="build-stat-item"><strong>32 Days</strong> / $200</span>
+                        <span class="build-traditional-small">Traditional: $80K–$150K / 16-20 weeks</span>
+                    </div>
                     <p>HeyGen-powered personalized video messages. Free funnel, paid packages, Stripe checkout.</p>
-                    <a href="https://videosfromsanta.com" class="portfolio-card-link" target="_blank">
-                        videosfromsanta.com
+                    <a href="https://videosfromasanta.com" class="portfolio-card-link" target="_blank">
+                        videosfromasanta.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                 </div>
@@ -459,9 +484,13 @@
                             <div class="portfolio-metric-label">Dependencies</div>
                         </div>
                     </div>
+                    <div class="build-stats-small">
+                        <span class="build-stat-item"><strong>10 Days</strong> / $100</span>
+                        <span class="build-traditional-small">Traditional: $18K–$35K / 8 weeks</span>
+                    </div>
                     <p>Qualification funnel for HOA dispute leads. Routes to vetted attorney partners. Zero dependencies.</p>
-                    <a href="https://hoa-attorneys.com" class="portfolio-card-link" target="_blank">
-                        hoa-attorneys.com
+                    <a href="https://hoaattorneyguide.com" class="portfolio-card-link" target="_blank">
+                        hoaattorneyguide.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                 </div>
@@ -540,7 +569,7 @@
         <div class="container-xl">
             <div class="fade-up">
                 <h2 class="section-title">Capabilities</h2>
-                <p class="section-subtitle">Full-stack execution across marketing, technology, and operations.</p>
+                <p class="section-subtitle">Full-stack execution across marketing, technology, and operations. What we bring to the table.</p>
             </div>
             
             <div class="skills-grid">
@@ -550,7 +579,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">Affiliate Marketing</span>
-                                <span class="skill-bar-value">15+ yrs</span>
+                                <span class="skill-bar-value">55 publishers</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="95"></div>
@@ -559,7 +588,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">Performance Marketing</span>
-                                <span class="skill-bar-value">$35M+</span>
+                                <span class="skill-bar-value">16 verticals</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="90"></div>
@@ -568,7 +597,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">SEO & Content</span>
-                                <span class="skill-bar-value">13K articles</span>
+                                <span class="skill-bar-value">13K+ articles</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="85"></div>
@@ -577,7 +606,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">Lead Generation</span>
-                                <span class="skill-bar-value">16 verticals</span>
+                                <span class="skill-bar-value">Multi-buyer routing</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="92"></div>
@@ -592,7 +621,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">Laravel / PHP</span>
-                                <span class="skill-bar-value">200K+ lines</span>
+                                <span class="skill-bar-value">351K+ lines</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="88"></div>
@@ -601,7 +630,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">AI-Accelerated Dev</span>
-                                <span class="skill-bar-value">60-day builds</span>
+                                <span class="skill-bar-value">126 days total</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="95"></div>
@@ -619,7 +648,7 @@
                         <div class="skill-bar">
                             <div class="skill-bar-header">
                                 <span class="skill-bar-name">Database Design</span>
-                                <span class="skill-bar-value">83 tables</span>
+                                <span class="skill-bar-value">83 tables (Portal)</span>
                             </div>
                             <div class="skill-bar-track">
                                 <div class="skill-bar-fill" data-width="85"></div>
@@ -771,11 +800,11 @@
                     <div class="about-content fade-up">
                         <h2 class="section-title">Process Over Permission</h2>
                         
-                        <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all shipping production.</p>
+                        <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all shipping production. Every property connects through Portal.</p>
                         
                         <p>The playbook took <strong>15+ years of combined experience</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO empires. The kind of knowledge you only get from <strong>$35M+ in revenue</strong>, <strong>300K+ paid subscribers</strong>, and teams scaled from zero to 50.</p>
                         
-                        <p>Then AI changed the math. What used to take teams and months now takes weeks. <strong>Stealth Portal</strong> — a full enterprise CDP with 100+ features — went from concept to production in <strong>60 days</strong>. No prior coding experience. Just process, execution, and the refusal to wait.</p>
+                        <p>Then AI changed the math. What used to take teams and months now takes weeks. The entire ecosystem — <strong>6 platforms, 351K+ lines of code</strong> — went from zero to production in <strong>126 days</strong>. Total investment: <strong>$15K</strong>. Traditional value: <strong>$750K+</strong>.</p>
                         
                         <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
                         
@@ -789,12 +818,12 @@
                                 <div class="about-stat-label">Paid subscribers acquired</div>
                             </div>
                             <div>
-                                <div class="about-stat-value">60</div>
-                                <div class="about-stat-label">Days to ship Portal</div>
+                                <div class="about-stat-value">126</div>
+                                <div class="about-stat-label">Days total ecosystem build</div>
                             </div>
                             <div>
-                                <div class="about-stat-value">2</div>
-                                <div class="about-stat-label">Continents, live ops</div>
+                                <div class="about-stat-value">$750K+</div>
+                                <div class="about-stat-label">Traditional build value</div>
                             </div>
                         </div>
                     </div>
@@ -838,29 +867,24 @@
     <section id="contact" class="cta-section">
         <div class="container-xl">
             <div class="cta-content fade-up">
-                <h2>Let's Build</h2>
-                <p>Partnerships. Licensing. Investment. Or just say what's up.</p>
-                
-                <div class="cta-buttons">
-                    <a href="mailto:mike@stealthlabz.com" class="btn-glow">
-                        Get in Touch
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                    <a href="https://t.me/michaelgkeating" class="btn-outline" target="_blank">Telegram</a>
-                </div>
-                
+                <h2>Stay in the Loop</h2>
+                <p>Get updates on new platforms, builds, and insights.</p>
+
+                <form id="cta-newsletter-form" class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-glow">
+                            Subscribe
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                    </div>
+                    <div class="newsletter-message"></div>
+                </form>
+
                 <div class="cta-contact">
-                    <span class="cta-contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <a href="mailto:mike@stealthlabz.com">mike@stealthlabz.com</a>
-                    </span>
-                    <span class="cta-contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <a href="tel:619-990-3761">619-990-3761</a>
-                    </span>
-                    <span class="cta-contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
-                        Miami, FL
+                    <span class="cta-contact-item text-muted">
+                        Or reach out directly:
+                        <a href="mailto:info@stealthlabz.com">info@stealthlabz.com</a>
                     </span>
                 </div>
             </div>
@@ -952,6 +976,55 @@
         }, { threshold: 0.5 });
 
         skillBars.forEach(bar => skillObserver.observe(bar));
+
+        // Newsletter form handling
+        const WEBHOOK_URL = 'https://portal.stealthlabz.com/source/internal/f0ece97b-9673-4eff-911b-4eed1e4ba1dd';
+
+        function handleNewsletterSubmit(form, messageEl) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = form.querySelector('input[name="email"]').value;
+                const button = form.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+
+                button.innerHTML = 'Sending...';
+                button.disabled = true;
+                messageEl.textContent = '';
+                messageEl.className = messageEl.className.replace(/success|error/g, '').trim();
+
+                try {
+                    const response = await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+
+                    if (response.ok) {
+                        messageEl.textContent = 'You\'re in! We\'ll be in touch.';
+                        messageEl.classList.add('success');
+                        form.reset();
+                    } else {
+                        throw new Error('Failed');
+                    }
+                } catch (err) {
+                    messageEl.textContent = 'Something went wrong. Try again.';
+                    messageEl.classList.add('error');
+                }
+
+                button.innerHTML = originalText;
+                button.disabled = false;
+            });
+        }
+
+        // CTA form
+        const ctaForm = document.getElementById('cta-newsletter-form');
+        const ctaMessage = ctaForm?.querySelector('.newsletter-message');
+        if (ctaForm && ctaMessage) handleNewsletterSubmit(ctaForm, ctaMessage);
+
+        // Footer form
+        const footerForm = document.getElementById('footer-newsletter-form');
+        const footerMessage = footerForm?.parentElement.querySelector('.newsletter-message-compact');
+        if (footerForm && footerMessage) handleNewsletterSubmit(footerForm, footerMessage);
     </script>
 </body>
 </html>

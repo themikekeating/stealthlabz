@@ -1436,3 +1436,206 @@ footer {
 .animation-delay-3 { animation-delay: 1.5s; }
 .animation-delay-4 { animation-delay: 2s; }
 .animation-delay-5 { animation-delay: 2.5s; }
+
+/* ========================================
+   Build Stats (Portfolio Cards)
+   ======================================== */
+.build-stats {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(229, 2, 93, 0.08);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-pink);
+}
+
+.build-stat {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.build-stat strong {
+    color: var(--accent-pink);
+}
+
+.build-traditional {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.build-stats-small {
+    margin: 0.75rem 0;
+    padding: 0.6rem 0.8rem;
+    background: rgba(229, 2, 93, 0.08);
+    border-radius: 6px;
+    border-left: 2px solid var(--accent-pink);
+}
+
+.build-stat-item {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.build-stat-item strong {
+    color: var(--accent-pink);
+}
+
+.build-traditional-small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ========================================
+   Newsletter Forms
+   ======================================== */
+.newsletter-form {
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.25rem;
+}
+
+.newsletter-input-group input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.newsletter-input-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.newsletter-input-group .btn-glow {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.newsletter-message {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.newsletter-message.success {
+    color: var(--accent-green);
+}
+
+.newsletter-message.error {
+    color: #ef4444;
+}
+
+/* Compact footer newsletter */
+.newsletter-form-compact {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.newsletter-form-compact input {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    width: 140px;
+    outline: none;
+}
+
+.newsletter-form-compact input::placeholder {
+    color: var(--text-muted);
+}
+
+.newsletter-form-compact button {
+    background: var(--accent-pink);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.newsletter-form-compact button:hover {
+    background: #c9024f;
+}
+
+.newsletter-message-compact {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.newsletter-message-compact.success {
+    color: var(--accent-green);
+}
+
+.newsletter-message-compact.error {
+    color: #ef4444;
+}
+
+/* Footer layout update */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .newsletter-input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-input-group .btn-glow {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

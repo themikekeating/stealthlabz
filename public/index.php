@@ -44,6 +44,7 @@ $router = new Router();
 
 // Routes
 $router->get('/', [LandingController::class, 'index']);
+$router->get('/tech', [LandingController::class, 'tech']);
 
 // Blog
 $router->get('/insights', [BlogController::class, 'index']);
