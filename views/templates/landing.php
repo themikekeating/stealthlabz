@@ -210,77 +210,71 @@
         <div class="integrations-label">Integrated Stack</div>
         <div class="integrations-track">
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                Everflow
+                <img src="/cdn/images/integrations/29next.svg" alt="29 Next">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                CAKE
+                <img src="/cdn/images/integrations/checkoutchamp.svg" alt="CheckoutChamp">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                TUNE
+                <img src="/cdn/images/integrations/codeclouds.svg" alt="CodeClouds">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                TrafficAI
+                <img src="/cdn/images/integrations/everflow.svg" alt="Everflow">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg>
-                Konnektive
+                <img src="/cdn/images/integrations/sendgrid.svg" alt="SendGrid">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                Shopify
+                <img src="/cdn/images/integrations/shopify.svg" alt="Shopify">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-                Stripe
+                <img src="/cdn/images/integrations/sticky.svg" alt="Sticky">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                Dripcel
+                <img src="/cdn/images/integrations/stripe.svg" alt="Stripe">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-                SendGrid
+                <img src="/cdn/images/integrations/telegram.svg" alt="Telegram">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                Twilio
+                <img src="/cdn/images/integrations/trackdesk.svg" alt="Trackdesk">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                HeyGen
-            </div>
-            <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-                Zapier
+                <img src="/cdn/images/integrations/zapier.svg" alt="Zapier">
             </div>
             <!-- Duplicate for seamless loop -->
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                Everflow
+                <img src="/cdn/images/integrations/29next.svg" alt="29 Next">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                CAKE
+                <img src="/cdn/images/integrations/checkoutchamp.svg" alt="CheckoutChamp">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                TUNE
+                <img src="/cdn/images/integrations/codeclouds.svg" alt="CodeClouds">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                TrafficAI
+                <img src="/cdn/images/integrations/everflow.svg" alt="Everflow">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg>
-                Konnektive
+                <img src="/cdn/images/integrations/sendgrid.svg" alt="SendGrid">
             </div>
             <div class="integration-item">
-                <svg class="integration-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                Shopify
+                <img src="/cdn/images/integrations/shopify.svg" alt="Shopify">
+            </div>
+            <div class="integration-item">
+                <img src="/cdn/images/integrations/sticky.svg" alt="Sticky">
+            </div>
+            <div class="integration-item">
+                <img src="/cdn/images/integrations/stripe.svg" alt="Stripe">
+            </div>
+            <div class="integration-item">
+                <img src="/cdn/images/integrations/telegram.svg" alt="Telegram">
+            </div>
+            <div class="integration-item">
+                <img src="/cdn/images/integrations/trackdesk.svg" alt="Trackdesk">
+            </div>
+            <div class="integration-item">
+                <img src="/cdn/images/integrations/zapier.svg" alt="Zapier">
             </div>
         </div>
     </section>
