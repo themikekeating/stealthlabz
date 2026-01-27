@@ -289,7 +289,7 @@
         <div class="container-xl">
             <div class="fade-up">
                 <h2 class="section-title">What's Live</h2>
-                <p class="section-subtitle">Production platforms across SaaS, lead generation, content, and DTC. Every property connects through Portal.</p>
+                <p class="section-subtitle">Our brands. Built with our process. Powered by Portal. Proof that the playbook works.</p>
             </div>
             
             <div class="portfolio-grid">
@@ -297,9 +297,9 @@
                 <div class="portfolio-card flagship fade-up">
                     <div class="flagship-content">
                         <div>
-                            <span class="portfolio-card-badge">Flagship • SaaS</span>
+                            <span class="portfolio-card-badge">Flagship • Internal IP</span>
                             <h3>Stealth Portal</h3>
-                            <p>5 platforms in one: CDP, Affiliate Network, Lead Distribution, E-Commerce, Marketing Automation. Identity resolution across 12 source types. 90+ profile fields. Intelligent routing to 7 outbound integrations. 12 merchant accounts.</p>
+                            <p>The operating system behind everything we build. CDP, affiliate network, lead distribution, e-commerce, and marketing automation — unified. Every platform in our portfolio connects through Portal.</p>
                             <a href="https://portal.stealthlabz.com" class="portfolio-card-link" target="_blank">
                                 portal.stealthlabz.com
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -307,30 +307,26 @@
                             <div class="flagship-features">
                                 <div class="flagship-feature">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                    100+ Features
-                                </div>
-                                <div class="flagship-feature">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                    83 DB Tables
-                                </div>
-                                <div class="flagship-feature">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                                     Identity Resolution
+                                </div>
+                                <div class="flagship-feature">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lead Distribution
+                                </div>
+                                <div class="flagship-feature">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Affiliate Network
                                 </div>
                                 <div class="flagship-feature">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                                     Multi-Tenant
                                 </div>
                             </div>
-                            <div class="build-stats">
-                                <div class="build-stat"><strong>60 Days</strong> / ~$500 / 150K Lines</div>
-                                <div class="build-traditional">Traditional: $300K–$450K / 6-12 months / 4-6 person team</div>
-                            </div>
                         </div>
                         <div class="flagship-visual">
                             <div class="chart-header mb-3">
-                                <span class="chart-title">Platform Growth</span>
-                                <span class="chart-badge">60 Day Build</span>
+                                <span class="chart-title">Platform Capabilities</span>
+                                <span class="chart-badge">6 Properties Connected</span>
                             </div>
                             <div class="flagship-chart">
                                 <div class="flagship-bar"></div>
@@ -340,11 +336,11 @@
                                 <div class="flagship-bar"></div>
                             </div>
                             <div class="flagship-chart-labels">
-                                <span>W1</span>
-                                <span>W2</span>
-                                <span>W4</span>
-                                <span>W6</span>
-                                <span>W8</span>
+                                <span>CDP</span>
+                                <span>Leads</span>
+                                <span>Affiliate</span>
+                                <span>E-Com</span>
+                                <span>Auto</span>
                             </div>
                         </div>
                     </div>
@@ -360,19 +356,11 @@
                             <div class="portfolio-metric-label">Verticals</div>
                         </div>
                         <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">40K</div>
-                            <div class="portfolio-metric-label">Lines</div>
-                        </div>
-                        <div class="portfolio-metric">
                             <div class="portfolio-metric-value">11</div>
                             <div class="portfolio-metric-label">SEO Pages</div>
                         </div>
                     </div>
-                    <div class="build-stats-small">
-                        <span class="build-stat-item"><strong>17 Days</strong> / $100</span>
-                        <span class="build-traditional-small">Traditional: $38K–$60K / 12 weeks</span>
-                    </div>
-                    <p>Config-driven insurance lead generation. Auto, life, medicare, credit cards. One codebase, infinite verticals.</p>
+                    <p>Insurance lead generation for the US market. Auto, life, medicare, credit cards. Config-driven — one codebase serves infinite verticals.</p>
                     <a href="https://goquoterocket.com" class="portfolio-card-link" target="_blank">
                         goquoterocket.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -389,19 +377,11 @@
                             <div class="portfolio-metric-label">Verticals</div>
                         </div>
                         <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">92K</div>
-                            <div class="portfolio-metric-label">Lines</div>
-                        </div>
-                        <div class="portfolio-metric">
                             <div class="portfolio-metric-value">10</div>
                             <div class="portfolio-metric-label">Articles</div>
                         </div>
                     </div>
-                    <div class="build-stats-small">
-                        <span class="build-stat-item"><strong>5 Days</strong> / $100</span>
-                        <span class="build-traditional-small">Traditional: $45K–$75K / 12-16 weeks</span>
-                    </div>
-                    <p>12-vertical insurance platform. Car, life, health, funeral, pet, business, debt, loans — all live.</p>
+                    <p>Full-market insurance lead gen for South Africa. Car, life, health, funeral, pet, business, debt, loans — all live and routing through Portal.</p>
                     <a href="https://quoterocket.co.za" class="portfolio-card-link" target="_blank">
                         quoterocket.co.za
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -426,11 +406,7 @@
                             <div class="portfolio-metric-label">Categories</div>
                         </div>
                     </div>
-                    <div class="build-stats-small">
-                        <span class="build-stat-item"><strong>2 Days</strong> / $100 / 5.9K Lines</span>
-                        <span class="build-traditional-small">Traditional: $15K–$25K / 6 weeks</span>
-                    </div>
-                    <p>Zero-dependency PHP MVC platform. Complete WordPress replacement built for affiliate monetization.</p>
+                    <p>Content platform built for affiliate monetization. Product reviews, comparison guides, and SEO content at scale.</p>
                     <a href="https://customer-reports.org" class="portfolio-card-link" target="_blank">
                         customer-reports.org
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -439,27 +415,19 @@
 
                 <!-- Videos From Santa -->
                 <div class="portfolio-card fade-up stagger-4">
-                    <span class="portfolio-card-badge">AI • Seasonal</span>
+                    <span class="portfolio-card-badge">AI • DTC</span>
                     <h3>Videos From Santa</h3>
                     <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">54K</div>
-                            <div class="portfolio-metric-label">Lines</div>
-                        </div>
                         <div class="portfolio-metric">
                             <div class="portfolio-metric-value">3</div>
                             <div class="portfolio-metric-label">Characters</div>
                         </div>
                         <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">5</div>
-                            <div class="portfolio-metric-label">Step Checkout</div>
+                            <div class="portfolio-metric-value">AI</div>
+                            <div class="portfolio-metric-label">Generated</div>
                         </div>
                     </div>
-                    <div class="build-stats-small">
-                        <span class="build-stat-item"><strong>32 Days</strong> / $200</span>
-                        <span class="build-traditional-small">Traditional: $80K–$150K / 16-20 weeks</span>
-                    </div>
-                    <p>HeyGen-powered personalized video messages. Free funnel, paid packages, Stripe checkout.</p>
+                    <p>AI-powered personalized video messages. Free funnel to paid packages. Seasonal DTC play with year-round potential.</p>
                     <a href="https://videosfromasanta.com" class="portfolio-card-link" target="_blank">
                         videosfromasanta.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -473,22 +441,14 @@
                     <div class="portfolio-metrics">
                         <div class="portfolio-metric">
                             <div class="portfolio-metric-value">6</div>
-                            <div class="portfolio-metric-label">Steps</div>
+                            <div class="portfolio-metric-label">Step Funnel</div>
                         </div>
                         <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">8.8K</div>
-                            <div class="portfolio-metric-label">Lines</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">0</div>
-                            <div class="portfolio-metric-label">Dependencies</div>
+                            <div class="portfolio-metric-value">Legal</div>
+                            <div class="portfolio-metric-label">Vertical</div>
                         </div>
                     </div>
-                    <div class="build-stats-small">
-                        <span class="build-stat-item"><strong>10 Days</strong> / $100</span>
-                        <span class="build-traditional-small">Traditional: $18K–$35K / 8 weeks</span>
-                    </div>
-                    <p>Qualification funnel for HOA dispute leads. Routes to vetted attorney partners. Zero dependencies.</p>
+                    <p>Qualification funnel for HOA dispute leads. Matches homeowners with vetted attorney partners. High-intent legal vertical.</p>
                     <a href="https://hoaattorneyguide.com" class="portfolio-card-link" target="_blank">
                         hoaattorneyguide.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -519,6 +479,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                 </div>
+            </div>
+
+            <div class="text-center mt-4 fade-up">
+                <a href="<?= siteUrl('tech') ?>" class="btn-outline">
+                    See How We Build
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -553,6 +520,23 @@
                 
                 <div class="global-map fade-up">
                     <div class="map-container">
+                        <!-- World Map SVG -->
+                        <svg class="world-map-svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet">
+                            <!-- North America -->
+                            <path d="M150,120 L180,100 L220,95 L260,100 L280,120 L285,150 L270,180 L250,200 L220,210 L200,230 L180,250 L150,240 L130,220 L120,190 L125,160 L140,140 Z" />
+                            <!-- South America -->
+                            <path d="M220,270 L250,260 L280,280 L290,320 L280,360 L260,400 L230,420 L200,400 L190,360 L195,320 L210,290 Z" />
+                            <!-- Europe -->
+                            <path d="M450,100 L480,95 L520,100 L540,120 L530,150 L510,170 L480,175 L460,160 L455,130 Z" />
+                            <!-- Africa -->
+                            <path d="M480,190 L520,185 L560,200 L580,240 L575,300 L550,350 L510,370 L470,350 L455,300 L460,250 L470,220 Z" />
+                            <!-- Asia -->
+                            <path d="M560,90 L620,80 L700,85 L780,100 L820,130 L830,170 L810,200 L760,210 L700,200 L650,190 L600,180 L570,160 L555,130 Z" />
+                            <!-- Australia -->
+                            <path d="M780,300 L830,290 L870,310 L880,350 L860,380 L820,390 L780,375 L770,340 Z" />
+                            <!-- Indonesia/Southeast Asia -->
+                            <path d="M720,230 L760,225 L800,240 L810,260 L790,275 L750,270 L720,255 Z" />
+                        </svg>
                         <div class="map-dot us"></div>
                         <div class="map-dot za"></div>
                         <div class="map-connection"></div>
@@ -564,254 +548,78 @@
         </div>
     </section>
 
-    <!-- Skills -->
-    <section class="skills-section">
-        <div class="container-xl">
-            <div class="fade-up">
-                <h2 class="section-title">Capabilities</h2>
-                <p class="section-subtitle">Full-stack execution across marketing, technology, and operations. What we bring to the table.</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category fade-up">
-                    <h4>Marketing & Growth</h4>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Affiliate Marketing</span>
-                                <span class="skill-bar-value">55 publishers</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Performance Marketing</span>
-                                <span class="skill-bar-value">16 verticals</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">SEO & Content</span>
-                                <span class="skill-bar-value">13K+ articles</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Lead Generation</span>
-                                <span class="skill-bar-value">Multi-buyer routing</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="92"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-up">
-                    <h4>Technology & Development</h4>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Laravel / PHP</span>
-                                <span class="skill-bar-value">351K+ lines</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">AI-Accelerated Dev</span>
-                                <span class="skill-bar-value">126 days total</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">API Integrations</span>
-                                <span class="skill-bar-value">12+ platforms</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Database Design</span>
-                                <span class="skill-bar-value">83 tables (Portal)</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-up">
-                    <h4>Operations & Scale</h4>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Team Building</span>
-                                <span class="skill-bar-value">0 → 50</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">DTC Operations</span>
-                                <span class="skill-bar-value">300K subs</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="92"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Global Expansion</span>
-                                <span class="skill-bar-value">US + ZA</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-name">Process Design</span>
-                                <span class="skill-bar-value">SOPs + RACI</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="88"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Methodology -->
-    <section id="methodology" class="section-dark methodology-section">
-        <div class="container-xl">
-            <div class="fade-up text-center">
-                <h2 class="section-title">The Loop</h2>
-                <p class="section-subtitle">Each cycle compounds — faster, cheaper, stronger with every launch.</p>
-            </div>
-
-            <!-- Circular Loop -->
-            <div class="loop-container fade-up">
-                <div class="loop-circle">
-                    <!-- SVG Circle with animated stroke -->
-                    <svg class="loop-svg" viewBox="0 0 400 400">
-                        <circle class="loop-track" cx="200" cy="200" r="160" />
-                        <circle class="loop-progress" cx="200" cy="200" r="160" />
-                    </svg>
-
-                    <!-- Steps positioned around the circle -->
-                    <div class="loop-step" data-position="1">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                        </div>
-                        <span class="loop-step-label">Validate</span>
-                        <div class="loop-step-tooltip">Gauge demand with traffic partners. Follow trends. Replicate what works.</div>
-                    </div>
-
-                    <div class="loop-step" data-position="2">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-                        </div>
-                        <span class="loop-step-label">Analyze</span>
-                        <div class="loop-step-tooltip">Model the campaign. Predict success. Define KPIs before spending a dollar.</div>
-                    </div>
-
-                    <div class="loop-step" data-position="3">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                        </div>
-                        <span class="loop-step-label">Build</span>
-                        <div class="loop-step-tooltip">Proven templates. AI-accelerated execution. Cut time and cost. Ship fast.</div>
-                    </div>
-
-                    <div class="loop-step" data-position="4">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                        </div>
-                        <span class="loop-step-label">Launch</span>
-                        <div class="loop-step-tooltip">Drive traffic. Collect data. Validate assumptions in the market, not in meetings.</div>
-                    </div>
-
-                    <div class="loop-step" data-position="5">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <span class="loop-step-label">Evaluate</span>
-                        <div class="loop-step-tooltip">Performance vs. projections. Go/no-go decision. Kill fast or double down.</div>
-                    </div>
-
-                    <div class="loop-step" data-position="6">
-                        <div class="loop-step-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                        </div>
-                        <span class="loop-step-label">Scale</span>
-                        <div class="loop-step-tooltip">Expand products. Diversify channels. Reinvest in content properties. Exit or hold.</div>
-                    </div>
-
-                    <!-- Center text -->
-                    <div class="loop-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4"/><path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
+    <!-- How We Work -->
+    <section id="about" class="how-we-work-section">
         <div class="container-xl">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="about-content fade-up">
-                        <h2 class="section-title">Process Over Permission</h2>
-                        
-                        <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all shipping production. Every property connects through Portal.</p>
-                        
-                        <p>The playbook took <strong>15+ years of combined experience</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO empires. The kind of knowledge you only get from <strong>$35M+ in revenue</strong>, <strong>300K+ paid subscribers</strong>, and teams scaled from zero to 50.</p>
-                        
-                        <p>Then AI changed the math. What used to take teams and months now takes weeks. The entire ecosystem — <strong>6 platforms, 351K+ lines of code</strong> — went from zero to production in <strong>126 days</strong>. Total investment: <strong>$15K</strong>. Traditional value: <strong>$750K+</strong>.</p>
-                        
-                        <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
-                        
-                        <div class="about-stats">
-                            <div>
-                                <div class="about-stat-value">$35M+</div>
-                                <div class="about-stat-label">Revenue across brands</div>
+                <div class="col-lg-7 fade-up">
+                    <h2 class="section-title">How We Work</h2>
+
+                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all shipping production. Every property connects through Portal.</p>
+
+                    <p>The playbook took <strong>15+ years of combined experience</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO empires. The kind of knowledge you only get from <strong>$35M+ in revenue</strong>, <strong>300K+ paid subscribers</strong>, and teams scaled from zero to 50.</p>
+
+                    <p>Then AI changed the math. What used to take teams and months now takes weeks. The entire ecosystem — <strong>6 platforms, 351K+ lines of code</strong> — went from zero to production in <strong>126 days</strong>. Total investment: <strong>$15K</strong>. Traditional value: <strong>$750K+</strong>.</p>
+
+                    <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
+                </div>
+                <div class="col-lg-5 fade-up">
+                    <div class="capability-list">
+                        <div class="capability-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <div class="capability-content">
+                                <span class="capability-name">Affiliate & Performance</span>
+                                <span class="capability-metric">55 publishers • 16 verticals</span>
                             </div>
-                            <div>
-                                <div class="about-stat-value">300K+</div>
-                                <div class="about-stat-label">Paid subscribers acquired</div>
+                        </div>
+                        <div class="capability-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <div class="capability-content">
+                                <span class="capability-name">Full-Stack Development</span>
+                                <span class="capability-metric">Laravel • 351K+ lines</span>
                             </div>
-                            <div>
-                                <div class="about-stat-value">126</div>
-                                <div class="about-stat-label">Days total ecosystem build</div>
+                        </div>
+                        <div class="capability-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                            <div class="capability-content">
+                                <span class="capability-name">AI-Accelerated Builds</span>
+                                <span class="capability-metric">126 days total • 6 platforms</span>
                             </div>
-                            <div>
-                                <div class="about-stat-value">$750K+</div>
-                                <div class="about-stat-label">Traditional build value</div>
+                        </div>
+                        <div class="capability-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <div class="capability-content">
+                                <span class="capability-name">Global Operations</span>
+                                <span class="capability-metric">US + ZA • 24/7</span>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            <div class="capability-content">
+                                <span class="capability-name">DTC & Subscriptions</span>
+                                <span class="capability-metric">300K subs • 25+ SKUs</span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="about-stats-row fade-up">
+                <div class="about-stat-item">
+                    <div class="about-stat-value">$35M+</div>
+                    <div class="about-stat-label">Revenue across brands</div>
+                </div>
+                <div class="about-stat-item">
+                    <div class="about-stat-value">300K+</div>
+                    <div class="about-stat-label">Paid subscribers acquired</div>
+                </div>
+                <div class="about-stat-item">
+                    <div class="about-stat-value">126</div>
+                    <div class="about-stat-label">Days total ecosystem build</div>
+                </div>
+                <div class="about-stat-item">
+                    <div class="about-stat-value">$750K+</div>
+                    <div class="about-stat-label">Traditional build value</div>
                 </div>
             </div>
         </div>

@@ -498,7 +498,7 @@ h1, h2, h3, h4, h5, h6 {
    Integrations Marquee
    ======================================== */
 .integrations-section {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     background: var(--bg-secondary);
@@ -507,17 +507,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .integrations-label {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .integrations-track {
     display: flex;
-    gap: 1rem;
-    animation: scroll 20s linear infinite;
+    gap: 2.5rem;
+    align-items: center;
+    animation: scroll 25s linear infinite;
 }
 
 .integrations-track:hover {
@@ -534,26 +535,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.75rem;
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
+    padding: 0.25rem;
     transition: all 0.3s ease;
 }
 
 .integration-item:hover {
-    border-color: var(--accent-pink);
+    transform: scale(1.1);
 }
 
 .integration-item img {
-    height: 24px;
+    height: 32px;
     width: auto;
-    filter: grayscale(100%) brightness(0.7);
+    filter: brightness(0) invert(1) opacity(0.7);
     transition: filter 0.3s ease;
 }
 
 .integration-item:hover img {
-    filter: grayscale(0%) brightness(1);
+    filter: brightness(0) invert(1) opacity(1);
 }
 
 /* ========================================
@@ -886,6 +884,23 @@ section {
     border-radius: 16px;
     border: 1px solid var(--border-color);
     overflow: hidden;
+}
+
+.world-map-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    opacity: 0.15;
+}
+
+.world-map-svg path {
+    fill: none;
+    stroke: var(--accent-pink);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
 }
 
 .map-dot {
@@ -1319,30 +1334,78 @@ section {
 }
 
 /* ========================================
-   About Section
+   How We Work Section
    ======================================== */
-.about-content {
-    max-width: 800px;
+.how-we-work-section {
+    padding: 6rem 0;
 }
 
-.about-content p {
+.how-we-work-section p {
     font-size: 1.125rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
-.about-content strong {
+.how-we-work-section strong {
     color: var(--text-primary);
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Capability List */
+.capability-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-top: 2.5rem;
+}
+
+.capability-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.capability-item svg {
+    color: var(--accent-pink);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.capability-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.capability-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.capability-metric {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: 'DM Mono', monospace;
+}
+
+/* Stats Row (full width) */
+.about-stats-row {
+    display: flex;
+    justify-content: space-between;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding-top: 3rem;
     border-top: 1px solid var(--border-color);
+}
+
+.about-stat-item {
+    text-align: center;
+    flex: 1;
 }
 
 .about-stat-value {
@@ -1357,7 +1420,27 @@ section {
 
 .about-stat-label {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .capability-list {
+        margin-top: 2rem;
+    }
+
+    .about-stats-row {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .about-stat-item {
+        flex: 0 0 calc(50% - 0.75rem);
+    }
+
+    .about-stat-value {
+        font-size: 2rem;
+    }
 }
 
 /* ========================================
