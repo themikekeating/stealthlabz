@@ -51,6 +51,8 @@ $router->get('/insights/{slug}', [BlogController::class, 'show']);
 // Legal
 $router->get('/legal/privacy', [LegalController::class, 'privacy']);
 $router->get('/legal/terms', [LegalController::class, 'terms']);
+$router->get('/legal/cookies', [LegalController::class, 'cookies']);
+$router->get('/legal/disclaimer', [LegalController::class, 'disclaimer']);
 
 // Dispatch
 $router->dispatch();

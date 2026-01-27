@@ -2203,22 +2203,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container-xl">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    © 2025 Stealth Labz LLC. All rights reserved.
-                </div>
-                <div class="footer-links">
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="/privacy">Privacy</a>
-                    <a href="/terms">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include ROOT_PATH . '/views/components/footer.php'; ?>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
