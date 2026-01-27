@@ -1588,7 +1588,24 @@ footer {
     color: #ef4444;
 }
 
-/* Footer layout update */
+/* Footer base */
+.site-footer {
+    background: var(--bg-primary);
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+.site-footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--text-primary);
+}
+
+/* Footer layout */
 .footer-content {
     display: flex;
     justify-content: space-between;

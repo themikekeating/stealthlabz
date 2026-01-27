@@ -980,15 +980,16 @@
         // Newsletter form handling
         const WEBHOOK_URL = 'https://portal.stealthlabz.com/source/internal/f0ece97b-9673-4eff-911b-4eed1e4ba1dd';
 
-        function handleNewsletterSubmit(form, messageEl) {
+        function handleNewsletterSubmit(form, messageEl, isCompact = false) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const email = form.querySelector('input[name="email"]').value;
                 const button = form.querySelector('button[type="submit"]');
-                const originalText = button.innerHTML;
+                const originalHTML = button.innerHTML;
 
-                button.innerHTML = 'Sending...';
                 button.disabled = true;
+                button.style.opacity = '0.6';
+                if (!isCompact) button.innerHTML = 'Sending...';
                 messageEl.textContent = '';
                 messageEl.className = messageEl.className.replace(/success|error/g, '').trim();
 
@@ -1000,31 +1001,32 @@
                     });
 
                     if (response.ok) {
-                        messageEl.textContent = 'You\'re in! We\'ll be in touch.';
+                        messageEl.textContent = isCompact ? 'Subscribed!' : 'You\'re in! We\'ll be in touch.';
                         messageEl.classList.add('success');
                         form.reset();
                     } else {
                         throw new Error('Failed');
                     }
                 } catch (err) {
-                    messageEl.textContent = 'Something went wrong. Try again.';
+                    messageEl.textContent = isCompact ? 'Error. Try again.' : 'Something went wrong. Try again.';
                     messageEl.classList.add('error');
                 }
 
-                button.innerHTML = originalText;
+                button.innerHTML = originalHTML;
                 button.disabled = false;
+                button.style.opacity = '1';
             });
         }
 
         // CTA form
         const ctaForm = document.getElementById('cta-newsletter-form');
         const ctaMessage = ctaForm?.querySelector('.newsletter-message');
-        if (ctaForm && ctaMessage) handleNewsletterSubmit(ctaForm, ctaMessage);
+        if (ctaForm && ctaMessage) handleNewsletterSubmit(ctaForm, ctaMessage, false);
 
-        // Footer form
+        // Footer form (compact)
         const footerForm = document.getElementById('footer-newsletter-form');
         const footerMessage = footerForm?.parentElement.querySelector('.newsletter-message-compact');
-        if (footerForm && footerMessage) handleNewsletterSubmit(footerForm, footerMessage);
+        if (footerForm && footerMessage) handleNewsletterSubmit(footerForm, footerMessage, true);
     </script>
 </body>
 </html>
