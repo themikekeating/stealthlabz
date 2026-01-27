@@ -22,6 +22,7 @@ $page['head'] = '
     "@type": "Article",
     "headline": "' . htmlspecialchars($post['title'], ENT_QUOTES) . '",
     "description": "' . htmlspecialchars($post['excerpt'] ?? '', ENT_QUOTES) . '",
+    "image": "' . htmlspecialchars($post['featured_image'] ?? '', ENT_QUOTES) . '",
     "author": {
         "@type": "Organization",
         "name": "Stealth Labz"
@@ -44,6 +45,10 @@ ob_start();
 ?>
 
 <article class="container py-5 mt-5" style="max-width: 800px;">
+    <?php if (!empty($post['featured_image'])): ?>
+    <img src="<?= htmlspecialchars($post['featured_image']) ?>" class="w-100 rounded mb-4" alt="<?= htmlspecialchars($post['title']) ?>" style="max-height: 400px; object-fit: cover;">
+    <?php endif; ?>
+
     <header class="mb-4 pb-4 border-bottom border-subtle">
         <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>
         <?php if (!empty($post['published_at'])): ?>

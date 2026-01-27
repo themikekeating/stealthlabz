@@ -42,7 +42,7 @@ class BlogController
             return;
         }
 
-        // Clean WordPress block markup
+        // Clean WordPress block markup and strip inline images
         $post['content'] = Post::cleanContent($post['content']);
 
         // Get related posts

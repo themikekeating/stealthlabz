@@ -34,7 +34,10 @@ ob_start();
     <div class="row g-4">
         <?php foreach ($posts as $post): ?>
         <div class="col-md-6 col-lg-4">
-            <article class="card h-100 bg-card border-subtle">
+            <article class="card h-100 bg-card border-subtle overflow-hidden">
+                <?php if (!empty($post['featured_image'])): ?>
+                <img src="<?= htmlspecialchars($post['featured_image']) ?>" class="card-img-top" alt="<?= htmlspecialchars($post['title']) ?>" style="height: 180px; object-fit: cover;">
+                <?php endif; ?>
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['category'])): ?>
                     <span class="badge bg-tertiary text-accent-pink mb-2 align-self-start"><?= htmlspecialchars($post['category']) ?></span>
@@ -45,7 +48,7 @@ ob_start();
                         </a>
                     </h2>
                     <?php if (!empty($post['excerpt'])): ?>
-                    <p class="card-text text-secondary small flex-grow-1"><?= htmlspecialchars(substr($post['excerpt'], 0, 160)) ?>...</p>
+                    <p class="card-text text-secondary small flex-grow-1"><?= htmlspecialchars(substr($post['excerpt'], 0, 120)) ?>...</p>
                     <?php endif; ?>
                     <?php if (!empty($post['published_at'])): ?>
                     <time datetime="<?= $post['published_at'] ?>" class="text-muted small mt-auto">

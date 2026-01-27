@@ -36,8 +36,15 @@ class Post
         $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
         $stmt->execute();
 
+        $posts = $stmt->fetchAll();
+
+        // Add featured image to each post
+        foreach ($posts as &$post) {
+            $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+        }
+
         return [
-            'posts' => $stmt->fetchAll(),
+            'posts' => $posts,
             'total' => $total,
             'pages' => ceil($total / $perPage),
             'current_page' => $page
@@ -63,6 +70,9 @@ class Post
         $stmt->execute(['slug' => $slug]);
 
         $post = $stmt->fetch();
+        if ($post) {
+            $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+        }
         return $post ?: null;
     }
 
@@ -86,7 +96,14 @@ class Post
         $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        $posts = $stmt->fetchAll();
+
+        // Add featured image to each post
+        foreach ($posts as &$post) {
+            $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+        }
+
+        return $posts;
     }
 
     /**
@@ -114,7 +131,7 @@ class Post
     }
 
     /**
-     * Clean WordPress block content
+     * Clean WordPress block content and strip inline images
      */
     public static function cleanContent(string $content): string
     {
@@ -122,9 +139,50 @@ class Post
         $content = preg_replace('/<!-- wp:[^>]+-->/', '', $content);
         $content = preg_replace('/<!-- \/wp:[^>]+-->/', '', $content);
 
+        // Strip all inline images (we use featured image instead)
+        $content = self::stripImages($content);
+
         // Clean up extra whitespace
         $content = preg_replace('/\n{3,}/', "\n\n", $content);
 
         return trim($content);
+    }
+
+    /**
+     * Strip all inline images from content
+     */
+    public static function stripImages(string $content): string
+    {
+        // Remove img tags
+        $content = preg_replace('/<img[^>]+>/i', '', $content);
+
+        // Remove empty figure tags that wrapped images
+        $content = preg_replace('/<figure[^>]*>\s*<\/figure>/i', '', $content);
+
+        // Remove empty paragraphs that may be left behind
+        $content = preg_replace('/<p>\s*<\/p>/i', '', $content);
+
+        return $content;
+    }
+
+    /**
+     * Generate AI featured image URL for a post
+     */
+    public static function getFeaturedImage(string $title, string $slug): string
+    {
+        // Clean title for prompt
+        $context = preg_replace('/[^a-zA-Z0-9\s]/', '', $title);
+        $context = substr($context, 0, 80);
+
+        // Use slug for consistent seed
+        $seed = crc32($slug);
+
+        // Brand style prompt
+        $basePrompt = "abstract futuristic technology illustration, dark background, pink and purple neon glow, minimal geometric shapes, professional digital art";
+
+        $prompt = $context . ", " . $basePrompt;
+        $encodedPrompt = urlencode($prompt);
+
+        return "https://image.pollinations.ai/prompt/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
     }
 }
