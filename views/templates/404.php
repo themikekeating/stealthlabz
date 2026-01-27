@@ -29,7 +29,7 @@
         h1 {
             font-size: 8rem;
             margin: 0;
-            background: linear-gradient(135deg, #e5025d 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #e5025d 0%, #a00245 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -40,7 +40,7 @@
         }
         a {
             display: inline-block;
-            background: linear-gradient(135deg, #e5025d 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #e5025d 0%, #a00245 100%);
             color: white;
             text-decoration: none;
             padding: 1rem 2rem;

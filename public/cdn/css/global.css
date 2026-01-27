@@ -18,11 +18,11 @@
     --text-muted: #6a6a6a;
     --accent-pink: #e5025d;
     --accent-pink-glow: rgba(229, 2, 93, 0.4);
-    --accent-purple: #8b5cf6;
+    --accent-purple: #6d4a8c;
     --accent-cyan: #22d3ee;
     --accent-green: #22c55e;
     --border-color: rgba(255, 255, 255, 0.08);
-    --gradient-pink: linear-gradient(135deg, #e5025d 0%, #8b5cf6 100%);
+    --gradient-pink: linear-gradient(135deg, #e5025d 0%, #a00245 100%);
 }
 
 /* ========================================
@@ -44,7 +44,8 @@ a {
 }
 
 a:hover {
-    color: var(--accent-purple);
+    color: var(--accent-pink);
+    opacity: 0.8;
 }
 
 /* ========================================
