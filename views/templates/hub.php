@@ -60,13 +60,12 @@ ob_start();
         <div class="col-md-6 col-lg-4">
             <article class="card h-100 bg-card border-subtle overflow-hidden">
                 <img src="<?= htmlspecialchars($post['featured_image']) ?>"
-                     class="card-img-top"
+                     class="card-img-top img-h-180 img-cover"
                      alt="<?= htmlspecialchars($post['title']) ?>"
-                     style="height: 180px; object-fit: cover;"
                      loading="lazy">
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['categories'])): ?>
-                    <div class="mb-2 d-flex flex-wrap gap-1" style="position: relative; z-index: 2;">
+                    <div class="mb-2 d-flex flex-wrap gap-1 z-above">
                         <?php foreach ($post['categories'] as $cat): ?>
                         <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
                            class="badge bg-tertiary text-secondary text-decoration-none">

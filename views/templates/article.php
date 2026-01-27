@@ -77,10 +77,7 @@ $page['head'] = '
     ]
 }
 </script>
-<style>
-.article-sidebar { position: sticky; top: 100px; }
-.last-child-no-border:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
-</style>';
+';
 
 ob_start();
 ?>
@@ -91,9 +88,8 @@ ob_start();
         <div class="col-lg-8">
             <article>
                 <img src="<?= htmlspecialchars($post['featured_image']) ?>"
-                     class="w-100 rounded mb-4"
+                     class="w-100 rounded mb-4 img-h-400 img-cover"
                      alt="<?= htmlspecialchars($post['title']) ?>"
-                     style="max-height: 400px; object-fit: cover;"
                      loading="eager"
                      fetchpriority="high">
 
@@ -155,9 +151,8 @@ ob_start();
         <div class="col-md-4">
             <article class="card h-100 bg-card border-subtle overflow-hidden">
                 <img src="<?= htmlspecialchars($related['featured_image']) ?>"
-                     class="card-img-top"
+                     class="card-img-top img-h-160 img-cover"
                      alt="<?= htmlspecialchars($related['title']) ?>"
-                     style="height: 160px; object-fit: cover;"
                      loading="lazy">
                 <div class="card-body d-flex flex-column">
                     <h3 class="h6 card-title">

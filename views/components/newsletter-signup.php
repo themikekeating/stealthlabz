@@ -16,7 +16,7 @@
                    required>
             <button type="submit" class="btn btn-outline-pink">Subscribe</button>
         </form>
-        <p id="newsletter-message" class="small mt-2 mb-0" style="display: none;"></p>
+        <p id="newsletter-message" class="small mt-2 mb-0 d-none"></p>
     </div>
 </div>
 
@@ -38,7 +38,7 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
             body: JSON.stringify({ email: email, source: 'blog_sidebar' })
         });
 
-        msg.style.display = 'block';
+        msg.classList.remove('d-none');
         if (response.ok) {
             msg.className = 'small mt-2 mb-0 text-accent-green';
             msg.textContent = 'Subscribed!';
@@ -48,7 +48,7 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
             msg.textContent = 'Something went wrong. Try again.';
         }
     } catch (err) {
-        msg.style.display = 'block';
+        msg.classList.remove('d-none');
         msg.className = 'small mt-2 mb-0 text-danger';
         msg.textContent = 'Connection error. Try again.';
     }

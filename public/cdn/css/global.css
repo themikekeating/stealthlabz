@@ -252,6 +252,52 @@ a:hover {
 }
 
 /* ========================================
+   Article Sidebar
+   ======================================== */
+.article-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+/* ========================================
+   Image Utilities
+   ======================================== */
+.img-cover {
+    object-fit: cover;
+}
+
+.img-h-160 {
+    height: 160px;
+}
+
+.img-h-180 {
+    height: 180px;
+}
+
+.img-h-400 {
+    max-height: 400px;
+}
+
+/* ========================================
+   Layout Utilities
+   ======================================== */
+.container-narrow {
+    max-width: 800px;
+}
+
+.z-above {
+    position: relative;
+    z-index: 2;
+}
+
+/* Remove border from last child */
+.last-child-no-border > *:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ========================================
    Responsive
    ======================================== */
 @media (max-width: 768px) {
