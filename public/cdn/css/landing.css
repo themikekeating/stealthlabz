@@ -1020,8 +1020,202 @@ section {
     position: relative;
 }
 
+/* ========================================
+   Circular Loop
+   ======================================== */
+.loop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.loop-circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.loop-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.loop-track {
+    fill: none;
+    stroke: var(--border-color);
+    stroke-width: 2;
+}
+
+.loop-progress {
+    fill: none;
+    stroke: url(#loopGradient);
+    stroke: var(--accent-pink);
+    stroke-width: 2;
+    stroke-dasharray: 1005;
+    stroke-dashoffset: 1005;
+    animation: loopDraw 3s ease-out forwards, loopPulse 4s ease-in-out 3s infinite;
+    stroke-linecap: round;
+}
+
+@keyframes loopDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes loopPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loop-step {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.loop-step:hover {
+    transform: scale(1.1);
+}
+
+.loop-step:hover .loop-step-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Position steps around the circle (6 positions, starting from top) */
+.loop-step[data-position="1"] { top: -10px; left: 50%; transform: translateX(-50%); }
+.loop-step[data-position="2"] { top: 15%; right: -10px; transform: translateY(-50%); }
+.loop-step[data-position="3"] { bottom: 15%; right: -10px; transform: translateY(50%); }
+.loop-step[data-position="4"] { bottom: -10px; left: 50%; transform: translateX(-50%); }
+.loop-step[data-position="5"] { bottom: 15%; left: -10px; transform: translateY(50%); }
+.loop-step[data-position="6"] { top: 15%; left: -10px; transform: translateY(-50%); }
+
+.loop-step-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--accent-pink);
+    transition: all 0.3s ease;
+}
+
+.loop-step:hover .loop-step-icon {
+    border-color: var(--accent-pink);
+    background: rgba(229, 2, 93, 0.1);
+    box-shadow: 0 0 20px rgba(229, 2, 93, 0.3);
+}
+
+.loop-step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.loop-step-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust tooltip positions for edge steps */
+.loop-step[data-position="2"] .loop-step-tooltip,
+.loop-step[data-position="3"] .loop-step-tooltip {
+    left: auto;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.loop-step[data-position="5"] .loop-step-tooltip,
+.loop-step[data-position="6"] .loop-step-tooltip {
+    left: 100%;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+}
+
+.loop-step[data-position="2"]:hover .loop-step-tooltip,
+.loop-step[data-position="3"]:hover .loop-step-tooltip {
+    transform: translateY(-50%) translateX(0);
+}
+
+.loop-step[data-position="5"]:hover .loop-step-tooltip,
+.loop-step[data-position="6"]:hover .loop-step-tooltip {
+    transform: translateY(-50%) translateX(0);
+}
+
+.loop-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+    .loop-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .loop-step-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .loop-step-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loop-step-label {
+        font-size: 0.75rem;
+    }
+
+    .loop-step-tooltip {
+        display: none;
+    }
+}
+
+/* Old methodology grid - keeping for reference but hiding */
 .methodology-grid {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
