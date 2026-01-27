@@ -35,17 +35,10 @@ ob_start();
         <?php foreach ($posts as $post): ?>
         <div class="col-md-6 col-lg-4">
             <article class="card h-100 bg-card border-subtle overflow-hidden">
-                <?php
-                $fallbackSeed = abs(crc32($post['slug'])) % 12 + 1;
-                $fallbackUrl = "https://picsum.photos/seed/stealth{$fallbackSeed}/600/400?grayscale";
-                ?>
-                <img src="<?= htmlspecialchars($post['featured_image'] ?? $fallbackUrl) ?>"
+                <img src="<?= htmlspecialchars($post['featured_image']) ?>"
                      class="card-img-top"
                      alt="<?= htmlspecialchars($post['title']) ?>"
-                     style="height: 180px; object-fit: cover;"
-                     data-fallback="<?= $fallbackUrl ?>"
-                     onerror="this.onerror=null; this.src=this.dataset.fallback"
-                     onload="if(this.naturalWidth<100)this.src=this.dataset.fallback">
+                     style="height: 180px; object-fit: cover;">
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['category'])): ?>
                     <span class="badge bg-tertiary text-accent-pink mb-2 align-self-start"><?= htmlspecialchars($post['category']) ?></span>

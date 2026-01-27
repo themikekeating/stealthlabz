@@ -166,23 +166,14 @@ class Post
     }
 
     /**
-     * Generate AI featured image URL for a post
+     * Generate featured image URL for a post
+     * Uses picsum.photos with consistent seed per post
      */
     public static function getFeaturedImage(string $title, string $slug): string
     {
-        // Clean title for prompt
-        $context = preg_replace('/[^a-zA-Z0-9\s]/', '', $title);
-        $context = substr($context, 0, 80);
+        // Use slug hash for consistent image per post (1-1000 range for variety)
+        $seed = abs(crc32($slug)) % 1000 + 1;
 
-        // Use slug for consistent seed
-        $seed = crc32($slug);
-
-        // Brand style prompt
-        $basePrompt = "abstract futuristic technology illustration, dark background, pink and purple neon glow, minimal geometric shapes, professional digital art";
-
-        $prompt = $context . ", " . $basePrompt;
-        $encodedPrompt = urlencode($prompt);
-
-        return "https://image.pollinations.ai/prompt/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
+        return "https://picsum.photos/seed/{$slug}/1200/630?grayscale";
     }
 }
