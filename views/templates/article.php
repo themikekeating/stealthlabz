@@ -45,9 +45,15 @@ ob_start();
 ?>
 
 <article class="container py-5 mt-5" style="max-width: 800px;">
-    <?php if (!empty($post['featured_image'])): ?>
-    <img src="<?= htmlspecialchars($post['featured_image']) ?>" class="w-100 rounded mb-4" alt="<?= htmlspecialchars($post['title']) ?>" style="max-height: 400px; object-fit: cover;">
-    <?php endif; ?>
+    <?php
+    $fallbackSeed = abs(crc32($post['slug'])) % 12 + 1;
+    $fallbackUrl = "https://picsum.photos/seed/stealth{$fallbackSeed}/1200/630?grayscale";
+    ?>
+    <img src="<?= htmlspecialchars($post['featured_image'] ?? $fallbackUrl) ?>"
+         class="w-100 rounded mb-4"
+         alt="<?= htmlspecialchars($post['title']) ?>"
+         style="max-height: 400px; object-fit: cover;"
+         onerror="this.onerror=null; this.src='<?= $fallbackUrl ?>'">
 
     <header class="mb-4 pb-4 border-bottom border-subtle">
         <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>
