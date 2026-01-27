@@ -179,7 +179,7 @@ class Post
         $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug);
 
-        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
+        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
         if ($apiKey) {
             $url .= "&key={$apiKey}";
         }
