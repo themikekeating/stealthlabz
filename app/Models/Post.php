@@ -183,7 +183,17 @@ class Post
         $prompt = $context . ", " . $basePrompt;
         $encodedPrompt = urlencode($prompt);
 
-        return "https://image.pollinations.ai/prompt/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
+        // Load API key from secrets
+        $secretsPath = ROOT_PATH . '/config/secrets.php';
+        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
+        $token = $secrets['pollinations_key'] ?? '';
+
+        $url = "https://image.pollinations.ai/prompt/{$encodedPrompt}?width=1200&height=630&seed={$seed}&nologo=true";
+        if ($token) {
+            $url .= "&token={$token}";
+        }
+
+        return $url;
     }
 
     /**
