@@ -4,7 +4,8 @@
  * Run once: php scripts/auto-categorize.php
  */
 
-require_once dirname(__DIR__) . '/config/environment.php';
+define('ROOT_PATH', dirname(__DIR__));
+require_once ROOT_PATH . '/config/environment.php';
 
 $pdo = getDbConnection();
 if (!$pdo) {
