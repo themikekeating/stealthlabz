@@ -3,16 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e91e8c">
     <title>Stealth Labz | Built Different. Ships Fast.</title>
     <meta name="description" content="15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.">
-    
+    <link rel="canonical" href="https://stealthlabz.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stealth Labz | Built Different. Ships Fast.">
+    <meta property="og:description" content="15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.">
+    <meta property="og:image" content="https://stealthlabz.com/cdn/images/og-default.png">
+    <meta property="og:url" content="https://stealthlabz.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stealth Labz">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stealth Labz | Built Different. Ships Fast.">
+    <meta name="twitter:description" content="15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.">
+    <meta name="twitter:image" content="https://stealthlabz.com/cdn/images/og-default.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/cdn/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/cdn/apple-touch-icon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Stealth Labz",
+        "url": "https://stealthlabz.com",
+        "logo": "https://stealthlabz.com/cdn/images/logo.png",
+        "description": "AI-powered marketing technology and lead generation solutions.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1225 W Beaver St. Ste 205-1 #1135",
+            "addressLocality": "Jacksonville",
+            "addressRegion": "FL",
+            "postalCode": "32204",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "email": "contact@stealthlabz.com"
+        }
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Stealth Labz",
+        "url": "https://stealthlabz.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://stealthlabz.com/insights?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
     
     <style>
         :root {

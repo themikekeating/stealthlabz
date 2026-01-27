@@ -37,6 +37,7 @@ use App\Core\Router;
 use App\Controllers\LandingController;
 use App\Controllers\BlogController;
 use App\Controllers\LegalController;
+use App\Controllers\SitemapController;
 
 // Initialize router
 $router = new Router();
@@ -54,6 +55,9 @@ $router->get('/legal/privacy', [LegalController::class, 'privacy']);
 $router->get('/legal/terms', [LegalController::class, 'terms']);
 $router->get('/legal/cookies', [LegalController::class, 'cookies']);
 $router->get('/legal/disclaimer', [LegalController::class, 'disclaimer']);
+
+// Sitemap
+$router->get('/sitemap.xml', [SitemapController::class, 'index']);
 
 // Dispatch
 $router->dispatch();

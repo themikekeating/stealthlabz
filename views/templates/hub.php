@@ -62,7 +62,8 @@ ob_start();
                 <img src="<?= htmlspecialchars($post['featured_image']) ?>"
                      class="card-img-top"
                      alt="<?= htmlspecialchars($post['title']) ?>"
-                     style="height: 180px; object-fit: cover;">
+                     style="height: 180px; object-fit: cover;"
+                     loading="lazy">
                 <div class="card-body d-flex flex-column">
                     <?php if (!empty($post['categories'])): ?>
                     <div class="mb-2 d-flex flex-wrap gap-1" style="position: relative; z-index: 2;">

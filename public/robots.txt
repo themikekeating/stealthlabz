@@ -1,0 +1,19 @@
+# Stealth Labz robots.txt
+
+User-agent: *
+Allow: /
+Allow: /insights
+Allow: /insights/
+Allow: /legal/
+
+Disallow: /cdn/
+Disallow: /config/
+Disallow: /app/
+Disallow: /scripts/
+Disallow: /deploy.php
+
+# Sitemap
+Sitemap: https://stealthlabz.com/sitemap.xml
+
+# Crawl-delay (optional, respected by some bots)
+Crawl-delay: 1
