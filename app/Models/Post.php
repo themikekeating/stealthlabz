@@ -178,7 +178,7 @@ class Post
         // Generic prompt - seed makes each image unique per post
         $prompt = "Abstract digital marketing technology blog header, neon gradients, dark background, professional";
         $encodedPrompt = rawurlencode($prompt);
-        $seed = crc32($slug);
+        $seed = crc32($slug) & 0x7FFFFFFF; // Cap at max signed 32-bit int
 
         $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
         if ($apiKey) {
