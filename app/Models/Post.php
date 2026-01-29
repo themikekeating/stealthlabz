@@ -24,12 +24,14 @@ class Post
         $countStmt = $pdo->query("SELECT COUNT(*) FROM posts WHERE post_status = 'publish' AND post_type = 'post'");
         $total = (int) $countStmt->fetchColumn();
 
-        // Get posts (WordPress column names)
+        // Get posts with category (single query via JOIN)
         $stmt = $pdo->prepare("
-            SELECT ID as id, post_title as title, post_name as slug, post_excerpt as excerpt, post_date as published_at
-            FROM posts
-            WHERE post_status = 'publish' AND post_type = 'post'
-            ORDER BY post_date DESC
+            SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_excerpt as excerpt, p.post_date as published_at,
+                   c.id as category_id, c.name as category_name, c.slug as category_slug
+            FROM posts p
+            LEFT JOIN categories c ON p.category_id = c.id
+            WHERE p.post_status = 'publish' AND p.post_type = 'post'
+            ORDER BY p.post_date DESC
             LIMIT :limit OFFSET :offset
         ");
         $stmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
@@ -38,16 +40,19 @@ class Post
 
         $posts = $stmt->fetchAll();
 
-        // Add featured image and categories to each post
         foreach ($posts as &$post) {
             $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
-            $post['categories'] = self::getCategoriesForPost($post['id']);
+            $post['category'] = $post['category_id'] ? [
+                'id' => $post['category_id'],
+                'name' => $post['category_name'],
+                'slug' => $post['category_slug'],
+            ] : null;
         }
 
         return [
             'posts' => $posts,
             'total' => $total,
-            'pages' => ceil($total / $perPage),
+            'pages' => (int) ceil($total / $perPage),
             'current_page' => $page
         ];
     }
@@ -63,9 +68,12 @@ class Post
         }
 
         $stmt = $pdo->prepare("
-            SELECT ID as id, post_title as title, post_name as slug, post_content as content, post_excerpt as excerpt, post_date as published_at, post_modified as updated_at
-            FROM posts
-            WHERE post_name = :slug AND post_status = 'publish' AND post_type = 'post'
+            SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_content as content, p.post_excerpt as excerpt,
+                   p.post_date as published_at, p.post_modified as updated_at,
+                   c.id as category_id, c.name as category_name, c.slug as category_slug
+            FROM posts p
+            LEFT JOIN categories c ON p.category_id = c.id
+            WHERE p.post_name = :slug AND p.post_status = 'publish' AND p.post_type = 'post'
             LIMIT 1
         ");
         $stmt->execute(['slug' => $slug]);
@@ -73,6 +81,11 @@ class Post
         $post = $stmt->fetch();
         if ($post) {
             $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
+            $post['category'] = $post['category_id'] ? [
+                'id' => $post['category_id'],
+                'name' => $post['category_name'],
+                'slug' => $post['category_slug'],
+            ] : null;
         }
         return $post ?: null;
     }
@@ -143,10 +156,32 @@ class Post
         // Strip all inline images (we use featured image instead)
         $content = self::stripImages($content);
 
+        // Sanitize HTML to prevent XSS — allow safe tags only
+        $content = self::sanitizeHtml($content);
+
         // Clean up extra whitespace
         $content = preg_replace('/\n{3,}/', "\n\n", $content);
 
         return trim($content);
+    }
+
+    /**
+     * Sanitize HTML content — allowlist of safe tags and attributes
+     */
+    public static function sanitizeHtml(string $html): string
+    {
+        $allowedTags = '<p><br><strong><b><em><i><u><s><a><ul><ol><li><h1><h2><h3><h4><h5><h6>'
+            . '<blockquote><pre><code><table><thead><tbody><tr><th><td><hr><div><span><figure><figcaption><sup><sub>';
+
+        $html = strip_tags($html, $allowedTags);
+
+        // Strip event handler attributes (onclick, onerror, onload, etc.) and javascript: URIs
+        $html = preg_replace('/\s+on\w+\s*=\s*["\'][^"\']*["\']/i', '', $html);
+        $html = preg_replace('/\s+on\w+\s*=\s*\S+/i', '', $html);
+        $html = preg_replace('/href\s*=\s*["\']?\s*javascript:[^"\'>\s]*/i', 'href="#"', $html);
+        $html = preg_replace('/src\s*=\s*["\']?\s*javascript:[^"\'>\s]*/i', 'src=""', $html);
+
+        return $html;
     }
 
     /**
@@ -210,19 +245,19 @@ class Post
 
         // Get total count
         $countStmt = $pdo->prepare("
-            SELECT COUNT(*) FROM posts p
-            INNER JOIN post_categories pc ON p.ID = pc.post_id
-            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+            SELECT COUNT(*) FROM posts
+            WHERE category_id = :category_id AND post_status = 'publish' AND post_type = 'post'
         ");
         $countStmt->execute(['category_id' => $categoryId]);
         $total = (int) $countStmt->fetchColumn();
 
-        // Get posts
+        // Get posts with category
         $stmt = $pdo->prepare("
-            SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_excerpt as excerpt, p.post_date as published_at
+            SELECT p.ID as id, p.post_title as title, p.post_name as slug, p.post_excerpt as excerpt, p.post_date as published_at,
+                   c.id as category_id, c.name as category_name, c.slug as category_slug
             FROM posts p
-            INNER JOIN post_categories pc ON p.ID = pc.post_id
-            WHERE pc.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
+            LEFT JOIN categories c ON p.category_id = c.id
+            WHERE p.category_id = :category_id AND p.post_status = 'publish' AND p.post_type = 'post'
             ORDER BY p.post_date DESC
             LIMIT :limit OFFSET :offset
         ");
@@ -235,36 +270,19 @@ class Post
 
         foreach ($posts as &$post) {
             $post['featured_image'] = self::getFeaturedImage($post['title'], $post['slug']);
-            $post['categories'] = self::getCategoriesForPost($post['id']);
+            $post['category'] = $post['category_id'] ? [
+                'id' => $post['category_id'],
+                'name' => $post['category_name'],
+                'slug' => $post['category_slug'],
+            ] : null;
         }
 
         return [
             'posts' => $posts,
             'total' => $total,
-            'pages' => ceil($total / $perPage),
+            'pages' => (int) ceil($total / $perPage),
             'current_page' => $page
         ];
-    }
-
-    /**
-     * Get categories for a specific post
-     */
-    public static function getCategoriesForPost(int $postId): array
-    {
-        $pdo = getDbConnection();
-        if (!$pdo) {
-            return [];
-        }
-
-        $stmt = $pdo->prepare("
-            SELECT c.id, c.name, c.slug
-            FROM categories c
-            INNER JOIN post_categories pc ON c.id = pc.category_id
-            WHERE pc.post_id = :post_id
-            ORDER BY c.name ASC
-        ");
-        $stmt->execute(['post_id' => $postId]);
-        return $stmt->fetchAll();
     }
 
     /**
@@ -277,26 +295,38 @@ class Post
     }
 
     /**
+     * Get all published posts (lightweight — for sitemap, etc.)
+     */
+    public static function allPublished(): array
+    {
+        $pdo = getDbConnection();
+        if (!$pdo) {
+            return [];
+        }
+
+        $stmt = $pdo->query("
+            SELECT post_name as slug, post_date as published_at, post_modified as updated_at
+            FROM posts
+            WHERE post_status = 'publish' AND post_type = 'post'
+            ORDER BY post_date DESC
+        ");
+
+        return $stmt->fetchAll();
+    }
+
+    /**
      * Generate featured image URL for a post
      * Using Pollinations.ai for AI-generated images
+     * Note: API key is NOT included in the URL to avoid leaking it in HTML source.
      */
     public static function getFeaturedImage(string $title, string $slug): string
     {
-        $secretsPath = defined('ROOT_PATH') ? ROOT_PATH . '/config/secrets.php' : dirname(__DIR__, 2) . '/config/secrets.php';
-        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
-        $apiKey = $secrets['pollinations_key'] ?? null;
-
         // Generic prompt - seed makes each image unique per post
         $prompt = "Abstract digital marketing technology blog header, neon gradients, dark background, professional";
         $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug) & 0x7FFFFFFF; // Cap at max signed 32-bit int
 
-        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
-        if ($apiKey) {
-            $url .= "&key={$apiKey}";
-        }
-
-        return $url;
+        return "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
     }
 
 }

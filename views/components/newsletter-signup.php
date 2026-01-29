@@ -14,6 +14,7 @@
                    class="form-control bg-tertiary border-subtle text-white"
                    placeholder="your@email.com"
                    required>
+            <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button type="submit" class="btn btn-outline-pink">Subscribe</button>
         </form>
         <p id="newsletter-message" class="small mt-2 mb-0 d-none"></p>
@@ -25,8 +26,11 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
     e.preventDefault();
     const form = this;
     const email = form.email.value;
+    const honeypot = form.querySelector('input[name="website"]');
     const msg = document.getElementById('newsletter-message');
     const btn = form.querySelector('button');
+
+    if (honeypot && honeypot.value) return; // bot detected
 
     btn.disabled = true;
     btn.textContent = 'Subscribing...';

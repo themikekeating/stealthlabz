@@ -64,14 +64,12 @@ ob_start();
                      alt="<?= htmlspecialchars($post['title']) ?>"
                      loading="lazy">
                 <div class="card-body d-flex flex-column">
-                    <?php if (!empty($post['categories'])): ?>
-                    <div class="mb-2 d-flex flex-wrap gap-1 z-above">
-                        <?php foreach ($post['categories'] as $cat): ?>
-                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
+                    <?php if (!empty($post['category'])): ?>
+                    <div class="mb-2 z-above">
+                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>"
                            class="badge bg-tertiary text-secondary text-decoration-none">
-                            <?= htmlspecialchars($cat['name']) ?>
+                            <?= htmlspecialchars($post['category']['name']) ?>
                         </a>
-                        <?php endforeach; ?>
                     </div>
                     <?php endif; ?>
                     <h2 class="h5 card-title">

@@ -1,6 +1,7 @@
 <?php
 /**
  * Auto-categorize posts based on keywords
+ * Assigns ONE category per post (best match by keyword hits)
  * Run once: php scripts/auto-categorize.php
  */
 
@@ -49,50 +50,46 @@ $stmt = $pdo->query("SELECT ID, post_title, post_content, post_excerpt FROM post
 $posts = $stmt->fetchAll();
 echo "Found " . count($posts) . " posts to categorize\n\n";
 
-// Step 3: Categorize each post
+// Step 3: Categorize each post — pick the single best match
 $assigned = 0;
-$insertStmt = $pdo->prepare("INSERT IGNORE INTO post_categories (post_id, category_id) VALUES (:post_id, :category_id)");
+$updateStmt = $pdo->prepare("UPDATE posts SET category_id = :category_id WHERE ID = :post_id");
 
 foreach ($posts as $post) {
     $searchText = strtolower($post['post_title'] . ' ' . $post['post_excerpt'] . ' ' . $post['post_content']);
-    $postCategories = [];
+    $bestCategory = null;
+    $bestScore = 0;
 
     foreach ($categoryKeywords as $categoryName => $keywords) {
+        $score = 0;
         foreach ($keywords as $keyword) {
-            if (strpos($searchText, strtolower($keyword)) !== false) {
-                $postCategories[$categoryName] = true;
-                break; // Found match, move to next category
-            }
+            $score += substr_count($searchText, strtolower($keyword));
+        }
+        if ($score > $bestScore) {
+            $bestScore = $score;
+            $bestCategory = $categoryName;
         }
     }
 
-    // Assign categories
-    foreach ($postCategories as $categoryName => $matched) {
-        if (isset($categories[$categoryName])) {
-            $insertStmt->execute([
-                'post_id' => $post['ID'],
-                'category_id' => $categories[$categoryName]
-            ]);
-            $assigned++;
-        }
-    }
-
-    $count = count($postCategories);
-    if ($count > 0) {
-        echo "Post {$post['ID']}: " . substr($post['post_title'], 0, 50) . "... -> " . implode(', ', array_keys($postCategories)) . "\n";
+    if ($bestCategory && isset($categories[$bestCategory])) {
+        $updateStmt->execute([
+            'category_id' => $categories[$bestCategory],
+            'post_id' => $post['ID']
+        ]);
+        $assigned++;
+        echo "Post {$post['ID']}: " . substr($post['post_title'], 0, 50) . "... -> {$bestCategory} (score: {$bestScore})\n";
     } else {
         echo "Post {$post['ID']}: " . substr($post['post_title'], 0, 50) . "... -> NO MATCH\n";
     }
 }
 
-echo "\nDone! Assigned {$assigned} category links.\n";
+echo "\nDone! Assigned {$assigned} posts to categories.\n";
 
 // Show summary
 echo "\nCategory counts:\n";
 $stmt = $pdo->query("
-    SELECT c.name, COUNT(pc.post_id) as count
+    SELECT c.name, COUNT(p.ID) as count
     FROM categories c
-    LEFT JOIN post_categories pc ON c.id = pc.category_id
+    LEFT JOIN posts p ON p.category_id = c.id AND p.post_status = 'publish' AND p.post_type = 'post'
     GROUP BY c.id, c.name
     ORDER BY count DESC
 ");
@@ -102,9 +99,8 @@ while ($row = $stmt->fetch()) {
 
 // Show uncategorized
 $stmt = $pdo->query("
-    SELECT COUNT(*) FROM posts p
-    WHERE p.post_status = 'publish' AND p.post_type = 'post'
-    AND NOT EXISTS (SELECT 1 FROM post_categories pc WHERE pc.post_id = p.ID)
+    SELECT COUNT(*) FROM posts
+    WHERE post_status = 'publish' AND post_type = 'post' AND category_id IS NULL
 ");
 $uncategorized = $stmt->fetchColumn();
 echo "\nUncategorized posts: {$uncategorized}\n";

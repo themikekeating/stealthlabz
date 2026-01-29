@@ -664,6 +664,7 @@
                 <p>Get updates on new platforms, builds, and insights.</p>
 
                 <form id="cta-newsletter-form" class="newsletter-form">
+                    <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="newsletter-input-group">
                         <input type="email" name="email" placeholder="Enter your email" required>
                         <button type="submit" class="btn-glow">
@@ -776,6 +777,8 @@
         function handleNewsletterSubmit(form, messageEl, isCompact = false) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
+                const honeypot = form.querySelector('input[name="website"]');
+                if (honeypot && honeypot.value) return; // bot detected
                 const email = form.querySelector('input[name="email"]').value;
                 const button = form.querySelector('button[type="submit"]');
                 const originalHTML = button.innerHTML;

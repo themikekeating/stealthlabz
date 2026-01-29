@@ -49,7 +49,7 @@ class SitemapController
         }
 
         // Blog posts
-        $posts = self::getAllPosts();
+        $posts = Post::allPublished();
         foreach ($posts as $post) {
             echo '<url>';
             echo '<loc>' . $baseUrl . '/insights/' . htmlspecialchars($post['slug']) . '</loc>';
@@ -66,23 +66,4 @@ class SitemapController
         echo '</urlset>';
     }
 
-    /**
-     * Get all published posts for sitemap
-     */
-    private static function getAllPosts(): array
-    {
-        $pdo = getDbConnection();
-        if (!$pdo) {
-            return [];
-        }
-
-        $stmt = $pdo->query("
-            SELECT post_name as slug, post_date as published_at, post_modified as updated_at
-            FROM posts
-            WHERE post_status = 'publish' AND post_type = 'post'
-            ORDER BY post_date DESC
-        ");
-
-        return $stmt->fetchAll();
-    }
 }

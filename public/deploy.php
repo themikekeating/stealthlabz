@@ -17,7 +17,12 @@
 $secretsPath = dirname(__DIR__) . '/config/secrets.php';
 $secrets = file_exists($secretsPath) ? require $secretsPath : [];
 
-$deploySecret = $secrets['deploy_secret'] ?? 'CHANGE_THIS_SECRET';
+$deploySecret = $secrets['deploy_secret'] ?? null;
+
+if (!$deploySecret) {
+    http_response_code(500);
+    die('Deploy secret not configured');
+}
 
 // Verify request is from GitHub
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'] ?? '';
@@ -57,11 +62,17 @@ $log = date('Y-m-d H:i:s') . " - Deploy triggered\n";
 $log .= "Return code: $returnCode\n";
 $log .= implode("\n", $output) . "\n\n";
 
-file_put_contents(dirname(__DIR__) . '/logs/deploy.log', $log, FILE_APPEND);
+$logFile = dirname(__DIR__) . '/logs/deploy.log';
 
-// Response
+// Rotate log if it exceeds 1MB
+if (file_exists($logFile) && filesize($logFile) > 1048576) {
+    rename($logFile, $logFile . '.' . date('Y-m-d-His') . '.bak');
+}
+
+file_put_contents($logFile, $log, FILE_APPEND);
+
+// Response (don't leak server paths or git output)
 header('Content-Type: application/json');
 echo json_encode([
-    'success' => $returnCode === 0,
-    'output' => $output
+    'success' => $returnCode === 0
 ]);

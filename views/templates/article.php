@@ -94,14 +94,12 @@ ob_start();
                      fetchpriority="high">
 
                 <header class="mb-4 pb-4 border-bottom border-subtle">
-                    <?php if (!empty($post['categories'])): ?>
-                    <div class="mb-3 d-flex flex-wrap gap-2">
-                        <?php foreach ($post['categories'] as $cat): ?>
-                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
+                    <?php if (!empty($post['category'])): ?>
+                    <div class="mb-3">
+                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>"
                            class="badge bg-tertiary text-secondary text-decoration-none">
-                            <?= htmlspecialchars($cat['name']) ?>
+                            <?= htmlspecialchars($post['category']['name']) ?>
                         </a>
-                        <?php endforeach; ?>
                     </div>
                     <?php endif; ?>
                     <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>

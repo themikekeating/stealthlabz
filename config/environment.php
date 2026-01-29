@@ -6,15 +6,18 @@
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 
-$isLocal = (
-    strpos($host, '.local') !== false ||
-    strpos($host, 'localhost') !== false ||
-    strpos($host, '127.0.0.1') !== false
-);
+// Validate against known domains to prevent Host header spoofing
+$knownLocalHosts = ['stealthlabz.local', 'localhost', '127.0.0.1'];
+$knownStagingHosts = ['staging.stealthlabz.com', 'beta.stealthlabz.com'];
+$knownProductionHosts = ['stealthlabz.com', 'www.stealthlabz.com'];
 
-$isStaging = strpos($host, 'staging.') === 0 || strpos($host, 'beta.') === 0;
+// Strip port number for matching
+$hostWithoutPort = strtok($host, ':');
 
-// Determine environment
+$isLocal = in_array($hostWithoutPort, $knownLocalHosts, true);
+$isStaging = in_array($hostWithoutPort, $knownStagingHosts, true);
+
+// Determine environment — default to production (safest)
 if ($isLocal) {
     define('ENVIRONMENT', 'local');
 } elseif ($isStaging) {
