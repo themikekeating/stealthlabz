@@ -590,7 +590,7 @@
                 <h2>Interested in CEM?</h2>
                 <p>See the methodology in action through the production systems it produced.</p>
                 <div class="d-flex gap-3 justify-content-center flex-wrap">
-                    <a href="<?= siteUrl('/') ?>#contact" class="btn-glow">
+                    <a href="mailto:info@stealthlabz.com" class="btn-glow">
                         Get in Touch
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
