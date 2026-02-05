@@ -23,14 +23,36 @@ class LandingController
         include ROOT_PATH . '/views/templates/landing.php';
     }
 
-    public function tech(): void
+    public function process(): void
     {
         $page = [
-            'title' => 'Our Tech | Stealth Labz',
-            'description' => 'The technology stack powering Stealth Labz platforms.',
+            'title' => 'Process — The Compounding Execution Method | Stealth Labz',
+            'description' => 'A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 systems shipped by a solo operator.',
+            'keywords' => 'CEM, Compounding Execution Method, AI development, methodology, software development'
+        ];
+
+        include ROOT_PATH . '/views/templates/cem.php';
+    }
+
+    public function stack(): void
+    {
+        $page = [
+            'title' => 'Stack | Stealth Labz',
+            'description' => 'The technology stack behind 10 production systems, 596,903 lines of code, and $938K in revenue.',
             'keywords' => 'technology, tech stack, Laravel, PHP, AI development'
         ];
 
         include ROOT_PATH . '/views/templates/tech.php';
+    }
+
+    public function brands(): void
+    {
+        $page = [
+            'title' => 'Brands | Stealth Labz',
+            'description' => '10 production systems across lead generation, content, DTC, and AI. Our portfolio of live platforms.',
+            'keywords' => 'portfolio, brands, platforms, lead generation, DTC'
+        ];
+
+        include ROOT_PATH . '/views/templates/brands.php';
     }
 }

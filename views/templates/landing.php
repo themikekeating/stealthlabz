@@ -82,24 +82,7 @@
 <body>
     <div class="grid-bg"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container-xl">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand" href="#">
-                    <img src="/cdn/images/logo.svg" alt="Stealth Labz" height="28">
-                </a>
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                    <a class="nav-link" href="/tech">Our Tech</a>
-                    <a class="nav-link" href="#methodology">Process</a>
-                    <a class="nav-link" href="#about">About</a>
-                    <a class="nav-link" href="/insights">Insights</a>
-                    <a class="nav-link btn-nav ms-2" href="#contact">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <!-- Hero -->
     <section class="hero">
@@ -130,20 +113,20 @@
                     
                     <div class="hero-stats">
                         <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="6">0</span></div>
-                            <div class="hero-stat-label">Live Platforms</div>
+                            <div class="hero-stat-value"><span class="counter" data-target="10">0</span></div>
+                            <div class="hero-stat-label">Production Systems</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="2">0</span></div>
-                            <div class="hero-stat-label">Continents</div>
+                            <div class="hero-stat-value"><span class="counter" data-target="596">0</span>K+</div>
+                            <div class="hero-stat-label">Lines of Code</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="351">0</span>K+</div>
-                            <div class="hero-stat-label">Lines Shipped</div>
+                            <div class="hero-stat-value"><span class="counter" data-target="4">0</span>.9x</div>
+                            <div class="hero-stat-label">Velocity Increase</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-value">$<span class="counter" data-target="750">0</span>K+</div>
-                            <div class="hero-stat-label">Built Value</div>
+                            <div class="hero-stat-value">$<span class="counter" data-target="938">0</span>K</div>
+                            <div class="hero-stat-label">Revenue Through Systems</div>
                         </div>
                     </div>
                 </div>
@@ -326,7 +309,7 @@
                         <div class="flagship-visual">
                             <div class="chart-header mb-3">
                                 <span class="chart-title">Platform Capabilities</span>
-                                <span class="chart-badge">6 Properties Connected</span>
+                                <span class="chart-badge">9 Properties Connected</span>
                             </div>
                             <div class="flagship-chart">
                                 <div class="flagship-bar"></div>
@@ -348,18 +331,11 @@
 
                 <!-- GoQuoteRocket US -->
                 <div class="portfolio-card fade-up stagger-1">
+                    <div class="portfolio-card-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); height: 140px; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center; margin: -1.5rem -1.5rem 1rem -1.5rem;">
+                        <span style="color: #4a5568; font-size: 0.75rem;">Screenshot: 400×140</span>
+                    </div>
                     <span class="portfolio-card-badge">Lead Gen • US</span>
                     <h3>GoQuoteRocket</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">4</div>
-                            <div class="portfolio-metric-label">Verticals</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">11</div>
-                            <div class="portfolio-metric-label">SEO Pages</div>
-                        </div>
-                    </div>
                     <p>Insurance lead generation for the US market. Auto, life, medicare, credit cards. Config-driven — one codebase serves infinite verticals.</p>
                     <a href="https://goquoterocket.com" class="portfolio-card-link" target="_blank">
                         goquoterocket.com
@@ -367,46 +343,14 @@
                     </a>
                 </div>
 
-                <!-- Quote Rocket ZA -->
-                <div class="portfolio-card fade-up stagger-2">
-                    <span class="portfolio-card-badge">Lead Gen • South Africa</span>
-                    <h3>Quote Rocket ZA</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">12</div>
-                            <div class="portfolio-metric-label">Verticals</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">10</div>
-                            <div class="portfolio-metric-label">Articles</div>
-                        </div>
-                    </div>
-                    <p>Full-market insurance lead gen for South Africa. Car, life, health, funeral, pet, business, debt, loans — all live and routing through Portal.</p>
-                    <a href="https://quoterocket.co.za" class="portfolio-card-link" target="_blank">
-                        quoterocket.co.za
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-
                 <!-- Customer Reports -->
-                <div class="portfolio-card fade-up stagger-3">
+                <div class="portfolio-card fade-up stagger-2">
+                    <div class="portfolio-card-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); height: 140px; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center; margin: -1.5rem -1.5rem 1rem -1.5rem;">
+                        <span style="color: #4a5568; font-size: 0.75rem;">Screenshot: 400×140</span>
+                    </div>
                     <span class="portfolio-card-badge">Content • Affiliate</span>
                     <h3>Customer Reports</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">13K</div>
-                            <div class="portfolio-metric-label">Articles</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">148</div>
-                            <div class="portfolio-metric-label">Reviews</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">14</div>
-                            <div class="portfolio-metric-label">Categories</div>
-                        </div>
-                    </div>
-                    <p>Content platform built for affiliate monetization. Product reviews, comparison guides, and SEO content at scale.</p>
+                    <p>13K+ articles. Product reviews, comparison guides, and SEO content at scale. Built for affiliate monetization.</p>
                     <a href="https://customer-reports.org" class="portfolio-card-link" target="_blank">
                         customer-reports.org
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -414,76 +358,23 @@
                 </div>
 
                 <!-- Videos From Santa -->
-                <div class="portfolio-card fade-up stagger-4">
+                <div class="portfolio-card fade-up stagger-3">
+                    <div class="portfolio-card-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); height: 140px; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center; margin: -1.5rem -1.5rem 1rem -1.5rem;">
+                        <span style="color: #4a5568; font-size: 0.75rem;">Screenshot: 400×140</span>
+                    </div>
                     <span class="portfolio-card-badge">AI • DTC</span>
                     <h3>Videos From Santa</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">3</div>
-                            <div class="portfolio-metric-label">Characters</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">AI</div>
-                            <div class="portfolio-metric-label">Generated</div>
-                        </div>
-                    </div>
                     <p>AI-powered personalized video messages. Free funnel to paid packages. Seasonal DTC play with year-round potential.</p>
                     <a href="https://videosfromasanta.com" class="portfolio-card-link" target="_blank">
                         videosfromasanta.com
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                 </div>
-
-                <!-- HOA Attorney Guide -->
-                <div class="portfolio-card fade-up stagger-5">
-                    <span class="portfolio-card-badge">Lead Gen • Legal</span>
-                    <h3>HOA Attorney Guide</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">6</div>
-                            <div class="portfolio-metric-label">Step Funnel</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">Legal</div>
-                            <div class="portfolio-metric-label">Vertical</div>
-                        </div>
-                    </div>
-                    <p>Qualification funnel for HOA dispute leads. Matches homeowners with vetted attorney partners. High-intent legal vertical.</p>
-                    <a href="https://hoaattorneyguide.com" class="portfolio-card-link" target="_blank">
-                        hoaattorneyguide.com
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-
-                <!-- Evergreen Brands -->
-                <div class="portfolio-card fade-up stagger-6">
-                    <span class="portfolio-card-badge">DTC • Nutra</span>
-                    <h3>Evergreen Brands</h3>
-                    <div class="portfolio-metrics">
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">14</div>
-                            <div class="portfolio-metric-label">Funnels</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">25+</div>
-                            <div class="portfolio-metric-label">SKUs</div>
-                        </div>
-                        <div class="portfolio-metric">
-                            <div class="portfolio-metric-value">3</div>
-                            <div class="portfolio-metric-label">Brands</div>
-                        </div>
-                    </div>
-                    <p>Essentials, Evolutions, Botanicals. Supplement funnels across US and South Africa.</p>
-                    <a href="#" class="portfolio-card-link">
-                        Multiple Properties
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
             </div>
 
             <div class="text-center mt-4 fade-up">
-                <a href="<?= siteUrl('tech') ?>" class="btn-outline">
-                    See How We Build
+                <a href="<?= siteUrl('brands') ?>" class="btn-outline">
+                    View All Brands
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
             </div>
@@ -508,8 +399,8 @@
                             <div class="global-stat-label">Live Funnels</div>
                         </div>
                         <div class="global-stat">
-                            <div class="global-stat-value">55</div>
-                            <div class="global-stat-label">Publishers</div>
+                            <div class="global-stat-value">22K+</div>
+                            <div class="global-stat-label">Leads Processed</div>
                         </div>
                         <div class="global-stat">
                             <div class="global-stat-value">24/7</div>
@@ -540,8 +431,8 @@
                         <div class="map-dot us"></div>
                         <div class="map-dot za"></div>
                         <div class="map-connection"></div>
-                        <div class="map-label us">US • 4 Platforms</div>
-                        <div class="map-label za">ZA • 2 Platforms</div>
+                        <div class="map-label us">US • 8 Systems</div>
+                        <div class="map-label za">ZA • 2 Systems</div>
                     </div>
                 </div>
             </div>
@@ -555,11 +446,11 @@
                 <div class="col-lg-7 fade-up">
                     <h2 class="section-title">How We Work</h2>
 
-                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all shipping production. Every property connects through Portal.</p>
+                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all in production. Every property connects through Portal Stealth.</p>
 
-                    <p>The playbook took <strong>15+ years of combined experience</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO empires. The kind of knowledge you only get from <strong>$35M+ in revenue</strong>, <strong>300K+ paid subscribers</strong>, and teams scaled from zero to 50.</p>
+                    <p>The playbook took <strong>15+ years</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO. The kind of knowledge you only get from <strong>$35M+ in revenue</strong> and <strong>300K+ paid subscribers</strong> acquired across multiple ventures.</p>
 
-                    <p>Then AI changed the math. What used to take teams and months now takes weeks. The entire ecosystem — <strong>6 platforms, 351K+ lines of code</strong> — went from zero to production in <strong>126 days</strong>. Total investment: <strong>$15K</strong>. Traditional value: <strong>$750K+</strong>.</p>
+                    <p>Then AI changed the math. A single operator now produces more output than a four-person team — <strong>4.9x velocity increase</strong>, <strong>596,903 lines of code</strong> across <strong>10 production systems</strong>. The methodology behind it: the Compounding Execution Method.</p>
 
                     <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
                 </div>
@@ -568,22 +459,22 @@
                         <div class="capability-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             <div class="capability-content">
-                                <span class="capability-name">Affiliate & Performance</span>
-                                <span class="capability-metric">55 publishers • 16 verticals</span>
+                                <span class="capability-name">Affiliate & Lead Gen</span>
+                                <span class="capability-metric">22K+ leads • 16 verticals</span>
                             </div>
                         </div>
                         <div class="capability-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                             <div class="capability-content">
                                 <span class="capability-name">Full-Stack Development</span>
-                                <span class="capability-metric">Laravel • 351K+ lines</span>
+                                <span class="capability-metric">Laravel/PHP • 596K+ LOC</span>
                             </div>
                         </div>
                         <div class="capability-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
                             <div class="capability-content">
-                                <span class="capability-name">AI-Accelerated Builds</span>
-                                <span class="capability-metric">126 days total • 6 platforms</span>
+                                <span class="capability-name">AI-Native Development</span>
+                                <span class="capability-metric">4.9x velocity • 10 systems</span>
                             </div>
                         </div>
                         <div class="capability-item">
@@ -596,8 +487,8 @@
                         <div class="capability-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                             <div class="capability-content">
-                                <span class="capability-name">DTC & Subscriptions</span>
-                                <span class="capability-metric">300K subs • 25+ SKUs</span>
+                                <span class="capability-name">DTC & E-Commerce</span>
+                                <span class="capability-metric">$938K revenue • 11K+ orders</span>
                             </div>
                         </div>
                     </div>
@@ -607,19 +498,19 @@
             <div class="about-stats-row fade-up">
                 <div class="about-stat-item">
                     <div class="about-stat-value">$35M+</div>
-                    <div class="about-stat-label">Revenue across brands</div>
+                    <div class="about-stat-label">Career revenue (15+ years)</div>
                 </div>
                 <div class="about-stat-item">
-                    <div class="about-stat-value">300K+</div>
-                    <div class="about-stat-label">Paid subscribers acquired</div>
+                    <div class="about-stat-value">596K+</div>
+                    <div class="about-stat-label">Lines of production code</div>
                 </div>
                 <div class="about-stat-item">
-                    <div class="about-stat-value">126</div>
-                    <div class="about-stat-label">Days total ecosystem build</div>
+                    <div class="about-stat-value">4.9x</div>
+                    <div class="about-stat-label">Velocity vs. traditional dev</div>
                 </div>
                 <div class="about-stat-item">
-                    <div class="about-stat-value">$750K+</div>
-                    <div class="about-stat-label">Traditional build value</div>
+                    <div class="about-stat-value">$938K</div>
+                    <div class="about-stat-label">Revenue through systems</div>
                 </div>
             </div>
         </div>

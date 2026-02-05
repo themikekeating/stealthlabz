@@ -23,6 +23,9 @@ class SitemapController
         // Static pages
         $staticPages = [
             ['loc' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
+            ['loc' => '/process', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/stack', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/brands', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['loc' => '/insights', 'priority' => '0.9', 'changefreq' => 'daily'],
             ['loc' => '/legal/privacy', 'priority' => '0.3', 'changefreq' => 'monthly'],
             ['loc' => '/legal/terms', 'priority' => '0.3', 'changefreq' => 'monthly'],

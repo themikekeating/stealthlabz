@@ -6,14 +6,14 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#e5025d">
     <title>Our Tech | Stealth Labz</title>
-    <meta name="description" content="One person. One infrastructure. Six properties. Two continents. 126 days. $15,000. See how AI-accelerated development delivers enterprise platforms at startup speed.">
-    <link rel="canonical" href="https://stealthlabz.com/tech">
+    <meta name="description" content="The technology stack behind 10 production systems, 596,903 lines of code, and $938K in revenue. Built by a solo operator using the Compounding Execution Method.">
+    <link rel="canonical" href="https://stealthlabz.com/stack">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Our Tech | Stealth Labz">
-    <meta property="og:description" content="One person. One infrastructure. Six properties. Two continents. 126 days. $15,000.">
+    <meta property="og:description" content="10 production systems. 596,903 lines of code. $938K revenue. The technology stack behind Stealth Labz.">
     <meta property="og:image" content="https://stealthlabz.com/cdn/images/og-default.png">
-    <meta property="og:url" content="https://stealthlabz.com/tech">
+    <meta property="og:url" content="https://stealthlabz.com/stack">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Stealth Labz">
     <meta property="og:locale" content="en_US">
@@ -21,7 +21,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Tech | Stealth Labz">
-    <meta name="twitter:description" content="One person. One infrastructure. Six properties. Two continents. 126 days. $15,000.">
+    <meta name="twitter:description" content="10 production systems. 596,903 lines of code. $938K revenue. The technology stack behind Stealth Labz.">
     <meta name="twitter:image" content="https://stealthlabz.com/cdn/images/og-default.png">
 
     <!-- Favicon -->
@@ -558,23 +558,7 @@
 <body>
     <div class="grid-bg"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container-xl">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand" href="<?= siteUrl('/') ?>">
-                    <img src="/cdn/images/logo.svg" alt="Stealth Labz" height="28">
-                </a>
-                <div class="d-none d-md-flex align-items-center gap-2">
-                    <a class="nav-link" href="<?= siteUrl('/') ?>#portfolio">Portfolio</a>
-                    <a class="nav-link" href="<?= siteUrl('tech') ?>">Our Tech</a>
-                    <a class="nav-link" href="<?= siteUrl('/') ?>#methodology">Process</a>
-                    <a class="nav-link" href="<?= siteUrl('insights') ?>">Insights</a>
-                    <a class="nav-link btn-nav ms-2" href="<?= siteUrl('/') ?>#contact">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <!-- Hero Section -->
     <section class="tech-hero">
@@ -585,24 +569,24 @@
             </div>
             <h1 class="tech-hero-title">The <span class="highlight">Ecosystem</span></h1>
             <p class="tech-hero-subtitle">
-                One person. One infrastructure. Six properties. Two continents. 126 days. $15,000.
+                10 production systems. 596,903 lines of code. $938K revenue. Two continents. One operator.
             </p>
             <div class="tech-hero-stats">
                 <div class="tech-hero-stat">
-                    <div class="tech-hero-stat-value">126</div>
-                    <div class="tech-hero-stat-label">Days to Build</div>
+                    <div class="tech-hero-stat-value">10</div>
+                    <div class="tech-hero-stat-label">Production Systems</div>
                 </div>
                 <div class="tech-hero-stat">
-                    <div class="tech-hero-stat-value">$15K</div>
-                    <div class="tech-hero-stat-label">Total Investment</div>
-                </div>
-                <div class="tech-hero-stat">
-                    <div class="tech-hero-stat-value">351K+</div>
+                    <div class="tech-hero-stat-value">596K+</div>
                     <div class="tech-hero-stat-label">Lines of Code</div>
                 </div>
                 <div class="tech-hero-stat">
-                    <div class="tech-hero-stat-value">$750K+</div>
-                    <div class="tech-hero-stat-label">Traditional Value</div>
+                    <div class="tech-hero-stat-value">$938K</div>
+                    <div class="tech-hero-stat-label">Revenue</div>
+                </div>
+                <div class="tech-hero-stat">
+                    <div class="tech-hero-stat-value">4.9x</div>
+                    <div class="tech-hero-stat-label">Velocity Increase</div>
                 </div>
             </div>
         </div>
@@ -1024,16 +1008,16 @@
             <!-- Summary -->
             <div class="summary-grid">
                 <div class="summary-box">
-                    <div class="summary-value">126</div>
-                    <div class="summary-label">Total Build Days</div>
+                    <div class="summary-value">10</div>
+                    <div class="summary-label">Production Systems</div>
                 </div>
                 <div class="summary-box">
-                    <div class="summary-value">$15K</div>
-                    <div class="summary-label">Total Investment</div>
+                    <div class="summary-value">596K+</div>
+                    <div class="summary-label">Lines of Code</div>
                 </div>
                 <div class="summary-box">
-                    <div class="summary-value">$750K+</div>
-                    <div class="summary-label">Traditional Value</div>
+                    <div class="summary-value">$938K</div>
+                    <div class="summary-label">Revenue Through Systems</div>
                 </div>
                 <div class="summary-box">
                     <div class="summary-value">2</div>
