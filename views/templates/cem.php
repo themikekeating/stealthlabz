@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/cdn/css/landing.css">
+    <link rel="stylesheet" href="/cdn/css/global.css">
 
     <style>
         /* CEM Page Specific Styles */
@@ -543,13 +544,21 @@
                         </thead>
                         <tbody>
                             <tr><td>Portal Stealth</td><td class="val">194,954</td></tr>
-                            <tr><td>SageWise Finance</td><td class="val">127,832</td></tr>
                             <tr><td>Videos From Santa</td><td class="val">61,359</td></tr>
                             <tr><td>GoQuoteRocket US</td><td class="val">39,750</td></tr>
                             <tr><td>Go Customer Reports</td><td class="val">29,193</td></tr>
-                            <tr><td><strong>Total (10 projects)</strong></td><td class="val accent"><strong>596,903</strong></td></tr>
+                            <tr><td><strong>Total (9 projects)</strong></td><td class="val accent"><strong>469,071</strong></td></tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <div class="traditional-summary fade-up">
+                <div class="traditional-summary-label">Traditional Equivalent</div>
+                <div class="traditional-summary-value"><span class="accent">$600K – $900K+</span> in development costs</div>
+                <div class="traditional-summary-context">
+                    At industry rates ($150–$200/hr), this output would require a 4-6 person team working 12–18 months.
+                    Built by one operator in under two years with ~$1,500 in direct costs.
                 </div>
             </div>
         </div>

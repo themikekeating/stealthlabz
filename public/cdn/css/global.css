@@ -335,6 +335,170 @@ a:hover {
 }
 
 /* ========================================
+   Stats Grid (Shared Component)
+   ======================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.stat-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+}
+
+.stat-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-pink);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+/* ========================================
+   Traditional Equivalent Block (Shared)
+   ======================================== */
+.traditional-block {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--accent-pink);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.traditional-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.15rem;
+}
+
+.traditional-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.traditional-timeline {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Traditional Summary (larger variant) */
+.traditional-summary {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-pink);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
+}
+
+.traditional-summary-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.traditional-summary-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.traditional-summary-value .accent {
+    color: var(--accent-pink);
+}
+
+.traditional-summary-context {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   Tech Pills (Shared Component)
+   ======================================== */
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.tech-pill {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.65rem;
+    font-family: 'DM Mono', monospace;
+}
+
+/* ========================================
+   Features List (Shared Component)
+   ======================================== */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.features-list li {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.features-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 5px;
+    height: 5px;
+    background: var(--accent-pink);
+    border-radius: 50%;
+}
+
+/* ========================================
+   Screenshot Placeholder (Shared)
+   ======================================== */
+.screenshot-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.screenshot-placeholder svg {
+    opacity: 0.3;
+}
+
+/* ========================================
    Responsive
    ======================================== */
 @media (max-width: 768px) {
