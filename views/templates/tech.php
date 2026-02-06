@@ -115,9 +115,15 @@
         }
 
         .case-studies-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 991px) {
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Case Study Card */
@@ -126,8 +132,9 @@
             border: 1px solid var(--border-color);
             border-radius: 20px;
             overflow: hidden;
-            min-height: 550px;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .case-study-card:hover {
@@ -139,18 +146,35 @@
         .case-study-card.flagship {
             border-color: rgba(229, 2, 93, 0.3);
             background: linear-gradient(135deg, var(--bg-card) 0%, rgba(229, 2, 93, 0.05) 100%);
+            grid-column: span 2;
+        }
+
+        @media (max-width: 991px) {
+            .case-study-card.flagship {
+                grid-column: span 1;
+            }
         }
 
         .case-study-row {
+            display: flex;
+            flex-direction: column;
             height: 100%;
-            min-height: 550px;
+        }
+
+        .case-study-card.flagship .case-study-row {
+            flex-direction: row;
+        }
+
+        @media (max-width: 991px) {
+            .case-study-card.flagship .case-study-row {
+                flex-direction: column;
+            }
         }
 
         /* Screenshot Side */
         .case-study-screenshot {
             background: var(--bg-tertiary);
-            height: 100%;
-            min-height: 550px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -158,6 +182,20 @@
             font-size: 0.875rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .case-study-card.flagship .case-study-screenshot {
+            width: 40%;
+            height: auto;
+            min-height: 450px;
+        }
+
+        @media (max-width: 991px) {
+            .case-study-card.flagship .case-study-screenshot {
+                width: 100%;
+                height: 200px;
+                min-height: auto;
+            }
         }
 
         .case-study-screenshot img {
@@ -179,11 +217,22 @@
 
         /* Content Side */
         .case-study-content {
-            padding: 2.5rem;
+            padding: 1.75rem;
             display: flex;
             flex-direction: column;
-            height: 100%;
-            min-height: 550px;
+            flex: 1;
+        }
+
+        .case-study-card.flagship .case-study-content {
+            width: 60%;
+            padding: 2rem;
+        }
+
+        @media (max-width: 991px) {
+            .case-study-card.flagship .case-study-content {
+                width: 100%;
+                padding: 1.75rem;
+            }
         }
 
         /* Badge */
@@ -210,44 +259,57 @@
 
         /* Title */
         .case-study-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             letter-spacing: -0.03em;
         }
 
+        .case-study-card.flagship .case-study-title {
+            font-size: 2rem;
+        }
+
         .case-study-tagline {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--text-secondary);
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .case-study-card.flagship .case-study-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         /* Stats Grid */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.75rem;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .stat-box {
             background: var(--bg-tertiary);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem;
+            border-radius: 10px;
+            padding: 0.75rem 0.5rem;
             text-align: center;
         }
 
         .stat-value {
             font-family: 'DM Mono', monospace;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent-pink);
             line-height: 1.2;
         }
 
+        .case-study-card.flagship .stat-value {
+            font-size: 1.5rem;
+        }
+
         .stat-label {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -258,27 +320,27 @@
         .traditional-block {
             background: var(--bg-secondary);
             border-left: 3px solid var(--accent-pink);
-            padding: 1rem 1.25rem;
-            margin-bottom: 1.5rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
             border-radius: 0 8px 8px 0;
         }
 
         .traditional-label {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.15rem;
         }
 
         .traditional-value {
             font-family: 'DM Mono', monospace;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--text-primary);
         }
 
         .traditional-timeline {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-secondary);
         }
 
@@ -286,17 +348,17 @@
         .tech-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            gap: 0.35rem;
+            margin-bottom: 1rem;
         }
 
         .tech-pill {
             background: var(--bg-tertiary);
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
-            padding: 0.3rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+            font-size: 0.65rem;
             font-family: 'DM Mono', monospace;
         }
 
@@ -304,15 +366,15 @@
         .features-list {
             list-style: none;
             padding: 0;
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1rem 0;
             flex-grow: 1;
         }
 
         .features-list li {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            padding: 0.35rem 0;
-            padding-left: 1.25rem;
+            padding: 0.25rem 0;
+            padding-left: 1rem;
             position: relative;
         }
 
@@ -320,9 +382,9 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 0.7rem;
-            width: 6px;
-            height: 6px;
+            top: 0.55rem;
+            width: 5px;
+            height: 5px;
             background: var(--accent-pink);
             border-radius: 50%;
         }
@@ -599,365 +661,331 @@
 
                 <!-- 1. STEALTH PORTAL (Flagship) -->
                 <div class="case-study-card flagship">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-row">
+                        <div class="case-study-screenshot">
+                            <div class="screenshot-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                                <span>Screenshot</span>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge flagship-badge">Flagship • The Hub</div>
-                                <h3 class="case-study-title">Stealth Portal</h3>
-                                <p class="case-study-tagline">5 Platforms. 1 Codebase. 60 Days.</p>
+                        <div class="case-study-content">
+                            <div class="case-study-badge flagship-badge">Flagship • The Hub</div>
+                            <h3 class="case-study-title">Stealth Portal</h3>
+                            <p class="case-study-tagline">5 Platforms. 1 Codebase. 60 Days.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">60</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$500</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">150K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
+                            <div class="stats-grid">
+                                <div class="stat-box">
+                                    <div class="stat-value">60</div>
+                                    <div class="stat-label">Days</div>
                                 </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$300,000 – $450,000</div>
-                                    <div class="traditional-timeline">6-12 months with 4-6 person team</div>
+                                <div class="stat-box">
+                                    <div class="stat-value">$500</div>
+                                    <div class="stat-label">Cost</div>
                                 </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">Laravel 10</span>
-                                    <span class="tech-pill">PHP 8.1+</span>
-                                    <span class="tech-pill">MySQL</span>
-                                    <span class="tech-pill">Tabler UI</span>
-                                    <span class="tech-pill">Vite</span>
+                                <div class="stat-box">
+                                    <div class="stat-value">150K</div>
+                                    <div class="stat-label">Lines</div>
                                 </div>
-
-                                <ul class="features-list">
-                                    <li>CDP with identity resolution across 12 source types</li>
-                                    <li>Affiliate Network: 55 publishers, 35 offers</li>
-                                    <li>Lead Distribution: 7 outbound integrations</li>
-                                    <li>E-Commerce: 12 merchant accounts</li>
-                                    <li>Marketing Automation: SMS/Email via Dripcel, Twilio, SendGrid</li>
-                                </ul>
-
-                                <a href="https://portal.stealthlabz.com" class="case-study-link" target="_blank">
-                                    portal.stealthlabz.com
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
                             </div>
+
+                            <div class="traditional-block">
+                                <div class="traditional-label">Traditional Equivalent</div>
+                                <div class="traditional-value">$300,000 – $450,000</div>
+                                <div class="traditional-timeline">6-12 months with 4-6 person team</div>
+                            </div>
+
+                            <div class="tech-pills">
+                                <span class="tech-pill">Laravel 10</span>
+                                <span class="tech-pill">PHP 8.1+</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">Tabler UI</span>
+                                <span class="tech-pill">Vite</span>
+                            </div>
+
+                            <ul class="features-list">
+                                <li>CDP with identity resolution across 12 source types</li>
+                                <li>Affiliate Network: 55 publishers, 35 offers</li>
+                                <li>Lead Distribution: 7 outbound integrations</li>
+                                <li>E-Commerce: 12 merchant accounts</li>
+                                <li>Marketing Automation: SMS/Email via Dripcel, Twilio, SendGrid</li>
+                            </ul>
+
+                            <a href="https://portal.stealthlabz.com" class="case-study-link" target="_blank">
+                                portal.stealthlabz.com
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. QUOTE ROCKET ZA -->
                 <div class="case-study-card">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-screenshot">
+                        <div class="screenshot-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Lead Gen • South Africa</div>
+                        <h3 class="case-study-title">Quote Rocket ZA</h3>
+                        <p class="case-study-tagline">12 Verticals. 5 Days. $100.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">92.5K</div>
+                                <div class="stat-label">Lines</div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge">Lead Gen • South Africa</div>
-                                <h3 class="case-study-title">Quote Rocket ZA</h3>
-                                <p class="case-study-tagline">12 Verticals. 5 Days. $100.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">5</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$100</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">92.5K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
-                                </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$45,000 – $75,000</div>
-                                    <div class="traditional-timeline">12-16 weeks with dev team</div>
-                                </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">PHP MVC</span>
-                                    <span class="tech-pill">Composer</span>
-                                    <span class="tech-pill">CI/CD</span>
-                                </div>
-
-                                <ul class="features-list">
-                                    <li>Car, life, health, funeral, pet + 7 more verticals</li>
-                                    <li>Step-by-step qualification funnels</li>
-                                    <li>Admin dashboard with per-vertical views</li>
-                                    <li>Lead backup and logging</li>
-                                </ul>
-
-                                <a href="https://quoterocket.co.za" class="case-study-link" target="_blank">
-                                    quoterocket.co.za
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Equivalent</div>
+                            <div class="traditional-value">$45,000 – $75,000</div>
+                            <div class="traditional-timeline">12-16 weeks with dev team</div>
                         </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">PHP MVC</span>
+                            <span class="tech-pill">Composer</span>
+                            <span class="tech-pill">CI/CD</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>Car, life, health, funeral, pet + 7 more verticals</li>
+                            <li>Step-by-step qualification funnels</li>
+                            <li>Admin dashboard with per-vertical views</li>
+                            <li>Lead backup and logging</li>
+                        </ul>
+
+                        <a href="https://quoterocket.co.za" class="case-study-link" target="_blank">
+                            quoterocket.co.za
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- 3. GOQUOTEROCKET US -->
                 <div class="case-study-card">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-screenshot">
+                        <div class="screenshot-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Lead Gen • United States</div>
+                        <h3 class="case-study-title">GoQuoteRocket US</h3>
+                        <p class="case-study-tagline">Config-Driven. Infinite Verticals. 17 Days.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">17</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">40K</div>
+                                <div class="stat-label">Lines</div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge">Lead Gen • United States</div>
-                                <h3 class="case-study-title">GoQuoteRocket US</h3>
-                                <p class="case-study-tagline">Config-Driven. Infinite Verticals. 17 Days.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">17</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$100</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">40K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
-                                </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$38,000 – $60,000</div>
-                                    <div class="traditional-timeline">12 weeks with dev team</div>
-                                </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">PHP MVC</span>
-                                    <span class="tech-pill">FunnelEngine.js</span>
-                                    <span class="tech-pill">CI/CD</span>
-                                </div>
-
-                                <ul class="features-list">
-                                    <li>Auto, life, medicare, credit card funnels</li>
-                                    <li>Add new vertical in 5 minutes with ONE config file</li>
-                                    <li>11 organic SEO pages for Google traffic</li>
-                                    <li>Multi-buyer lead routing, white-label ready</li>
-                                </ul>
-
-                                <a href="https://goquoterocket.com" class="case-study-link" target="_blank">
-                                    goquoterocket.com
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Equivalent</div>
+                            <div class="traditional-value">$38,000 – $60,000</div>
+                            <div class="traditional-timeline">12 weeks with dev team</div>
                         </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">PHP MVC</span>
+                            <span class="tech-pill">FunnelEngine.js</span>
+                            <span class="tech-pill">CI/CD</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>Auto, life, medicare, credit card funnels</li>
+                            <li>Add new vertical in 5 minutes with ONE config file</li>
+                            <li>11 organic SEO pages for Google traffic</li>
+                            <li>Multi-buyer lead routing, white-label ready</li>
+                        </ul>
+
+                        <a href="https://goquoterocket.com" class="case-study-link" target="_blank">
+                            goquoterocket.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- 4. CUSTOMER REPORTS -->
                 <div class="case-study-card">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-screenshot">
+                        <div class="screenshot-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Content • Affiliate</div>
+                        <h3 class="case-study-title">Customer Reports</h3>
+                        <p class="case-study-tagline">13,000 Articles. 2 Days. Zero Dependencies.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">5.9K</div>
+                                <div class="stat-label">Lines</div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge">Content • Affiliate</div>
-                                <h3 class="case-study-title">Customer Reports</h3>
-                                <p class="case-study-tagline">13,000 Articles. 2 Days. Zero Dependencies.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">2</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$100</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">5.9K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
-                                </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$15,000 – $25,000</div>
-                                    <div class="traditional-timeline">6 weeks with dev team</div>
-                                </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">PHP MVC</span>
-                                    <span class="tech-pill">Zero Dependencies</span>
-                                    <span class="tech-pill">CI/CD</span>
-                                </div>
-
-                                <ul class="features-list">
-                                    <li>13,000+ articles migrated from WordPress</li>
-                                    <li>Product reviews with ratings, pros/cons, affiliate CTAs</li>
-                                    <li>148 reviews, 100+ listicles, 14 categories</li>
-                                    <li>SEO-optimized URL structure with 301 redirects</li>
-                                </ul>
-
-                                <a href="https://customer-reports.org" class="case-study-link" target="_blank">
-                                    customer-reports.org
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Equivalent</div>
+                            <div class="traditional-value">$15,000 – $25,000</div>
+                            <div class="traditional-timeline">6 weeks with dev team</div>
                         </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">PHP MVC</span>
+                            <span class="tech-pill">Zero Dependencies</span>
+                            <span class="tech-pill">CI/CD</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>13,000+ articles migrated from WordPress</li>
+                            <li>Product reviews with ratings, pros/cons, affiliate CTAs</li>
+                            <li>148 reviews, 100+ listicles, 14 categories</li>
+                            <li>SEO-optimized URL structure with 301 redirects</li>
+                        </ul>
+
+                        <a href="https://customer-reports.org" class="case-study-link" target="_blank">
+                            customer-reports.org
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- 5. VIDEOS FROM SANTA -->
                 <div class="case-study-card">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-screenshot">
+                        <div class="screenshot-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-badge">AI Video • DTC</div>
+                        <h3 class="case-study-title">Videos From Santa</h3>
+                        <p class="case-study-tagline">AI Video Platform. 32 Days. $1M/30 Day Potential.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">32</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$200</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">54K</div>
+                                <div class="stat-label">Lines</div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge">AI Video • DTC</div>
-                                <h3 class="case-study-title">Videos From Santa</h3>
-                                <p class="case-study-tagline">AI Video Platform. 32 Days. $1M/30 Day Potential.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">32</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$200</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">54K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
-                                </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$80,000 – $150,000</div>
-                                    <div class="traditional-timeline">16-20 weeks with dev team</div>
-                                </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">Laravel 10</span>
-                                    <span class="tech-pill">HeyGen API</span>
-                                    <span class="tech-pill">Stripe</span>
-                                    <span class="tech-pill">Trackdesk</span>
-                                </div>
-
-                                <ul class="features-list">
-                                    <li>5-step paid checkout with Apple/Google Pay</li>
-                                    <li>Free lead funnel with share-to-unlock viral mechanic</li>
-                                    <li>3 AI characters: Santa, Mrs. Claus, Elfie</li>
-                                    <li>Admin dashboard: orders, customers, videos, analytics</li>
-                                </ul>
-
-                                <a href="https://videosfromsanta.com" class="case-study-link" target="_blank">
-                                    videosfromsanta.com
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Equivalent</div>
+                            <div class="traditional-value">$80,000 – $150,000</div>
+                            <div class="traditional-timeline">16-20 weeks with dev team</div>
                         </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">Laravel 10</span>
+                            <span class="tech-pill">HeyGen API</span>
+                            <span class="tech-pill">Stripe</span>
+                            <span class="tech-pill">Trackdesk</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>5-step paid checkout with Apple/Google Pay</li>
+                            <li>Free lead funnel with share-to-unlock viral mechanic</li>
+                            <li>3 AI characters: Santa, Mrs. Claus, Elfie</li>
+                            <li>Admin dashboard: orders, customers, videos, analytics</li>
+                        </ul>
+
+                        <a href="https://videosfromsanta.com" class="case-study-link" target="_blank">
+                            videosfromsanta.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- 6. HOA ATTORNEY GUIDE -->
                 <div class="case-study-card">
-                    <div class="row g-0 case-study-row">
-                        <div class="col-lg-5">
-                            <div class="case-study-screenshot">
-                                <div class="screenshot-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <span>Screenshot</span>
-                                </div>
+                    <div class="case-study-screenshot">
+                        <div class="screenshot-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Legal • Lead Gen</div>
+                        <h3 class="case-study-title">HOA Attorney Guide</h3>
+                        <p class="case-study-tagline">Legal Lead Gen. 10 Days. Zero Dependencies.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">10</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">8.8K</div>
+                                <div class="stat-label">Lines</div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="case-study-content">
-                                <div class="case-study-badge">Legal • Lead Gen</div>
-                                <h3 class="case-study-title">HOA Attorney Guide</h3>
-                                <p class="case-study-tagline">Legal Lead Gen. 10 Days. Zero Dependencies.</p>
 
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">10</div>
-                                        <div class="stat-label">Days</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">$100</div>
-                                        <div class="stat-label">Cost</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">8.8K</div>
-                                        <div class="stat-label">Lines</div>
-                                    </div>
-                                </div>
-
-                                <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Equivalent</div>
-                                    <div class="traditional-value">$18,000 – $35,000</div>
-                                    <div class="traditional-timeline">8 weeks with dev team</div>
-                                </div>
-
-                                <div class="tech-pills">
-                                    <span class="tech-pill">PHP MVC</span>
-                                    <span class="tech-pill">Zero Dependencies</span>
-                                    <span class="tech-pill">CI/CD</span>
-                                </div>
-
-                                <ul class="features-list">
-                                    <li>6-step qualification funnel</li>
-                                    <li>Attorney offer wall with featured firm</li>
-                                    <li>Case results display</li>
-                                    <li>Lead backup and logging, GTM tracking</li>
-                                </ul>
-
-                                <a href="https://hoaattorneyguide.com" class="case-study-link" target="_blank">
-                                    hoaattorneyguide.com
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Equivalent</div>
+                            <div class="traditional-value">$18,000 – $35,000</div>
+                            <div class="traditional-timeline">8 weeks with dev team</div>
                         </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">PHP MVC</span>
+                            <span class="tech-pill">Zero Dependencies</span>
+                            <span class="tech-pill">CI/CD</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>6-step qualification funnel</li>
+                            <li>Attorney offer wall with featured firm</li>
+                            <li>Case results display</li>
+                            <li>Lead backup and logging, GTM tracking</li>
+                        </ul>
+
+                        <a href="https://hoaattorneyguide.com" class="case-study-link" target="_blank">
+                            hoaattorneyguide.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
 
