@@ -78,6 +78,48 @@
             margin: 0 auto;
         }
 
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            display: block;
+            font-family: 'DM Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-pink);
+            line-height: 1.2;
+        }
+
+        .hero-stat-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 576px) {
+            .hero-stats {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+            .hero-stat-value {
+                font-size: 1.5rem;
+            }
+        }
+
         /* Brands Grid Section */
         .brands-section {
             padding: 40px 0 80px;
@@ -282,8 +324,28 @@
             </div>
             <h1 class="brands-hero-title">Our <span class="highlight">Brands</span></h1>
             <p class="brands-hero-subtitle">
-                8 production systems across lead generation, content, DTC, and AI. All owned. All in production. All connected through Portal.
+                10 production systems across lead generation, content, DTC, and AI. All owned. All in production. All connected through Portal.
             </p>
+
+            <!-- Hero Stats -->
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">10</span>
+                    <span class="hero-stat-label">Systems</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">596K+</span>
+                    <span class="hero-stat-label">LOC</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">$938K</span>
+                    <span class="hero-stat-label">Revenue</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">4.9x</span>
+                    <span class="hero-stat-label">Velocity</span>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -15,7 +15,6 @@
             <ul class="navbar-nav align-items-center gap-1">
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('/') ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('process') ?>">Process</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= siteUrl('stack') ?>">Stack</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('brands') ?>">Brands</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('insights') ?>">Insights</a></li>
                 <li class="nav-item"><a class="nav-link btn-nav" href="mailto:info@stealthlabz.com">Get in Touch</a></li>

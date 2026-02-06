@@ -120,7 +120,8 @@ a:hover {
     color: var(--text-primary) !important;
 }
 
-.btn-nav {
+.btn-nav,
+.navbar .nav-link.btn-nav {
     background: var(--gradient-pink);
     color: white !important;
     border-radius: 8px;

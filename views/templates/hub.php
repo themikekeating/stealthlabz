@@ -28,7 +28,7 @@ ob_start();
 
 <div class="container py-5 mt-5">
     <header class="mb-4">
-        <h1 class="display-5 fw-bold mb-2"><?= htmlspecialchars($page['title'] ?? 'Articles') ?></h1>
+        <h1 class="display-5 fw-bold mb-2"><?= htmlspecialchars($page['heading'] ?? 'Insights') ?></h1>
         <?php if (!empty($page['headerDescription'])): ?>
         <p class="lead text-secondary"><?= htmlspecialchars($page['headerDescription']) ?></p>
         <?php endif; ?>

@@ -54,10 +54,10 @@ $router->get('/insights/category/{slug}', [BlogController::class, 'category']);
 $router->get('/insights/{slug}', [BlogController::class, 'show']);
 
 // Legal
-$router->get('/legal/privacy', [LegalController::class, 'privacy']);
-$router->get('/legal/terms', [LegalController::class, 'terms']);
-$router->get('/legal/cookies', [LegalController::class, 'cookies']);
-$router->get('/legal/disclaimer', [LegalController::class, 'disclaimer']);
+$router->get('/privacy', [LegalController::class, 'privacy']);
+$router->get('/terms', [LegalController::class, 'terms']);
+$router->get('/cookies', [LegalController::class, 'cookies']);
+$router->get('/disclaimer', [LegalController::class, 'disclaimer']);
 
 // Sitemap
 $router->get('/sitemap.xml', [SitemapController::class, 'index']);

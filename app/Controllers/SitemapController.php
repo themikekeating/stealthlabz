@@ -24,13 +24,12 @@ class SitemapController
         $staticPages = [
             ['loc' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
             ['loc' => '/process', 'priority' => '0.8', 'changefreq' => 'monthly'],
-            ['loc' => '/stack', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['loc' => '/brands', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['loc' => '/insights', 'priority' => '0.9', 'changefreq' => 'daily'],
-            ['loc' => '/legal/privacy', 'priority' => '0.3', 'changefreq' => 'monthly'],
-            ['loc' => '/legal/terms', 'priority' => '0.3', 'changefreq' => 'monthly'],
-            ['loc' => '/legal/cookies', 'priority' => '0.3', 'changefreq' => 'monthly'],
-            ['loc' => '/legal/disclaimer', 'priority' => '0.3', 'changefreq' => 'monthly'],
+            ['loc' => '/privacy', 'priority' => '0.3', 'changefreq' => 'monthly'],
+            ['loc' => '/terms', 'priority' => '0.3', 'changefreq' => 'monthly'],
+            ['loc' => '/cookies', 'priority' => '0.3', 'changefreq' => 'monthly'],
+            ['loc' => '/disclaimer', 'priority' => '0.3', 'changefreq' => 'monthly'],
         ];
 
         foreach ($staticPages as $page) {
