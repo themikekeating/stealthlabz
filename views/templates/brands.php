@@ -41,11 +41,11 @@
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <!-- Hero -->
-    <section class="hero" style="padding: 8rem 0 4rem;">
+    <section class="hero" style="padding: 7rem 0 2rem;">
         <div class="container-xl">
             <div class="text-center">
-                <h1 class="hero-title">Our <span class="highlight">Brands</span></h1>
-                <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+                <h1 class="hero-title" style="margin-bottom: 1rem;">Our <span class="highlight">Brands</span></h1>
+                <p class="hero-subtitle mx-auto" style="max-width: 580px; margin-bottom: 0;">
                     10 production systems across lead generation, content, DTC, and AI. All owned. All in production. All connected through Portal.
                 </p>
             </div>

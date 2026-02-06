@@ -23,6 +23,7 @@
     --accent-green: #22c55e;
     --border-color: rgba(255, 255, 255, 0.08);
     --gradient-pink: linear-gradient(135deg, #e5025d 0%, #a00245 100%);
+    --font-mono: 'DM Mono', monospace;
 }
 
 /* ========================================
