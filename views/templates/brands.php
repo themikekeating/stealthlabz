@@ -46,7 +46,7 @@
             <div class="text-center">
                 <h1 class="hero-title">Our <span class="highlight">Brands</span></h1>
                 <p class="hero-subtitle mx-auto" style="max-width: 600px;">
-                    10 production systems across lead generation, content, DTC, and AI. Built with our process. Powered by Portal.
+                    10 production systems across lead generation, content, DTC, and AI. All owned. All in production. All connected through Portal.
                 </p>
             </div>
         </div>

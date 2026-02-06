@@ -254,7 +254,7 @@
             margin-top: 0.25rem;
         }
 
-        /* Traditional Estimate */
+        /* Traditional Equivalent */
         .traditional-block {
             background: var(--bg-secondary);
             border-left: 3px solid var(--accent-pink);
@@ -630,7 +630,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$300,000 – $450,000</div>
                                     <div class="traditional-timeline">6-12 months with 4-6 person team</div>
                                 </div>
@@ -693,7 +693,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$45,000 – $75,000</div>
                                     <div class="traditional-timeline">12-16 weeks with dev team</div>
                                 </div>
@@ -753,7 +753,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$38,000 – $60,000</div>
                                     <div class="traditional-timeline">12 weeks with dev team</div>
                                 </div>
@@ -813,7 +813,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$15,000 – $25,000</div>
                                     <div class="traditional-timeline">6 weeks with dev team</div>
                                 </div>
@@ -873,7 +873,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$80,000 – $150,000</div>
                                     <div class="traditional-timeline">16-20 weeks with dev team</div>
                                 </div>
@@ -934,7 +934,7 @@
                                 </div>
 
                                 <div class="traditional-block">
-                                    <div class="traditional-label">Traditional Estimate</div>
+                                    <div class="traditional-label">Traditional Equivalent</div>
                                     <div class="traditional-value">$18,000 – $35,000</div>
                                     <div class="traditional-timeline">8 weeks with dev team</div>
                                 </div>
@@ -952,8 +952,8 @@
                                     <li>Lead backup and logging, GTM tracking</li>
                                 </ul>
 
-                                <a href="https://hoa-attorneys.com" class="case-study-link" target="_blank">
-                                    hoa-attorneys.com
+                                <a href="https://hoaattorneyguide.com" class="case-study-link" target="_blank">
+                                    hoaattorneyguide.com
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                                 </a>
                             </div>
@@ -1032,20 +1032,20 @@
     <section class="tech-cta">
         <div class="container-xl">
             <h2 class="tech-cta-title">Want In?</h2>
-            <p class="tech-cta-subtitle">The door is open.</p>
+            <p class="tech-cta-subtitle">Three ways to plug into the ecosystem.</p>
 
             <div class="cta-options">
                 <div class="cta-option">
-                    <div class="cta-option-title">Custom Builds</div>
-                    <div class="cta-option-desc">We build your platform. Same AI-accelerated process. Days and weeks, not months and years.</div>
+                    <div class="cta-option-title">Portal Access</div>
+                    <div class="cta-option-desc">Full infrastructure access. CDP, affiliate network, lead distribution, automation — your brand, our engine.</div>
                 </div>
                 <div class="cta-option">
                     <div class="cta-option-title">White-Label</div>
-                    <div class="cta-option-desc">License any property. Your brand, proven architecture.</div>
+                    <div class="cta-option-desc">License any production property. Proven architecture, your market.</div>
                 </div>
                 <div class="cta-option">
-                    <div class="cta-option-title">Portal Access</div>
-                    <div class="cta-option-desc">Come swing in the big leagues. Full infrastructure — your brand, our engine.</div>
+                    <div class="cta-option-title">Partnership</div>
+                    <div class="cta-option-desc">Strategic partnerships for lead buyers, publishers, and operators who want to scale together.</div>
                 </div>
             </div>
 
@@ -1054,8 +1054,8 @@
                     Sign Up for Portal
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
-                <a href="mailto:mike@stealthlabz.com" class="btn-outline">
-                    Contact for Quote
+                <a href="mailto:info@stealthlabz.com" class="btn-outline">
+                    Get in Touch
                 </a>
             </div>
         </div>

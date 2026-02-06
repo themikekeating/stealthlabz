@@ -95,14 +95,14 @@
                     </div>
                     
                     <h1 class="hero-title">
-                        Built Different.<br>
-                        <span class="highlight">Ships Fast.</span>
+                        One Operator. Ten Systems.<br>
+                        <span class="highlight">$938K Revenue.</span>
                     </h1>
-                    
+
                     <p class="hero-subtitle">
-                        Performance marketing, product development, and global operations — now accelerated by AI. We build platforms that compete in billion-dollar categories.
+                        15+ years of performance marketing experience, now compounded by AI. Stealth Labz is the operating company behind a portfolio of lead gen, content, DTC, and SaaS platforms — all built by a single operator in under two years. Every property connects through one platform. Every dollar tracked.
                     </p>
-                    
+
                     <div class="hero-cta">
                         <a href="<?= siteUrl('brands') ?>" class="btn-glow">
                             Explore Portfolio
@@ -110,23 +110,23 @@
                         </a>
                         <a href="mailto:info@stealthlabz.com" class="btn-outline">Get in Touch</a>
                     </div>
-                    
+
                     <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">$<span class="counter" data-target="35">0</span>M+</div>
+                            <div class="hero-stat-label">Career Revenue</div>
+                        </div>
                         <div class="hero-stat">
                             <div class="hero-stat-value"><span class="counter" data-target="10">0</span></div>
                             <div class="hero-stat-label">Production Systems</div>
                         </div>
                         <div class="hero-stat">
+                            <div class="hero-stat-value"><span class="counter" data-target="4">0</span>.9x</div>
+                            <div class="hero-stat-label">AI Velocity Increase</div>
+                        </div>
+                        <div class="hero-stat">
                             <div class="hero-stat-value"><span class="counter" data-target="596">0</span>K+</div>
                             <div class="hero-stat-label">Lines of Code</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value"><span class="counter" data-target="4">0</span>.9x</div>
-                            <div class="hero-stat-label">Velocity Increase</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">$<span class="counter" data-target="938">0</span>K</div>
-                            <div class="hero-stat-label">Revenue Through Systems</div>
                         </div>
                     </div>
                 </div>
@@ -272,7 +272,7 @@
         <div class="container-xl">
             <div class="fade-up">
                 <h2 class="section-title">What's Live</h2>
-                <p class="section-subtitle">Our brands. Built with our process. Powered by Portal. Proof that the playbook works.</p>
+                <p class="section-subtitle">Our brands. Our infrastructure. Every property built with the same method, powered by the same platform.</p>
             </div>
             
             <div class="portfolio-grid">
@@ -446,11 +446,11 @@
                 <div class="col-lg-7 fade-up">
                     <h2 class="section-title">How We Work</h2>
 
-                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all built lean, all in production. Every property connects through Portal Stealth.</p>
+                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all in production, all connected through Portal.</p>
 
-                    <p>The playbook took <strong>15+ years</strong> to develop: affiliate networks, DTC scale-ups, subscription brands, SEO. The kind of knowledge you only get from <strong>$35M+ in revenue</strong> and <strong>300K+ paid subscribers</strong> acquired across multiple ventures.</p>
+                    <p>The playbook took <strong>15+ years</strong> to develop across affiliate networks, DTC scale-ups, subscription brands, and SEO — <strong>$35M+ in revenue</strong> and <strong>300K+ paid subscribers</strong> across multiple ventures.</p>
 
-                    <p>Then AI changed the math. A single operator now produces more output than a four-person team — <strong>4.9x velocity increase</strong>, <strong>596,903 lines of code</strong> across <strong>10 production systems</strong>. The methodology behind it: the Compounding Execution Method.</p>
+                    <p>Then AI changed the math. What used to require a four-person team now ships from a single operator — <strong>10 production systems</strong>, <strong>596,903 lines of code</strong>, two continents. The methodology behind it: the Compounding Execution Method.</p>
 
                     <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
                 </div>
@@ -552,7 +552,7 @@
         <div class="container-xl">
             <div class="cta-content fade-up">
                 <h2>Stay in the Loop</h2>
-                <p>Get updates on new platforms, builds, and insights.</p>
+                <p>New platforms, builds, and insights — straight to your inbox.</p>
 
                 <form id="cta-newsletter-form" class="newsletter-form">
                     <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
