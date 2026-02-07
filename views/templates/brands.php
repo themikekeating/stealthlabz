@@ -589,6 +589,21 @@
                             <span class="tech-pill">PHP MVC</span>
                             <span class="tech-pill">FunnelEngine.js</span>
                             <span class="tech-pill">CI/CD</span>
+                        </div>
+
+                        <ul class="features-list">
+                            <li>Config-driven funnels: add verticals in minutes</li>
+                            <li>FunnelEngine.js handles state, validation, API routing</li>
+                            <li>Portal integration for lead distribution</li>
+                            <li>Real-time analytics and conversion tracking</li>
+                        </ul>
+
+                        <a href="https://goquoterocket.com" class="brand-link" target="_blank">
+                            goquoterocket.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- 4. CUSTOMER REPORTS -->
                 <div class="brand-card fade-up">
