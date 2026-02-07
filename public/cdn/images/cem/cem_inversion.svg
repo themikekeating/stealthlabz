@@ -11,7 +11,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="780" height="420" fill="#0D0D1A" rx="16"/>
+  <rect width="780" height="420" fill="transparent" rx="16"/>
   
   <!-- Grid -->
   <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">

@@ -17,7 +17,7 @@
   </defs>
   
   <!-- Background -->
-  <rect width="680" height="480" fill="#0D0D1A" rx="16"/>
+  <rect width="680" height="480" fill="transparent" rx="16"/>
   
   <!-- Subtle grid texture -->
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
