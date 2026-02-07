@@ -378,22 +378,6 @@
         }
 
         /* Responsive */
-        @media (max-width: 991px) {
-            .brand-card[style*="grid-column: span 2"] {
-                grid-column: span 1;
-            }
-            .brand-card[style*="grid-column: span 2"] .brand-card-row {
-                flex-direction: column !important;
-            }
-            .brand-card[style*="grid-column: span 2"] .brand-screenshot {
-                width: 100% !important;
-                min-height: auto !important;
-            }
-            .brand-card[style*="grid-column: span 2"] .brand-content {
-                width: 100% !important;
-            }
-        }
-
         @media (max-width: 768px) {
             .brands-hero-title {
                 font-size: 2.25rem;
@@ -605,90 +589,64 @@
                             <span class="tech-pill">PHP MVC</span>
                             <span class="tech-pill">FunnelEngine.js</span>
                             <span class="tech-pill">CI/CD</span>
+
+                <!-- 4. CUSTOMER REPORTS -->
+                <div class="brand-card fade-up">
+                    <div class="brand-screenshot">
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">customer-reports.org</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/customer-reports.png" alt="Customer Reports - Product Reviews and Buying Guides" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="brand-content">
+                        <div class="brand-badge">Content • Affiliate</div>
+                        <h3 class="brand-title">Customer Reports</h3>
+                        <p class="brand-tagline">13,000 Articles. 2 Days. Zero Dependencies.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Days</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">$100</div>
+                                <div class="stat-label">Cost</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">29K</div>
+                                <div class="stat-label">Lines</div>
+                            </div>
+                        </div>
+
+                        <div class="traditional-block">
+                            <div class="traditional-label">Traditional Estimate</div>
+                            <div class="traditional-value">$15,000 – $25,000</div>
+                            <div class="traditional-timeline">6 weeks with dev team</div>
+                        </div>
+
+                        <div class="tech-pills">
+                            <span class="tech-pill">PHP MVC</span>
+                            <span class="tech-pill">Zero Dependencies</span>
+                            <span class="tech-pill">CI/CD</span>
                         </div>
 
                         <ul class="features-list">
-                            <li>Auto, life, medicare, credit card funnels</li>
-                            <li>Add new vertical in 5 minutes with ONE config file</li>
-                            <li>11 organic SEO pages for Google traffic</li>
-                            <li>Multi-buyer lead routing, white-label ready</li>
+                            <li>13,000+ articles migrated from WordPress</li>
+                            <li>Product reviews with ratings, pros/cons, affiliate CTAs</li>
+                            <li>148 reviews, 100+ listicles, 14 categories</li>
+                            <li>SEO-optimized URL structure with 301 redirects</li>
                         </ul>
 
-                        <a href="https://goquoterocket.com" class="brand-link" target="_blank">
-                            goquoterocket.com
+                        <a href="https://customer-reports.org" class="brand-link" target="_blank">
+                            customer-reports.org
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                     </div>
                 </div>
-
-
-                <!-- 4. CUSTOMER REPORTS NETWORK -->
-                <div class="brand-card flagship fade-up">
-                    <div class="brand-card-row">
-                        <div class="brand-screenshot">
-                            <div class="browser-titlebar">
-                                <div class="browser-dots"><span></span><span></span><span></span></div>
-                                <div class="browser-url">customer-reports.org</div>
-                            </div>
-                            <div class="browser-viewport">
-                                <img src="/cdn/images/brands/customer-reports.png" alt="Customer Reports - Product Reviews and Buying Guides" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="brand-content">
-                            <div class="brand-badge">Content Network • Affiliate</div>
-                            <h3 class="brand-title">Customer Reports</h3>
-                            <p class="brand-tagline">13,000+ Articles. 2 Properties. 5 Days Total Build.</p>
-
-                            <div class="stats-grid">
-                                <div class="stat-box">
-                                    <div class="stat-value">5</div>
-                                    <div class="stat-label">Days Total</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div class="stat-value">$200</div>
-                                    <div class="stat-label">Cost</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div class="stat-value">35K</div>
-                                    <div class="stat-label">Lines</div>
-                                </div>
-                            </div>
-
-                            <div class="traditional-block">
-                                <div class="traditional-label">Traditional Estimate</div>
-                                <div class="traditional-value">$25,000 – $45,000</div>
-                                <div class="traditional-timeline">8-12 weeks with dev team</div>
-                            </div>
-
-                            <div class="tech-pills">
-                                <span class="tech-pill">PHP MVC</span>
-                                <span class="tech-pill">Zero Dependencies</span>
-                                <span class="tech-pill">CI/CD</span>
-                                <span class="tech-pill">Shared Admin</span>
-                            </div>
-
-                            <ul class="features-list">
-                                <li>13,000+ articles migrated from WordPress across 2 domains</li>
-                                <li>Product reviews with ratings, pros/cons, affiliate CTAs</li>
-                                <li>148 reviews, 100+ listicles, 14 categories</li>
-                                <li>SEO-optimized URL structure with 301 redirects</li>
-                                <li>Companion site (gocustomerreports.com) for expanded coverage</li>
-                            </ul>
-
-                            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-                                <a href="https://customer-reports.org" class="brand-link" target="_blank">
-                                    customer-reports.org
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                                <a href="https://gocustomerreports.com" class="brand-link" target="_blank">
-                                    gocustomerreports.com
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 6. VIDEOS FROM SANTA -->
+                <!-- 5. VIDEOS FROM SANTA -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
                         <div class="browser-titlebar">
@@ -746,7 +704,7 @@
                     </div>
                 </div>
 
-                <!-- 7. HOA ATTORNEY GUIDE -->
+                <!-- 6. HOA ATTORNEY GUIDE -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
                         <div class="browser-titlebar">
@@ -803,7 +761,7 @@
                     </div>
                 </div>
 
-                <!-- 8. EVERGREEN BRANDS -->
+                <!-- 7. EVERGREEN BRANDS -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
                         <div class="browser-titlebar">
