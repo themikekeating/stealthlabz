@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#e5025d">
     <title>CEM — The Compounding Execution Method | Stealth Labz</title>
-    <meta name="description" content="A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 systems shipped by a solo operator.">
+    <meta name="description" content="A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 systems shipped.">
     <link rel="canonical" href="https://stealthlabz.com/cem">
 
     <meta property="og:title" content="CEM — The Compounding Execution Method | Stealth Labz">
@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="/cdn/css/global.css">
 
     <style>
-        /* CEM Page Specific Styles */
+        /* ========================================
+           CEM Page — Styles
+           ======================================== */
+
+        /* --- Hero --- */
         .cem-hero {
             padding: 10rem 0 6rem;
             position: relative;
@@ -44,7 +48,7 @@
             align-items: center;
             gap: 0.5rem;
             font-family: var(--font-mono);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--accent-pink);
             background: var(--accent-pink-bg-light);
             border: 1px solid var(--accent-pink-border-strong);
@@ -82,32 +86,73 @@
             line-height: 1.8;
             margin-bottom: 2.5rem;
         }
+
+        /* Hero stats — dominant number */
         .cem-hero-stats {
+            display: flex;
+            align-items: flex-end;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .cem-stat-hero {
+            /* The dominant stat */
+        }
+        .cem-stat-hero .cem-stat-value {
+            font-family: var(--font-mono);
+            font-size: clamp(3.5rem, 7vw, 5.5rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+        .cem-stat-hero .cem-stat-value .accent {
+            color: var(--accent-pink);
+        }
+        .cem-stat-hero .cem-stat-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 0.5rem;
+        }
+        .cem-stats-secondary {
             display: flex;
             gap: 2.5rem;
             flex-wrap: wrap;
         }
-        .cem-stat-value {
+        .cem-stats-secondary .cem-stat-value {
             font-family: var(--font-mono);
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-primary);
         }
-        .cem-stat-value .accent { color: var(--accent-pink); }
-        .cem-stat-label {
-            font-size: 0.75rem;
+        .cem-stats-secondary .cem-stat-value .accent {
+            color: var(--accent-pink);
+        }
+        .cem-stats-secondary .cem-stat-label {
+            font-size: 0.7rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             margin-top: 0.15rem;
         }
 
+        /* --- Sections --- */
         .cem-section {
             padding: 6rem 0;
             position: relative;
         }
         .cem-section.alt {
             background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .cem-section.evidence-section {
+            padding: 8rem 0;
+        }
+        .cem-section.pillars-section {
+            padding: 8rem 0;
         }
         .cem-section-label {
             font-family: var(--font-mono);
@@ -131,6 +176,7 @@
             margin-bottom: 3rem;
         }
 
+        /* --- Cards (Requirements) --- */
         .cem-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -164,18 +210,24 @@
         }
         .cem-card p {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.7;
         }
 
+        /* --- Framework Cards (Pillars) --- */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
         .framework-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
+            padding: 2.5rem;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s;
         }
         .framework-card::before {
             content: '';
@@ -186,44 +238,70 @@
             height: 2px;
             background: linear-gradient(90deg, var(--accent-pink), transparent);
         }
+        .framework-card:hover {
+            border-color: var(--accent-pink-border-strong);
+            transform: translateY(-2px);
+        }
         .framework-card .fc-number {
             font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--text-muted);
+            font-size: 0.85rem;
+            color: var(--accent-pink);
             text-transform: uppercase;
             letter-spacing: 0.15em;
             margin-bottom: 0.75rem;
+            font-weight: 500;
         }
         .framework-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
-        .framework-card p {
+        .framework-card .fc-desc {
             color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.8;
-            max-width: 640px;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
         .framework-card .fc-evidence {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
+            margin-top: 1.25rem;
+            padding: 1rem;
             background: var(--accent-pink-bg);
             border: 1px solid var(--accent-pink-border);
             border-radius: 10px;
             font-family: var(--font-mono);
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
+            line-height: 1.6;
         }
         .framework-card .fc-evidence strong {
             color: var(--accent-pink);
         }
 
+        /* --- Evidence Hero Callout --- */
+        .evidence-callout {
+            padding: 3rem 0 4rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+        .evidence-callout-number {
+            font-family: var(--font-mono);
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 700;
+            color: var(--accent-pink);
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+        .evidence-callout-context {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* --- Tables --- */
         .cem-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
         .cem-table th {
             font-family: var(--font-mono);
@@ -238,10 +316,12 @@
         .cem-table td {
             padding: 0.85rem 1rem;
             border-bottom: 1px solid var(--border-browser);
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--text-secondary);
         }
-        .cem-table tr:hover td { background: var(--bg-subtle); }
+        .cem-table tr:hover td {
+            background: var(--bg-subtle);
+        }
         .cem-table .val {
             font-family: var(--font-mono);
             color: var(--text-primary);
@@ -250,85 +330,20 @@
         .cem-table .accent { color: var(--accent-pink); }
         .cem-table .green { color: var(--accent-green); }
 
-        .not-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .not-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 2rem;
-        }
-        .not-card h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
-        }
-        .not-card h4 span { color: var(--accent-pink); }
-        .not-card p {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .doc-row {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            padding: 1.25rem 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            margin-bottom: 0.75rem;
-            transition: all 0.3s;
-        }
-        .doc-row:hover {
-            border-color: var(--accent-pink-border-strong);
-            background: var(--bg-hover);
-        }
-        .doc-row-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: var(--accent-pink-bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--accent-pink);
-        }
-        .doc-row h4 {
+        .table-label {
             font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.5rem;
         }
-        .doc-row p {
-            font-size: 0.9rem;
+        .table-footnote {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin: 0;
+            margin-top: 0.75rem;
         }
 
-        .cem-cta {
-            padding: 6rem 0;
-            text-align: center;
-        }
-        .cem-cta h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .cem-cta p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Visual containers */
+        /* --- Visual containers --- */
         .cem-visual {
-            margin: 3rem 0;
+            margin: 4rem 0;
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border-browser);
@@ -354,11 +369,65 @@
             margin-right: auto;
         }
 
+        /* --- Not Grid --- */
+        .not-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .not-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2rem;
+        }
+        .not-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        .not-card h4 span { color: var(--accent-pink); }
+        .not-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* --- CTA --- */
+        .cem-cta {
+            padding: 6rem 0;
+            text-align: center;
+        }
+        .cem-cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .cem-cta p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 991px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         @media (max-width: 768px) {
             .cem-hero { padding: 8rem 0 4rem; }
-            .cem-hero-stats { gap: 1.5rem; }
+            .cem-hero-stats { gap: 2rem; }
+            .cem-stat-hero .cem-stat-value { font-size: 3rem; }
+            .cem-stats-secondary { gap: 1.5rem; }
             .framework-card { padding: 2rem; }
             .cem-section { padding: 4rem 0; }
+            .cem-section.evidence-section { padding: 5rem 0; }
+            .cem-section.pillars-section { padding: 5rem 0; }
+            .evidence-callout { padding: 2rem 0 3rem; margin-bottom: 3rem; }
+            .cem-visual { margin: 3rem 0; }
         }
     </style>
 </head>
@@ -367,7 +436,9 @@
 
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
-    <!-- Hero -->
+    <!-- ============================================
+         HERO
+         ============================================ -->
     <section class="cem-hero">
         <div class="container-xl">
             <div class="fade-up">
@@ -377,49 +448,49 @@
                 </div>
                 <h1>The Compounding<br><span class="highlight">Execution Method</span></h1>
                 <p class="cem-hero-sub">
-                    A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code, 10 systems, and a 4.9x velocity increase — by a solo operator with zero prior development experience.
+                    An execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 shipped systems.
                 </p>
                 <div class="cem-hero-stats">
-                    <div class="cem-stat">
-                        <div class="cem-stat-value">596<span class="accent">,</span>903</div>
-                        <div class="cem-stat-label">Lines of Code</div>
+                    <!-- Dominant stat -->
+                    <div class="cem-stat-hero">
+                        <div class="cem-stat-value">70<span class="accent">→</span>5</div>
+                        <div class="cem-stat-label">Days to Production</div>
                     </div>
-                    <div class="cem-stat">
-                        <div class="cem-stat-value">10</div>
-                        <div class="cem-stat-label">Production Systems</div>
-                    </div>
-                    <div class="cem-stat">
-                        <div class="cem-stat-value">70→5</div>
-                        <div class="cem-stat-label">Days to MVP</div>
-                    </div>
-                    <div class="cem-stat">
-                        <div class="cem-stat-value">4.9<span class="accent">x</span></div>
-                        <div class="cem-stat-label">Velocity Increase</div>
+                    <!-- Supporting stats -->
+                    <div class="cem-stats-secondary">
+                        <div class="cem-stat">
+                            <div class="cem-stat-value">596<span class="accent">,</span>903</div>
+                            <div class="cem-stat-label">Lines of Code</div>
+                        </div>
+                        <div class="cem-stat">
+                            <div class="cem-stat-value">10</div>
+                            <div class="cem-stat-label">Production Systems</div>
+                        </div>
+                        <div class="cem-stat">
+                            <div class="cem-stat-value">4.9<span class="accent">x</span></div>
+                            <div class="cem-stat-label">Velocity Increase</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What Is CEM -->
+    <!-- ============================================
+         WHAT IS CEM
+         ============================================ -->
     <section class="cem-section alt">
         <div class="container-xl">
             <div class="row align-items-center">
                 <div class="col-lg-6 fade-up">
                     <div class="cem-section-label">Overview</div>
                     <h2>What Is CEM?</h2>
-                    <p class="cem-section-intro" style="margin-bottom:1.5rem;">
+                    <p class="cem-section-intro" style="margin-bottom:0;">
                         The Compounding Execution Method is an execution framework for the AI era. Not project management. Not agile with a new name. An operating system for how a single operator — or a small team — ships production software at a pace that was previously impossible.
-                    </p>
-                    <p style="color:var(--text-secondary);font-size:1rem;line-height:1.8;max-width:720px;margin-bottom:1.5rem;">
-                        CEM was extracted from a 23-month build that produced 10 production systems across multiple verticals and two geographic markets. Every component maps to a real operational pattern that emerged during execution.
-                    </p>
-                    <p style="color:var(--text-secondary);font-size:1rem;line-height:1.8;max-width:720px;">
-                        Traditional methodologies were built around constraints AI has dissolved: context switching cost, team coordination overhead, the lag between specification and implementation. CEM starts from a different premise — with AI as an enabling environment, the bottleneck shifts from "how many people can we coordinate" to "how effectively can one operator compound their accumulated knowledge."
                     </p>
                 </div>
                 <div class="col-lg-6 fade-up stagger-1">
-                    <div class="cem-visual">
+                    <div class="cem-visual" style="margin:0;">
                         <img src="/cdn/images/cem/cem_core_loop.svg"
                              alt="The CEM Core Loop: Vision, Target, Foundation, and Pendulum forming a compounding cycle"
                              loading="lazy">
@@ -429,7 +500,9 @@
         </div>
     </section>
 
-    <!-- Requirements -->
+    <!-- ============================================
+         REQUIREMENTS
+         ============================================ -->
     <section class="cem-section">
         <div class="container-xl">
             <div class="fade-up">
@@ -444,7 +517,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
                         </div>
                         <h3>AI as Enabling Environment</h3>
-                        <p>AI is not a tool within CEM. It is the container that makes the system possible. A tool assists with discrete tasks. An environment changes what tasks are possible. When AI operates as an environment, context switching cost approaches zero. Parallel execution becomes practical.</p>
+                        <p>AI is not a tool within CEM — it is the container that makes the system possible. An environment changes what tasks are possible. Context switching cost approaches zero. Parallel execution becomes practical.</p>
                     </div>
                 </div>
                 <div class="col-md-6 fade-up stagger-2">
@@ -453,15 +526,17 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3>The Operator</h3>
-                        <p>CEM is operator-dependent. It amplifies domain knowledge, decision-making speed, and accumulated patterns. It does not replace them. Deep domain understanding, resourcefulness under constraint, self-reliance, risk tolerance, sustained focus.</p>
+                        <p>CEM is operator-dependent. It amplifies domain knowledge, decision-making speed, and accumulated patterns — it does not replace them. Deep domain understanding, resourcefulness, and sustained focus are prerequisites.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Framework -->
-    <section class="cem-section alt">
+    <!-- ============================================
+         FOUR PILLARS
+         ============================================ -->
+    <section class="cem-section alt pillars-section">
         <div class="container-xl">
             <div class="fade-up">
                 <div class="cem-section-label">Core Framework</div>
@@ -469,47 +544,52 @@
                 <p class="cem-section-intro">Vision sets direction. Target defines scope. Foundation provides fuel. The Pendulum makes decisions.</p>
             </div>
 
-            <!-- Core Triangle Visual -->
-            <div class="cem-visual compact centered fade-up" style="margin-bottom:3rem;">
+            <!-- Core Triangle Visual — section anchor -->
+            <div class="cem-visual compact centered fade-up" style="margin-bottom:3.5rem;margin-top:0;">
                 <img src="/cdn/images/cem/cem_core_triangle.svg"
                      alt="The Core Triangle: Vision at apex, Foundation and Pendulum at base, Target in center"
                      loading="lazy">
             </div>
 
-            <div class="framework-card fade-up">
-                <div class="fc-number">Pillar 01</div>
-                <h3>Vision</h3>
-                <p>The future state. Undefined by design — not a spec, not a wireframe, not a PRD. The confidence that the operator, working within the AI environment, drawing from the Foundation, will reach a destination that can't be fully described in advance.</p>
-            </div>
-
-            <div class="framework-card fade-up">
-                <div class="fc-number">Pillar 02</div>
-                <h3>Target</h3>
-                <p>The operational filter. What are we building right now? Defined at 80% of a known reference — a market leader, a proven competitor, an existing system. Execute to 80% of what already exists, then let the remaining 20% emerge as differentiation.</p>
-                <div class="fc-evidence">
-                    <strong>80% Premise →</strong> This is why CEM produces 2–5 day MVPs in the mature phase. Build to functional completeness against a known reference, not perfection.
+            <!-- 2x2 Grid -->
+            <div class="pillars-grid">
+                <div class="framework-card fade-up">
+                    <div class="fc-number">Pillar 01</div>
+                    <h3>Vision</h3>
+                    <p class="fc-desc">The future state. Undefined by design — not a spec, not a wireframe. The confidence that the operator, working within the AI environment, will reach a destination that can't be fully described in advance.</p>
                 </div>
-            </div>
 
-            <div class="framework-card fade-up">
-                <div class="fc-number">Pillar 03</div>
-                <h3>Foundation</h3>
-                <p>The accumulated asset base. Templates, patterns, code libraries, architectural decisions, solved problems, working integrations. Every completed cycle feeds back into the Foundation. Every new project draws from it. This is where the compounding happens.</p>
-                <div class="fc-evidence">
-                    <strong>Evidence →</strong> First vertical: 70 days to first lead. By month four: 9 verticals deployed in a single day. Same operator. Same tools. Larger Foundation.
+                <div class="framework-card fade-up">
+                    <div class="fc-number">Pillar 02</div>
+                    <h3>Target</h3>
+                    <p class="fc-desc">The operational filter. Defined at 80% of a known reference — a market leader, a proven competitor. Execute to functional completeness, then let the remaining 20% emerge as differentiation.</p>
+                    <div class="fc-evidence">
+                        <strong>80% Premise →</strong> This is why CEM produces 2–5 day MVPs in the mature phase.
+                    </div>
                 </div>
-            </div>
 
-            <div class="framework-card fade-up">
-                <div class="fc-number">Pillar 04</div>
-                <h3>The Pendulum</h3>
-                <p>The binary decision mechanism. Every piece of work gets one question: does this advance the Target? Yes → execute immediately. No → stash retrievably in the Foundation. There is no backlog. No "we'll get to it later" list that grows indefinitely.</p>
+                <div class="framework-card fade-up">
+                    <div class="fc-number">Pillar 03</div>
+                    <h3>Foundation</h3>
+                    <p class="fc-desc">The accumulated asset base. Templates, patterns, code libraries, solved problems. Every completed cycle feeds back into the Foundation. This is where the compounding happens.</p>
+                    <div class="fc-evidence">
+                        <strong>Evidence →</strong> First vertical: 70 days. By month four: 9 verticals deployed in a single day. Same operator. Larger Foundation.
+                    </div>
+                </div>
+
+                <div class="framework-card fade-up">
+                    <div class="fc-number">Pillar 04</div>
+                    <h3>The Pendulum</h3>
+                    <p class="fc-desc">The binary decision mechanism. Every piece of work gets one question: does this advance the Target? Yes → execute immediately. No → stash retrievably in the Foundation. No backlog.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Evidence -->
-    <section class="cem-section">
+    <!-- ============================================
+         EVIDENCE
+         ============================================ -->
+    <section class="cem-section evidence-section">
         <div class="container-xl">
             <div class="fade-up">
                 <div class="cem-section-label">Evidence</div>
@@ -517,9 +597,21 @@
                 <p class="cem-section-intro">Every claim is backed by production data — commits, timestamps, database records, transaction logs.</p>
             </div>
 
+            <!-- Hero Callout — the number that stops the scroll -->
+            <div class="evidence-callout fade-up">
+                <div class="evidence-callout-number">
+                    1 operator. 23.1 commits/day.<br>
+                    A 4-person team did 13.5.
+                </div>
+                <div class="evidence-callout-context">
+                    71% higher daily velocity. 75% fewer contributors. Git-audited across 64 days of production.
+                </div>
+            </div>
+
+            <!-- Velocity + Production Output -->
             <div class="row g-4 mb-5">
                 <div class="col-lg-6 fade-up">
-                    <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Velocity Comparison</h4>
+                    <div class="table-label">Velocity Comparison</div>
                     <table class="cem-table">
                         <thead>
                             <tr><th>Period</th><th>Commits</th><th>Days</th><th>Commits/Day</th><th>Contributors</th></tr>
@@ -541,10 +633,9 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p style="font-size:0.95rem;color:var(--text-muted);margin-top:0.75rem;">71% higher daily velocity. 75% fewer contributors. One operator outproduced a four-person team.</p>
                 </div>
                 <div class="col-lg-6 fade-up">
-                    <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Production Output</h4>
+                    <div class="table-label">Production Output</div>
                     <table class="cem-table">
                         <thead>
                             <tr><th>Metric</th><th>Value</th></tr>
@@ -571,9 +662,10 @@
                 </div>
             </div>
 
+            <!-- Time Compression + Git Projects -->
             <div class="row g-4">
                 <div class="col-lg-6 fade-up">
-                    <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Time Compression</h4>
+                    <div class="table-label">Time Compression</div>
                     <table class="cem-table">
                         <thead>
                             <tr><th>Project</th><th>Days to Production</th></tr>
@@ -588,7 +680,7 @@
                     </table>
                 </div>
                 <div class="col-lg-6 fade-up">
-                    <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Git-Tracked Projects</h4>
+                    <div class="table-label">Git-Tracked Projects</div>
                     <table class="cem-table">
                         <thead>
                             <tr><th>Project</th><th>LOC</th></tr>
@@ -605,7 +697,7 @@
             </div>
 
             <!-- Compounding Trajectory Visual -->
-            <div class="cem-visual fade-up" style="margin-top:3rem;">
+            <div class="cem-visual fade-up">
                 <img src="/cdn/images/cem/cem_compounding.svg"
                      alt="Compounding Trajectory: velocity accelerating from Project 1 (70 days) to Project 10 (5 days)"
                      loading="lazy">
@@ -615,7 +707,7 @@
             </div>
 
             <!-- Inflection Window Visual -->
-            <div class="cem-visual fade-up" style="margin-top:2rem;">
+            <div class="cem-visual fade-up">
                 <img src="/cdn/images/cem/cem_inflection.svg"
                      alt="The Inflection Window: 7-day gap followed by explosion to 44.6 commits/day"
                      loading="lazy">
@@ -624,18 +716,21 @@
                 </div>
             </div>
 
+            <!-- Traditional Equivalent -->
             <div class="traditional-summary fade-up">
                 <div class="traditional-summary-label">Traditional Equivalent</div>
                 <div class="traditional-summary-value"><span class="accent">$600K – $900K+</span> in development costs</div>
                 <div class="traditional-summary-context">
                     At industry rates ($150–$200/hr), this output would require a 4-6 person team working 12–18 months.
-                    Built by one operator in under two years with ~$1,500 in direct costs.
+                    Produced with ~$1,500 in direct costs.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CEM Is Not -->
+    <!-- ============================================
+         CEM IS NOT
+         ============================================ -->
     <section class="cem-section alt">
         <div class="container-xl">
             <div class="fade-up">
@@ -663,14 +758,16 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ============================================
+         CTA
+         ============================================ -->
     <section class="cem-cta">
         <div class="container-xl">
             <div class="fade-up">
                 <h2>Interested in CEM?</h2>
                 <p>See the methodology in action through the production systems it produced.</p>
                 <div class="d-flex gap-3 justify-content-center flex-wrap">
-                    <a href="mailto:info@stealthlabz.com" class="btn-glow">
+                    <a href="/cdn-cgi/l/email-protection#d1b8bfb7be91a2a5b4b0bda5b9bdb0b3abffb2bebc" class="btn-glow">
                         Get in Touch
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
@@ -683,6 +780,7 @@
     <!-- Footer -->
     <?php include ROOT_PATH . '/views/components/footer.php'; ?>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         window.addEventListener('scroll', function() {
