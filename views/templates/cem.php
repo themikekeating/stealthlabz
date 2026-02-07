@@ -44,7 +44,7 @@
             align-items: center;
             gap: 0.5rem;
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--accent-pink);
             background: var(--accent-pink-bg-light);
             border: 1px solid var(--accent-pink-border-strong);
@@ -164,7 +164,7 @@
         }
         .cem-card p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.7;
         }
 
@@ -212,7 +212,7 @@
             border: 1px solid var(--accent-pink-border);
             border-radius: 10px;
             font-family: var(--font-mono);
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: var(--text-secondary);
         }
         .framework-card .fc-evidence strong {
@@ -238,7 +238,7 @@
         .cem-table td {
             padding: 0.85rem 1rem;
             border-bottom: 1px solid var(--border-browser);
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--text-secondary);
         }
         .cem-table tr:hover td { background: var(--bg-subtle); }
@@ -269,7 +269,7 @@
         }
         .not-card h4 span { color: var(--accent-pink); }
         .not-card p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-secondary);
             line-height: 1.7;
         }
@@ -301,12 +301,12 @@
             color: var(--accent-pink);
         }
         .doc-row h4 {
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: 0.15rem;
         }
         .doc-row p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             margin: 0;
         }
@@ -541,7 +541,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;">71% higher daily velocity. 75% fewer contributors. One operator outproduced a four-person team.</p>
+                    <p style="font-size:0.95rem;color:var(--text-muted);margin-top:0.75rem;">71% higher daily velocity. 75% fewer contributors. One operator outproduced a four-person team.</p>
                 </div>
                 <div class="col-lg-6 fade-up">
                     <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Production Output</h4>
