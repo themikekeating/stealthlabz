@@ -44,8 +44,7 @@ $router = new Router();
 
 // Routes
 $router->get('/', [LandingController::class, 'index']);
-$router->get('/process', [LandingController::class, 'process']);
-$router->get('/stack', [LandingController::class, 'stack']);
+$router->get('/cem', [LandingController::class, 'cem']);
 $router->get('/brands', [LandingController::class, 'brands']);
 
 // Blog

@@ -7,12 +7,12 @@
     <meta name="theme-color" content="#e5025d">
     <title>CEM — The Compounding Execution Method | Stealth Labz</title>
     <meta name="description" content="A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 systems shipped by a solo operator.">
-    <link rel="canonical" href="https://stealthlabz.com/process">
+    <link rel="canonical" href="https://stealthlabz.com/cem">
 
     <meta property="og:title" content="CEM — The Compounding Execution Method | Stealth Labz">
     <meta property="og:description" content="A universal execution operating system for AI-native builders. 596,903 lines of code. 10 production systems. One methodology.">
     <meta property="og:image" content="https://stealthlabz.com/cdn/images/og-default.png">
-    <meta property="og:url" content="https://stealthlabz.com/process">
+    <meta property="og:url" content="https://stealthlabz.com/cem">
     <meta property="og:type" content="article">
 
     <link rel="icon" type="image/x-icon" href="/cdn/favicon.ico">
@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/cdn/css/landing.css">
     <link rel="stylesheet" href="/cdn/css/global.css">
 
     <style>
@@ -47,8 +46,8 @@
             font-family: var(--font-mono);
             font-size: 0.8rem;
             color: var(--accent-pink);
-            background: rgba(229,2,93,0.08);
-            border: 1px solid rgba(229,2,93,0.3);
+            background: var(--accent-pink-bg-light);
+            border: 1px solid var(--accent-pink-border-strong);
             border-radius: 100px;
             padding: 0.4rem 1rem;
             margin-bottom: 2rem;
@@ -141,16 +140,16 @@
             height: 100%;
         }
         .cem-card:hover {
-            background: rgba(255,255,255,0.06);
-            border-color: rgba(229,2,93,0.3);
+            background: var(--bg-hover);
+            border-color: var(--accent-pink-border-strong);
             transform: translateY(-2px);
         }
         .cem-card-icon {
             width: 48px;
             height: 48px;
             border-radius: 12px;
-            background: rgba(229,2,93,0.08);
-            border: 1px solid rgba(229,2,93,0.3);
+            background: var(--accent-pink-bg-light);
+            border: 1px solid var(--accent-pink-border-strong);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -209,8 +208,8 @@
         .framework-card .fc-evidence {
             margin-top: 1.5rem;
             padding: 1.25rem;
-            background: rgba(229,2,93,0.04);
-            border: 1px solid rgba(229,2,93,0.15);
+            background: var(--accent-pink-bg);
+            border: 1px solid var(--accent-pink-border);
             border-radius: 10px;
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -238,18 +237,18 @@
         }
         .cem-table td {
             padding: 0.85rem 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+            border-bottom: 1px solid var(--border-browser);
             font-size: 0.95rem;
             color: var(--text-secondary);
         }
-        .cem-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .cem-table tr:hover td { background: var(--bg-subtle); }
         .cem-table .val {
             font-family: var(--font-mono);
             color: var(--text-primary);
             font-weight: 600;
         }
         .cem-table .accent { color: var(--accent-pink); }
-        .cem-table .green { color: #00c853; }
+        .cem-table .green { color: var(--accent-green); }
 
         .not-grid {
             display: grid;
@@ -287,14 +286,14 @@
             transition: all 0.3s;
         }
         .doc-row:hover {
-            border-color: rgba(229,2,93,0.3);
-            background: rgba(255,255,255,0.06);
+            border-color: var(--accent-pink-border-strong);
+            background: var(--bg-hover);
         }
         .doc-row-icon {
             width: 40px;
             height: 40px;
             border-radius: 10px;
-            background: rgba(229,2,93,0.08);
+            background: var(--accent-pink-bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -325,6 +324,34 @@
             color: var(--text-secondary);
             font-size: 1.1rem;
             margin-bottom: 2rem;
+        }
+
+        /* Visual containers */
+        .cem-visual {
+            margin: 3rem 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-browser);
+        }
+        .cem-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .cem-visual-caption {
+            padding: 0.75rem 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-subtle);
+            border-top: 1px solid var(--border-browser);
+        }
+        .cem-visual.compact {
+            max-width: 720px;
+        }
+        .cem-visual.centered {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @media (max-width: 768px) {
@@ -377,8 +404,8 @@
     <!-- What Is CEM -->
     <section class="cem-section alt">
         <div class="container-xl">
-            <div class="row">
-                <div class="col-lg-8 fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-up">
                     <div class="cem-section-label">Overview</div>
                     <h2>What Is CEM?</h2>
                     <p class="cem-section-intro" style="margin-bottom:1.5rem;">
@@ -390,6 +417,13 @@
                     <p style="color:var(--text-secondary);font-size:1rem;line-height:1.8;max-width:720px;">
                         Traditional methodologies were built around constraints AI has dissolved: context switching cost, team coordination overhead, the lag between specification and implementation. CEM starts from a different premise — with AI as an enabling environment, the bottleneck shifts from "how many people can we coordinate" to "how effectively can one operator compound their accumulated knowledge."
                     </p>
+                </div>
+                <div class="col-lg-6 fade-up stagger-1">
+                    <div class="cem-visual">
+                        <img src="/cdn/images/cem/cem_core_loop.svg"
+                             alt="The CEM Core Loop: Vision, Target, Foundation, and Pendulum forming a compounding cycle"
+                             loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -433,6 +467,13 @@
                 <div class="cem-section-label">Core Framework</div>
                 <h2>The Four Pillars</h2>
                 <p class="cem-section-intro">Vision sets direction. Target defines scope. Foundation provides fuel. The Pendulum makes decisions.</p>
+            </div>
+
+            <!-- Core Triangle Visual -->
+            <div class="cem-visual compact centered fade-up" style="margin-bottom:3rem;">
+                <img src="/cdn/images/cem/cem_core_triangle.svg"
+                     alt="The Core Triangle: Vision at apex, Foundation and Pendulum at base, Target in center"
+                     loading="lazy">
             </div>
 
             <div class="framework-card fade-up">
@@ -520,6 +561,16 @@
                 </div>
             </div>
 
+            <!-- Inversion Visual -->
+            <div class="cem-visual fade-up">
+                <img src="/cdn/images/cem/cem_inversion.svg"
+                     alt="The Inversion: consumption collapsed while output exploded — the X-pattern"
+                     loading="lazy">
+                <div class="cem-visual-caption">
+                    The Inversion — As consumption dropped to near-zero, production output exploded to 545 commits/month
+                </div>
+            </div>
+
             <div class="row g-4">
                 <div class="col-lg-6 fade-up">
                     <h4 style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">Time Compression</h4>
@@ -550,6 +601,26 @@
                             <tr><td><strong>Total (9 projects)</strong></td><td class="val accent"><strong>469,071</strong></td></tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Compounding Trajectory Visual -->
+            <div class="cem-visual fade-up" style="margin-top:3rem;">
+                <img src="/cdn/images/cem/cem_compounding.svg"
+                     alt="Compounding Trajectory: velocity accelerating from Project 1 (70 days) to Project 10 (5 days)"
+                     loading="lazy">
+                <div class="cem-visual-caption">
+                    Time Compression — Project 1 took 70 days. Project 10 took 5. Same operator, larger Foundation.
+                </div>
+            </div>
+
+            <!-- Inflection Window Visual -->
+            <div class="cem-visual fade-up" style="margin-top:2rem;">
+                <img src="/cdn/images/cem/cem_inflection.svg"
+                     alt="The Inflection Window: 7-day gap followed by explosion to 44.6 commits/day"
+                     loading="lazy">
+                <div class="cem-visual-caption">
+                    The Inflection Window — A 7-day gap preceded an explosion to 44.6 commits/day, establishing a permanent new baseline
                 </div>
             </div>
 
@@ -603,7 +674,7 @@
                         Get in Touch
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
-                    <a href="<?= siteUrl('stack') ?>" class="btn-outline">See the Tech Stack →</a>
+                    <a href="<?= siteUrl('brands') ?>" class="btn-outline">See Our Brands →</a>
                 </div>
             </div>
         </div>

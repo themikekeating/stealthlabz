@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+  <defs>
+    <marker id="arrowPink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e5025d"/>
+    </marker>
+    <marker id="arrowFade" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="rgba(229,2,93,0.5)"/>
+    </marker>
+    <linearGradient id="triEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(229,2,93,0.2)"/>
+      <stop offset="100%" stop-color="rgba(229,2,93,0.05)"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="520" fill="#0D0D1A" rx="16"/>
+  
+  <!-- Grid -->
+  <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  </pattern>
+  <rect width="720" height="520" fill="url(#grid2)" rx="16"/>
+
+  <!-- Triangle fill (subtle) -->
+  <polygon points="360,80 140,380 580,380" fill="rgba(229,2,93,0.02)" stroke="none"/>
+
+  <!-- Triangle edges -->
+  <line x1="360" y1="80" x2="140" y2="380" stroke="rgba(229,2,93,0.12)" stroke-width="2"/>
+  <line x1="360" y1="80" x2="580" y2="380" stroke="rgba(229,2,93,0.12)" stroke-width="2"/>
+  <line x1="140" y1="380" x2="580" y2="380" stroke="rgba(229,2,93,0.12)" stroke-width="2"/>
+
+  <!-- Flow arrows -->
+  <!-- Vision → Target (down center) -->
+  <path d="M360,155 L360,215" stroke="#e5025d" stroke-width="2" fill="none" marker-end="url(#arrowPink)"/>
+  
+  <!-- Target → Foundation (down-left) -->
+  <path d="M310,275 Q240,330 195,350" stroke="#e5025d" stroke-width="2" fill="none" marker-end="url(#arrowPink)"/>
+  
+  <!-- Foundation → Pendulum (across bottom) -->
+  <path d="M225,390 L500,390" stroke="#e5025d" stroke-width="2" fill="none" marker-end="url(#arrowPink)"/>
+  
+  <!-- Pendulum → Vision (feedback loop — the compounding arrow) -->
+  <path d="M545,345 Q530,220 400,115" stroke="rgba(229,2,93,0.5)" stroke-width="2.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arrowFade)"/>
+  <!-- Feedback label -->
+  <text x="560" y="260" fill="rgba(229,2,93,0.5)" font-family="'DM Mono', monospace" font-size="9" letter-spacing="0.04em" transform="rotate(-60, 560, 260)">compounds back</text>
+
+  <!-- VISION node (apex) -->
+  <circle cx="360" cy="95" r="56" fill="rgba(229,2,93,0.08)" stroke="rgba(229,2,93,0.5)" stroke-width="2"/>
+  <circle cx="360" cy="95" r="56" fill="rgba(13,13,26,0.7)"/>
+  <circle cx="360" cy="95" r="56" fill="none" stroke="rgba(229,2,93,0.5)" stroke-width="2"/>
+  <text x="360" y="90" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="17" font-weight="700">VISION</text>
+  <text x="360" y="110" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="'DM Mono', monospace" font-size="10">The Why</text>
+
+  <!-- TARGET node (center) -->
+  <circle cx="360" cy="255" r="42" fill="rgba(13,13,26,0.8)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <text x="360" y="251" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="15" font-weight="700">TARGET</text>
+  <text x="360" y="270" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="'DM Mono', monospace" font-size="9">80% Scope</text>
+
+  <!-- FOUNDATION node (bottom-left) -->
+  <circle cx="165" cy="380" r="56" fill="rgba(229,2,93,0.06)" stroke="rgba(229,2,93,0.35)" stroke-width="2"/>
+  <circle cx="165" cy="380" r="56" fill="rgba(13,13,26,0.7)"/>
+  <circle cx="165" cy="380" r="56" fill="none" stroke="rgba(229,2,93,0.35)" stroke-width="2"/>
+  <text x="165" y="372" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">FOUNDATION</text>
+  <text x="165" y="392" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="'DM Mono', monospace" font-size="10">The Fuel</text>
+
+  <!-- PENDULUM node (bottom-right) -->
+  <circle cx="555" cy="380" r="56" fill="rgba(229,2,93,0.06)" stroke="rgba(229,2,93,0.35)" stroke-width="2"/>
+  <circle cx="555" cy="380" r="56" fill="rgba(13,13,26,0.7)"/>
+  <circle cx="555" cy="380" r="56" fill="none" stroke="rgba(229,2,93,0.35)" stroke-width="2"/>
+  <text x="555" y="372" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">PENDULUM</text>
+  <text x="555" y="392" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="'DM Mono', monospace" font-size="10">The Filter</text>
+
+  <!-- Bottom tagline -->
+  <text x="360" y="475" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="'DM Mono', monospace" font-size="10">Every cycle draws from Foundation. Every completed cycle feeds back.</text>
+
+  <!-- Version -->
+  <text x="360" y="505" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-family="'DM Mono', monospace" font-size="9">CEM v3.0</text>
+</svg>

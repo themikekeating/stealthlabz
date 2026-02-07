@@ -12,7 +12,7 @@
             </div>
 
             <div class="footer-links">
-                <a href="<?= siteUrl('process') ?>" class="small">Process</a>
+                <a href="<?= siteUrl('cem') ?>" class="small">CEM</a>
                 <a href="<?= siteUrl('brands') ?>" class="small">Brands</a>
                 <a href="<?= siteUrl('insights') ?>" class="small">Insights</a>
                 <a href="<?= siteUrl('privacy') ?>" class="small">Privacy</a>

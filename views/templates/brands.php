@@ -32,8 +32,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Landing Page Styles -->
-    <link rel="stylesheet" href="/cdn/css/landing.css">
+    <!-- Global Styles -->
     <link rel="stylesheet" href="/cdn/css/global.css">
 
     <style>
@@ -149,14 +148,14 @@
         }
 
         .brand-card:hover {
-            border-color: rgba(229, 2, 93, 0.3);
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-pink-border-strong);
+            box-shadow: var(--shadow-card-hover);
             transform: translateY(-5px);
         }
 
         .brand-card.flagship {
-            border-color: rgba(229, 2, 93, 0.3);
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(229, 2, 93, 0.05) 100%);
+            border-color: var(--accent-pink-border-strong);
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--accent-pink-bg-subtle) 100%);
             grid-column: span 2;
         }
 
@@ -182,37 +181,113 @@
             }
         }
 
-        /* Screenshot Side */
+        /* ============================================
+           BROWSER MOCKUP FRAME
+           ============================================ */
         .brand-screenshot {
-            background: var(--bg-tertiary);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
             position: relative;
             overflow: hidden;
+            background: var(--bg-browser-chrome);
         }
 
+        /* Standard card screenshot area */
+        .brand-card:not(.flagship) .brand-screenshot {
+            height: auto;
+        }
+
+        /* Flagship screenshot area */
         .brand-card.flagship .brand-screenshot {
             width: 40%;
             height: auto;
             min-height: 450px;
+            display: flex;
+            flex-direction: column;
         }
 
         @media (max-width: 991px) {
             .brand-card.flagship .brand-screenshot {
                 width: 100%;
-                height: 200px;
+                height: auto;
                 min-height: auto;
             }
         }
 
-        .brand-screenshot img {
+        /* Browser chrome titlebar */
+        .browser-titlebar {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            background: var(--bg-browser-chrome);
+            border-bottom: 1px solid var(--border-browser);
+            gap: 10px;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 5px;
+            flex-shrink: 0;
+        }
+
+        .browser-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .browser-dots span:nth-child(1) { background: #FF5F57; }
+        .browser-dots span:nth-child(2) { background: #FFBD2E; }
+        .browser-dots span:nth-child(3) { background: #28C840; }
+
+        .browser-url {
+            flex: 1;
+            background: var(--border-browser);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 4px 10px;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Screenshot image container */
+        .browser-viewport {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Standard cards: fixed crop height */
+        .brand-card:not(.flagship) .browser-viewport {
+            height: 220px;
+        }
+
+        /* Flagship: fill remaining height */
+        .brand-card.flagship .browser-viewport {
+            flex: 1;
+            min-height: 0;
+        }
+
+        .browser-viewport img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        /* Bottom fade gradient — blends screenshot into card bg */
+        .browser-viewport::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to top, var(--bg-browser-chrome) 0%, transparent 100%);
+            pointer-events: none;
         }
 
         /* Content Side */
@@ -240,7 +315,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(229, 2, 93, 0.15);
+            background: var(--accent-pink-bg-medium);
             color: var(--accent-pink);
             padding: 0.35rem 0.85rem;
             border-radius: 100px;
@@ -358,9 +433,12 @@
                 <div class="brand-card flagship fade-up">
                     <div class="brand-card-row">
                         <div class="brand-screenshot">
-                            <div class="screenshot-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                <span>Screenshot</span>
+                            <div class="browser-titlebar">
+                                <div class="browser-dots"><span></span><span></span><span></span></div>
+                                <div class="browser-url">portalstealth.com</div>
+                            </div>
+                            <div class="browser-viewport">
+                                <img src="/cdn/images/brands/stealth-portal.png" alt="Stealth Portal - SaaS Dashboard" loading="lazy">
                             </div>
                         </div>
                         <div class="brand-content">
@@ -416,9 +494,12 @@
                 <!-- 2. QUOTE ROCKET ZA -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">quoterocket.co.za</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/quote-rocket-sa.png" alt="Quote Rocket South Africa - Insurance Comparison" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -470,9 +551,12 @@
                 <!-- 3. GOQUOTEROCKET US -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">goquoterocket.com</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/quote-rocket-usa.png" alt="GoQuoteRocket US - Insurance Quotes" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -524,9 +608,12 @@
                 <!-- 4. CUSTOMER REPORTS -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">customer-reports.org</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/customer-reports.png" alt="Customer Reports - Product Reviews & Buying Guides" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -578,9 +665,12 @@
                 <!-- 5. GO CUSTOMER REPORTS -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">gocustomerreports.com</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/go-customer-reports.png" alt="Go Customer Reports - Expanded Coverage" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -632,9 +722,12 @@
                 <!-- 6. VIDEOS FROM SANTA -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">videosfromsanta.com</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/videos-from-santa.png" alt="Videos From Santa - AI Personalized Santa Videos" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -687,9 +780,12 @@
                 <!-- 7. HOA ATTORNEY GUIDE -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">hoaattorneyguide.com</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/hoa-attorney.png" alt="HOA Attorney Guide - Legal Lead Generation" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
@@ -741,9 +837,12 @@
                 <!-- 8. EVERGREEN BRANDS -->
                 <div class="brand-card fade-up">
                     <div class="brand-screenshot">
-                        <div class="screenshot-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>Screenshot</span>
+                        <div class="browser-titlebar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">evergreenevolutions.com</div>
+                        </div>
+                        <div class="browser-viewport">
+                            <img src="/cdn/images/brands/evergreen.png" alt="Evergreen Evolutions - Natural Health Products" loading="lazy">
                         </div>
                     </div>
                     <div class="brand-content">
