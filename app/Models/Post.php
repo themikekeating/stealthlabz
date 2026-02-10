@@ -321,12 +321,21 @@ class Post
      */
     public static function getFeaturedImage(string $title, string $slug): string
     {
+        $secretsPath = defined('ROOT_PATH') ? ROOT_PATH . '/config/secrets.php' : dirname(__DIR__, 2) . '/config/secrets.php';
+        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
+        $apiKey = $secrets['pollinations_key'] ?? null;
+
         // Generic prompt - seed makes each image unique per post
         $prompt = "Abstract digital marketing technology blog header, neon gradients, dark background, professional";
         $encodedPrompt = rawurlencode($prompt);
         $seed = crc32($slug) & 0x7FFFFFFF; // Cap at max signed 32-bit int
 
-        return "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
+        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
+        if ($apiKey) {
+            $url .= "&key={$apiKey}";
+        }
+
+        return $url;
     }
 
 }
