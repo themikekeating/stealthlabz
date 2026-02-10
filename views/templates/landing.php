@@ -426,28 +426,23 @@
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         BLOG
-         ════════════════════════════════════════ -->
-    <section class="blog-section">
+    <!-- Blog -->
+    <section id="blog" class="section-dark">
         <div class="container-xl">
-            <div class="blog-header">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 fade-up">
                 <div>
-                    <div class="section-label">Insights</div>
-                    <h2 class="section-title">From the Build</h2>
-                    <p class="section-desc mb-0">Thoughts on building, scaling, and shipping.</p>
+                    <h2 class="section-title">Insights</h2>
+                    <p class="section-subtitle mb-0">Thoughts on building, scaling, and shipping.</p>
                 </div>
-                <a href="<?= siteUrl('insights') ?>" class="btn-outline-home">
-                    View All
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
-                </a>
+                <a href="<?= siteUrl('insights') ?>" class="btn-outline">View All Posts</a>
             </div>
 
             <div class="blog-grid">
                 <?php if (!empty($recentPosts)): ?>
                     <?php foreach ($recentPosts as $i => $post): ?>
-                <a href="<?= siteUrl('insights/' . $post['slug']) ?>" class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>')"></div>
+                <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>" class="blog-card fade-up stagger-<?= $i + 1 ?>">
+                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>')">
+                    </div>
                     <div class="blog-card-body">
                         <div class="blog-card-date"><?= date('Y-m-d', strtotime($post['published_at'])) ?></div>
                         <h4><?= htmlspecialchars($post['title']) ?></h4>
