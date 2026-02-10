@@ -441,7 +441,8 @@
                 <?php if (!empty($recentPosts)): ?>
                     <?php foreach ($recentPosts as $i => $post): ?>
                 <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>" class="blog-card fade-up stagger-<?= $i + 1 ?>">
-                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>')">
+                    <div class="blog-card-image">
+                        <img src="<?= htmlspecialchars($post['featured_image']) ?>" alt="<?= htmlspecialchars($post['title']) ?>" loading="lazy">
                     </div>
                     <div class="blog-card-body">
                         <div class="blog-card-date"><?= date('Y-m-d', strtotime($post['published_at'])) ?></div>
