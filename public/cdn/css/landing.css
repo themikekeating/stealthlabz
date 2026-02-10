@@ -38,7 +38,7 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-pink);
@@ -144,7 +144,7 @@
 }
 .hero-stat-lbl {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -179,7 +179,7 @@
 .dashboard-dot.green { background: #27ae60; opacity: 0.6; }
 .dashboard-url {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     margin-left: 0.5rem;
 }
@@ -198,7 +198,7 @@
 }
 .dashboard-stat-label {
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -226,14 +226,14 @@
 }
 .chart-title {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
 }
 .chart-badge {
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.875rem;
     color: #27ae60;
     background: rgba(39, 174, 96, 0.1);
     padding: 0.15rem 0.5rem;
@@ -274,7 +274,7 @@
 }
 .floating-card-label {
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -296,7 +296,7 @@
 }
 .integrations-label {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -328,7 +328,7 @@
 }
 .section-label {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-pink);
@@ -405,7 +405,7 @@
 
 .pillar-label {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -437,7 +437,7 @@
 }
 .pillar-stat-lbl {
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.875rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -446,7 +446,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--accent-pink);
     text-decoration: none;
@@ -503,7 +503,7 @@
 }
 .capability-metric {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     letter-spacing: 0.04em;
 }
@@ -538,7 +538,7 @@
 }
 .about-stat-label {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -585,7 +585,7 @@
 .blog-card-body { padding: 1.25rem; }
 .blog-card-date {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     letter-spacing: 0.06em;
     margin-bottom: 0.5rem;
@@ -597,7 +597,7 @@
     margin-bottom: 0.5rem;
 }
 .blog-card p {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -670,14 +670,14 @@
 }
 .newsletter-message {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     margin-top: 0.75rem;
 }
 .newsletter-message.success { color: #27ae60; }
 .newsletter-message.error { color: #e5025d; }
 .cta-contact {
     margin-top: 1.5rem;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     position: relative;
 }

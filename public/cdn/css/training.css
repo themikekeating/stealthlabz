@@ -26,7 +26,7 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-pink);
@@ -87,7 +87,7 @@
 }
 .hero-proof-lbl {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -129,7 +129,7 @@
 
 .learn-card-num {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     color: var(--accent-pink);
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
@@ -140,7 +140,7 @@
     margin-bottom: 0.5rem;
 }
 .learn-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -193,7 +193,7 @@
 
 .format-label {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -256,7 +256,7 @@
     margin-bottom: 0.75rem;
 }
 .audience-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }

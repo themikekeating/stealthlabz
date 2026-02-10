@@ -161,6 +161,7 @@
                             <circle cx="100" cy="200" r="1" fill="#e5e5e9"/><circle cx="200" cy="200" r="1" fill="#e5e5e9"/><circle cx="300" cy="200" r="1" fill="#e5e5e9"/><circle cx="400" cy="200" r="1" fill="#e5e5e9"/><circle cx="500" cy="200" r="1" fill="#e5e5e9"/>
                             <circle cx="100" cy="300" r="1" fill="#e5e5e9"/><circle cx="200" cy="300" r="1" fill="#e5e5e9"/><circle cx="300" cy="300" r="1" fill="#e5e5e9"/><circle cx="400" cy="300" r="1" fill="#e5e5e9"/><circle cx="500" cy="300" r="1" fill="#e5e5e9"/>
                             <circle cx="100" cy="400" r="1" fill="#e5e5e9"/><circle cx="200" cy="400" r="1" fill="#e5e5e9"/><circle cx="300" cy="400" r="1" fill="#e5e5e9"/><circle cx="400" cy="400" r="1" fill="#e5e5e9"/><circle cx="500" cy="400" r="1" fill="#e5e5e9"/>
+                            <circle cx="100" cy="500" r="1" fill="#e5e5e9"/><circle cx="200" cy="500" r="1" fill="#e5e5e9"/><circle cx="300" cy="500" r="1" fill="#e5e5e9"/><circle cx="400" cy="500" r="1" fill="#e5e5e9"/><circle cx="500" cy="500" r="1" fill="#e5e5e9"/>
                         </g>
 
                         <!-- Area fill under curve -->
@@ -169,44 +170,40 @@
                         <!-- The curve -->
                         <path d="M70,480 C120,475 170,465 220,445 C280,418 330,375 380,320 C420,275 460,220 500,165 L530,120" stroke="url(#curveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
 
-                        <!-- P1 -->
+                        <!-- P1 — Level 2 -->
                         <circle cx="70" cy="480" r="4" fill="#ae3ec9" opacity="0.5"/>
-                        <text x="70" y="502" text-anchor="middle" fill="#737378" font-family="'DM Mono', monospace" font-size="13" font-weight="500">P1</text>
+                        <text x="70" y="502" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P1</text>
 
-                        <!-- P3 -->
+                        <!-- P3 — Level 2 -->
                         <circle cx="220" cy="445" r="5" fill="#ae3ec9" opacity="0.6"/>
-                        <text x="220" y="467" text-anchor="middle" fill="#737378" font-family="'DM Mono', monospace" font-size="13" font-weight="500">P3</text>
+                        <text x="220" y="467" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P3</text>
 
-                        <!-- P6 -->
+                        <!-- P6 — Level 2 -->
                         <circle cx="380" cy="320" r="6" fill="#d6336c" opacity="0.75" filter="url(#dotGlow)"/>
-                        <text x="380" y="310" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="13" font-weight="500">P6</text>
+                        <text x="380" y="310" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P6</text>
 
-                        <!-- P8 -->
+                        <!-- P8 — Level 2 -->
                         <circle cx="470" cy="195" r="7" fill="#d6336c" opacity="0.85" filter="url(#dotGlow)"/>
-                        <text x="470" y="185" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="13" font-weight="500">P8</text>
+                        <text x="470" y="185" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P8</text>
 
-                        <!-- P10 terminal -->
+                        <!-- P10 terminal — Level 1 -->
                         <circle cx="530" cy="120" r="10" fill="#d6336c" opacity="0.2" filter="url(#termGlow)"/>
                         <circle cx="530" cy="120" r="6" fill="#d6336c" opacity="0.4"/>
                         <circle cx="530" cy="120" r="3.5" fill="#d6336c"/>
-                        <text x="530" y="108" text-anchor="middle" fill="#e5e5e9" font-family="'DM Mono', monospace" font-size="14" font-weight="600">P10</text>
+                        <text x="530" y="108" text-anchor="middle" fill="#e5e5e9" font-family="'DM Mono', monospace" font-size="18" font-weight="600">P10</text>
 
-                        <!-- Terminal callout -->
-                        <rect x="440" y="72" width="120" height="28" rx="4" fill="rgba(214,51,108,0.08)" stroke="rgba(214,51,108,0.2)" stroke-width="1"/>
-                        <text x="500" y="91" text-anchor="middle" fill="#d6336c" font-family="'DM Mono', monospace" font-size="13" font-weight="600">5-day MVP</text>
+                        <!-- Terminal callout — Level 1 (shifted up for 20px+ clearance from P10) -->
+                        <rect x="440" y="52" width="120" height="28" rx="4" fill="rgba(214,51,108,0.08)" stroke="rgba(214,51,108,0.2)" stroke-width="1"/>
+                        <text x="500" y="71" text-anchor="middle" fill="#d6336c" font-family="'DM Mono', monospace" font-size="18" font-weight="600">5-day MVP</text>
 
-                        <!-- Origin callout -->
-                        <text x="70" y="525" text-anchor="start" fill="#737378" font-family="'DM Mono', monospace" font-size="12">WEEKS</text>
-                        <text x="140" y="525" text-anchor="start" fill="#525257" font-family="'DM Mono', monospace" font-size="12">→</text>
-                        <text x="165" y="525" text-anchor="start" fill="#d6336c" font-family="'DM Mono', monospace" font-size="12" font-weight="500">DAYS</text>
+                        <!-- Origin callout — Level 3 -->
+                        <text x="70" y="525" text-anchor="start" fill="#737378" font-family="'DM Mono', monospace" font-size="14" font-weight="500">WEEKS</text>
+                        <text x="145" y="525" text-anchor="start" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="500">→</text>
+                        <text x="170" y="525" text-anchor="start" fill="#d6336c" font-family="'DM Mono', monospace" font-size="14" font-weight="500">DAYS</text>
 
-                        <!-- Top left label -->
-                        <text x="40" y="45" fill="#737378" font-family="'DM Mono', monospace" font-size="11" letter-spacing="0.1em">COMPOUNDING EXECUTION</text>
-                        <text x="40" y="65" fill="#525257" font-family="'DM Mono', monospace" font-size="11">10 production systems</text>
-
-                        <!-- Bottom stat -->
-                        <rect x="390" y="540" width="180" height="36" rx="6" fill="rgba(229,229,233,0.02)" stroke="#2a2a31" stroke-width="1"/>
-                        <text x="480" y="563" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="12">Foundation compounds</text>
+                        <!-- Top left label — Level 4 -->
+                        <text x="40" y="45" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="400" letter-spacing="0.1em">COMPOUNDING EXECUTION</text>
+                        <text x="40" y="65" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="400">10 production systems</text>
                     </svg>
                 </div>
             </div>
