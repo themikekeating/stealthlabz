@@ -38,6 +38,7 @@
 
     <!-- Global Styles -->
     <link rel="stylesheet" href="/cdn/css/global.css">
+    <link rel="stylesheet" href="/cdn/css/landing.css">
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
