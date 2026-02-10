@@ -42,6 +42,17 @@ class LandingController
             'keywords' => 'portfolio, brands, platforms, lead generation, DTC'
         ];
 
-        include ROOT_PATH . '/views/templates/brands.php';
+        include ROOT_PATH . '/views/templates/brands-old.php';
+    }
+
+    public function ecosystem(): void
+    {
+        $page = [
+            'title' => 'The Ecosystem | Stealth Labz',
+            'description' => '7 brands across lead generation, consumer products, content, and AI — all owned, all in production, all connected through one platform.',
+            'keywords' => 'ecosystem, portfolio, brands, platforms, lead generation, DTC, AI'
+        ];
+
+        include ROOT_PATH . '/views/templates/ecosystem.php';
     }
 }
