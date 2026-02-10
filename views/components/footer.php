@@ -13,6 +13,8 @@
 
             <div class="footer-links">
                 <a href="<?= siteUrl('cem') ?>" class="small">CEM</a>
+                <a href="<?= siteUrl('solutions') ?>" class="small">Solutions</a>
+                <a href="<?= siteUrl('training') ?>" class="small">Training</a>
                 <a href="<?= siteUrl('ecosystem') ?>" class="small">Ecosystem</a>
                 <a href="<?= siteUrl('insights') ?>" class="small">Insights</a>
                 <a href="<?= siteUrl('privacy') ?>" class="small">Privacy</a>

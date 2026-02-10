@@ -12,8 +12,9 @@ class LandingController
     public function index(): void
     {
         $page = [
-            'title' => 'Stealth Labz | Built Different. Ships Fast.',
-            'description' => '15+ years of combined execution across performance marketing, product development, and global operations — now accelerated by AI.',
+            'title' => 'Stealth Labz | Built Different. Compounds Daily.',
+            'description' => 'The Compounding Execution Method. 10 production systems shipped in 74 days. A 13.4× compounding multiplier across the portfolio.',
+            'og_description' => 'The Compounding Execution Method. 10 production systems in 74 days. 13.4× compounding multiplier. See the method. See the results.',
             'keywords' => 'software development, performance marketing, AI, product development, global operations'
         ];
 
@@ -43,6 +44,28 @@ class LandingController
         ];
 
         include ROOT_PATH . '/views/templates/brands-old.php';
+    }
+
+    public function solutions(): void
+    {
+        $page = [
+            'title' => 'Solutions | Stealth Labz',
+            'description' => 'Custom software, proven systems, and production-ready platforms — built with the same methodology behind 2,561 commits and 10 shipped systems.',
+            'keywords' => 'solutions, custom software, SaaS, lead generation, platform development, AI development'
+        ];
+
+        include ROOT_PATH . '/views/templates/solutions.php';
+    }
+
+    public function training(): void
+    {
+        $page = [
+            'title' => 'Training | Learn the Compounding Execution Method | Stealth Labz',
+            'description' => '1-on-1 coaching and embedded team training. Learn the methodology behind 2,561 commits, 10 production systems, and a 13.4× compounding multiplier.',
+            'keywords' => 'CEM training, coaching, methodology, AI development, execution method'
+        ];
+
+        include ROOT_PATH . '/views/templates/training.php';
     }
 
     public function ecosystem(): void

@@ -15,6 +15,8 @@
             <ul class="navbar-nav align-items-center gap-1">
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('/') ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('cem') ?>">CEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= siteUrl('solutions') ?>">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= siteUrl('training') ?>">Training</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('ecosystem') ?>">Ecosystem</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('insights') ?>">Insights</a></li>
                 <li class="nav-item"><a class="nav-link btn-nav" href="mailto:info@stealthlabz.com">Get in Touch</a></li>

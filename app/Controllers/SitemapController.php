@@ -24,7 +24,10 @@ class SitemapController
         $staticPages = [
             ['loc' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
             ['loc' => '/cem', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/solutions', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/training', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['loc' => '/ecosystem', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/brands', 'priority' => '0.6', 'changefreq' => 'monthly'],
             ['loc' => '/insights', 'priority' => '0.9', 'changefreq' => 'daily'],
             ['loc' => '/privacy', 'priority' => '0.3', 'changefreq' => 'monthly'],
             ['loc' => '/terms', 'priority' => '0.3', 'changefreq' => 'monthly'],

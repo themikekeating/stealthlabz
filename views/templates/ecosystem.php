@@ -5,275 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#d90158">
-    <title>The Ecosystem | Stealth Labz</title>
-    <meta name="description" content="7 brands across lead generation, consumer products, content, and AI — all owned, all in production, all connected through one platform.">
+    <title><?= htmlspecialchars($page['title']) ?></title>
+    <meta name="description" content="<?= htmlspecialchars($page['description']) ?>">
     <link rel="canonical" href="https://stealthlabz.com/ecosystem">
 
-    <meta property="og:title" content="The Ecosystem | Stealth Labz">
-    <meta property="og:description" content="7 brands across lead generation, consumer products, content, and AI.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?= htmlspecialchars($page['title']) ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($page['description']) ?>">
     <meta property="og:image" content="https://stealthlabz.com/cdn/images/og-default.png">
     <meta property="og:url" content="https://stealthlabz.com/ecosystem">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stealth Labz">
+    <meta property="og:locale" content="en_US">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= htmlspecialchars($page['title']) ?>">
+    <meta name="twitter:description" content="<?= htmlspecialchars($page['description']) ?>">
+    <meta name="twitter:image" content="https://stealthlabz.com/cdn/images/og-default.png">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/cdn/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/cdn/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/cdn/css/global.css">
 
-    <style>
-        /* ========================================
-           Ecosystem Page
-           ======================================== */
-
-        .eco-hero {
-            padding: 10rem 0 4rem;
-            text-align: center;
-            position: relative;
-        }
-        .eco-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150%;
-            height: 100%;
-            background: radial-gradient(ellipse at center top, var(--accent-pink-glow) 0%, transparent 60%);
-            opacity: 0.15;
-            pointer-events: none;
-        }
-        .eco-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-        }
-        .eco-hero h1 .highlight {
-            background: var(--gradient-pink);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .eco-hero-sub {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 580px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-        .eco-hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-        .eco-hero-stat-val {
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-pink);
-            line-height: 1.2;
-        }
-        .eco-hero-stat-lbl {
-            display: block;
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 0.25rem;
-        }
-
-        /* --- Grid --- */
-        .eco-section {
-            padding: 2rem 0 6rem;
-        }
-        .eco-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        /* --- Card --- */
-        .eco-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .eco-card:hover {
-            border-color: var(--accent-pink-border-strong);
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-5px);
-        }
-
-        /* Browser mockup */
-        .eco-screenshot {
-            position: relative;
-            overflow: hidden;
-            background: var(--bg-browser-chrome);
-        }
-        .eco-titlebar {
-            display: flex;
-            align-items: center;
-            padding: 10px 14px;
-            background: var(--bg-browser-chrome);
-            border-bottom: 1px solid var(--border-browser);
-            gap: 10px;
-        }
-        .eco-dots {
-            display: flex;
-            gap: 5px;
-            flex-shrink: 0;
-        }
-        .eco-dots span {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            display: block;
-        }
-        .eco-dots span:nth-child(1) { background: #FF5F57; }
-        .eco-dots span:nth-child(2) { background: #FFBD2E; }
-        .eco-dots span:nth-child(3) { background: #28C840; }
-        .eco-url {
-            flex: 1;
-            background: var(--border-browser);
-            border: 1px solid var(--border-browser);
-            border-radius: 5px;
-            padding: 4px 10px;
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .eco-viewport {
-            position: relative;
-            overflow: hidden;
-            height: 200px;
-        }
-        .eco-viewport img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            display: block;
-        }
-        .eco-viewport::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 40px;
-            background: linear-gradient(to top, var(--bg-browser-chrome) 0%, transparent 100%);
-            pointer-events: none;
-        }
-
-        /* Content */
-        .eco-content {
-            padding: 1.5rem 2rem 2rem;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        .eco-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--accent-pink-bg-medium);
-            color: var(--accent-pink);
-            padding: 0.3rem 0.75rem;
-            border-radius: 100px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            width: fit-content;
-            margin-bottom: 0.75rem;
-        }
-        .eco-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.35rem;
-        }
-        .eco-tagline {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.25rem;
-            line-height: 1.6;
-        }
-
-        /* Stats row */
-        .eco-stats {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-        .eco-stat {
-            flex: 1;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 0.6rem 0.75rem;
-            text-align: center;
-        }
-        .eco-stat-val {
-            font-family: var(--font-mono);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-        .eco-stat-lbl {
-            font-size: 0.6rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.1rem;
-        }
-
-        /* Link */
-        .eco-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--accent-pink);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.85rem;
-            transition: gap 0.2s ease;
-            margin-top: auto;
-        }
-        .eco-link:hover {
-            color: var(--accent-pink);
-            gap: 0.75rem;
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 991px) {
-            .eco-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-            .eco-hero { padding: 8rem 0 3rem; }
-            .eco-hero h1 { font-size: 2.25rem; }
-            .eco-hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-            .eco-hero-stat-val { font-size: 1.5rem; }
-            .eco-section { padding: 1.5rem 0 4rem; }
-        }
-        @media (max-width: 576px) {
-            .eco-stats { flex-direction: column; }
-        }
-    </style>
+    <link rel="stylesheet" href="/cdn/css/ecosystem.css">
 </head>
 <body>
     <div class="grid-bg"></div>
