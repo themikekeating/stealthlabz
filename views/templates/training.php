@@ -53,31 +53,136 @@
          ════════════════════════════════════════ -->
     <section class="t-hero">
         <div class="container-xl">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                Training &amp; Coaching
-            </div>
-            <h1>Learn the <span class="highlight">method.</span><br>Ship like we do.</h1>
-            <p class="t-hero-sub">
-                The same methodology behind 2,561 commits and 10 production systems — transferred to you or your team. Not theory. The actual operating system.
-            </p>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        Training &amp; Coaching
+                    </div>
+                    <h1>Learn the <span class="highlight">method.</span><br>Ship like we do.</h1>
+                    <p class="t-hero-sub">
+                        The same methodology behind 2,561 commits and 10 production systems — transferred to you or your team. Not theory. The actual operating system.
+                    </p>
 
-            <div class="hero-proof">
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">12</div>
-                    <div class="hero-proof-lbl">Core Mechanisms</div>
+                    <div class="hero-proof">
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">12</div>
+                            <div class="hero-proof-lbl">Core Mechanisms</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">13.4&times;</div>
+                            <div class="hero-proof-lbl">Compounding Multiplier</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">9.6%</div>
+                            <div class="hero-proof-lbl">Defect Rate</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">10</div>
+                            <div class="hero-proof-lbl">Systems Built</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">13.4&times;</div>
-                    <div class="hero-proof-lbl">Compounding Multiplier</div>
-                </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">9.6%</div>
-                    <div class="hero-proof-lbl">Defect Rate</div>
-                </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">10</div>
-                    <div class="hero-proof-lbl">Systems Built</div>
+
+                <div class="hero-visual">
+                    <div class="train-viz">
+                        <!-- 13.4x callout -->
+                        <div class="multiplier-callout">
+                            <div class="mult-val">13.4<span>&times;</span></div>
+                            <div class="mult-lbl">Compounding Multiplier</div>
+                        </div>
+
+                        <!-- Acceleration card -->
+                        <div class="accel-card">
+                            <div class="accel-val">12</div>
+                            <div class="accel-lbl">Mechanisms Stacked</div>
+                            <div class="accel-bar"><div class="accel-fill"></div></div>
+                        </div>
+
+                        <!-- Defect card -->
+                        <div class="defect-card">
+                            <div class="stat-val">9.6%</div>
+                            <div class="stat-lbl">Defect Rate</div>
+                        </div>
+
+                        <!-- Compounding growth curve -->
+                        <div class="train-chart">
+                            <svg viewBox="0 0 500 300" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="trainGradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="rgba(229,2,93,0.15)" />
+                                        <stop offset="60%" stop-color="rgba(109,74,140,0.05)" />
+                                        <stop offset="100%" stop-color="transparent" />
+                                    </linearGradient>
+                                    <linearGradient id="trainStroke" x1="0" y1="0" x2="1" y2="0">
+                                        <stop offset="0%" stop-color="#6d4a8c" />
+                                        <stop offset="60%" stop-color="#e5025d" />
+                                        <stop offset="100%" stop-color="#e5025d" />
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- Grid -->
+                                <line class="grid-line" x1="0" y1="60" x2="500" y2="60" />
+                                <line class="grid-line" x1="0" y1="120" x2="500" y2="120" />
+                                <line class="grid-line" x1="0" y1="180" x2="500" y2="180" />
+                                <line class="grid-line" x1="0" y1="240" x2="500" y2="240" />
+                                <line class="grid-line" x1="0" y1="300" x2="500" y2="300" />
+
+                                <!-- Linear growth comparison -->
+                                <path class="linear-path" d="M 0,280 L 500,100" />
+
+                                <!-- Exponential compounding curve -->
+                                <path class="compound-fill" d="M 0,280 C 40,278 80,274 120,268 C 160,260 200,250 240,232 C 280,210 320,175 360,130 C 400,80 440,30 500,5 L 500,300 L 0,300 Z" fill="url(#trainGradient)" />
+                                <path class="compound-path" d="M 0,280 C 40,278 80,274 120,268 C 160,260 200,250 240,232 C 280,210 320,175 360,130 C 400,80 440,30 500,5" />
+
+                                <!-- Mechanism markers (12 ticks) -->
+                                <g class="mech-tick mech-tick-1"><line x1="42" y1="295" x2="42" y2="300"/><text x="42" y="310" text-anchor="middle">M1</text></g>
+                                <g class="mech-tick mech-tick-2"><line x1="83" y1="295" x2="83" y2="300"/><text x="83" y="310" text-anchor="middle">M2</text></g>
+                                <g class="mech-tick mech-tick-3"><line x1="125" y1="295" x2="125" y2="300"/><text x="125" y="310" text-anchor="middle">M3</text></g>
+                                <g class="mech-tick mech-tick-4"><line x1="167" y1="295" x2="167" y2="300"/><text x="167" y="310" text-anchor="middle">M4</text></g>
+                                <g class="mech-tick mech-tick-5"><line x1="208" y1="295" x2="208" y2="300"/><text x="208" y="310" text-anchor="middle">M5</text></g>
+                                <g class="mech-tick mech-tick-6"><line x1="250" y1="295" x2="250" y2="300"/><text x="250" y="310" text-anchor="middle">M6</text></g>
+                                <g class="mech-tick mech-tick-7"><line x1="292" y1="295" x2="292" y2="300"/><text x="292" y="310" text-anchor="middle">M7</text></g>
+                                <g class="mech-tick mech-tick-8"><line x1="333" y1="295" x2="333" y2="300"/><text x="333" y="310" text-anchor="middle">M8</text></g>
+                                <g class="mech-tick mech-tick-9"><line x1="375" y1="295" x2="375" y2="300"/><text x="375" y="310" text-anchor="middle">M9</text></g>
+                                <g class="mech-tick mech-tick-10"><line x1="417" y1="293" x2="417" y2="300"/><text x="417" y="310" text-anchor="middle">M10</text></g>
+                                <g class="mech-tick mech-tick-11"><line x1="458" y1="293" x2="458" y2="300"/><text x="458" y="310" text-anchor="middle">M11</text></g>
+                                <g class="mech-tick mech-tick-12"><line x1="500" y1="293" x2="500" y2="300"/><text x="495" y="310" text-anchor="middle">M12</text></g>
+
+                                <!-- Key inflection markers on curve -->
+                                <g class="curve-marker curve-marker-1">
+                                    <circle cx="120" cy="268" r="6" fill="rgba(109,74,140,0.15)" />
+                                    <circle cx="120" cy="268" r="2.5" fill="#6d4a8c" />
+                                </g>
+                                <g class="curve-marker curve-marker-2">
+                                    <circle cx="240" cy="232" r="6" fill="rgba(162,50,110,0.15)" />
+                                    <circle cx="240" cy="232" r="2.5" fill="#a2326e" />
+                                </g>
+                                <g class="curve-marker curve-marker-3">
+                                    <circle cx="360" cy="130" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="360" cy="130" r="3" fill="#e5025d" />
+                                </g>
+                                <g class="curve-marker curve-marker-4">
+                                    <circle cx="485" cy="10" r="8" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="485" cy="10" r="3.5" fill="#e5025d" />
+                                </g>
+
+                                <!-- Linear label -->
+                                <text class="axis-label-dim" x="505" y="98">LINEAR</text>
+                            </svg>
+                        </div>
+
+                        <!-- Cycle velocity strip -->
+                        <div class="cycle-strip">
+                            <div class="cycle-block cycle-block-1"></div>
+                            <div class="cycle-block cycle-block-2"></div>
+                            <div class="cycle-block cycle-block-3"></div>
+                            <div class="cycle-block cycle-block-4"></div>
+                            <div class="cycle-block cycle-block-5"></div>
+                            <div class="cycle-block cycle-block-6"></div>
+                            <span class="cycle-lbl">Cycle Velocity</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

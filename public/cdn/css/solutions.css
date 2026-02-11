@@ -126,6 +126,195 @@
     margin-top: 0.25rem;
 }
 
+/* Hero 2-column grid */
+.sol-hero .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.75rem;
+    align-items: center;
+}
+.sol-hero .hero-content { position: relative; z-index: 2; }
+
+/* ─── HERO VISUAL PANEL ─── */
+.sol-hero .hero-visual {
+    position: relative;
+    width: 100%;
+    height: 480px;
+}
+.sol-viz {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.sol-viz::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    top: 20%; left: 30%;
+    background: radial-gradient(circle, rgba(229,2,93,0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+/* Chart container */
+.sol-chart {
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    right: 30px;
+    height: 280px;
+}
+.sol-chart svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* SVG elements */
+.grid-line { stroke: rgba(255,255,255,0.04); stroke-width: 1; }
+
+.velocity-path {
+    fill: none;
+    stroke: var(--accent-pink);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: drawLine 2.5s ease-out forwards 0.5s;
+}
+.velocity-fill { opacity: 0; animation: fadeIn 1s ease-out forwards 2s; }
+
+.avg-path {
+    fill: none;
+    stroke: rgba(255,255,255,0.12);
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards 1s;
+}
+
+/* SVG axis labels */
+.axis-label {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    fill: var(--text-secondary);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+.axis-label-avg {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    fill: rgba(255,255,255,0.2);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+.axis-delay-1 { animation-delay: 0.3s; }
+.axis-delay-2 { animation-delay: 0.4s; }
+.axis-delay-3 { animation-delay: 0.5s; }
+.axis-delay-4 { animation-delay: 0.6s; }
+.axis-delay-5 { animation-delay: 0.7s; }
+.axis-delay-6 { animation-delay: 0.8s; }
+.axis-delay-7 { animation-delay: 1.2s; }
+
+/* Data point markers */
+.data-point { opacity: 0; animation: fadeIn 0.3s ease-out forwards; }
+.data-point circle:first-child { animation: pointPulse 3s ease-in-out infinite; }
+.data-point-1 { animation-delay: 1.4s; }
+.data-point-2 { animation-delay: 1.6s; }
+.data-point-3 { animation-delay: 1.8s; }
+.data-point-4 { animation-delay: 2.0s; }
+.data-point-5 { animation-delay: 2.2s; }
+
+/* Floating stat cards */
+.stat-card {
+    position: absolute;
+    background: rgba(26,26,31,0.92);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    animation: cardAppear 0.5s ease-out forwards;
+}
+.stat-card .stat-val {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+.stat-card .stat-lbl {
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+.stat-card .stat-delta {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent-pink);
+    margin-top: 0.125rem;
+}
+.stat-card-1 { top: 12px; right: 20px; animation-delay: 2.2s; }
+.stat-card-2 { top: 100px; left: 10px; animation-delay: 2.6s; }
+.stat-card-3 { top: 30px; left: 40%; animation-delay: 2.9s; }
+
+/* Throughput bars */
+.throughput-bar-group {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards 1.8s;
+}
+.throughput-bar {
+    width: 6px;
+    border-radius: 2px 2px 0 0;
+    animation: barGrow 0.8s ease-out forwards;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+.throughput-bar:nth-child(1)  { height: 14px; background: rgba(229,2,93,0.15); animation-delay: 2.0s; }
+.throughput-bar:nth-child(2)  { height: 20px; background: rgba(229,2,93,0.2);  animation-delay: 2.1s; }
+.throughput-bar:nth-child(3)  { height: 16px; background: rgba(229,2,93,0.18); animation-delay: 2.15s; }
+.throughput-bar:nth-child(4)  { height: 28px; background: rgba(229,2,93,0.25); animation-delay: 2.2s; }
+.throughput-bar:nth-child(5)  { height: 24px; background: rgba(229,2,93,0.22); animation-delay: 2.25s; }
+.throughput-bar:nth-child(6)  { height: 34px; background: rgba(229,2,93,0.3);  animation-delay: 2.3s; }
+.throughput-bar:nth-child(7)  { height: 30px; background: rgba(229,2,93,0.28); animation-delay: 2.35s; }
+.throughput-bar:nth-child(8)  { height: 40px; background: rgba(229,2,93,0.4);  animation-delay: 2.4s; }
+.throughput-bar:nth-child(9)  { height: 36px; background: rgba(229,2,93,0.35); animation-delay: 2.45s; }
+.throughput-bar:nth-child(10) { height: 48px; background: var(--accent-pink);   animation-delay: 2.5s; }
+
+.throughput-label {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards 2.6s;
+}
+
+/* Hero visual animations */
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pointPulse {
+    0%, 100% { r: 6; opacity: 0.15; }
+    50%      { r: 10; opacity: 0.05; }
+}
+@keyframes barGrow { to { transform: scaleY(1); } }
+
 /* ═══════════════════════════════════════
    01 — TWO TRACKS
    ═══════════════════════════════════════ */
@@ -552,6 +741,8 @@
    RESPONSIVE
    ═══════════════════════════════════════ */
 @media (max-width: 991px) {
+    .sol-hero .hero-grid { grid-template-columns: 1fr; }
+    .sol-hero .hero-visual { height: 400px; }
     .sol-hero h1 { font-size: 2.75rem; }
     .hero-proof { grid-template-columns: repeat(2, 1fr); }
     .tracks-grid { grid-template-columns: 1fr; }
@@ -562,6 +753,7 @@
     .deploy-foundation { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 576px) {
+    .sol-hero .hero-visual { height: 320px; }
     .sol-hero h1 { font-size: 2rem; }
     .hero-proof { grid-template-columns: repeat(2, 1fr); }
     .deploy-grid { grid-template-columns: 1fr; }

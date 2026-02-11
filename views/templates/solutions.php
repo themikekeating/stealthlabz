@@ -51,31 +51,129 @@
          ════════════════════════════════════════ -->
     <section class="sol-hero">
         <div class="container-xl">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                Build &amp; Deploy
-            </div>
-            <h1>Built on <span class="highlight">Foundation.</span><br>Not from scratch.</h1>
-            <p class="sol-hero-sub">
-                Custom software, proven systems, and production-ready platforms — built with the same methodology behind 2,561 commits and 10 shipped systems.
-            </p>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        Build &amp; Deploy
+                    </div>
+                    <h1>Built on <span class="highlight">Foundation.</span><br>Not from scratch.</h1>
+                    <p class="sol-hero-sub">
+                        Custom software, proven systems, and production-ready platforms — built with the same methodology behind 2,561 commits and 10 shipped systems.
+                    </p>
 
-            <div class="hero-proof">
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">5 days</div>
-                    <div class="hero-proof-lbl">Fastest MVP</div>
+                    <div class="hero-proof">
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">5 days</div>
+                            <div class="hero-proof-lbl">Fastest MVP</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">195K</div>
+                            <div class="hero-proof-lbl">Largest Build (LOC)</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">10</div>
+                            <div class="hero-proof-lbl">Systems Shipped</div>
+                        </div>
+                        <div class="hero-proof-item">
+                            <div class="hero-proof-val">9.6%</div>
+                            <div class="hero-proof-lbl">Defect Rate</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">195K</div>
-                    <div class="hero-proof-lbl">Largest Build (LOC)</div>
-                </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">10</div>
-                    <div class="hero-proof-lbl">Systems Shipped</div>
-                </div>
-                <div class="hero-proof-item">
-                    <div class="hero-proof-val">9.6%</div>
-                    <div class="hero-proof-lbl">Defect Rate</div>
+
+                <div class="hero-visual">
+                    <div class="sol-viz">
+                        <!-- Stat cards -->
+                        <div class="stat-card stat-card-1">
+                            <div class="stat-val">195K</div>
+                            <div class="stat-lbl">Lines of Code</div>
+                            <div class="stat-delta">across 10 systems</div>
+                        </div>
+                        <div class="stat-card stat-card-2">
+                            <div class="stat-val">5d</div>
+                            <div class="stat-lbl">MVP to Production</div>
+                            <div class="stat-delta">&darr; 87% vs industry avg</div>
+                        </div>
+                        <div class="stat-card stat-card-3">
+                            <div class="stat-val">9.6%</div>
+                            <div class="stat-lbl">Defect Rate</div>
+                            <div class="stat-delta">&darr; from ~25% industry</div>
+                        </div>
+
+                        <!-- Shipping velocity curve -->
+                        <div class="sol-chart">
+                            <svg viewBox="0 0 500 280" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="solGradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="rgba(229,2,93,0.2)" />
+                                        <stop offset="100%" stop-color="rgba(229,2,93,0)" />
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- Grid -->
+                                <line class="grid-line" x1="0" y1="70" x2="500" y2="70" />
+                                <line class="grid-line" x1="0" y1="140" x2="500" y2="140" />
+                                <line class="grid-line" x1="0" y1="210" x2="500" y2="210" />
+                                <line class="grid-line" x1="0" y1="280" x2="500" y2="280" />
+
+                                <!-- Industry average -->
+                                <path class="avg-path" d="M 0,220 C 100,215 200,210 300,205 C 400,200 450,195 500,190" />
+
+                                <!-- Velocity curve -->
+                                <path class="velocity-fill" d="M 0,260 C 50,255 100,240 150,220 C 200,195 250,160 300,115 C 350,70 400,35 500,10 L 500,280 L 0,280 Z" fill="url(#solGradient)" />
+                                <path class="velocity-path" d="M 0,260 C 50,255 100,240 150,220 C 200,195 250,160 300,115 C 350,70 400,35 500,10" />
+
+                                <!-- System ship markers -->
+                                <g class="data-point data-point-1">
+                                    <circle cx="50" cy="255" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="50" cy="255" r="3" fill="#e5025d" />
+                                </g>
+                                <g class="data-point data-point-2">
+                                    <circle cx="150" cy="220" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="150" cy="220" r="3" fill="#e5025d" />
+                                </g>
+                                <g class="data-point data-point-3">
+                                    <circle cx="250" cy="160" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="250" cy="160" r="3" fill="#e5025d" />
+                                </g>
+                                <g class="data-point data-point-4">
+                                    <circle cx="350" cy="70" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="350" cy="70" r="3" fill="#e5025d" />
+                                </g>
+                                <g class="data-point data-point-5">
+                                    <circle cx="480" cy="15" r="6" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="480" cy="15" r="3" fill="#e5025d" />
+                                </g>
+
+                                <!-- Axis labels -->
+                                <text class="axis-label axis-delay-1" x="4" y="278">S1</text>
+                                <text class="axis-label axis-delay-2" x="95" y="278">S3</text>
+                                <text class="axis-label axis-delay-3" x="195" y="278">S5</text>
+                                <text class="axis-label axis-delay-4" x="295" y="278">S7</text>
+                                <text class="axis-label axis-delay-5" x="395" y="278">S9</text>
+                                <text class="axis-label axis-delay-6" x="470" y="278">S10</text>
+
+                                <!-- Avg label -->
+                                <text class="axis-label-avg axis-delay-7" x="505" y="188">INDUSTRY AVG</text>
+                            </svg>
+                        </div>
+
+                        <!-- Throughput bars -->
+                        <div class="throughput-bar-group">
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                            <div class="throughput-bar"></div>
+                        </div>
+                        <div class="throughput-label">THROUGHPUT / SYSTEM</div>
+                    </div>
                 </div>
             </div>
         </div>
