@@ -315,27 +315,15 @@ class Post
     }
 
     /**
-     * Generate featured image URL for a post
-     * Using Pollinations.ai for AI-generated images
-     * Note: API key is NOT included in the URL to avoid leaking it in HTML source.
+     * Get featured image URL for a post
+     * Uses static pre-generated images (50 variants) mapped by slug hash
      */
     public static function getFeaturedImage(string $title, string $slug): string
     {
-        $secretsPath = defined('ROOT_PATH') ? ROOT_PATH . '/config/secrets.php' : dirname(__DIR__, 2) . '/config/secrets.php';
-        $secrets = file_exists($secretsPath) ? require $secretsPath : [];
-        $apiKey = $secrets['pollinations_key'] ?? null;
+        $imageNumber = (crc32($slug) & 0x7FFFFFFF) % 50 + 1;
+        $paddedNumber = str_pad((string) $imageNumber, 2, '0', STR_PAD_LEFT);
 
-        // Generic prompt - seed makes each image unique per post
-        $prompt = "Abstract digital marketing technology blog header, neon gradients, dark background, professional";
-        $encodedPrompt = rawurlencode($prompt);
-        $seed = crc32($slug) & 0x7FFFFFFF; // Cap at max signed 32-bit int
-
-        $url = "https://gen.pollinations.ai/image/{$encodedPrompt}?model=flux&width=1200&height=630&seed={$seed}&nologo=true";
-        if ($apiKey) {
-            $url .= "&key={$apiKey}";
-        }
-
-        return $url;
+        return cdnUrl("images/blog/blog-{$paddedNumber}.jpg");
     }
 
 }
