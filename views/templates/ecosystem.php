@@ -45,11 +45,11 @@
         <div class="container-xl">
             <div class="hero-badge">
                 <span class="dot"></span>
-                Live Production Systems
+                Live Systems
             </div>
             <h1>The <span class="highlight">Ecosystem</span></h1>
             <p class="eco-hero-sub">
-                7 owned brands across insurance, legal, health, content, and AI — all in production, all connected through one platform.
+                7 owned brands across insurance, legal, health, content, supplements, and Ai.
             </p>
             <div class="eco-hero-stats">
                 <div>
@@ -57,7 +57,7 @@
                     <span class="eco-hero-stat-lbl">Brands</span>
                 </div>
                 <div>
-                    <span class="eco-hero-stat-val">4</span>
+                    <span class="eco-hero-stat-val">24</span>
                     <span class="eco-hero-stat-lbl">Verticals</span>
                 </div>
                 <div>
@@ -65,8 +65,8 @@
                     <span class="eco-hero-stat-lbl">Countries</span>
                 </div>
                 <div>
-                    <span class="eco-hero-stat-val">$938K</span>
-                    <span class="eco-hero-stat-lbl">Revenue</span>
+                    <span class="eco-hero-stat-val">2</span>
+                    <span class="eco-hero-stat-lbl">Operators</span>
                 </div>
             </div>
         </div>
@@ -82,16 +82,16 @@
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
                             <div class="eco-dots"><span></span><span></span><span></span></div>
-                            <div class="eco-url">portalstealth.com</div>
+                            <div class="eco-url">portal.stealthlabz.com</div>
                         </div>
                         <div class="eco-viewport">
                             <img src="/cdn/images/brands/stealth-portal.png" alt="Stealth Portal" loading="lazy">
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Platform • The Hub</div>
+                        <div class="eco-badge">Performance Marketing CDP</div>
                         <h3 class="eco-title">Stealth Portal</h3>
-                        <p class="eco-tagline">Customer data platform with identity resolution, lead enrichment, multi-buyer distribution, and real-time analytics. The engine behind every brand in the ecosystem.</p>
+                        <p class="eco-tagline">Customer data platform with identity resolution, lead enrichment, multi-buyer distribution, and real-time de-anonymization. The engine behind every brand we touch.</p>
                         <div class="eco-stats">
                             <div class="eco-stat"><div class="eco-stat-val">12</div><div class="eco-stat-lbl">Source Types</div></div>
                             <div class="eco-stat"><div class="eco-stat-val">5</div><div class="eco-stat-lbl">Dashboards</div></div>
@@ -116,8 +116,8 @@
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Insurance • South Africa</div>
-                        <h3 class="eco-title">Quote Rocket ZA</h3>
+                        <div class="eco-badge">Insurance</div>
+                        <h3 class="eco-title">Quote Rocket</h3>
                         <p class="eco-tagline">Compare insurance quotes across 12 verticals — car, life, medical, funeral, pet, business, and more. South Africa's broadest insurance comparison platform.</p>
                         <div class="eco-stats">
                             <div class="eco-stat"><div class="eco-stat-val">12</div><div class="eco-stat-lbl">Verticals</div></div>
@@ -143,8 +143,8 @@
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Insurance • United States</div>
-                        <h3 class="eco-title">GoQuoteRocket US</h3>
+                        <div class="eco-badge">Insurance</div>
+                        <h3 class="eco-title">Quote Rocket</h3>
                         <p class="eco-tagline">Fast insurance quotes for American consumers. Auto, life, medicare, credit cards — step-by-step qualification with eligibility-based carrier matching.</p>
                         <div class="eco-stats">
                             <div class="eco-stat"><div class="eco-stat-val">4</div><div class="eco-stat-lbl">Funnels</div></div>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Reviews • Affiliate</div>
+                        <div class="eco-badge">Reviews</div>
                         <h3 class="eco-title">Customer Reports</h3>
                         <p class="eco-tagline">Independent product reviews, comparison guides, and buying advice across 14 categories. 13,000+ articles with expert ratings, pros/cons, and price tracking.</p>
                         <div class="eco-stats">
@@ -190,14 +190,14 @@
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
                             <div class="eco-dots"><span></span><span></span><span></span></div>
-                            <div class="eco-url">videosfromsanta.com</div>
+                            <div class="eco-url">videosfromasanta.com</div>
                         </div>
                         <div class="eco-viewport">
                             <img src="/cdn/images/brands/videos-from-santa.png" alt="Videos From Santa" loading="lazy">
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">AI Video • DTC</div>
+                        <div class="eco-badge">AI Video</div>
                         <h3 class="eco-title">Videos From Santa</h3>
                         <p class="eco-tagline">Personalized AI video messages from Santa, Mrs. Claus, and Elfie. Each video speaks your child's name, mentions their achievements, and feels completely real.</p>
                         <div class="eco-stats">
@@ -205,8 +205,8 @@
                             <div class="eco-stat"><div class="eco-stat-val">90s</div><div class="eco-stat-lbl">Max Length</div></div>
                             <div class="eco-stat"><div class="eco-stat-val">$29</div><div class="eco-stat-lbl">From</div></div>
                         </div>
-                        <a href="https://videosfromsanta.com" class="eco-link" target="_blank">
-                            videosfromsanta.com
+                        <a href="https://videosfromasanta.com" class="eco-link" target="_blank">
+                            videosfromasanta.com
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                     </div>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Legal • Lead Gen</div>
+                        <div class="eco-badge">Legal</div>
                         <h3 class="eco-title">HOA Attorney Guide</h3>
                         <p class="eco-tagline">Connect with HOA attorneys who specialize in fines, fees, property disputes, and board conflicts. Qualified matching based on location, issue type, and urgency.</p>
                         <div class="eco-stats">
@@ -251,7 +251,7 @@
                         </div>
                     </div>
                     <div class="eco-content">
-                        <div class="eco-badge">Health • DTC</div>
+                        <div class="eco-badge">Health</div>
                         <h3 class="eco-title">Evergreen Brands</h3>
                         <p class="eco-tagline">Direct-to-consumer health and wellness supplements across the US and South African markets. 25+ products with subscription and one-time purchase options.</p>
                         <div class="eco-stats">
@@ -259,7 +259,6 @@
                             <div class="eco-stat"><div class="eco-stat-val">14</div><div class="eco-stat-lbl">Funnels</div></div>
                             <div class="eco-stat"><div class="eco-stat-val">2</div><div class="eco-stat-lbl">Markets</div></div>
                         </div>
-                        <span class="eco-link" style="cursor:default;">Multiple Properties</span>
                     </div>
                 </div>
 

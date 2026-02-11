@@ -12,10 +12,10 @@ class LandingController
     public function index(): void
     {
         $page = [
-            'title' => 'Stealth Labz | Built Different. Compounds Daily.',
-            'description' => 'The Compounding Execution Method. 10 production systems shipped in 74 days. A 13.4× compounding multiplier across the portfolio.',
-            'og_description' => 'The Compounding Execution Method. 10 production systems in 74 days. 13.4× compounding multiplier. See the method. See the results.',
-            'keywords' => 'software development, performance marketing, AI, product development, global operations'
+            'title' => 'Stealth Labz | AI-Native Software Development',
+            'description' => '10 production systems. 596K lines of code. 74 days. The Compounding Execution Method turns solo operators into system-building machines.',
+            'og_description' => '10 production systems. 596K lines of code. 74 days. See the methodology behind a 13.4× compounding multiplier.',
+            'keywords' => 'AI software development, compounding execution method, production systems, solo operator, rapid deployment'
         ];
 
         // Get recent blog posts for the insights section
@@ -27,9 +27,9 @@ class LandingController
     public function cem(): void
     {
         $page = [
-            'title' => 'CEM — The Compounding Execution Method | Stealth Labz',
-            'description' => 'A universal execution operating system for AI-native builders. The methodology behind 596,903 lines of production code and 10 systems shipped by a solo operator.',
-            'keywords' => 'CEM, Compounding Execution Method, AI development, methodology, software development'
+            'title' => 'The Compounding Execution Method (CEM) | Stealth Labz',
+            'description' => '12 mechanisms, 4 applications, and a tactical escalation chain. The execution OS behind 596K lines of production code shipped by one operator.',
+            'keywords' => 'CEM, Compounding Execution Method, execution framework, AI development methodology, solo operator'
         ];
 
         include ROOT_PATH . '/views/templates/cem.php';
@@ -49,9 +49,9 @@ class LandingController
     public function solutions(): void
     {
         $page = [
-            'title' => 'Solutions | Stealth Labz',
-            'description' => 'Custom software, proven systems, and production-ready platforms — built with the same methodology behind 2,561 commits and 10 shipped systems.',
-            'keywords' => 'solutions, custom software, SaaS, lead generation, platform development, AI development'
+            'title' => 'Solutions — Custom Software & Systems | Stealth Labz',
+            'description' => 'Custom builds, proven systems, or learn the method. Three tracks for teams that need production software shipped fast.',
+            'keywords' => 'custom software development, production systems, SaaS development, AI integration, CEM training'
         ];
 
         include ROOT_PATH . '/views/templates/solutions.php';
@@ -60,9 +60,9 @@ class LandingController
     public function training(): void
     {
         $page = [
-            'title' => 'Training | Learn the Compounding Execution Method | Stealth Labz',
-            'description' => '1-on-1 coaching and embedded team training. Learn the methodology behind 2,561 commits, 10 production systems, and a 13.4× compounding multiplier.',
-            'keywords' => 'CEM training, coaching, methodology, AI development, execution method'
+            'title' => 'CEM Training — Learn the Method | Stealth Labz',
+            'description' => '1-on-1 coaching and embedded team training. Master the 12 mechanisms behind 10 production systems and a 13.4× compounding multiplier.',
+            'keywords' => 'CEM training, execution coaching, methodology training, AI development, compounding execution method'
         ];
 
         include ROOT_PATH . '/views/templates/training.php';
@@ -71,9 +71,9 @@ class LandingController
     public function ecosystem(): void
     {
         $page = [
-            'title' => 'The Ecosystem | Stealth Labz',
-            'description' => '7 brands across lead generation, consumer products, content, and AI — all owned, all in production, all connected through one platform.',
-            'keywords' => 'ecosystem, portfolio, brands, platforms, lead generation, DTC, AI'
+            'title' => 'The Ecosystem — 10 Live Brands | Stealth Labz',
+            'description' => 'Lead generation, consumer products, content platforms, and AI tools — 10 brands, all owned, all live, all built with the Compounding Execution Method.',
+            'keywords' => 'brand ecosystem, production portfolio, lead generation, DTC brands, AI platforms, CEM'
         ];
 
         include ROOT_PATH . '/views/templates/ecosystem.php';

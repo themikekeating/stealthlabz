@@ -15,7 +15,7 @@ class LegalController
         $page = [
             'title' => 'Privacy Policy | Stealth Labz',
             'heading' => 'Privacy Policy',
-            'description' => 'Privacy policy for Stealth Labz LLC. We respect your privacy and are committed to protecting your personal data.',
+            'description' => 'How Stealth Labz collects, uses, and protects your personal data.',
             'effectiveDate' => 'January 27, 2026',
             'sections' => [
                 [
@@ -80,7 +80,7 @@ class LegalController
         $page = [
             'title' => 'Terms of Service | Stealth Labz',
             'heading' => 'Terms of Service',
-            'description' => 'Terms of service for Stealth Labz LLC services and website.',
+            'description' => 'Terms governing use of Stealth Labz services, deliverables, and website.',
             'effectiveDate' => 'January 27, 2026',
             'sections' => [
                 [
@@ -151,7 +151,7 @@ class LegalController
         $page = [
             'title' => 'Cookie Policy | Stealth Labz',
             'heading' => 'Cookie Policy',
-            'description' => 'Cookie policy explaining how Stealth Labz uses cookies and similar technologies.',
+            'description' => 'How Stealth Labz uses cookies and similar tracking technologies.',
             'effectiveDate' => 'January 27, 2026',
             'sections' => [
                 [
@@ -202,7 +202,7 @@ class LegalController
         $page = [
             'title' => 'Disclaimer | Stealth Labz',
             'heading' => 'Disclaimer',
-            'description' => 'Legal disclaimer for Stealth Labz LLC website and content.',
+            'description' => 'Legal disclaimer covering Stealth Labz website content, case studies, and liability.',
             'effectiveDate' => 'January 27, 2026',
             'sections' => [
                 [

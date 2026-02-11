@@ -19,9 +19,9 @@ class BlogController
         $categories = Category::all();
 
         $page = [
-            'title' => 'Insights | Stealth Labz',
-            'headerDescription' => 'Technical deep-dives on AI development, lead generation, and performance marketing.',
-            'metaDescription' => 'Technical insights on AI development, lead generation, and performance marketing.'
+            'title' => 'Insights — AI Development & Execution Blog | Stealth Labz',
+            'headerDescription' => 'Deep dives on AI-native development, execution methodology, and building production systems at speed.',
+            'metaDescription' => 'Deep dives on AI-native development, execution methodology, and building production systems at speed.'
         ];
 
         $posts = $data['posts'];

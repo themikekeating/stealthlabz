@@ -33,25 +33,6 @@
     align-items: center;
 }
 
-.home-hero .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent-pink);
-    margin-bottom: 2rem;
-}
-.home-hero .hero-badge .dot {
-    width: 6px; height: 6px;
-    background: var(--accent-pink);
-    border-radius: 50%;
-    animation: homePulse 2s ease-in-out infinite;
-}
-@keyframes homePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
 .home-hero h1 {
     font-size: 3.5rem;
     font-weight: 800;

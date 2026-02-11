@@ -6,6 +6,21 @@
 .t-section { padding: 6rem 0; }
 .t-section.alt { background: var(--bg-secondary); }
 
+.t-section .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-pink);
+    margin-bottom: 1rem;
+}
+.t-section .section-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    line-height: 1.7;
+}
+
 /* ── Hero ── */
 .t-hero {
     padding: 8rem 0 6rem;
@@ -20,25 +35,6 @@
     background: radial-gradient(circle, rgba(229, 2, 93, 0.06) 0%, transparent 70%);
     pointer-events: none;
 }
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent-pink);
-    margin-bottom: 2rem;
-}
-.hero-badge .dot {
-    width: 6px; height: 6px;
-    background: var(--accent-pink);
-    border-radius: 50%;
-    animation: trainingPulse 2s ease-in-out infinite;
-}
-@keyframes trainingPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 .t-hero h1 {
     font-size: 3.25rem;
