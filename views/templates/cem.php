@@ -157,11 +157,10 @@
         <div class="container-xl">
             <div class="cem-section-label">01 — Architecture</div>
             <h2>System Architecture</h2>
-            <p class="cem-section-desc">How every mechanism connects. The Core Triangle drives execution. Four operational layers surround it. Eight feedback loops sustain the system.</p>
+            <p class="cem-section-desc">How every mechanism connects.  Four operational layers surround it./p>
 
             <!-- ── THE CORE TRIANGLE ── -->
             <div class="core-triangle">
-                <div class="core-triangle-label">The Core Triangle</div>
                 <div class="core-triangle-flow">
                     <div class="core-node">
                         <div class="core-node-role">Defines the Why</div>
@@ -202,7 +201,6 @@
             </div>
 
             <!-- ── LAYER STACK ── -->
-            <div class="arch-layers-header">Operational Layers</div>
             <div class="arch-stack">
                 <div class="arch-layer">
                     <div class="arch-layer-name">
@@ -214,7 +212,7 @@
                             <span class="arch-component">Nested Cycles</span>
                             <span class="arch-component">Sweeps</span>
                         </div>
-                        <div class="arch-layer-flow-label">Flow</div>
+                        <div class="arch-layer-flow-label">How it works</div>
                         <div class="arch-layer-flow">Nested Cycles and Sweeps run in parallel. Both feed Foundation. Cycles produce output. Sweeps maintain retrievability. Without Sweeps, Foundation degrades and cycles slow.</div>
                     </div>
                 </div>
@@ -229,7 +227,7 @@
                             <span class="arch-component">Regroup</span>
                             <span class="arch-component">Governor</span>
                         </div>
-                        <div class="arch-layer-flow-label">Flow</div>
+                        <div class="arch-layer-flow-label">How it works</div>
                         <div class="arch-layer-flow">Regroup is periodic — clears Foundation and clears the mind. Governor is continuous — throttles output and protects focus. Together they prevent the system from destroying itself through overextension.</div>
                     </div>
                 </div>
@@ -245,7 +243,7 @@
                             <span class="arch-component">Stop and Recap</span>
                             <span class="arch-component">Stop. Run It Back</span>
                         </div>
-                        <div class="arch-layer-flow-label">Flow</div>
+                        <div class="arch-layer-flow-label">How it works</div>
                         <div class="arch-layer-flow">Micro-Triage clears blockages through the 7-step loop. If unresolved in 15–30 minutes, escalate: Stop and Recap for repairable context, Stop. Run It Back when context is poisoned.</div>
                     </div>
                 </div>
@@ -261,56 +259,11 @@
                             <span class="arch-component">Bridge</span>
                             <span class="arch-component">Burst</span>
                         </div>
-                        <div class="arch-layer-flow-label">Flow</div>
+                        <div class="arch-layer-flow-label">How it works</div>
                         <div class="arch-layer-flow">Scaffold spins up instant structure from Foundation. Bridge multiplies by connecting across the ecosystem. Burst scatters when stuck. All three feed Foundation. Scaffold creates. Bridge connects. Burst unsticks.</div>
                     </div>
                 </div>
             </div>
-
-            <!-- ── FEEDBACK LOOPS ── -->
-            <div class="loops-header">Key Feedback Loops — 8 Self-Sustaining Cycles</div>
-            <div class="loops-grid">
-                <div class="loop-card">
-                    <div class="loop-name">Build Loop</div>
-                    <div class="loop-flow">Vision <span class="loop-flow-arrow">→</span> Target <span class="loop-flow-arrow">→</span> Foundation <span class="loop-flow-arrow">→</span> Pendulum <span class="loop-flow-arrow">→</span> Cycles <span class="loop-flow-arrow">→</span> Output <span class="loop-flow-arrow">→</span> Foundation</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Maintenance Loop</div>
-                    <div class="loop-flow">Sweeps <span class="loop-flow-arrow">→</span> Foundation <span class="loop-flow-arrow">→</span> Cycles <span class="loop-flow-arrow">→</span> Sweeps</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Reset Loop</div>
-                    <div class="loop-flow">Regroup <span class="loop-flow-arrow">→</span> Foundation cleared <span class="loop-flow-arrow">→</span> Mind cleared <span class="loop-flow-arrow">→</span> Vision reassessed</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Throttle Loop</div>
-                    <div class="loop-flow">Governor <span class="loop-flow-arrow">→</span> Output throttled <span class="loop-flow-arrow">→</span> Focus protected <span class="loop-flow-arrow">→</span> Cycles sustained</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Acceleration Loop</div>
-                    <div class="loop-flow">Scaffold <span class="loop-flow-arrow">→</span> Build/Bridge <span class="loop-flow-arrow">→</span> Output <span class="loop-flow-arrow">→</span> Foundation <span class="loop-flow-arrow">→</span> Faster Scaffold</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Problem-Solving Loop</div>
-                    <div class="loop-flow">Blockage <span class="loop-flow-arrow">→</span> Micro-Triage <span class="loop-flow-arrow">→</span> Resolution or Escalate <span class="loop-flow-arrow">→</span> Continue</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Burst Loop</div>
-                    <div class="loop-flow">Stuck <span class="loop-flow-arrow">→</span> Internalize <span class="loop-flow-arrow">→</span> Explode <span class="loop-flow-arrow">→</span> Scatter <span class="loop-flow-arrow">→</span> Pendulum sorts <span class="loop-flow-arrow">→</span> Foundation catches</div>
-                </div>
-
-                <div class="loop-card">
-                    <div class="loop-name">Spiral Recovery Loop</div>
-                    <div class="loop-flow">Context corrupts <span class="loop-flow-arrow">→</span> Drift compounds <span class="loop-flow-arrow">→</span> Recognition fires <span class="loop-flow-arrow">→</span> Severity assessed <span class="loop-flow-arrow">→</span> Graduated response</div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
@@ -340,7 +293,7 @@
                         <div class="icon-wrap icon-vision">
                             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3m0 14v3m10-10h-3M5 12H2m15.07-7.07l-2.12 2.12M9.05 14.95l-2.12 2.12m12.14 0l-2.12-2.12M9.05 9.05L6.93 6.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                         </div>
-                        <div class="dd-badge dd-badge-purple">North Star</div>
+                        <div class="dd-badge dd-badge-pink">North Star</div>
                         <h3>Vision</h3>
                         <p>The future state. Undefined but believed. The destination the entire ecosystem compounds toward. Without Vision, execution has no meaning. With Vision, even failures compound toward the destination.</p>
                     </div>
@@ -348,7 +301,7 @@
                         <div class="icon-wrap icon-target">
                             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
                         </div>
-                        <div class="dd-badge dd-badge-pink">Operational Filter</div>
+                        <div class="dd-badge dd-badge-purple">Operational Filter</div>
                         <h3>Target</h3>
                         <p>Concrete. Measurable. Every decision passes through it. You know where you're going before you take a single step. Target can be built or found — when you recognize what you need already exists, you Bridge instead of rebuild.</p>
                     </div>
@@ -385,7 +338,7 @@
             <div class="tab-panel" id="tab-requirements">
                 <div class="req-grid">
                     <div class="req-card">
-                        <div class="dd-badge dd-badge-pink">R1 — Environment</div>
+                        <div class="dd-badge dd-badge-pink">The Environment</div>
                         <h3>AI as Enabler</h3>
                         <p>AI is not a tool inside the methodology — it is the environment that makes it possible. Removes traditional constraints: context switching cost, expertise bottlenecks, linear effort scaling. The operator and AI form a system capable of output neither achieves alone.</p>
                     </div>
@@ -484,25 +437,11 @@
                         <p>First-line interrupt. Catches drift before it compounds. Costs seconds. You notice you've lost focus, you SPR — stop what you're doing, pause to reorient, redirect to what matters.</p>
                     </div>
 
-                    <div class="tactic-arrow tactic-arrow-1">
-                        <div class="tactic-arrow-inner">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span class="tactic-arrow-label">Escalate</span>
-                        </div>
-                    </div>
-
                     <div class="tactic-card tactic-level-2">
                         <div class="tactic-severity">Level 2 — Context Repair</div>
                         <h3>Stop and Recap</h3>
                         <div class="tactic-action">Full context rebuild</div>
                         <p>When SPR isn't enough. You've lost the thread entirely. Stop. Rebuild context from scratch. Restate the Target. Restate what you've done. Restate what's next. Then proceed.</p>
-                    </div>
-
-                    <div class="tactic-arrow tactic-arrow-2">
-                        <div class="tactic-arrow-inner">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span class="tactic-arrow-label">Escalate</span>
-                        </div>
                     </div>
 
                     <div class="tactic-card tactic-level-3">
@@ -842,358 +781,6 @@
         </div>
     </section>
 
-
-    <!-- ════════════════════════════════════════
-         04 — FAILURE MODES
-         ════════════════════════════════════════ -->
-    <section class="cem-section section-alt cem-section-glow-right" data-section>
-        <div class="container-xl">
-            <div class="cem-section-label">04 — Failure Modes</div>
-            <h2>How the System Breaks</h2>
-            <p class="cem-section-desc">CEM fails in predictable ways. Nine patterns across four categories. Recognizing failure patterns enables faster recovery.</p>
-
-            <!-- ── FOUNDATION FAILURES ── -->
-            <div class="failure-category failure-cat-foundation">
-                <div class="failure-category-header">
-                    <div class="failure-category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="14" width="18" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="7" width="14" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="3" width="10" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <div class="failure-category-title">Foundation Failures</div>
-                </div>
-                <div class="failure-modes-grid">
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Foundation Rot</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Can't find assets. Sweeps stopped running. Stashed work is unretrievable. Foundation exists but doesn't accelerate anything.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Storage Discipline collapsed. Sweeps deprioritized. Assets accumulated without organization.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Stop execution. Run a major Regroup. Rebuild retrieval systems before resuming. Foundation must be retrievable before it can be useful.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Foundation Bloat</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Foundation is huge but nothing is usable. Assets exist but don't accelerate cycles. Searching takes longer than rebuilding.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Left-swinging without proper organization. Stashing without cleaning. Quantity over retrievability.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Audit Foundation. Delete or archive what hasn't been touched in 30+ days. Tighten Storage Discipline. Quality of retrieval over quantity of storage.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── CYCLE FAILURES ── -->
-            <div class="failure-category failure-cat-cycle">
-                <div class="failure-category-header">
-                    <div class="failure-category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
-                    </div>
-                    <div class="failure-category-title">Cycle Failures</div>
-                </div>
-                <div class="failure-modes-grid">
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Cycle Stall</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Same task spans multiple cycles. No completion. Endless "almost done." Work keeps expanding instead of resolving.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Target unclear. Pendulum not being applied. No binary decision forcing resolution. The cycle has no exit condition.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Deploy SPR. Re-lock Target. Define what "done" looks like in concrete, measurable terms. Resume only when the exit condition is binary.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Cycle Fragmentation</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Starting many cycles, finishing none. High activity, low output. Feels productive but nothing ships.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Burst overuse without Pendulum discipline. Governor not engaged. Starting feels like progress. Finishing requires discipline.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Stop all cycles. Pick one. Complete it. Rebuild momentum from a single thread. Only resume parallel execution after single-thread discipline is restored.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── OPERATOR FAILURES ── -->
-            <div class="failure-category failure-cat-operator">
-                <div class="failure-category-header">
-                    <div class="failure-category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <div class="failure-category-title">Operator Failures</div>
-                </div>
-                <div class="failure-modes-grid">
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Governor Blindness</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Shipping broken work. Redoing completed work. Exhaustion without output. Moving faster than depth. The operator can't see their own limits.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Moving faster than depth. Not recognizing personal limits. The Governor exists but the operator has stopped listening to it.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Forced stop. Major Regroup. Recalibrate Governor triggers through honest assessment. Recognition is not failure — it is the system working.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Pendulum Paralysis</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Work accumulates in limbo. Neither advanced nor stashed. Decision avoidance. Growing pile of "undecided" items that never resolve.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Fear of wrong decision. Target unclear. Attachment to options. The binary filter requires conviction the operator doesn't have.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Deploy SPR. Verify Target is locked. Force binary decision on the oldest limbo item. Repeat until the queue is clear. Speed of decision matters more than perfection of decision.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Triage Loops</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Running Micro-Triage repeatedly with no resolution. Same problem resurfaces after each attempt. The loop becomes the work itself.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Problem is upstream. Vision or Target unclear. Triage can't fix foundation-level issues — it's a tactical tool being applied to a strategic problem.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Stop Triage. Step back to Vision and Target. Re-lock both. The problem isn't execution — it's direction. Fix direction first, then resume execution.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── SYSTEM FAILURES ── -->
-            <div class="failure-category failure-cat-system">
-                <div class="failure-category-header">
-                    <div class="failure-category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="failure-category-title">System Failures</div>
-                </div>
-                <div class="failure-modes-grid">
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Compounding Reversal</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Later projects take longer than earlier ones. Efficiency decreasing instead of increasing. The compounding curve inverts.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Foundation not being fed. Outputs not returning to Foundation. Bridge opportunities missed. The feedback loop is broken.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Audit the feedback loop. Identify where outputs are leaking instead of feeding Foundation. Restore the Build Loop. Every output must return.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="failure-card">
-                        <div class="failure-card-header">
-                            <div class="failure-name">Parallel Collapse</div>
-                        </div>
-                        <div class="failure-card-body">
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-symptoms">Symptoms</div>
-                                <p>Multi-Thread Workflow breaks down. Projects collide. Context lost between screens. Switching costs return despite AI support.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-cause">Cause</div>
-                                <p>Too many active projects. Governor not engaged. Routing not being used. The operator exceeded Multi-Thread capacity.</p>
-                            </div>
-                            <div class="failure-detail">
-                                <div class="failure-detail-label failure-detail-label-recovery">Recovery</div>
-                                <p>Reduce to single thread. Complete one project fully. Re-establish Multi-Thread with fewer active projects. The Governor must be recalibrated for parallel limits.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── RECOVERY PRINCIPLE ── -->
-            <div class="recovery-principle">
-                <div class="recovery-principle-header">
-                    <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <span>Recovery Principle</span>
-                </div>
-                <div class="recovery-principle-body">
-                    <div class="recovery-steps">
-                        <div class="recovery-step">
-                            <div class="recovery-step-num">01</div>
-                            <div class="recovery-step-action">Stop</div>
-                            <div class="recovery-step-desc">SPR or Governor intervention. Halt execution before the failure compounds further.</div>
-                            <div class="recovery-step-arrow"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12h14m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        </div>
-                        <div class="recovery-step">
-                            <div class="recovery-step-num">02</div>
-                            <div class="recovery-step-action">Identify</div>
-                            <div class="recovery-step-desc">Which layer failed? Foundation, Cycle, Operator, or System. The symptom reveals the source.</div>
-                            <div class="recovery-step-arrow"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12h14m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        </div>
-                        <div class="recovery-step">
-                            <div class="recovery-step-num">03</div>
-                            <div class="recovery-step-action">Address</div>
-                            <div class="recovery-step-desc">Fix the failed layer directly. Do not resume execution while the layer is broken.</div>
-                            <div class="recovery-step-arrow"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12h14m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        </div>
-                        <div class="recovery-step">
-                            <div class="recovery-step-num">04</div>
-                            <div class="recovery-step-action">Resume</div>
-                            <div class="recovery-step-desc">Only after the layer is restored. The system is resilient because Foundation catches everything.</div>
-                        </div>
-                    </div>
-                    <div class="recovery-note"><strong>Failures cost time, not work.</strong> Foundation catches everything. Nothing is lost.</div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ════════════════════════════════════════
-         05 — EVIDENCE
-         ════════════════════════════════════════ -->
-    <section class="cem-section cem-section-glow-left cem-section-glow-right" data-section>
-        <div class="container-xl">
-            <div class="cem-section-label">05 — Validation</div>
-            <h2>Evidence</h2>
-            <p class="cem-section-desc">Validated through git commit analysis across 10 production systems built between October 2025 and January 2026.</p>
-
-            <div class="evidence-grid">
-                <div class="evidence-card"><div class="evidence-val">2,561</div><div class="evidence-lbl">Total Commits</div></div>
-                <div class="evidence-card"><div class="evidence-val">10</div><div class="evidence-lbl">Production Systems</div></div>
-                <div class="evidence-card"><div class="evidence-val">195K</div><div class="evidence-lbl">Largest Codebase LOC</div></div>
-                <div class="evidence-card"><div class="evidence-val">9.6%</div><div class="evidence-lbl">Defect Rate</div></div>
-                <div class="evidence-card"><div class="evidence-val">5 days</div><div class="evidence-lbl">Mature Phase MVP</div></div>
-                <div class="evidence-card"><div class="evidence-val">89</div><div class="evidence-lbl">Peak Daily Commits</div></div>
-                <div class="evidence-card"><div class="evidence-val">60%</div><div class="evidence-lbl">Parallel Work Days</div></div>
-                <div class="evidence-card"><div class="evidence-val">5</div><div class="evidence-lbl">Max Concurrent Projects</div></div>
-            </div>
-
-            <div class="compression-layout">
-                <div class="compression-panel">
-                    <div class="compression-title">Time Compression</div>
-                    <div class="compression-subtitle">How CEM's compounding effect accelerates delivery over time</div>
-
-                    <div class="phase-row phase-early">
-                        <div class="phase-header">
-                            <div class="phase-label">Early<span class="phase-label-sub">Projects 1–3</span></div>
-                            <div class="phase-days">14–21 days</div>
-                        </div>
-                        <div class="phase-bar"><div class="phase-fill"><span>Foundation filling — every pattern is new</span><span class="phase-fill-loc">~3K LOC/day</span></div></div>
-                    </div>
-
-                    <div class="phase-row phase-mid">
-                        <div class="phase-header">
-                            <div class="phase-label">Mid<span class="phase-label-sub">Projects 4–7</span></div>
-                            <div class="phase-days">5–10 days</div>
-                        </div>
-                        <div class="phase-bar"><div class="phase-fill"><span>Compounding kicks</span><span class="phase-fill-loc">~6K LOC/day</span></div></div>
-                    </div>
-
-                    <div class="phase-row phase-mature">
-                        <div class="phase-header">
-                            <div class="phase-label">Mature<span class="phase-label-sub">Projects 8–10</span></div>
-                            <div class="phase-days">5 days</div>
-                        </div>
-                        <div class="phase-bar"><div class="phase-fill"><span>Full compounding</span><span class="phase-fill-loc">8K+</span></div></div>
-                    </div>
-
-                    <div class="compression-annotation">
-                        <svg viewBox="0 0 20 20" fill="none"><path d="M10 16V4m0 0l4 4m-4-4L6 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>Early-phase projects take 14–21 days. Mature-phase projects ship in 5. <span class="annotation-highlight">Foundation carries the difference.</span></span>
-                    </div>
-                </div>
-
-                <div class="metric-stack">
-                    <div class="metric-card">
-                        <div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M3 17l4-4 4 4 4-8 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <div><div class="metric-val">61.5</div><div class="metric-lbl">Peak Commits / Day</div><div class="metric-context">Jan 1–6 peak sprint. Up from 4.6/day in October. 89 commits on the single highest day.</div></div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M21 12a9 9 0 11-6.22-8.56" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M21 3v6h-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <div><div class="metric-val">13.4×</div><div class="metric-lbl">Compounding Multiplier</div><div class="metric-context">Portal Stealth peak sprint hit 61.5 commits/day — up from 4.6/day in the first phase. Each cycle fed Foundation. Foundation fed the next cycle.</div></div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <div><div class="metric-val">60%</div><div class="metric-lbl">Parallel Execution Days</div><div class="metric-context">Over half of all development days involved work on multiple systems simultaneously.</div></div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
-                        <div><div class="metric-val">9.6%</div><div class="metric-lbl">Defect Rate</div><div class="metric-context">Sub-10% across 10 systems. Governor's scope control prevents quality collapse as output compounds.</div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- ════════════════════════════════════════
          06 — THEORETICAL FOUNDATION
          ════════════════════════════════════════ -->
@@ -1356,7 +943,7 @@
     </section>
 
     <div class="cem-footer">
-        <div class="container-xl">CEM Framework v4.0 — Production</div>
+        <div class="container-xl">CEM Framework — Production</div>
     </div>
 
     <!-- Footer -->

@@ -2204,10 +2204,10 @@
     font-family: var(--font-mono);
     font-size: 0.875rem;
     padding: 0.3rem 0.65rem;
-    background: var(--accent-pink-bg);
-    border: 1px solid var(--accent-pink-border);
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    color: var(--accent-pink);
     letter-spacing: 0.03em;
     font-weight: 500;
 }
