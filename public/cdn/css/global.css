@@ -166,6 +166,18 @@ a:hover {
     background: var(--bg-tertiary) !important;
 }
 
+.badge-category {
+    background: var(--accent-pink-bg) !important;
+    border: 1px solid var(--accent-pink-border);
+    color: var(--accent-pink) !important;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+}
+
 .border-subtle {
     border-color: var(--border-color) !important;
 }
@@ -530,7 +542,7 @@ section {
 
 .portfolio-card p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     margin-bottom: 1.5rem;
     line-height: 1.7;
 }
@@ -583,7 +595,7 @@ section {
 }
 
 .portfolio-metric-value {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     font-weight: 700;
     font-family: var(--font-mono);
     color: var(--accent-cyan);
@@ -866,7 +878,7 @@ section {
 
 .stat-value {
     font-family: var(--font-mono);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent-pink);
     line-height: 1.2;

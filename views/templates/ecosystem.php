@@ -91,7 +91,7 @@
                     <div class="eco-content">
                         <div class="eco-badge">Performance Marketing CDP</div>
                         <h3 class="eco-title">Stealth Portal</h3>
-                        <p class="eco-tagline">Customer data platform with identity resolution, lead enrichment, multi-buyer distribution, and real-time de-anonymization. The engine behind every brand we touch.</p>
+                        <p class="eco-tagline">Customer data platform with identity resolution, lead enrichment, distribution, and real-time de-anonymization. The engine behind every brand we touch.</p>
                         <div class="eco-stats">
                             <div class="eco-stat"><div class="eco-stat-val">12</div><div class="eco-stat-lbl">Source Types</div></div>
                             <div class="eco-stat"><div class="eco-stat-val">5</div><div class="eco-stat-lbl">Dashboards</div></div>

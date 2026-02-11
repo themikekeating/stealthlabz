@@ -97,7 +97,7 @@ ob_start();
                     <?php if (!empty($post['category'])): ?>
                     <div class="mb-3">
                         <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>"
-                           class="badge bg-tertiary text-secondary text-decoration-none">
+                           class="badge badge-category text-decoration-none">
                             <?= htmlspecialchars($post['category']['name']) ?>
                         </a>
                     </div>

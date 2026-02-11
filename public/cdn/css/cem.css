@@ -390,8 +390,8 @@
 }
 .dd-card:hover::before { opacity: 1; }
 .dd-card:hover::after { opacity: 1; }
-.dd-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
-.dd-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
+.dd-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+.dd-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
 
 /* Badge pattern */
 .dd-badge {
@@ -482,9 +482,9 @@
 .icon-compound { background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.18); }
 .icon-compound::before { background: rgba(34, 197, 94, 0.2); }
 .icon-compound svg { color: var(--accent-green); }
-.above-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.above-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
 .above-card .dd-badge { margin-bottom: 0.6rem; }
-.above-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; }
+.above-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.65; }
 
 /* --- Death Traps --- */
 .death-traps {
@@ -575,8 +575,8 @@
 }
 .req-card:hover::before { opacity: 1; }
 .req-card:hover::after { opacity: 1; }
-.req-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-.req-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; }
+.req-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.req-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.65; }
 
 /* --- Team Structure --- */
 .team-structure {
@@ -785,7 +785,7 @@
 .tactic-level-1 .tactic-severity { color: var(--accent-purple); }
 .tactic-level-2 .tactic-severity { color: rgba(229, 2, 93, 0.7); }
 .tactic-level-3 .tactic-severity { color: var(--accent-pink); }
-.tactic-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; position: relative; z-index: 1; }
+.tactic-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.35rem; position: relative; z-index: 1; }
 .tactic-action {
     font-family: var(--font-mono);
     font-size: 0.875rem;
@@ -888,8 +888,8 @@
     position: relative;
     z-index: 1;
 }
-.mech-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; position: relative; z-index: 1; }
-.mech-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; position: relative; z-index: 1; }
+.mech-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; position: relative; z-index: 1; }
+.mech-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; position: relative; z-index: 1; }
 .mech-expand-hint {
     font-family: var(--font-mono);
     font-size: 0.875rem;
@@ -1025,8 +1025,8 @@
     position: relative;
     z-index: 1;
 }
-.app-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
-.app-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
+.app-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+.app-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
 
 /* --- Supporting — 2x2 grid --- */
 .support-grid {
@@ -1080,8 +1080,8 @@
     position: relative;
     z-index: 1;
 }
-.support-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
-.support-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
+.support-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+.support-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.65; position: relative; z-index: 1; }
 
 /* --- Case Studies --- */
 .case-stack {
@@ -1139,7 +1139,7 @@
 .case-card.expanded .case-num { color: var(--accent-pink); }
 
 .case-header-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.2rem;
 }

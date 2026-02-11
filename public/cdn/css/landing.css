@@ -116,7 +116,7 @@
     text-align: center;
 }
 .hero-stat-val {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 800;
     background: var(--gradient-pink);
     -webkit-background-clip: text;
@@ -288,7 +288,7 @@
 }
 .float-card .fc-val {
     font-family: var(--font-mono);
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1;
@@ -582,12 +582,12 @@
     margin-bottom: 0.75rem;
 }
 .pillar-title {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
 .pillar-desc {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -601,7 +601,7 @@
     margin-bottom: 1.5rem;
 }
 .pillar-stat-val {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--accent-pink);
 }
@@ -636,7 +636,7 @@
     margin-top: 3rem;
 }
 .about-text {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
     line-height: 1.8;
 }
@@ -667,7 +667,7 @@
     flex-shrink: 0;
 }
 .capability-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
 }
@@ -778,13 +778,13 @@
     margin-bottom: 0.5rem;
 }
 .blog-card h4 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 .blog-card p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }

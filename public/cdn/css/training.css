@@ -243,7 +243,7 @@
 }
 .accel-card .accel-val {
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
 }
@@ -285,7 +285,7 @@
 }
 .defect-card .stat-val {
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
 }
@@ -386,12 +386,12 @@
     margin-bottom: 1rem;
 }
 .learn-card-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 .learn-card-desc {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -457,7 +457,7 @@
 }
 .format-desc {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -470,7 +470,7 @@
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-secondary);
 }
 .format-detail-dot {
@@ -502,12 +502,12 @@
     transform: translateY(-2px);
 }
 .audience-card-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
 .audience-card-desc {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -539,13 +539,13 @@
     background: linear-gradient(135deg, rgba(229, 2, 93, 0.08), rgba(109, 74, 140, 0.04));
 }
 .contrast-col-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 700;
 }
 .contrast-rows { padding: 0.75rem 0; }
 .contrast-row {
     padding: 0.75rem 2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     display: flex;
     align-items: center;
