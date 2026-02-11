@@ -122,89 +122,174 @@
                 </div>
 
                 <div class="hero-visual">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
-                        <defs>
-                            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="rgba(214,51,108,0.14)"/>
-                                <stop offset="100%" stop-color="rgba(214,51,108,0)"/>
-                            </linearGradient>
-                            <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#ae3ec9"/>
-                                <stop offset="100%" stop-color="#d6336c"/>
-                            </linearGradient>
-                            <radialGradient id="glowTR" cx="85%" cy="15%" r="45%">
-                                <stop offset="0%" stop-color="rgba(214,51,108,0.08)"/>
-                                <stop offset="100%" stop-color="rgba(214,51,108,0)"/>
-                            </radialGradient>
-                            <radialGradient id="glowBL" cx="10%" cy="90%" r="35%">
-                                <stop offset="0%" stop-color="rgba(174,62,201,0.06)"/>
-                                <stop offset="100%" stop-color="rgba(174,62,201,0)"/>
-                            </radialGradient>
-                            <filter id="dotGlow">
-                                <feGaussianBlur stdDeviation="4" result="b"/>
-                                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="termGlow">
-                                <feGaussianBlur stdDeviation="8" result="b"/>
-                                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
+                    <div class="home-viz">
 
-                        <!-- Background -->
-                        <rect width="600" height="600" fill="#08080a"/>
-                        <rect width="600" height="600" fill="url(#glowTR)"/>
-                        <rect width="600" height="600" fill="url(#glowBL)"/>
+                        <!-- Floating Stat Cards -->
+                        <div class="float-card card-mvp">
+                            <div class="fc-header">
+                                <div class="fc-indicator"></div>
+                                <span class="fc-tag">Peak Velocity</span>
+                            </div>
+                            <div class="fc-val">5-day</div>
+                            <div class="fc-sub">MVP to production</div>
+                            <div class="fc-delta">P10 — fastest system shipped</div>
+                        </div>
 
-                        <!-- Subtle grid dots -->
-                        <g opacity="0.12">
-                            <circle cx="100" cy="100" r="1" fill="#e5e5e9"/><circle cx="200" cy="100" r="1" fill="#e5e5e9"/><circle cx="300" cy="100" r="1" fill="#e5e5e9"/><circle cx="400" cy="100" r="1" fill="#e5e5e9"/><circle cx="500" cy="100" r="1" fill="#e5e5e9"/>
-                            <circle cx="100" cy="200" r="1" fill="#e5e5e9"/><circle cx="200" cy="200" r="1" fill="#e5e5e9"/><circle cx="300" cy="200" r="1" fill="#e5e5e9"/><circle cx="400" cy="200" r="1" fill="#e5e5e9"/><circle cx="500" cy="200" r="1" fill="#e5e5e9"/>
-                            <circle cx="100" cy="300" r="1" fill="#e5e5e9"/><circle cx="200" cy="300" r="1" fill="#e5e5e9"/><circle cx="300" cy="300" r="1" fill="#e5e5e9"/><circle cx="400" cy="300" r="1" fill="#e5e5e9"/><circle cx="500" cy="300" r="1" fill="#e5e5e9"/>
-                            <circle cx="100" cy="400" r="1" fill="#e5e5e9"/><circle cx="200" cy="400" r="1" fill="#e5e5e9"/><circle cx="300" cy="400" r="1" fill="#e5e5e9"/><circle cx="400" cy="400" r="1" fill="#e5e5e9"/><circle cx="500" cy="400" r="1" fill="#e5e5e9"/>
-                            <circle cx="100" cy="500" r="1" fill="#e5e5e9"/><circle cx="200" cy="500" r="1" fill="#e5e5e9"/><circle cx="300" cy="500" r="1" fill="#e5e5e9"/><circle cx="400" cy="500" r="1" fill="#e5e5e9"/><circle cx="500" cy="500" r="1" fill="#e5e5e9"/>
-                        </g>
+                        <div class="float-card card-multiplier">
+                            <div class="fc-header">
+                                <div class="fc-indicator"></div>
+                                <span class="fc-tag">Compounding Output</span>
+                            </div>
+                            <div class="fc-val">13.4×</div>
+                            <div class="fc-sub">Velocity multiplier</div>
+                            <div class="mini-spark">
+                                <div class="spark-bar sb-1"></div>
+                                <div class="spark-bar sb-2"></div>
+                                <div class="spark-bar sb-3"></div>
+                                <div class="spark-bar sb-4"></div>
+                                <div class="spark-bar sb-5"></div>
+                                <div class="spark-bar sb-6"></div>
+                                <div class="spark-bar sb-7"></div>
+                                <div class="spark-bar sb-8"></div>
+                                <div class="spark-bar sb-9"></div>
+                                <div class="spark-bar sb-10"></div>
+                            </div>
+                        </div>
 
-                        <!-- Area fill under curve -->
-                        <path d="M70,480 C120,475 170,465 220,445 C280,418 330,375 380,320 C420,275 460,220 500,165 L530,120 L530,520 L70,520 Z" fill="url(#areaFill)"/>
+                        <div class="float-card card-systems">
+                            <div class="fc-header">
+                                <div class="fc-indicator"></div>
+                                <span class="fc-tag">Production Systems</span>
+                            </div>
+                            <div class="fc-val">10</div>
+                            <div class="fc-sub">596K lines of code</div>
+                            <div class="fc-delta">All live. All revenue-generating.</div>
+                        </div>
 
-                        <!-- The curve -->
-                        <path d="M70,480 C120,475 170,465 220,445 C280,418 330,375 380,320 C420,275 460,220 500,165 L530,120" stroke="url(#curveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <!-- Compounding Curve Chart -->
+                        <div class="home-chart">
+                            <svg viewBox="0 0 520 320" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="homeGradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="rgba(229,2,93,0.18)" />
+                                        <stop offset="50%" stop-color="rgba(109,74,140,0.06)" />
+                                        <stop offset="100%" stop-color="transparent" />
+                                    </linearGradient>
+                                    <linearGradient id="homeStroke" x1="0" y1="0" x2="1" y2="0">
+                                        <stop offset="0%" stop-color="#6d4a8c" />
+                                        <stop offset="40%" stop-color="#a0386e" />
+                                        <stop offset="100%" stop-color="#e5025d" />
+                                    </linearGradient>
+                                </defs>
 
-                        <!-- P1 — Level 2 -->
-                        <circle cx="70" cy="480" r="4" fill="#ae3ec9" opacity="0.5"/>
-                        <text x="70" y="502" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P1</text>
+                                <!-- Grid lines -->
+                                <line class="grid-line" x1="0" y1="64"  x2="520" y2="64" />
+                                <line class="grid-line" x1="0" y1="128" x2="520" y2="128" />
+                                <line class="grid-line" x1="0" y1="192" x2="520" y2="192" />
+                                <line class="grid-line" x1="0" y1="256" x2="520" y2="256" />
+                                <line class="grid-line" x1="0" y1="320" x2="520" y2="320" />
 
-                        <!-- P3 — Level 2 -->
-                        <circle cx="220" cy="445" r="5" fill="#ae3ec9" opacity="0.6"/>
-                        <text x="220" y="467" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P3</text>
+                                <!-- Industry average -->
+                                <path class="industry-line" d="M 0,285 C 130,278 260,270 390,262 C 450,258 500,255 520,252" />
 
-                        <!-- P6 — Level 2 -->
-                        <circle cx="380" cy="320" r="6" fill="#d6336c" opacity="0.75" filter="url(#dotGlow)"/>
-                        <text x="380" y="310" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P6</text>
+                                <!-- Area fill -->
+                                <path class="compound-area" d="M 0,300 C 25,298 52,295 78,290 C 130,280 170,265 210,244 C 260,216 300,180 340,140 C 380,100 420,58 460,28 C 490,10 510,4 520,2 L 520,320 L 0,320 Z" />
 
-                        <!-- P8 — Level 2 -->
-                        <circle cx="470" cy="195" r="7" fill="#d6336c" opacity="0.85" filter="url(#dotGlow)"/>
-                        <text x="470" y="185" text-anchor="middle" fill="#a3a3a9" font-family="'DM Mono', monospace" font-size="14" font-weight="500">P8</text>
+                                <!-- Compounding curve -->
+                                <path class="compound-curve" d="M 0,300 C 25,298 52,295 78,290 C 130,280 170,265 210,244 C 260,216 300,180 340,140 C 380,100 420,58 460,28 C 490,10 510,4 520,2" />
 
-                        <!-- P10 terminal — Level 1 -->
-                        <circle cx="530" cy="120" r="10" fill="#d6336c" opacity="0.2" filter="url(#termGlow)"/>
-                        <circle cx="530" cy="120" r="6" fill="#d6336c" opacity="0.4"/>
-                        <circle cx="530" cy="120" r="3.5" fill="#d6336c"/>
-                        <text x="530" y="108" text-anchor="middle" fill="#e5e5e9" font-family="'DM Mono', monospace" font-size="18" font-weight="600">P10</text>
+                                <!-- System data points P1-P10 -->
+                                <g class="system-marker sm-1">
+                                    <circle class="pulse-ring" cx="26" cy="298" r="8" fill="rgba(109,74,140,0.12)" />
+                                    <circle cx="26" cy="298" r="3" fill="#6d4a8c" opacity="0.6" />
+                                </g>
+                                <g class="system-marker sm-2">
+                                    <circle class="pulse-ring" cx="78" cy="290" r="8" fill="rgba(109,74,140,0.12)" />
+                                    <circle cx="78" cy="290" r="3" fill="#6d4a8c" opacity="0.65" />
+                                </g>
+                                <g class="system-marker sm-3">
+                                    <circle class="pulse-ring" cx="130" cy="278" r="8" fill="rgba(140,55,115,0.12)" />
+                                    <circle cx="130" cy="278" r="3" fill="#8c3773" opacity="0.7" />
+                                </g>
+                                <g class="system-marker sm-4">
+                                    <circle class="pulse-ring" cx="182" cy="258" r="8" fill="rgba(160,45,105,0.12)" />
+                                    <circle cx="182" cy="258" r="3" fill="#a02d69" />
+                                </g>
+                                <g class="system-marker sm-5">
+                                    <circle class="pulse-ring" cx="234" cy="230" r="8" fill="rgba(180,35,95,0.12)" />
+                                    <circle cx="234" cy="230" r="3" fill="#b4235f" />
+                                </g>
+                                <g class="system-marker sm-6">
+                                    <circle class="pulse-ring" cx="286" cy="192" r="9" fill="rgba(200,20,85,0.12)" />
+                                    <circle cx="286" cy="192" r="3.5" fill="#c81455" />
+                                </g>
+                                <g class="system-marker sm-7">
+                                    <circle class="pulse-ring" cx="338" cy="145" r="9" fill="rgba(215,10,78,0.12)" />
+                                    <circle cx="338" cy="145" r="3.5" fill="#d70a4e" />
+                                </g>
+                                <g class="system-marker sm-8">
+                                    <circle class="pulse-ring" cx="390" cy="95" r="10" fill="rgba(229,2,93,0.12)" />
+                                    <circle cx="390" cy="95" r="4" fill="#e5025d" />
+                                </g>
+                                <g class="system-marker sm-9">
+                                    <circle class="pulse-ring" cx="442" cy="45" r="10" fill="rgba(229,2,93,0.14)" />
+                                    <circle cx="442" cy="45" r="4" fill="#e5025d" />
+                                </g>
+                                <g class="system-marker sm-10">
+                                    <circle class="pulse-ring" cx="505" cy="5" r="12" fill="rgba(229,2,93,0.15)" />
+                                    <circle cx="505" cy="5" r="5" fill="#e5025d" />
+                                </g>
 
-                        <!-- Terminal callout — Level 1 (shifted up for 20px+ clearance from P10) -->
-                        <rect x="440" y="52" width="120" height="28" rx="4" fill="rgba(214,51,108,0.08)" stroke="rgba(214,51,108,0.2)" stroke-width="1"/>
-                        <text x="500" y="71" text-anchor="middle" fill="#d6336c" font-family="'DM Mono', monospace" font-size="18" font-weight="600">5-day MVP</text>
+                                <!-- X-axis labels -->
+                                <text class="x-label xl-1"  x="26"  y="318" text-anchor="middle">P1</text>
+                                <text class="x-label xl-2"  x="78"  y="318" text-anchor="middle">P2</text>
+                                <text class="x-label xl-3"  x="130" y="318" text-anchor="middle">P3</text>
+                                <text class="x-label xl-4"  x="182" y="318" text-anchor="middle">P4</text>
+                                <text class="x-label xl-5"  x="234" y="318" text-anchor="middle">P5</text>
+                                <text class="x-label xl-6"  x="286" y="318" text-anchor="middle">P6</text>
+                                <text class="x-label xl-7"  x="338" y="318" text-anchor="middle">P7</text>
+                                <text class="x-label xl-8"  x="390" y="318" text-anchor="middle">P8</text>
+                                <text class="x-label xl-9"  x="442" y="318" text-anchor="middle">P9</text>
+                                <text class="x-label xl-10" x="505" y="318" text-anchor="middle">P10</text>
 
-                        <!-- Origin callout — Level 3 -->
-                        <text x="70" y="525" text-anchor="start" fill="#737378" font-family="'DM Mono', monospace" font-size="14" font-weight="500">WEEKS</text>
-                        <text x="145" y="525" text-anchor="start" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="500">→</text>
-                        <text x="170" y="525" text-anchor="start" fill="#d6336c" font-family="'DM Mono', monospace" font-size="14" font-weight="500">DAYS</text>
+                                <!-- Phase labels -->
+                                <text class="phase-label pl-1" x="60"  y="275">FOUNDATION</text>
+                                <text class="phase-label pl-2" x="240" y="195">LEVERAGE</text>
+                                <text class="phase-label pl-3" x="410" y="75">COMPOUND</text>
 
-                        <!-- Top left label — Level 4 -->
-                        <text x="40" y="45" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="400" letter-spacing="0.1em">COMPOUNDING EXECUTION</text>
-                        <text x="40" y="65" fill="#525257" font-family="'DM Mono', monospace" font-size="14" font-weight="400">10 production systems</text>
-                    </svg>
+                                <!-- Industry avg label -->
+                                <text class="x-label xl-avg" x="520" y="248" text-anchor="end">INDUSTRY AVG</text>
+                            </svg>
+                        </div>
+
+                        <!-- Velocity Strip -->
+                        <div class="velocity-strip">
+                            <div class="vel-block vb-1"></div>
+                            <div class="vel-block vb-2"></div>
+                            <div class="vel-block vb-3"></div>
+                            <div class="vel-block vb-4"></div>
+                            <div class="vel-block vb-5"></div>
+                            <div class="vel-block vb-6"></div>
+                            <div class="vel-block vb-7"></div>
+                            <span class="vel-label">Execution Velocity</span>
+                        </div>
+
+                        <!-- System Output Ticks -->
+                        <div class="sys-ticks">
+                            <div class="sys-tick st-1"></div>
+                            <div class="sys-tick st-2"></div>
+                            <div class="sys-tick st-3"></div>
+                            <div class="sys-tick st-4"></div>
+                            <div class="sys-tick st-5"></div>
+                            <div class="sys-tick st-6"></div>
+                            <div class="sys-tick st-7"></div>
+                            <div class="sys-tick st-8"></div>
+                            <div class="sys-tick st-9"></div>
+                            <div class="sys-tick st-10"></div>
+                        </div>
+                        <div class="sys-ticks-label">Output / System</div>
+
+                    </div>
                 </div>
             </div>
         </div>

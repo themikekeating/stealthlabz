@@ -20,7 +20,28 @@
       "Bash(powershell -Command:*)",
       "Bash(powershell:*)",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(for token in accent-pink accent-pink-bg-medium accent-pink-bg-subtle accent-pink-border-strong accent-pink-glow bg-browser-chrome bg-card border-browser border-color font-mono gradient-pink shadow-card-hover text-muted text-secondary)",
+      "Bash(do if grep -q \"^\\\\s*--$token:\" \"c:/Users/Servi/Documents/GitHub/stealthlabz/stealthlabz/public/cdn/css/global.css\")",
+      "Bash(then echo \"✓ --$token\")",
+      "Bash(else echo \"✗ --$token MISSING\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(git checkout:*)",
+      "Bash(git rm:*)",
+      "Bash(for file in cem_core_loop.svg cem_core_triangle.svg cem_inversion.svg cem_compounding.svg cem_inflection.svg)",
+      "Bash(do sed -i 's/fill=\"\"#0f0f1c\"\"/fill=\"\"transparent\"\"/g; s/fill=\"\"#0D0D1A\"\"/fill=\"\"transparent\"\"/g; s/fill=\"\"#0d0d1a\"\"/fill=\"\"transparent\"\"/g' \"$file\")",
+      "Bash(git pull:*)",
+      "Bash(git merge:*)",
+      "Bash(dir:*)",
+      "Bash(php -r:*)",
+      "Bash(git fetch:*)",
+      "Bash(findstr:*)",
+      "Bash(wc:*)",
+      "Bash(git log:*)",
+      "Bash(del:*)",
+      "WebFetch(domain:gen.pollinations.ai)",
+      "Bash(Select-String -Pattern \"blog|featured_image|blog-card|background-image\")"
     ]
   }
 }
