@@ -36,7 +36,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Global Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="/cdn/css/global.css">
     <link rel="stylesheet" href="/cdn/css/landing.css">
 
@@ -70,232 +70,61 @@
 
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
-    <!-- ════════════════════════════════════════
-         HERO — What Stealth Labz IS
-         ════════════════════════════════════════ -->
+    <!-- ═══════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════ -->
     <section class="home-hero">
         <div class="container-xl">
-            <div class="home-hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="dot"></span>
-                        AI-Native Operating Company
-                    </div>
-
-                    <h1>
-                        We build, own, and operate<br>
-                        <span class="highlight">revenue systems.</span>
-                    </h1>
-
-                    <p class="home-hero-sub">
-                        Stealth Labz is the operating company behind 7 brands across lead generation, SaaS, DTC, and content — all in production, all generating revenue, across two continents. Built on 20+ years of compounding expertise in direct response, engineering, and product development.
-                    </p>
-
-                    <div class="hero-cta-row">
-                        <a href="<?= siteUrl('ecosystem') ?>" class="btn-glow">
-                            See the Ecosystem
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                        </a>
-                        <a href="<?= siteUrl('cem') ?>" class="btn-outline-home">See the Method</a>
-                    </div>
-
-                    <div class="hero-stats-bar">
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-val">$75M+</div>
-                            <div class="hero-stat-lbl">Scaled Revenue</div>
-                        </div>
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-val">10</div>
-                            <div class="hero-stat-lbl">Production Systems</div>
-                        </div>
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-val">20+</div>
-                            <div class="hero-stat-lbl">Years Compounding</div>
-                        </div>
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-val">2</div>
-                            <div class="hero-stat-lbl">Continents</div>
-                        </div>
-                    </div>
+            <div class="hero-center">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    AI-Native Operating Company
                 </div>
 
-                <div class="hero-visual">
-                    <div class="home-viz">
+                <h1>Built on AI.<br><span class="highlight">Operating at scale.</span></h1>
 
-                        <!-- Floating Stat Cards — ecosystem-focused -->
-                        <div class="float-card card-mvp">
-                            <div class="fc-header">
-                                <div class="fc-indicator"></div>
-                                <span class="fc-tag">Lead Generation</span>
-                            </div>
-                            <div class="fc-val">22K+</div>
-                            <div class="fc-sub">Leads generated</div>
-                            <div class="fc-delta">12 verticals · US + ZA</div>
-                        </div>
+                <p class="home-hero-sub">
+                    Stealth Labz builds, owns, and operates $4.5M in proprietary revenue systems — across lead generation, SaaS, DTC, and content, spanning 12 verticals and two continents. Built on 20+ years of compounding execution depth. This is what an AI-native operating company looks like.
+                </p>
 
-                        <div class="float-card card-multiplier">
-                            <div class="fc-header">
-                                <div class="fc-indicator"></div>
-                                <span class="fc-tag">DTC &amp; Commerce</span>
-                            </div>
-                            <div class="fc-val">11K+</div>
-                            <div class="fc-sub">Orders processed</div>
-                            <div class="mini-spark">
-                                <div class="spark-bar sb-1"></div>
-                                <div class="spark-bar sb-2"></div>
-                                <div class="spark-bar sb-3"></div>
-                                <div class="spark-bar sb-4"></div>
-                                <div class="spark-bar sb-5"></div>
-                                <div class="spark-bar sb-6"></div>
-                                <div class="spark-bar sb-7"></div>
-                                <div class="spark-bar sb-8"></div>
-                                <div class="spark-bar sb-9"></div>
-                                <div class="spark-bar sb-10"></div>
-                            </div>
-                        </div>
+                <div class="hero-cta-row">
+                    <a href="<?= siteUrl('ecosystem') ?>" class="btn-glow">
+                        See the Ecosystem
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="<?= siteUrl('method') ?>" class="btn-outline-home">See the Method</a>
+                </div>
 
-                        <div class="float-card card-systems">
-                            <div class="fc-header">
-                                <div class="fc-indicator"></div>
-                                <span class="fc-tag">Production Systems</span>
-                            </div>
-                            <div class="fc-val">10</div>
-                            <div class="fc-sub">596K lines of code</div>
-                            <div class="fc-delta">All live. All revenue-generating.</div>
-                        </div>
-
-                        <!-- Compounding Curve Chart -->
-                        <div class="home-chart">
-                            <svg viewBox="0 0 520 320" preserveAspectRatio="none">
-                                <defs>
-                                    <linearGradient id="homeGradient" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="rgba(229,2,93,0.18)" />
-                                        <stop offset="50%" stop-color="rgba(109,74,140,0.06)" />
-                                        <stop offset="100%" stop-color="transparent" />
-                                    </linearGradient>
-                                    <linearGradient id="homeStroke" x1="0" y1="0" x2="1" y2="0">
-                                        <stop offset="0%" stop-color="#6d4a8c" />
-                                        <stop offset="40%" stop-color="#a0386e" />
-                                        <stop offset="100%" stop-color="#e5025d" />
-                                    </linearGradient>
-                                </defs>
-
-                                <!-- Grid lines -->
-                                <line class="grid-line" x1="0" y1="64"  x2="520" y2="64" />
-                                <line class="grid-line" x1="0" y1="128" x2="520" y2="128" />
-                                <line class="grid-line" x1="0" y1="192" x2="520" y2="192" />
-                                <line class="grid-line" x1="0" y1="256" x2="520" y2="256" />
-                                <line class="grid-line" x1="0" y1="320" x2="520" y2="320" />
-
-                                <!-- Industry average -->
-                                <path class="industry-line" d="M 0,285 C 130,278 260,270 390,262 C 450,258 500,255 520,252" />
-
-                                <!-- Area fill -->
-                                <path class="compound-area" d="M 0,300 C 25,298 52,295 78,290 C 130,280 170,265 210,244 C 260,216 300,180 340,140 C 380,100 420,58 460,28 C 490,10 510,4 520,2 L 520,320 L 0,320 Z" />
-
-                                <!-- Compounding curve -->
-                                <path class="compound-curve" d="M 0,300 C 25,298 52,295 78,290 C 130,280 170,265 210,244 C 260,216 300,180 340,140 C 380,100 420,58 460,28 C 490,10 510,4 520,2" />
-
-                                <!-- System data points P1-P10 -->
-                                <g class="system-marker sm-1">
-                                    <circle class="pulse-ring" cx="26" cy="298" r="8" fill="rgba(109,74,140,0.12)" />
-                                    <circle cx="26" cy="298" r="3" fill="#6d4a8c" opacity="0.6" />
-                                </g>
-                                <g class="system-marker sm-2">
-                                    <circle class="pulse-ring" cx="78" cy="290" r="8" fill="rgba(109,74,140,0.12)" />
-                                    <circle cx="78" cy="290" r="3" fill="#6d4a8c" opacity="0.65" />
-                                </g>
-                                <g class="system-marker sm-3">
-                                    <circle class="pulse-ring" cx="130" cy="278" r="8" fill="rgba(140,55,115,0.12)" />
-                                    <circle cx="130" cy="278" r="3" fill="#8c3773" opacity="0.7" />
-                                </g>
-                                <g class="system-marker sm-4">
-                                    <circle class="pulse-ring" cx="182" cy="258" r="8" fill="rgba(160,45,105,0.12)" />
-                                    <circle cx="182" cy="258" r="3" fill="#a02d69" />
-                                </g>
-                                <g class="system-marker sm-5">
-                                    <circle class="pulse-ring" cx="234" cy="230" r="8" fill="rgba(180,35,95,0.12)" />
-                                    <circle cx="234" cy="230" r="3" fill="#b4235f" />
-                                </g>
-                                <g class="system-marker sm-6">
-                                    <circle class="pulse-ring" cx="286" cy="192" r="9" fill="rgba(200,20,85,0.12)" />
-                                    <circle cx="286" cy="192" r="3.5" fill="#c81455" />
-                                </g>
-                                <g class="system-marker sm-7">
-                                    <circle class="pulse-ring" cx="338" cy="145" r="9" fill="rgba(215,10,78,0.12)" />
-                                    <circle cx="338" cy="145" r="3.5" fill="#d70a4e" />
-                                </g>
-                                <g class="system-marker sm-8">
-                                    <circle class="pulse-ring" cx="390" cy="95" r="10" fill="rgba(229,2,93,0.12)" />
-                                    <circle cx="390" cy="95" r="4" fill="#e5025d" />
-                                </g>
-                                <g class="system-marker sm-9">
-                                    <circle class="pulse-ring" cx="442" cy="45" r="10" fill="rgba(229,2,93,0.14)" />
-                                    <circle cx="442" cy="45" r="4" fill="#e5025d" />
-                                </g>
-                                <g class="system-marker sm-10">
-                                    <circle class="pulse-ring" cx="505" cy="5" r="12" fill="rgba(229,2,93,0.15)" />
-                                    <circle cx="505" cy="5" r="5" fill="#e5025d" />
-                                </g>
-
-                                <!-- X-axis labels -->
-                                <text class="x-label xl-1"  x="26"  y="318" text-anchor="middle">P1</text>
-                                <text class="x-label xl-2"  x="78"  y="318" text-anchor="middle">P2</text>
-                                <text class="x-label xl-3"  x="130" y="318" text-anchor="middle">P3</text>
-                                <text class="x-label xl-4"  x="182" y="318" text-anchor="middle">P4</text>
-                                <text class="x-label xl-5"  x="234" y="318" text-anchor="middle">P5</text>
-                                <text class="x-label xl-6"  x="286" y="318" text-anchor="middle">P6</text>
-                                <text class="x-label xl-7"  x="338" y="318" text-anchor="middle">P7</text>
-                                <text class="x-label xl-8"  x="390" y="318" text-anchor="middle">P8</text>
-                                <text class="x-label xl-9"  x="442" y="318" text-anchor="middle">P9</text>
-                                <text class="x-label xl-10" x="505" y="318" text-anchor="middle">P10</text>
-
-                                <!-- Phase labels -->
-                                <text class="phase-label pl-1" x="60"  y="275">FOUNDATION</text>
-                                <text class="phase-label pl-2" x="240" y="195">LEVERAGE</text>
-                                <text class="phase-label pl-3" x="410" y="75">COMPOUND</text>
-
-                                <!-- Industry avg label -->
-                                <text class="x-label xl-avg" x="520" y="248" text-anchor="end">INDUSTRY AVG</text>
-                            </svg>
-                        </div>
-
-                        <!-- Velocity Strip -->
-                        <div class="velocity-strip">
-                            <div class="vel-block vb-1"></div>
-                            <div class="vel-block vb-2"></div>
-                            <div class="vel-block vb-3"></div>
-                            <div class="vel-block vb-4"></div>
-                            <div class="vel-block vb-5"></div>
-                            <div class="vel-block vb-6"></div>
-                            <div class="vel-block vb-7"></div>
-                            <span class="vel-label">Execution Velocity</span>
-                        </div>
-
-                        <!-- System Output Ticks -->
-                        <div class="sys-ticks">
-                            <div class="sys-tick st-1"></div>
-                            <div class="sys-tick st-2"></div>
-                            <div class="sys-tick st-3"></div>
-                            <div class="sys-tick st-4"></div>
-                            <div class="sys-tick st-5"></div>
-                            <div class="sys-tick st-6"></div>
-                            <div class="sys-tick st-7"></div>
-                            <div class="sys-tick st-8"></div>
-                            <div class="sys-tick st-9"></div>
-                            <div class="sys-tick st-10"></div>
-                        </div>
-                        <div class="sys-ticks-label">Output / System</div>
-
+                <div class="hero-stats-bar">
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-val">$4.5M</div>
+                        <div class="hero-stat-lbl">Proprietary Software</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-val">$75M+</div>
+                        <div class="hero-stat-lbl">Revenue Scaled</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-val">20+</div>
+                        <div class="hero-stat-lbl">Years Compounding</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-val">2</div>
+                        <div class="hero-stat-lbl">Continents</div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <!-- ════════════════════════════════════════
+    <!-- ═══════════════════════════════════════
          INTEGRATIONS MARQUEE
-         ════════════════════════════════════════ -->
+         ═══════════════════════════════════════ -->
     <section class="integrations-section">
         <div class="integrations-label">Integrated Stack</div>
         <div class="integrations-track">
@@ -325,266 +154,408 @@
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         ECOSYSTEM PROOF — What we built for ourselves
-         ════════════════════════════════════════ -->
-    <section class="about-section">
+    <!-- ═══════════════════════════════════════
+         ECOSYSTEM
+         ═══════════════════════════════════════ -->
+    <section class="ecosystem-section">
         <div class="container-xl">
-            <div class="section-label">The Portfolio</div>
+            <div class="section-label">The Ecosystem</div>
             <h2 class="section-title">Everything we build, we operate.</h2>
+            <p class="section-desc">Every system in the Stealth Labz ecosystem was built to serve its own businesses. This isn't a services portfolio. It's <strong>living infrastructure</strong> that generates revenue daily — and the proof that the model works.</p>
 
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Every system in the Stealth Labz ecosystem was built to serve our own businesses — lead generation, DTC brands, SaaS platforms, and content properties running across the US and South Africa.</p>
+            <div class="eco-layout">
 
-                    <p>This isn't a services portfolio. It's a <strong>living infrastructure</strong> that generates revenue daily. 10 production systems, 596K+ lines of code, 11K+ orders processed, 22K+ leads generated across 12 verticals.</p>
-
-                    <p>The ecosystem is the proof. <strong>Everything we offer, we run ourselves first.</strong></p>
+                <!-- Vertical stack -->
+                <div class="vertical-stack">
+                    <div class="vertical-card">
+                        <div class="vc-icon pink">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <div class="vc-info">
+                            <span class="vc-name">Lead Generation</span>
+                            <span class="vc-detail">12 verticals · US + ZA</span>
+                        </div>
+                        <div class="vc-status"><div class="vc-dot"></div><span class="vc-live">Live</span></div>
+                    </div>
+                    <div class="vertical-card">
+                        <div class="vc-icon purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                        </div>
+                        <div class="vc-info">
+                            <span class="vc-name">DTC &amp; Commerce</span>
+                            <span class="vc-detail">Multi-brand · Subscription + one-time</span>
+                        </div>
+                        <div class="vc-status"><div class="vc-dot"></div><span class="vc-live">Live</span></div>
+                    </div>
+                    <div class="vertical-card">
+                        <div class="vc-icon pink">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="vc-info">
+                            <span class="vc-name">SaaS Platforms</span>
+                            <span class="vc-detail">Custom-built · Multi-tenant</span>
+                        </div>
+                        <div class="vc-status"><div class="vc-dot"></div><span class="vc-live">Live</span></div>
+                    </div>
+                    <div class="vertical-card">
+                        <div class="vc-icon purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        </div>
+                        <div class="vc-info">
+                            <span class="vc-name">Content</span>
+                            <span class="vc-detail">Publishing · SEO · Authority sites</span>
+                        </div>
+                        <div class="vc-status"><div class="vc-dot"></div><span class="vc-live">Live</span></div>
+                    </div>
+                    <div class="vertical-card">
+                        <div class="vc-icon pink">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <div class="vc-info">
+                            <span class="vc-name">Full-Stack Engineering</span>
+                            <span class="vc-detail">596K+ LOC · Laravel/PHP · 10 systems</span>
+                        </div>
+                        <div class="vc-status"><div class="vc-dot"></div><span class="vc-live">Live</span></div>
+                    </div>
                 </div>
 
-                <div class="capability-list">
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">Lead Generation</span>
-                            <span class="capability-metric">22K+ leads · 12 verticals · US + ZA</span>
-                        </div>
+                <!-- Network visual -->
+                <div class="eco-visual">
+                    <div class="eco-network-svg">
+                        <svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <radialGradient id="hubG" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(229,2,93,0.2)" />
+                                    <stop offset="100%" stop-color="transparent" />
+                                </radialGradient>
+                                <radialGradient id="nGp" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(229,2,93,0.18)" />
+                                    <stop offset="100%" stop-color="transparent" />
+                                </radialGradient>
+                                <radialGradient id="nGv" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(109,74,140,0.18)" />
+                                    <stop offset="100%" stop-color="transparent" />
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Connections -->
+                            <line class="net-line-accent nl-1" x1="300" y1="240" x2="480" y2="90" />
+                            <line class="net-line-accent nl-2" x1="300" y1="240" x2="120" y2="110" />
+                            <line class="net-line nl-3" x1="300" y1="240" x2="510" y2="260" />
+                            <line class="net-line nl-4" x1="300" y1="240" x2="100" y2="320" />
+                            <line class="net-line nl-5" x1="300" y1="240" x2="340" y2="410" />
+                            <line class="net-line nl-6" x1="480" y1="90" x2="510" y2="260" />
+                            <line class="net-line nl-7" x1="120" y1="110" x2="100" y2="320" />
+                            <line class="net-line nl-8" x1="510" y1="260" x2="340" y2="410" />
+                            <line class="net-line nl-9" x1="100" y1="320" x2="340" y2="410" />
+                            <line class="net-line nl-10" x1="120" y1="110" x2="480" y2="90" />
+
+                            <!-- Hub -->
+                            <g class="hub-node">
+                                <circle class="hub-pulse-outer" cx="300" cy="240" r="44" fill="none" stroke="rgba(229,2,93,0.12)" stroke-width="1.5" />
+                                <circle class="hub-pulse-inner" cx="300" cy="240" r="30" fill="none" stroke="rgba(229,2,93,0.18)" stroke-width="1.5" />
+                                <circle cx="300" cy="240" r="20" fill="url(#hubG)" stroke="rgba(229,2,93,0.25)" stroke-width="1" />
+                                <circle cx="300" cy="240" r="5.5" fill="#e5025d" />
+                                <text class="hub-label" x="300" y="215" text-anchor="middle">STEALTH LABZ</text>
+                            </g>
+
+                            <!-- Nodes -->
+                            <g class="eco-node en-1">
+                                <circle class="node-ring" cx="480" cy="90" r="18" fill="url(#nGp)" />
+                                <circle cx="480" cy="90" r="4.5" fill="#e5025d" />
+                            </g>
+                            <text class="node-label lb-1" x="480" y="66" text-anchor="middle">Lead Gen</text>
+
+                            <g class="eco-node en-2">
+                                <circle class="node-ring" cx="120" cy="110" r="18" fill="url(#nGv)" />
+                                <circle cx="120" cy="110" r="4.5" fill="#6d4a8c" />
+                            </g>
+                            <text class="node-label lb-2" x="120" y="86" text-anchor="middle">DTC</text>
+
+                            <g class="eco-node en-3">
+                                <circle class="node-ring" cx="510" cy="260" r="18" fill="url(#nGp)" />
+                                <circle cx="510" cy="260" r="4.5" fill="#c81455" />
+                            </g>
+                            <text class="node-label lb-3" x="510" y="240" text-anchor="middle">SaaS</text>
+
+                            <g class="eco-node en-4">
+                                <circle class="node-ring" cx="100" cy="320" r="18" fill="url(#nGv)" />
+                                <circle cx="100" cy="320" r="4.5" fill="#6d4a8c" />
+                            </g>
+                            <text class="node-label lb-4" x="100" y="348" text-anchor="middle">Content</text>
+
+                            <g class="eco-node en-5">
+                                <circle class="node-ring" cx="340" cy="410" r="18" fill="url(#nGp)" />
+                                <circle cx="340" cy="410" r="4.5" fill="#b4235f" />
+                            </g>
+                            <text class="node-label lb-5" x="340" y="438" text-anchor="middle">Engineering</text>
+
+                            <!-- Particles -->
+                            <circle r="2" fill="#e5025d">
+                                <animateMotion dur="4s" repeatCount="indefinite" begin="1.5s" path="M 300,240 L 480,90" />
+                                <animate attributeName="opacity" values="0;0.8;0.8;0" dur="4s" repeatCount="indefinite" begin="1.5s" />
+                            </circle>
+                            <circle r="2" fill="#6d4a8c">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" begin="2s" path="M 300,240 L 120,110" />
+                                <animate attributeName="opacity" values="0;0.7;0.7;0" dur="4.5s" repeatCount="indefinite" begin="2s" />
+                            </circle>
+                            <circle r="2" fill="#c81455">
+                                <animateMotion dur="3.8s" repeatCount="indefinite" begin="2.5s" path="M 300,240 L 510,260" />
+                                <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3.8s" repeatCount="indefinite" begin="2.5s" />
+                            </circle>
+                            <circle r="2" fill="#6d4a8c">
+                                <animateMotion dur="5s" repeatCount="indefinite" begin="3s" path="M 300,240 L 100,320" />
+                                <animate attributeName="opacity" values="0;0.7;0.7;0" dur="5s" repeatCount="indefinite" begin="3s" />
+                            </circle>
+                            <circle r="2" fill="#b4235f">
+                                <animateMotion dur="4.2s" repeatCount="indefinite" begin="1.8s" path="M 300,240 L 340,410" />
+                                <animate attributeName="opacity" values="0;0.7;0.7;0" dur="4.2s" repeatCount="indefinite" begin="1.8s" />
+                            </circle>
+                        </svg>
                     </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">DTC &amp; E-Commerce</span>
-                            <span class="capability-metric">$938K revenue · 11K+ orders</span>
-                        </div>
+
+                    <!-- Geography badges -->
+                    <div class="geo-badge geo-us">
+                        <div class="geo-dot"></div>
+                        <span>United States — Live</span>
                     </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">SaaS Platforms</span>
-                            <span class="capability-metric">Custom-built · Multi-tenant · Production</span>
-                        </div>
+                    <div class="geo-badge geo-za">
+                        <div class="geo-dot"></div>
+                        <span>South Africa — Live</span>
                     </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">Full-Stack Engineering</span>
-                            <span class="capability-metric">596K+ LOC · Laravel/PHP · 10 systems</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">International Operations</span>
-                            <span class="capability-metric">US + ZA · Dual compliance · Dual currency</span>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+            <!-- Summary strip -->
+            <div class="eco-summary">
+                <div class="eco-summary-item">
+                    <div class="eco-summary-val">10</div>
+                    <div class="eco-summary-lbl">Production Systems</div>
+                </div>
+                <div class="eco-summary-item">
+                    <div class="eco-summary-val">596K+</div>
+                    <div class="eco-summary-lbl">Lines of Code</div>
+                </div>
+                <div class="eco-summary-item">
+                    <div class="eco-summary-val">12</div>
+                    <div class="eco-summary-lbl">Verticals</div>
+                </div>
+                <div class="eco-summary-item">
+                    <div class="eco-summary-val">7</div>
+                    <div class="eco-summary-lbl">Brands Live</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         THE FOUNDATION — Experience as organizational DNA
-         ════════════════════════════════════════ -->
-    <section class="pillars-section">
+    <!-- ═══════════════════════════════════════
+         FOUNDATION
+         ═══════════════════════════════════════ -->
+    <section class="foundation-section section-dark">
         <div class="container-xl">
             <div class="section-label">The Foundation</div>
             <h2 class="section-title">20+ years of execution density.</h2>
-            <p class="section-desc">Stealth Labz was built on a foundation that spans direct response marketing at $75M+ scale, full-stack engineering across 596K+ lines of production code, multi-vertical lead generation across 12 industries, subscription commerce with 300K+ paid subscribers, affiliate network management, and international operations. That depth compounds — it's why one team operates what normally requires 8–15 specialists.</p>
+            <p class="section-desc">Ten disciplines. Each at production depth. All compounding inside one operating company.</p>
 
-            <div class="about-stats-row" style="margin-top: 3rem;">
-                <div class="about-stat-item">
-                    <div class="about-stat-value">$75M+</div>
-                    <div class="about-stat-label">Direct Response Scale</div>
+            <div class="discipline-grid">
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Direct Response</div>
+                        <div class="dc-depth">Performance marketing at institutional scale</div>
+                    </div>
+                    <div class="dc-metric">$75M+</div>
                 </div>
-                <div class="about-stat-item">
-                    <div class="about-stat-value">596K+</div>
-                    <div class="about-stat-label">Lines of Production Code</div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Full-Stack Engineering</div>
+                        <div class="dc-depth">10 production systems, deployed &amp; revenue-generating</div>
+                    </div>
+                    <div class="dc-metric">596K LOC</div>
                 </div>
-                <div class="about-stat-item">
-                    <div class="about-stat-value">300K+</div>
-                    <div class="about-stat-label">Paid Subscribers</div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">E-Commerce</div>
+                        <div class="dc-depth">Subscription + one-time, multi-processor, churn &amp; LTV</div>
+                    </div>
+                    <div class="dc-metric">300K+</div>
                 </div>
-                <div class="about-stat-item">
-                    <div class="about-stat-value">10+</div>
-                    <div class="about-stat-label">Disciplines</div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Lead Generation</div>
+                        <div class="dc-depth">Multi-vertical, multi-buyer, compliance per vertical</div>
+                    </div>
+                    <div class="dc-metric">12 verticals</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Affiliate &amp; Network</div>
+                        <div class="dc-depth">Both sides — running offers and managing affiliates</div>
+                    </div>
+                    <div class="dc-metric">Multi-CPA</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">International Ops</div>
+                        <div class="dc-depth">Dual currency, compliance, payment rails, partnerships</div>
+                    </div>
+                    <div class="dc-metric">US + ZA</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Product Development</div>
+                        <div class="dc-depth">Zero to market — pricing, positioning, packaging, fulfillment</div>
+                    </div>
+                    <div class="dc-metric">20+ brands</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Unit Economics</div>
+                        <div class="dc-depth">P&amp;L across entities, revenue attribution, AOV/LTV modeling</div>
+                    </div>
+                    <div class="dc-metric">Multi-entity</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">Business Formation</div>
+                        <div class="dc-depth">Entity structure, merchant accounts, processor relationships</div>
+                    </div>
+                    <div class="dc-metric">6 entities</div>
+                </div>
+                <div class="discipline-cell">
+                    <div class="dc-top">
+                        <div class="dc-domain">AI-Native Development</div>
+                        <div class="dc-depth">Pioneering CEM — documented, systematized, with evidence</div>
+                    </div>
+                    <div class="dc-metric">$82K vs $2.9M</div>
+                </div>
+            </div>
+
+            <div class="foundation-summary">
+                <div class="fs-text">
+                    Sequentially, these disciplines represent <strong>41–64 years</strong> of professional experience. Compounded inside Stealth Labz, they operate as <span class="pink">20+ years of execution density</span> — and the reason one operating company does what normally requires 8–15 specialists.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         THE METHOD — CEM
-         ════════════════════════════════════════ -->
-    <section class="about-section">
+    <!-- ═══════════════════════════════════════
+         METHOD (CEM)
+         ═══════════════════════════════════════ -->
+    <section class="method-section">
         <div class="container-xl">
             <div class="section-label">The Method</div>
             <h2 class="section-title">The Compounding Execution Method.</h2>
+            <p class="section-desc">CEM is the operating system behind every system in the ecosystem. 12 mechanisms, 4 applications, and a tactical escalation chain — <strong>AI-native, compounding-first, validated in production.</strong></p>
 
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>CEM is the operating system behind everything we build. 12 mechanisms, 4 applications, and a tactical escalation chain — AI-native, compounding-first, validated across every system in the ecosystem.</p>
-
-                    <p>It's how <strong>596K lines of code shipped in 74 days</strong> at a <strong>9.6% defect rate</strong> while output multiplied <strong>13.4×</strong>. It's how one team builds and operates what traditional companies staff 8–15 specialists to handle.</p>
-
-                    <p>The method isn't theoretical. It's extracted from the work — and the ecosystem is the proof it works.</p>
+            <div class="proof-strip">
+                <div class="proof-block">
+                    <div class="pb-value">13.4×</div>
+                    <div class="pb-label">Velocity Multiplier</div>
+                    <div class="pb-context">Output compounds with each system shipped</div>
                 </div>
-
-                <div class="capability-list">
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">13.4× Velocity Multiplier</span>
-                            <span class="capability-metric">Output compounds with each system shipped</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">9.6% Defect Rate</span>
-                            <span class="capability-metric">Quality maintained as velocity scaled</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">5-Day Fastest MVP</span>
-                            <span class="capability-metric">From concept to production deployment</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">2,561 Production Commits</span>
-                            <span class="capability-metric">Across 10 systems in 74 days</span>
-                        </div>
-                    </div>
+                <div class="proof-block">
+                    <div class="pb-value">9.6%</div>
+                    <div class="pb-label">Defect Rate</div>
+                    <div class="pb-context">Quality maintained as velocity scaled</div>
+                </div>
+                <div class="proof-block">
+                    <div class="pb-value">74d</div>
+                    <div class="pb-label">Full Ecosystem</div>
+                    <div class="pb-context">10 systems to production</div>
+                </div>
+                <div class="proof-block">
+                    <div class="pb-value">5 days</div>
+                    <div class="pb-label">Fastest MVP</div>
+                    <div class="pb-context">Concept to production deployment</div>
+                </div>
+                <div class="proof-block">
+                    <div class="pb-value">$82K</div>
+                    <div class="pb-label">Actual Build Cost</div>
+                    <div class="pb-context">vs $2.9M traditional estimate</div>
                 </div>
             </div>
 
-            <div style="margin-top: 3rem;">
-                <a href="<?= siteUrl('cem') ?>" class="btn-glow">
-                    Explore CEM
+            <div class="method-context">
+                <div class="mc-block pink">
+                    <div class="mc-eyebrow">What it does</div>
+                    <div class="mc-statement">CEM turns 20+ years of compounding expertise into a repeatable execution system. It's how <strong>596K lines of code shipped in 74 days</strong> at a 9.6% defect rate — and how one operating company builds and runs what traditional companies staff 8–15 specialists to handle.</div>
+                </div>
+                <div class="mc-block purple">
+                    <div class="mc-eyebrow">Why it matters</div>
+                    <div class="mc-statement">The method isn't theoretical. It's extracted from the work — validated across every system in the ecosystem. <strong>$4.5M in proprietary software built for $82K.</strong> The ecosystem is the proof CEM works.</div>
+                </div>
+            </div>
+
+            <div class="method-cta">
+                <a href="<?= siteUrl('method') ?>" class="btn-glow">
+                    Explore the Full Method
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
+                <span class="method-cta-note">12 mechanisms · 4 applications · Full documentation</span>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         WORK WITH US — Commercial offer
-         ════════════════════════════════════════ -->
-    <section class="pillars-section">
+    <!-- ═══════════════════════════════════════
+         WORK WITH US
+         ═══════════════════════════════════════ -->
+    <section class="offer-section section-dark">
         <div class="container-xl">
             <div class="section-label">Work With Us</div>
             <h2 class="section-title">The same infrastructure, applied to your business.</h2>
-            <p class="section-desc">The methodology and systems behind our ecosystem are available three ways.</p>
+            <p class="section-desc">The methodology and systems behind the ecosystem are available three ways.</p>
 
-            <div class="pillars-grid">
-
-                <!-- Custom Builds -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-                        </svg>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="oc-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                     </div>
-                    <div class="pillar-label">Build</div>
-                    <div class="pillar-title">Custom Builds</div>
-                    <div class="pillar-desc">We build it for you. Same method, same foundation, same velocity — applied to your project. Production-grade systems deployed in days, not months.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">195K</div>
-                            <div class="pillar-stat-lbl">Largest Build</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">74d</div>
-                            <div class="pillar-stat-lbl">Full Ecosystem</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">13.4×</div>
-                            <div class="pillar-stat-lbl">Velocity</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                    <div class="oc-type">Build</div>
+                    <div class="oc-title">Custom Builds</div>
+                    <div class="oc-desc">Same method, same foundation, same velocity — applied to your project. Production-grade systems deployed in days, not months.</div>
+                    <a href="<?= siteUrl('solutions') ?>" class="oc-link">
                         Learn More
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
                     </a>
                 </div>
-
-                <!-- White Label -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                        </svg>
+                <div class="offer-card">
+                    <div class="oc-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <div class="pillar-label">License</div>
-                    <div class="pillar-title">White Label</div>
-                    <div class="pillar-desc">License what we've already built. Proven systems across lead gen, DTC, and SaaS — deployed under your brand, backed by production-tested infrastructure.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">10</div>
-                            <div class="pillar-stat-lbl">Systems</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">596K</div>
-                            <div class="pillar-stat-lbl">LOC</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">4</div>
-                            <div class="pillar-stat-lbl">Verticals</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                    <div class="oc-type">License</div>
+                    <div class="oc-title">White Label</div>
+                    <div class="oc-desc">License what's already built. Proven systems across lead gen, DTC, and SaaS — deployed under your brand, backed by production-tested infrastructure.</div>
+                    <a href="<?= siteUrl('solutions') ?>" class="oc-link">
                         Learn More
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
                     </a>
                 </div>
-
-                <!-- Training -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
+                <div class="offer-card">
+                    <div class="oc-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
-                    <div class="pillar-label">Learn</div>
-                    <div class="pillar-title">Training</div>
-                    <div class="pillar-desc">Learn the method. CEM applied to your team, your stack, your business model. The same operating system that drives our ecosystem — transferred to yours.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">12</div>
-                            <div class="pillar-stat-lbl">Mechanisms</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">4</div>
-                            <div class="pillar-stat-lbl">Applications</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">$82K</div>
-                            <div class="pillar-stat-lbl">vs $2.9M Build</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                    <div class="oc-type">Learn</div>
+                    <div class="oc-title">Training</div>
+                    <div class="oc-desc">CEM applied to your team, your stack, your business model. The same operating system that drives the ecosystem — transferred to yours.</div>
+                    <a href="<?= siteUrl('solutions') ?>" class="oc-link">
                         Learn More
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
-         INSIGHTS — Blog
-         ════════════════════════════════════════ -->
-    <section id="blog" class="section-dark">
+    <!-- ═══════════════════════════════════════
+         INSIGHTS
+         ═══════════════════════════════════════ -->
+    <section class="insights-section">
         <div class="container-xl">
-            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 fade-up">
+            <div class="insights-header">
                 <div>
-                    <h2 class="section-title">Insights</h2>
-                    <p class="section-subtitle mb-0">Thoughts on building, scaling, and shipping.</p>
+                    <div class="section-label">Insights</div>
+                    <h2 class="section-title">From the build.</h2>
+                    <p class="section-sub-text">Thoughts on building, scaling, and shipping.</p>
                 </div>
                 <a href="<?= siteUrl('insights') ?>" class="btn-outline">View All Posts</a>
             </div>
@@ -593,12 +564,11 @@
                 <?php if (!empty($recentPosts)): ?>
                     <?php foreach ($recentPosts as $i => $post): ?>
                 <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>" class="blog-card fade-up stagger-<?= $i + 1 ?>">
-                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>')">
-                    </div>
+                    <div class="blog-card-image" style="background-image: url('<?= htmlspecialchars($post['featured_image']) ?>')"></div>
                     <div class="blog-card-body">
                         <div class="blog-card-date"><?= date('Y-m-d', strtotime($post['published_at'])) ?></div>
-                        <h4><?= htmlspecialchars($post['title']) ?></h4>
-                        <p><?= htmlspecialchars(substr($post['excerpt'] ?? '', 0, 100)) ?>...</p>
+                        <h4 class="blog-card-title"><?= htmlspecialchars($post['title']) ?></h4>
+                        <p class="blog-card-excerpt"><?= htmlspecialchars(substr($post['excerpt'] ?? '', 0, 100)) ?>...</p>
                     </div>
                 </a>
                     <?php endforeach; ?>
@@ -609,13 +579,13 @@
         </div>
     </section>
 
-    <!-- ════════════════════════════════════════
+    <!-- ═══════════════════════════════════════
          CTA
-         ════════════════════════════════════════ -->
+         ═══════════════════════════════════════ -->
     <section class="home-cta">
         <div class="container-xl">
-            <h2>Stay in the <span class="highlight">Loop.</span></h2>
-            <p>New platforms, builds, and insights — straight to your inbox.</p>
+            <h2 class="cta-title">Stay in the <span class="highlight">Loop.</span></h2>
+            <p class="cta-sub">New platforms, builds, and insights — straight to your inbox.</p>
 
             <form id="cta-newsletter-form" class="newsletter-form">
                 <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -666,9 +636,9 @@
                 if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up, .pillar-card, .capability-item, .blog-card').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-up, .offer-card, .vertical-card, .discipline-cell, .blog-card').forEach(el => observer.observe(el));
 
-        // Newsletter form
+        // Newsletter
         const WEBHOOK_URL = 'https://portal.stealthlabz.com/source/internal/f0ece97b-9673-4eff-911b-4eed1e4ba1dd';
 
         function handleNewsletterSubmit(form, messageEl, isCompact = false) {

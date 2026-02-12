@@ -32,7 +32,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/cdn/css/global.css">
-
     <link rel="stylesheet" href="/cdn/css/ecosystem.css">
 </head>
 <body>
@@ -47,9 +46,9 @@
                 <span class="dot"></span>
                 Live Systems
             </div>
-            <h1>The <span class="highlight">Ecosystem</span></h1>
+            <h1>Everything we build, <span class="highlight">we operate.</span></h1>
             <p class="eco-hero-sub">
-                7 owned brands across insurance, legal, health, content, supplements, and Ai.
+                Every system in the Stealth Labz ecosystem was built to serve our own businesses — lead gen, DTC, SaaS, and content properties running across the US and South Africa. This isn't a services portfolio. It's a living infrastructure that generates revenue daily.
             </p>
             <div class="eco-hero-stats">
                 <div>
@@ -57,54 +56,73 @@
                     <span class="eco-hero-stat-lbl">Brands</span>
                 </div>
                 <div>
-                    <span class="eco-hero-stat-val">24</span>
+                    <span class="eco-hero-stat-val">4</span>
                     <span class="eco-hero-stat-lbl">Verticals</span>
                 </div>
                 <div>
-                    <span class="eco-hero-stat-val">3</span>
-                    <span class="eco-hero-stat-lbl">Countries</span>
-                </div>
-                <div>
                     <span class="eco-hero-stat-val">2</span>
-                    <span class="eco-hero-stat-lbl">Operators</span>
+                    <span class="eco-hero-stat-lbl">Continents</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════ GRID ════ -->
-    <section class="eco-section">
+    <!-- ════ PORTAL — THE ENGINE ════ -->
+    <section class="eco-section eco-engine-section">
         <div class="container-xl">
-            <div class="eco-grid">
-
-                <!-- 1. STEALTH PORTAL -->
-                <div class="eco-card fade-up">
-                    <div class="eco-screenshot">
+            <div class="eco-engine-label mono">The Engine</div>
+            <div class="eco-engine">
+                <div class="eco-engine-visual">
+                    <div class="eco-screenshot eco-screenshot-lg">
                         <div class="eco-titlebar">
                             <div class="eco-dots"><span></span><span></span><span></span></div>
                             <div class="eco-url">portal.stealthlabz.com</div>
                         </div>
-                        <div class="eco-viewport">
+                        <div class="eco-viewport eco-viewport-lg">
                             <img src="/cdn/images/brands/stealth-portal.png" alt="Stealth Portal" loading="lazy">
                         </div>
                     </div>
-                    <div class="eco-content">
-                        <div class="eco-badge">Performance Marketing CDP</div>
-                        <h3 class="eco-title">Stealth Portal</h3>
-                        <p class="eco-tagline">Customer data platform with identity resolution, lead enrichment, distribution, and real-time de-anonymization. The engine behind every brand we touch.</p>
-                        <div class="eco-stats">
-                            <div class="eco-stat"><div class="eco-stat-val">12</div><div class="eco-stat-lbl">Source Types</div></div>
-                            <div class="eco-stat"><div class="eco-stat-val">5</div><div class="eco-stat-lbl">Dashboards</div></div>
-                            <div class="eco-stat"><div class="eco-stat-val">8+</div><div class="eco-stat-lbl">Integrations</div></div>
-                        </div>
-                        <a href="https://portal.stealthlabz.com" class="eco-link" target="_blank">
-                            portal.stealthlabz.com
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                        </a>
-                    </div>
                 </div>
+                <div class="eco-engine-content">
+                    <div class="eco-badge">Performance Marketing CDP</div>
+                    <h2 class="eco-engine-title">Stealth Portal</h2>
+                    <p class="eco-engine-desc">
+                        Customer data platform with identity resolution, lead enrichment, distribution, and real-time de-anonymization. Every brand in the ecosystem feeds through Portal — it's the operating layer that makes the rest possible.
+                    </p>
+                    <div class="eco-stats">
+                        <div class="eco-stat">
+                            <div class="eco-stat-val">12</div>
+                            <div class="eco-stat-lbl">Source Types</div>
+                        </div>
+                        <div class="eco-stat">
+                            <div class="eco-stat-val">5</div>
+                            <div class="eco-stat-lbl">Dashboards</div>
+                        </div>
+                        <div class="eco-stat">
+                            <div class="eco-stat-val">8+</div>
+                            <div class="eco-stat-lbl">Integrations</div>
+                        </div>
+                    </div>
+                    <a href="https://portal.stealthlabz.com" class="eco-link" target="_blank">
+                        portal.stealthlabz.com
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- 2. QUOTE ROCKET ZA -->
+    <!-- ════ BRAND GRID ════ -->
+    <section class="eco-section">
+        <div class="container-xl">
+            <div class="eco-grid-header">
+                <span class="eco-grid-label mono">The Brands</span>
+                <p class="eco-grid-intro">Validated systems across insurance, legal, health, content, and AI — each one a proven funnel, proven vertical, proven revenue model.</p>
+            </div>
+
+            <div class="eco-grid">
+
+                <!-- QUOTE ROCKET ZA -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -131,7 +149,7 @@
                     </div>
                 </div>
 
-                <!-- 3. GOQUOTEROCKET US -->
+                <!-- GOQUOTEROCKET US -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -158,7 +176,7 @@
                     </div>
                 </div>
 
-                <!-- 4. CUSTOMER REPORTS -->
+                <!-- CUSTOMER REPORTS -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -185,7 +203,7 @@
                     </div>
                 </div>
 
-                <!-- 5. VIDEOS FROM SANTA -->
+                <!-- VIDEOS FROM SANTA -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -212,7 +230,7 @@
                     </div>
                 </div>
 
-                <!-- 6. HOA ATTORNEY GUIDE -->
+                <!-- HOA ATTORNEY GUIDE -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -239,7 +257,7 @@
                     </div>
                 </div>
 
-                <!-- 7. EVERGREEN BRANDS -->
+                <!-- EVERGREEN BRANDS -->
                 <div class="eco-card fade-up">
                     <div class="eco-screenshot">
                         <div class="eco-titlebar">
@@ -262,6 +280,67 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ FOUNDATION STRIP ════ -->
+    <section class="eco-foundation">
+        <div class="container-xl">
+            <div class="eco-foundation-inner">
+                <div class="eco-foundation-item">
+                    <span class="eco-foundation-val">20+</span>
+                    <span class="eco-foundation-lbl">Years Compounding</span>
+                </div>
+                <div class="eco-foundation-divider"></div>
+                <div class="eco-foundation-item">
+                    <span class="eco-foundation-val">$75M+</span>
+                    <span class="eco-foundation-lbl">Scaled Revenue</span>
+                </div>
+                <div class="eco-foundation-divider"></div>
+                <div class="eco-foundation-item">
+                    <span class="eco-foundation-val">596K+</span>
+                    <span class="eco-foundation-lbl">Lines of Code</span>
+                </div>
+                <div class="eco-foundation-divider"></div>
+                <div class="eco-foundation-item">
+                    <span class="eco-foundation-val">10</span>
+                    <span class="eco-foundation-lbl">Production Systems</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ CTA — WORK WITH US ════ -->
+    <section class="eco-cta-section">
+        <div class="container-xl">
+            <div class="eco-cta-block">
+                <span class="eco-cta-label mono">Work With Us</span>
+                <h2 class="eco-cta-title">The same infrastructure,<br>applied to <span class="highlight">your business.</span></h2>
+                <p class="eco-cta-desc">
+                    The methodology and systems behind this ecosystem are available three ways.
+                </p>
+                <div class="eco-cta-paths">
+                    <div class="eco-cta-path">
+                        <h4>Custom Builds</h4>
+                        <p>We build it for you. Same method, same foundation, same velocity — applied to your project. Production-grade systems deployed in days, not months.</p>
+                    </div>
+                    <div class="eco-cta-path">
+                        <h4>White Label</h4>
+                        <p>License what we've already built. Proven systems across lead gen, DTC, and SaaS — deployed under your brand.</p>
+                    </div>
+                    <div class="eco-cta-path">
+                        <h4>Training</h4>
+                        <p>Learn the method. CEM applied to your team, your stack, your business model.</p>
+                    </div>
+                </div>
+                <div class="eco-cta-actions">
+                    <a href="<?= siteUrl('contact') ?>" class="btn-glow">
+                        Let's Talk
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="<?= siteUrl('method') ?>" class="btn-outline">See the Method</a>
+                </div>
             </div>
         </div>
     </section>

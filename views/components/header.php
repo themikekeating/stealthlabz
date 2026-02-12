@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center gap-1">
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('/') ?>">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= siteUrl('cem') ?>">CEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= siteUrl('method') ?>">Method</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('solutions') ?>">Solutions</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('training') ?>">Training</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= siteUrl('ecosystem') ?>">Ecosystem</a></li>

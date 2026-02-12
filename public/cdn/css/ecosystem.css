@@ -2,6 +2,7 @@
    Ecosystem Page
    ======================================== */
 
+/* ── Hero ── */
 .eco-hero {
     padding: 10rem 0 4rem;
     text-align: center;
@@ -32,9 +33,9 @@
     background-clip: text;
 }
 .eco-hero-sub {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 580px;
+    max-width: 640px;
     margin: 0 auto;
     line-height: 1.7;
 }
@@ -63,9 +64,97 @@
     margin-top: 0.25rem;
 }
 
-/* --- Grid --- */
+/* ── Engine Section (Portal) ── */
+.eco-engine-section {
+    padding: 3rem 0 4rem;
+}
+.eco-engine-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+}
+.eco-engine {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--accent-pink-bg-subtle) 100%);
+    border: 1px solid var(--accent-pink-border-medium);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.eco-engine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-pink);
+}
+.eco-engine::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 60%;
+    height: 140%;
+    background: radial-gradient(ellipse at center, var(--accent-pink-glow) 0%, transparent 65%);
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* Engine screenshot — larger viewport */
+.eco-screenshot-lg {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+.eco-viewport-lg {
+    height: 280px;
+}
+
+.eco-engine-content {
+    position: relative;
+    z-index: 1;
+}
+.eco-engine-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.eco-engine-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Grid Section ── */
 .eco-section {
-    padding: 2rem 0 6rem;
+    padding: 2rem 0 4rem;
+}
+.eco-grid-header {
+    margin-bottom: 2rem;
+}
+.eco-grid-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.eco-grid-intro {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    line-height: 1.6;
 }
 .eco-grid {
     display: grid;
@@ -73,7 +162,7 @@
     gap: 2rem;
 }
 
-/* --- Card --- */
+/* ── Card ── */
 .eco-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -234,17 +323,204 @@
     gap: 0.75rem;
 }
 
-/* --- Responsive --- */
+/* ── Foundation Strip ── */
+.eco-foundation {
+    padding: 0 0 4rem;
+}
+.eco-foundation-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem 3rem;
+}
+.eco-foundation-item {
+    text-align: center;
+}
+.eco-foundation-val {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+.eco-foundation-lbl {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.25rem;
+}
+.eco-foundation-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border-color);
+    flex-shrink: 0;
+}
+
+/* ── CTA Section ── */
+.eco-cta-section {
+    padding: 0 0 6rem;
+}
+.eco-cta-block {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.eco-cta-block::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, var(--accent-pink-glow) 0%, transparent 60%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+.eco-cta-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.eco-cta-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.eco-cta-title .highlight {
+    background: var(--gradient-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.eco-cta-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Three paths */
+.eco-cta-paths {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+.eco-cta-path {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+.eco-cta-path:hover {
+    border-color: var(--accent-pink-border-strong);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+}
+.eco-cta-path h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+.eco-cta-path p {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA buttons */
+.eco-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Responsive ── */
 @media (max-width: 991px) {
-    .eco-grid { grid-template-columns: 1fr; }
+    .eco-grid {
+        grid-template-columns: 1fr;
+    }
+    .eco-engine {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .eco-cta-paths {
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 768px) {
-    .eco-hero { padding: 8rem 0 3rem; }
-    .eco-hero h1 { font-size: 2.25rem; }
-    .eco-hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    .eco-hero-stat-val { font-size: 1.5rem; }
-    .eco-section { padding: 1.5rem 0 4rem; }
+    .eco-hero {
+        padding: 8rem 0 3rem;
+    }
+    .eco-hero h1 {
+        font-size: 2.25rem;
+    }
+    .eco-hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .eco-hero-stat-val {
+        font-size: 1.5rem;
+    }
+    .eco-section {
+        padding: 1.5rem 0 3rem;
+    }
+    .eco-engine {
+        padding: 1.5rem;
+    }
+    .eco-viewport-lg {
+        height: 200px;
+    }
+    .eco-foundation-inner {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .eco-foundation-divider {
+        display: none;
+    }
+    .eco-foundation-item {
+        flex: 1 1 40%;
+    }
+    .eco-cta-block {
+        padding: 2.5rem 1.5rem;
+    }
+    .eco-cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 @media (max-width: 576px) {
-    .eco-stats { flex-direction: column; }
+    .eco-stats {
+        flex-direction: column;
+    }
 }

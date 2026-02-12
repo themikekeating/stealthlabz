@@ -61,127 +61,95 @@
                     </div>
                     <h1>Learn the <span class="highlight">method.</span><br>Ship like we do.</h1>
                     <p class="t-hero-sub">
-                        The same methodology behind 2,561 commits and 10 production systems — transferred to you or your team. Not theory. The actual operating system.
+                        Hands-on training applied to your real projects. You'll work inside the same environment, using the same mechanisms, with the operator who built 10 production systems.
                     </p>
-
-                    <div class="hero-proof">
-                        <div class="hero-proof-item">
-                            <div class="hero-proof-val">12</div>
-                            <div class="hero-proof-lbl">Core Mechanisms</div>
+                    <div class="hero-facts">
+                        <div class="hero-fact">
+                            <svg class="hero-fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Full framework in 4–8 weeks
                         </div>
-                        <div class="hero-proof-item">
-                            <div class="hero-proof-val">13.4&times;</div>
-                            <div class="hero-proof-lbl">Compounding Multiplier</div>
+                        <div class="hero-fact">
+                            <svg class="hero-fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Applied to your real projects
                         </div>
-                        <div class="hero-proof-item">
-                            <div class="hero-proof-val">9.6%</div>
-                            <div class="hero-proof-lbl">Defect Rate</div>
-                        </div>
-                        <div class="hero-proof-item">
-                            <div class="hero-proof-val">10</div>
-                            <div class="hero-proof-lbl">Systems Built</div>
+                        <div class="hero-fact">
+                            <svg class="hero-fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Both formats hands-on
                         </div>
                     </div>
                 </div>
 
+                <!-- Multi-Thread Workflow Visual -->
                 <div class="hero-visual">
-                    <div class="train-viz">
-                        <!-- 13.4x callout -->
-                        <div class="multiplier-callout">
-                            <div class="mult-val">13.4<span>&times;</span></div>
-                            <div class="mult-lbl">Compounding Multiplier</div>
+                    <div class="mtw-mockup">
+                        <!-- Left: Research pane -->
+                        <div class="mtw-pane">
+                            <div class="mtw-pane-header">
+                                <span class="mtw-pane-dot research"></span>
+                                <span class="mtw-pane-label">Research</span>
+                            </div>
+                            <div class="mtw-pane-body">
+                                <div class="mtw-mechanism purple">Foundation</div>
+                                <div class="mtw-line purple" style="width:90%"></div>
+                                <div class="mtw-line purple" style="width:70%"></div>
+                                <div class="mtw-line" style="width:85%"></div>
+                                <div class="mtw-line purple" style="width:60%"></div>
+                                <div class="mtw-line" style="width:75%"></div>
+                                <div class="mtw-line purple" style="width:50%"></div>
+                            </div>
                         </div>
 
-                        <!-- Acceleration card -->
-                        <div class="accel-card">
-                            <div class="accel-val">12</div>
-                            <div class="accel-lbl">Mechanisms Stacked</div>
-                            <div class="accel-bar"><div class="accel-fill"></div></div>
+                        <!-- Middle: Primary (code) pane -->
+                        <div class="mtw-pane">
+                            <div class="mtw-pane-header">
+                                <span class="mtw-pane-dot primary"></span>
+                                <span class="mtw-pane-label">Primary</span>
+                            </div>
+                            <div class="mtw-pane-body">
+                                <div class="mtw-mechanism pink">Nested Cycle — Sprint</div>
+                                <div class="mtw-code-block">
+                                    <div class="mtw-code-line"><span class="cm">// scaffold from foundation</span></div>
+                                    <div class="mtw-code-line"><span class="kw">import</span> { scaffold } <span class="kw">from</span> <span class="str">'./foundation'</span></div>
+                                    <div class="mtw-code-line"><span class="kw">const</span> mvp = <span class="fn">scaffold</span>(<span class="str">'checkout'</span>)</div>
+                                    <div class="mtw-code-line"></div>
+                                    <div class="mtw-code-line"><span class="cm">// pendulum: advance target</span></div>
+                                    <div class="mtw-code-line">mvp.<span class="fn">deploy</span>({ target: <span class="str">'v1'</span> })</div>
+                                    <div class="mtw-code-line"><span class="cm">// → stash to foundation</span></div>
+                                </div>
+                                <div class="mtw-pendulum">
+                                    <svg class="mtw-pendulum-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                                    <span class="mtw-pendulum-text">Pendulum → Advance</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Defect card -->
-                        <div class="defect-card">
-                            <div class="stat-val">9.6%</div>
-                            <div class="stat-lbl">Defect Rate</div>
+                        <!-- Right: AI pane -->
+                        <div class="mtw-pane">
+                            <div class="mtw-pane-header">
+                                <span class="mtw-pane-dot ai"></span>
+                                <span class="mtw-pane-label">AI</span>
+                            </div>
+                            <div class="mtw-pane-body">
+                                <div class="mtw-mechanism cyan">Micro-Triage</div>
+                                <div class="mtw-ai-response">
+                                    <div class="mtw-ai-line" style="width:95%"></div>
+                                    <div class="mtw-ai-line" style="width:80%"></div>
+                                    <div class="mtw-ai-line" style="width:90%"></div>
+                                    <div class="mtw-ai-line" style="width:65%"></div>
+                                    <div class="mtw-ai-line" style="width:85%"></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Compounding growth curve -->
-                        <div class="train-chart">
-                            <svg viewBox="0 0 500 300" preserveAspectRatio="none">
-                                <defs>
-                                    <linearGradient id="trainGradient" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="rgba(229,2,93,0.15)" />
-                                        <stop offset="60%" stop-color="rgba(109,74,140,0.05)" />
-                                        <stop offset="100%" stop-color="transparent" />
-                                    </linearGradient>
-                                    <linearGradient id="trainStroke" x1="0" y1="0" x2="1" y2="0">
-                                        <stop offset="0%" stop-color="#6d4a8c" />
-                                        <stop offset="60%" stop-color="#e5025d" />
-                                        <stop offset="100%" stop-color="#e5025d" />
-                                    </linearGradient>
-                                </defs>
-
-                                <!-- Grid -->
-                                <line class="grid-line" x1="0" y1="60" x2="500" y2="60" />
-                                <line class="grid-line" x1="0" y1="120" x2="500" y2="120" />
-                                <line class="grid-line" x1="0" y1="180" x2="500" y2="180" />
-                                <line class="grid-line" x1="0" y1="240" x2="500" y2="240" />
-                                <line class="grid-line" x1="0" y1="300" x2="500" y2="300" />
-
-                                <!-- Linear growth comparison -->
-                                <path class="linear-path" d="M 0,280 L 500,100" />
-
-                                <!-- Exponential compounding curve -->
-                                <path class="compound-fill" d="M 0,280 C 40,278 80,274 120,268 C 160,260 200,250 240,232 C 280,210 320,175 360,130 C 400,80 440,30 500,5 L 500,300 L 0,300 Z" fill="url(#trainGradient)" />
-                                <path class="compound-path" d="M 0,280 C 40,278 80,274 120,268 C 160,260 200,250 240,232 C 280,210 320,175 360,130 C 400,80 440,30 500,5" />
-
-                                <!-- Mechanism markers (12 ticks) -->
-                                <g class="mech-tick mech-tick-1"><line x1="42" y1="295" x2="42" y2="300"/><text x="42" y="310" text-anchor="middle">M1</text></g>
-                                <g class="mech-tick mech-tick-2"><line x1="83" y1="295" x2="83" y2="300"/><text x="83" y="310" text-anchor="middle">M2</text></g>
-                                <g class="mech-tick mech-tick-3"><line x1="125" y1="295" x2="125" y2="300"/><text x="125" y="310" text-anchor="middle">M3</text></g>
-                                <g class="mech-tick mech-tick-4"><line x1="167" y1="295" x2="167" y2="300"/><text x="167" y="310" text-anchor="middle">M4</text></g>
-                                <g class="mech-tick mech-tick-5"><line x1="208" y1="295" x2="208" y2="300"/><text x="208" y="310" text-anchor="middle">M5</text></g>
-                                <g class="mech-tick mech-tick-6"><line x1="250" y1="295" x2="250" y2="300"/><text x="250" y="310" text-anchor="middle">M6</text></g>
-                                <g class="mech-tick mech-tick-7"><line x1="292" y1="295" x2="292" y2="300"/><text x="292" y="310" text-anchor="middle">M7</text></g>
-                                <g class="mech-tick mech-tick-8"><line x1="333" y1="295" x2="333" y2="300"/><text x="333" y="310" text-anchor="middle">M8</text></g>
-                                <g class="mech-tick mech-tick-9"><line x1="375" y1="295" x2="375" y2="300"/><text x="375" y="310" text-anchor="middle">M9</text></g>
-                                <g class="mech-tick mech-tick-10"><line x1="417" y1="293" x2="417" y2="300"/><text x="417" y="310" text-anchor="middle">M10</text></g>
-                                <g class="mech-tick mech-tick-11"><line x1="458" y1="293" x2="458" y2="300"/><text x="458" y="310" text-anchor="middle">M11</text></g>
-                                <g class="mech-tick mech-tick-12"><line x1="500" y1="293" x2="500" y2="300"/><text x="495" y="310" text-anchor="middle">M12</text></g>
-
-                                <!-- Key inflection markers on curve -->
-                                <g class="curve-marker curve-marker-1">
-                                    <circle cx="120" cy="268" r="6" fill="rgba(109,74,140,0.15)" />
-                                    <circle cx="120" cy="268" r="2.5" fill="#6d4a8c" />
-                                </g>
-                                <g class="curve-marker curve-marker-2">
-                                    <circle cx="240" cy="232" r="6" fill="rgba(162,50,110,0.15)" />
-                                    <circle cx="240" cy="232" r="2.5" fill="#a2326e" />
-                                </g>
-                                <g class="curve-marker curve-marker-3">
-                                    <circle cx="360" cy="130" r="6" fill="rgba(229,2,93,0.15)" />
-                                    <circle cx="360" cy="130" r="3" fill="#e5025d" />
-                                </g>
-                                <g class="curve-marker curve-marker-4">
-                                    <circle cx="485" cy="10" r="8" fill="rgba(229,2,93,0.15)" />
-                                    <circle cx="485" cy="10" r="3.5" fill="#e5025d" />
-                                </g>
-
-                                <!-- Linear label -->
-                                <text class="axis-label-dim" x="505" y="98">LINEAR</text>
-                            </svg>
-                        </div>
-
-                        <!-- Cycle velocity strip -->
-                        <div class="cycle-strip">
-                            <div class="cycle-block cycle-block-1"></div>
-                            <div class="cycle-block cycle-block-2"></div>
-                            <div class="cycle-block cycle-block-3"></div>
-                            <div class="cycle-block cycle-block-4"></div>
-                            <div class="cycle-block cycle-block-5"></div>
-                            <div class="cycle-block cycle-block-6"></div>
-                            <span class="cycle-lbl">Cycle Velocity</span>
-                        </div>
+                    <!-- Floating overlays -->
+                    <div class="mtw-overlay top-right">
+                        <div class="mtw-overlay-val">3 panes</div>
+                        <div class="mtw-overlay-lbl">Parallel execution</div>
+                    </div>
+                    <div class="mtw-overlay bottom-left">
+                        <div class="mtw-overlay-val">Live session</div>
+                        <div class="mtw-overlay-lbl">Your project, your code</div>
                     </div>
                 </div>
             </div>
@@ -190,47 +158,15 @@
 
 
     <!-- ════════════════════════════════════════
-         01 — WHAT YOU LEARN
+         01 — HOW IT WORKS
          ════════════════════════════════════════ -->
     <section class="t-section alt">
         <div class="container-xl">
-            <div class="section-label">01 — Curriculum</div>
-            <h2 class="section-title">What You Learn</h2>
-            <p class="section-desc">Three domains. Each one compounds on the last.</p>
-
-            <div class="learn-grid">
-                <div class="learn-card">
-                    <div class="learn-card-num">01</div>
-                    <div class="learn-card-title">Framework Architecture</div>
-                    <div class="learn-card-desc">Above the System (Vision, Target, 80% Premise), Requirements (AI as Enabler, The Operator), Team Structure from solo to optimal 4-person layer stacks, the Death Traps (No Backlog, No Long Planning), and the five architectural layers that connect everything.</div>
-                </div>
-                <div class="learn-card">
-                    <div class="learn-card-num">02</div>
-                    <div class="learn-card-title">12 Mechanisms + Tactics</div>
-                    <div class="learn-card-desc">The operating system: Foundation, Pendulum, Nested Cycles, Sweeps, Patterns, Regroup, Governor, Micro-Triage, Multi-Thread Workflow, Bridge, Scaffold, Burst. Plus the tactical escalation chain: SPR, Stop and Recap, Stop. Run It Back.</div>
-                </div>
-                <div class="learn-card">
-                    <div class="learn-card-num">03</div>
-                    <div class="learn-card-title">Applications + Failure Modes</div>
-                    <div class="learn-card-desc">Four applications (Build-as-Validation, Parallel MVP, Time Compression, Routing), supporting concepts (Storage Discipline, Breadcrumbs, Spiral Anatomy, Environmental Control), and the 8 failure patterns — Foundation Rot, Cycle Stall, Governor Blindness, Compounding Reversal, and more.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ════════════════════════════════════════
-         02 — FORMATS
-         ════════════════════════════════════════ -->
-    <section class="t-section">
-        <div class="container-xl">
-            <div class="section-label">02 — Formats</div>
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-desc">Two formats, both hands-on. You learn by building, not by watching slides.</p>
+            <div class="section-label">01 — How It Works</div>
+            <h2 class="section-title">Two Formats. Both Hands-On.</h2>
+            <p class="section-desc">You learn by building, not by watching slides. Pick the format that fits how you work.</p>
 
             <div class="formats-grid">
-
-                <!-- 1-on-1 -->
                 <div class="format-card coaching">
                     <div class="format-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -240,17 +176,30 @@
                     <div class="format-label">Format 01</div>
                     <div class="format-title">1-on-1 Coaching</div>
                     <div class="format-desc">
-                        Direct, structured sessions with the operator who built all 10 systems. You bring your project, we apply the method to it in real time.
+                        Direct sessions with the operator who built all 10 systems. You bring your project — we apply the method to it in real time.
+                    </div>
+                    <div class="format-meta">
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">4–8 wks</div>
+                            <div class="format-meta-lbl">Duration</div>
+                        </div>
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">2×/wk</div>
+                            <div class="format-meta-lbl">Sessions</div>
+                        </div>
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">Full CEM</div>
+                            <div class="format-meta-lbl">Deliverable</div>
+                        </div>
                     </div>
                     <div class="format-details">
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Full framework transfer — Above the System through Failure Modes</span></div>
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>AI as Enabler (R1) setup — prompt architecture, Multi-Thread Workflow, parallel execution</span></div>
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Live mechanism drills — Pendulum decisions, Nested Cycles, Micro-Triage on your real projects</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Full framework transfer — architecture through failure modes</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>AI-as-Enabler setup: prompt architecture, Multi-Thread Workflow, parallel execution</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Live mechanism drills on your real project</span></div>
                         <div class="format-detail"><span class="format-detail-dot"></span><span>Governor calibration and failure mode recognition</span></div>
                     </div>
                 </div>
 
-                <!-- Embedded -->
                 <div class="format-card embedded">
                     <div class="format-icon purple">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#6d4a8c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -260,42 +209,190 @@
                     <div class="format-label">Format 02</div>
                     <div class="format-title">Embedded Team Training</div>
                     <div class="format-desc">
-                        I work alongside your team for a defined period. Same tools, same codebase, same daily rhythm. The method transfers through shared execution, not documentation.
+                        I work alongside your team. Same tools, same codebase, same daily rhythm. The method transfers through shared execution.
+                    </div>
+                    <div class="format-meta">
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">2–6 wks</div>
+                            <div class="format-meta-lbl">Duration</div>
+                        </div>
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">Daily</div>
+                            <div class="format-meta-lbl">Cadence</div>
+                        </div>
+                        <div class="format-meta-item">
+                            <div class="format-meta-val">Team CEM</div>
+                            <div class="format-meta-lbl">Deliverable</div>
+                        </div>
                     </div>
                     <div class="format-details">
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Embedded in your team's workflow — layer ownership model applied to your people</span></div>
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Foundation architecture built from your existing codebase and assets</span></div>
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Team-wide adoption: Sweeps cadence, Regroup rhythms, Routing between team members</span></div>
-                        <div class="format-detail"><span class="format-detail-dot"></span><span>Measurable compounding benchmarks — rework rate, cycle duration, Foundation reuse</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Layer ownership model applied to your people</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Foundation architecture built from your existing codebase</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Sweeps cadence, Regroup rhythms, Routing between members</span></div>
+                        <div class="format-detail"><span class="format-detail-dot"></span><span>Measurable benchmarks — rework rate, cycle duration, Foundation reuse</span></div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
     <!-- ════════════════════════════════════════
-         03 — WHO IT'S FOR
+         02 — WHAT YOU WALK AWAY WITH
+         ════════════════════════════════════════ -->
+    <section class="t-section">
+        <div class="container-xl">
+            <div class="section-label">02 — Deliverables</div>
+            <h2 class="section-title">What You Walk Away With</h2>
+            <p class="section-desc">Not a certificate. Not a PDF. Tangible outputs you'll use the day after training ends.</p>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">A configured Foundation</div>
+                        <div class="deliverable-desc">Templates, stored assets, and reusable patterns built from your actual project — ready to compound from day one.</div>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">Calibrated cycle rhythms</div>
+                        <div class="deliverable-desc">Nested Cycle structure tuned to your work — Micro, Sprint, Build, and Integration timeboxes you can run independently.</div>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">Multi-Thread Workflow setup</div>
+                        <div class="deliverable-desc">Your physical execution environment configured — research, primary, and AI panes running in parallel.</div>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">Governor + failure mode recognition</div>
+                        <div class="deliverable-desc">The judgment layer calibrated to your risk profile. You'll know when to push and when to stop before it costs you cycles.</div>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">AI prompt architecture</div>
+                        <div class="deliverable-desc">Structured prompts, escalation chains (SPR → Stop and Recap → Run It Back), and drift management built for your stack.</div>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <div>
+                        <div class="deliverable-title">Compounding benchmarks</div>
+                        <div class="deliverable-desc">Baseline measurements and targets for rework rate, cycle duration, and Foundation reuse — so you can track acceleration.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         03 — MVP TRAINING (Flagship)
          ════════════════════════════════════════ -->
     <section class="t-section alt">
         <div class="container-xl">
-            <div class="section-label">03 — Who It's For</div>
+            <div class="section-label">03 — Flagship Program</div>
+            <h2 class="section-title">MVP Deployment Training</h2>
+            <p class="section-desc">The most concrete application of CEM. Learn the method by shipping an actual MVP.</p>
+
+            <div class="mvp-card">
+                <div class="mvp-card-top"></div>
+                <div class="mvp-card-inner">
+                    <div class="mvp-grid">
+                        <div>
+                            <div class="mvp-badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                Flagship
+                            </div>
+                            <div class="mvp-title">Ship your MVP using CEM</div>
+                            <div class="mvp-desc">
+                                You don't learn the method in the abstract — you learn it by deploying a production MVP. Every mechanism gets applied to a real build: Foundation setup, Pendulum decisions, Nested Cycles, Scaffold from existing assets, and the full tactical escalation chain.
+                            </div>
+                            <div class="mvp-details">
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Define Vision and Target for your specific product</span></div>
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Build Foundation from scratch — templates, components, stored patterns</span></div>
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Execute Nested Cycles against a real deployment timeline</span></div>
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Apply the 80% Premise — ship at 80%, let the system close the gap</span></div>
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Manage AI drift in production: SPR, Stop and Recap, Run It Back</span></div>
+                                <div class="mvp-detail"><span class="mvp-detail-dot"></span><span>Walk away with a deployed MVP and a Foundation that compounds into your next build</span></div>
+                            </div>
+                        </div>
+                        <div class="mvp-sidebar">
+                            <div class="mvp-stat-block">
+                                <div class="mvp-stat-val">4–6 wks</div>
+                                <div class="mvp-stat-lbl">Typical duration</div>
+                            </div>
+                            <div class="mvp-stat-block">
+                                <div class="mvp-stat-val">Deployed</div>
+                                <div class="mvp-stat-lbl">MVP at completion</div>
+                            </div>
+                            <div class="mvp-stat-block">
+                                <div class="mvp-stat-val">Full CEM</div>
+                                <div class="mvp-stat-lbl">Framework transfer</div>
+                            </div>
+                            <div class="mvp-stat-block">
+                                <div class="mvp-stat-val">Reusable</div>
+                                <div class="mvp-stat-lbl">Foundation for next build</div>
+                            </div>
+                            <a href="#cta-section" class="mvp-cta-btn">
+                                Start Here
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         04 — WHO IT'S FOR
+         ════════════════════════════════════════ -->
+    <section class="t-section">
+        <div class="container-xl">
+            <div class="section-label">04 — Who It's For</div>
             <h2 class="section-title">Is This Right for You?</h2>
             <p class="section-desc">This isn't a beginner course. It's for people already building who want to build faster and better.</p>
 
             <div class="audience-grid">
                 <div class="audience-card">
+                    <div class="audience-card-type">Solo / Founder</div>
                     <div class="audience-card-title">Solo Developers &amp; Technical Founders</div>
-                    <div class="audience-card-desc">You're already shipping code. You want to 10&times; your output using AI-native workflow and structured execution patterns instead of brute force.</div>
+                    <div class="audience-card-desc">You're already shipping code. You want to 10&times; your output using AI-native workflow and structured execution instead of brute force.</div>
+                    <div class="audience-card-route">→ MVP Training or 1-on-1 Coaching</div>
                 </div>
                 <div class="audience-card">
-                    <div class="audience-card-title">Engineering Teams (2-10)</div>
+                    <div class="audience-card-type">Team</div>
+                    <div class="audience-card-title">Engineering Teams (2–10)</div>
                     <div class="audience-card-desc">Your team ships, but coordination overhead kills compounding. CEM eliminates the friction between planning and execution so every cycle feeds the next.</div>
+                    <div class="audience-card-route">→ Embedded Team Training</div>
                 </div>
                 <div class="audience-card">
+                    <div class="audience-card-type">Leadership</div>
                     <div class="audience-card-title">Technical Leaders &amp; CTOs</div>
                     <div class="audience-card-desc">You need a framework for AI-augmented development that scales. Not ad-hoc prompting — a structured methodology with measurable compounding benchmarks.</div>
+                    <div class="audience-card-route">→ Any format, scoped to your org</div>
                 </div>
             </div>
         </div>
@@ -303,11 +400,11 @@
 
 
     <!-- ════════════════════════════════════════
-         04 — WHAT THIS ISN'T
+         05 — WHAT THIS IS / ISN'T
          ════════════════════════════════════════ -->
-    <section class="t-section">
+    <section class="t-section alt">
         <div class="container-xl">
-            <div class="section-label">04 — Expectations</div>
+            <div class="section-label">05 — Expectations</div>
             <h2 class="section-title">What This Is — and Isn't</h2>
             <p class="section-desc">Clear expectations. No fluff, no ambiguity.</p>
 
@@ -351,7 +448,7 @@
                         </div>
                         <div class="contrast-row">
                             <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>A production-validated system backed by 596K+ LOC of evidence</span>
+                            <span>A production-validated system backed by 596K+ LOC</span>
                         </div>
                         <div class="contrast-row">
                             <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -359,7 +456,7 @@
                         </div>
                         <div class="contrast-row">
                             <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Measurable before-and-after compounding benchmarks</span>
+                            <span>You leave with a deployed MVP and reusable Foundation</span>
                         </div>
                         <div class="contrast-row">
                             <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -375,16 +472,49 @@
     <!-- ════════════════════════════════════════
          CTA
          ════════════════════════════════════════ -->
-    <section class="t-cta">
+    <section class="t-cta" id="cta-section">
         <div class="container-xl">
-            <h2>Ready to <span class="highlight">compound?</span></h2>
-            <p>Tell us about your team and what you're building. We'll design the right engagement.</p>
-            <a href="mailto:info@stealthlabz.com" class="cta-btn">
-                Let's Talk
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
-                </svg>
-            </a>
+            <h2>Ready to <span class="highlight">start?</span></h2>
+            <p>Tell us what you're building and how you work. We'll scope the right engagement.</p>
+
+            <div class="cta-form-wrap">
+                <form class="cta-form" action="mailto:info@stealthlabz.com" method="POST" enctype="text/plain">
+                    <div class="cta-form-row">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="cta-form-row">
+                        <select name="format" required>
+                            <option value="" disabled selected>What interests you?</option>
+                            <option value="mvp">MVP Deployment Training</option>
+                            <option value="coaching">1-on-1 Coaching</option>
+                            <option value="embedded">Embedded Team Training</option>
+                            <option value="unsure">Not sure yet</option>
+                        </select>
+                        <select name="team_size" required>
+                            <option value="" disabled selected>Team size</option>
+                            <option value="solo">Solo / Founder</option>
+                            <option value="2-5">2–5 people</option>
+                            <option value="6-10">6–10 people</option>
+                            <option value="10+">10+</option>
+                        </select>
+                    </div>
+                    <textarea name="message" placeholder="What are you building? What's the biggest bottleneck?"></textarea>
+                    <button type="submit" class="cta-btn">
+                        Let's Talk
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="cta-proof">
+                <div class="cta-proof-item"><span>10</span> production systems</div>
+                <div class="cta-proof-item"><span>596K+</span> LOC</div>
+                <div class="cta-proof-item"><span>12</span> mechanisms</div>
+                <div class="cta-proof-item"><span>18</span> years refined</div>
+            </div>
         </div>
     </section>
 

@@ -47,7 +47,7 @@
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <!-- ════════════════════════════════════════
-         HERO
+         HERO (v2 — chart-only visual, no redundant stat cards)
          ════════════════════════════════════════ -->
     <section class="sol-hero">
         <div class="container-xl">
@@ -84,24 +84,19 @@
 
                 <div class="hero-visual">
                     <div class="sol-viz">
-                        <!-- Stat cards -->
-                        <div class="stat-card stat-card-1">
-                            <div class="stat-val">195K</div>
-                            <div class="stat-lbl">Lines of Code</div>
-                            <div class="stat-delta">across 10 systems</div>
-                        </div>
-                        <div class="stat-card stat-card-2">
-                            <div class="stat-val">5d</div>
-                            <div class="stat-lbl">MVP to Production</div>
-                            <div class="stat-delta">&darr; 87% vs industry avg</div>
-                        </div>
-                        <div class="stat-card stat-card-3">
-                            <div class="stat-val">9.6%</div>
-                            <div class="stat-lbl">Defect Rate</div>
-                            <div class="stat-delta">&darr; from ~25% industry</div>
+                        <!-- Chart legend (replaces cluttered stat cards) -->
+                        <div class="chart-legend">
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-line pink"></div>
+                                <span class="chart-legend-text pink">CEM Velocity</span>
+                            </div>
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-line dashed"></div>
+                                <span class="chart-legend-text">Industry Avg</span>
+                            </div>
                         </div>
 
-                        <!-- Shipping velocity curve -->
+                        <!-- Shipping velocity curve — expanded to fill panel -->
                         <div class="sol-chart">
                             <svg viewBox="0 0 500 280" preserveAspectRatio="none">
                                 <defs>
@@ -116,6 +111,11 @@
                                 <line class="grid-line" x1="0" y1="140" x2="500" y2="140" />
                                 <line class="grid-line" x1="0" y1="210" x2="500" y2="210" />
                                 <line class="grid-line" x1="0" y1="280" x2="500" y2="280" />
+
+                                <!-- Y-axis labels -->
+                                <text class="y-axis-label y-delay-1" x="-4" y="74" text-anchor="end">High</text>
+                                <text class="y-axis-label y-delay-2" x="-4" y="144" text-anchor="end">Med</text>
+                                <text class="y-axis-label y-delay-3" x="-4" y="214" text-anchor="end">Low</text>
 
                                 <!-- Industry average -->
                                 <path class="avg-path" d="M 0,220 C 100,215 200,210 300,205 C 400,200 450,195 500,190" />
@@ -147,32 +147,17 @@
                                 </g>
 
                                 <!-- Axis labels -->
-                                <text class="axis-label axis-delay-1" x="4" y="278">S1</text>
-                                <text class="axis-label axis-delay-2" x="95" y="278">S3</text>
-                                <text class="axis-label axis-delay-3" x="195" y="278">S5</text>
-                                <text class="axis-label axis-delay-4" x="295" y="278">S7</text>
-                                <text class="axis-label axis-delay-5" x="395" y="278">S9</text>
-                                <text class="axis-label axis-delay-6" x="470" y="278">S10</text>
+                                <text class="axis-label axis-delay-1" x="50" y="278" text-anchor="middle">S1</text>
+                                <text class="axis-label axis-delay-2" x="150" y="278" text-anchor="middle">S3</text>
+                                <text class="axis-label axis-delay-3" x="250" y="278" text-anchor="middle">S5</text>
+                                <text class="axis-label axis-delay-4" x="350" y="278" text-anchor="middle">S7</text>
+                                <text class="axis-label axis-delay-5" x="430" y="278" text-anchor="middle">S9</text>
+                                <text class="axis-label axis-delay-6" x="480" y="278" text-anchor="middle">S10</text>
 
                                 <!-- Avg label -->
                                 <text class="axis-label-avg axis-delay-7" x="505" y="188">INDUSTRY AVG</text>
                             </svg>
                         </div>
-
-                        <!-- Throughput bars -->
-                        <div class="throughput-bar-group">
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                            <div class="throughput-bar"></div>
-                        </div>
-                        <div class="throughput-label">THROUGHPUT / SYSTEM</div>
                     </div>
                 </div>
             </div>
@@ -181,7 +166,7 @@
 
 
     <!-- ════════════════════════════════════════
-         01 — THREE TRACKS
+         01 — THREE TRACKS (v2 — featured primary card)
          ════════════════════════════════════════ -->
     <section class="sol-section alt">
         <div class="container-xl">
@@ -191,8 +176,12 @@
 
             <div class="tracks-grid">
 
-                <!-- CUSTOM BUILD -->
-                <div class="track-card">
+                <!-- CUSTOM BUILD — Featured primary -->
+                <div class="track-card featured">
+                    <div class="track-featured-tag">
+                        <span class="dot"></span>
+                        Most Popular
+                    </div>
                     <div class="track-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
@@ -254,7 +243,7 @@
 
 
     <!-- ════════════════════════════════════════
-         02 — READY TO DEPLOY
+         02 — READY TO DEPLOY (v2 — grouped with row labels, alternating icons)
          ════════════════════════════════════════ -->
     <section class="sol-section">
         <div class="container-xl">
@@ -262,11 +251,13 @@
             <h2 class="section-title">Ready to Deploy</h2>
             <p class="section-desc">Every system below is live in production. Battle-tested, revenue-generating, and ready to run under your brand.</p>
 
+            <!-- Platform-Level Systems -->
+            <div class="deploy-row-label">Platform Systems</div>
             <div class="deploy-grid">
 
                 <!-- Digital Command Center -->
                 <div class="deploy-card">
-                    <div class="deploy-card-icon">
+                    <div class="deploy-card-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h2"/><path d="M7 11h4"/>
                         </svg>
@@ -283,8 +274,8 @@
 
                 <!-- Multi-Tenant Lead Gen -->
                 <div class="deploy-card">
-                    <div class="deploy-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="deploy-card-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6d4a8c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
                         </svg>
                     </div>
@@ -300,7 +291,7 @@
 
                 <!-- Reporting & Analytics -->
                 <div class="deploy-card">
-                    <div class="deploy-card-icon">
+                    <div class="deploy-card-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
                         </svg>
@@ -313,11 +304,16 @@
                         <span class="deploy-tag">Integrations</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- Vertical-Specific Systems -->
+            <div class="deploy-row-label">Vertical &amp; Revenue Systems</div>
+            <div class="deploy-grid">
 
                 <!-- E-Commerce / DTC -->
-                <div class="deploy-card">
-                    <div class="deploy-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <div class="deploy-card purple-accent">
+                    <div class="deploy-card-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6d4a8c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
                         </svg>
                     </div>
@@ -331,8 +327,8 @@
                 </div>
 
                 <!-- Content Platforms -->
-                <div class="deploy-card">
-                    <div class="deploy-card-icon">
+                <div class="deploy-card purple-accent">
+                    <div class="deploy-card-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
                         </svg>
@@ -347,9 +343,9 @@
                 </div>
 
                 <!-- Vertical-Specific Qualifiers -->
-                <div class="deploy-card">
-                    <div class="deploy-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <div class="deploy-card purple-accent">
+                    <div class="deploy-card-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6d4a8c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
                         </svg>
                     </div>
@@ -391,9 +387,54 @@
 
 
     <!-- ════════════════════════════════════════
-         03 — US VS OTHERS
+         TRUST STRIP (new)
          ════════════════════════════════════════ -->
-    <section class="sol-section alt">
+    <section class="trust-strip">
+        <div class="container-xl">
+            <div class="trust-strip-inner">
+                <div class="trust-strip-label">Built &amp; Validated In</div>
+                <div class="trust-strip-items">
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Legal</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Insurance</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Home Services</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Health &amp; Wellness</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Finance</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>E-Commerce</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>SaaS</span>
+                    </div>
+                    <div class="trust-strip-item">
+                        <span class="trust-val">+5 more</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         03 — US VS OTHERS (v2 — win/lose indicators, bolder "Us" values)
+         ════════════════════════════════════════ -->
+    <section class="sol-section alt tight">
         <div class="container-xl">
             <div class="section-label">03 — Comparison</div>
             <h2 class="section-title">Us vs. Everyone Else</h2>
@@ -408,13 +449,41 @@
                         <span class="sol-compare-col-tag">Industry Standard</span>
                     </div>
                     <div class="sol-compare-rows">
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Timeline</div><div class="sol-compare-row-val">4–8 months for MVP. 12+ months for full platform.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Cost</div><div class="sol-compare-row-val">$150K–$750K+ depending on scope.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Team</div><div class="sol-compare-row-val">5–15 people. PM, designers, frontend, backend, QA, DevOps.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Process</div><div class="sol-compare-row-val">Discovery → wireframes → design → sprint planning → development → QA → deploy. Sequential.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Rework</div><div class="sol-compare-row-val">High. Requirements drift, scope creep, handoff friction between roles.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Ownership</div><div class="sol-compare-row-val">You pay for the hours. Code quality varies by team.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Post-Launch</div><div class="sol-compare-row-val">New SOW for every change. Retainer for maintenance at agency rates.</div></div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Timeline</div>
+                            <div class="sol-compare-row-val">4–8 months for MVP. 12+ months for full platform.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Cost</div>
+                            <div class="sol-compare-row-val">$150K–$750K+ depending on scope.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Team</div>
+                            <div class="sol-compare-row-val">5–15 people. PM, designers, frontend, backend, QA, DevOps.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Process</div>
+                            <div class="sol-compare-row-val">Discovery → wireframes → design → sprint planning → development → QA → deploy. Sequential.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Rework</div>
+                            <div class="sol-compare-row-val">High. Requirements drift, scope creep, handoff friction between roles.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Ownership</div>
+                            <div class="sol-compare-row-val">You pay for the hours. Code quality varies by team.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Post-Launch</div>
+                            <div class="sol-compare-row-val">New SOW for every change. Retainer for maintenance at agency rates.</div>
+                            <div class="sol-compare-row-indicator"><span class="lose-dot"></span></div>
+                        </div>
                     </div>
                 </div>
 
@@ -425,13 +494,41 @@
                         <span class="sol-compare-col-tag">CEM-Powered</span>
                     </div>
                     <div class="sol-compare-rows">
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Timeline</div><div class="sol-compare-row-val">5 days to MVP. Full platforms in weeks.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Cost</div><div class="sol-compare-row-val">Project-based. A fraction of traditional quotes.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Team</div><div class="sol-compare-row-val">Lean execution. AI-augmented workflow eliminates coordination overhead.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Process</div><div class="sol-compare-row-val">Scope → build → ship. Parallel execution, not sequential phases.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Rework</div><div class="sol-compare-row-val">Sub-10% defect rate across 10 production systems. Patterns compound, quality increases.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Ownership</div><div class="sol-compare-row-val">Full source code. Your infrastructure or ours. No lock-in.</div></div>
-                        <div class="sol-compare-row"><div class="sol-compare-row-label">Post-Launch</div><div class="sol-compare-row-val">Optional retainer for support and iteration. Same methodology, same quality.</div></div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Timeline</div>
+                            <div class="sol-compare-row-val"><span class="compare-highlight">5 days</span> to MVP. Full platforms in weeks.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Cost</div>
+                            <div class="sol-compare-row-val">Project-based. <span class="compare-highlight">A fraction</span> of traditional quotes.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Team</div>
+                            <div class="sol-compare-row-val">Lean execution. AI-augmented workflow eliminates coordination overhead.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Process</div>
+                            <div class="sol-compare-row-val">Scope → build → ship. <span class="compare-highlight">Parallel execution</span>, not sequential phases.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Rework</div>
+                            <div class="sol-compare-row-val"><span class="compare-highlight">Sub-10%</span> defect rate across 10 production systems. Patterns compound, quality increases.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Ownership</div>
+                            <div class="sol-compare-row-val"><span class="compare-highlight">Full source code.</span> Your infrastructure or ours. No lock-in.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
+                        <div class="sol-compare-row">
+                            <div class="sol-compare-row-label">Post-Launch</div>
+                            <div class="sol-compare-row-val">Optional retainer for support and iteration. Same methodology, same quality.</div>
+                            <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
+                        </div>
                     </div>
                 </div>
 
@@ -441,7 +538,7 @@
 
 
     <!-- ════════════════════════════════════════
-         04 — HOW IT WORKS
+         04 — HOW IT WORKS (v2 — inline stepper)
          ════════════════════════════════════════ -->
     <section class="sol-section">
         <div class="container-xl">
@@ -449,29 +546,26 @@
             <h2 class="section-title">How It Works</h2>
             <p class="section-desc">Four steps. No bloated discovery phases, no committee approvals.</p>
 
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-step-num">01</div>
-                    <div class="process-step-title">Scope</div>
-                    <div class="process-step-desc">You tell us what you need. We define the target, timeline, and deliverable. No ambiguity.</div>
-                    <span class="process-arrow">→</span>
+            <div class="process-stepper">
+                <div class="step">
+                    <div class="step-marker">01</div>
+                    <div class="step-title">Scope</div>
+                    <div class="step-desc">You tell us what you need. We define the target, timeline, and deliverable. No ambiguity.</div>
                 </div>
-                <div class="process-step">
-                    <div class="process-step-num">02</div>
-                    <div class="process-step-title">Build</div>
-                    <div class="process-step-desc">We execute. Foundation patterns, AI-augmented development, compounding output. You see progress daily.</div>
-                    <span class="process-arrow">→</span>
+                <div class="step">
+                    <div class="step-marker">02</div>
+                    <div class="step-title">Build</div>
+                    <div class="step-desc">We execute. Foundation patterns, AI-augmented development, compounding output. You see progress daily.</div>
                 </div>
-                <div class="process-step">
-                    <div class="process-step-num">03</div>
-                    <div class="process-step-title">Ship</div>
-                    <div class="process-step-desc">Production-deployed. Not a staging link. Not a demo. Live software your users can touch.</div>
-                    <span class="process-arrow">→</span>
+                <div class="step">
+                    <div class="step-marker">03</div>
+                    <div class="step-title">Ship</div>
+                    <div class="step-desc">Production-deployed. Not a staging link. Not a demo. Live software your users can touch.</div>
                 </div>
-                <div class="process-step">
-                    <div class="process-step-num">04</div>
-                    <div class="process-step-title">Support</div>
-                    <div class="process-step-desc">Walk away with source code, or stay on retainer for iteration and maintenance. Your choice.</div>
+                <div class="step">
+                    <div class="step-marker">04</div>
+                    <div class="step-title">Support</div>
+                    <div class="step-desc">Walk away with source code, or stay on retainer for iteration and maintenance. Your choice.</div>
                 </div>
             </div>
         </div>

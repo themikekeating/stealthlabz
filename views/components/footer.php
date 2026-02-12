@@ -12,7 +12,7 @@
             </div>
 
             <div class="footer-links">
-                <a href="<?= siteUrl('cem') ?>" class="small">CEM</a>
+                <a href="<?= siteUrl('method') ?>" class="small">Method</a>
                 <a href="<?= siteUrl('solutions') ?>" class="small">Solutions</a>
                 <a href="<?= siteUrl('training') ?>" class="small">Training</a>
                 <a href="<?= siteUrl('ecosystem') ?>" class="small">Ecosystem</a>
