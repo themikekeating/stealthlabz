@@ -23,7 +23,7 @@
 
 /* ── Hero ── */
 .t-hero {
-    padding: 8rem 0 6rem;
+    padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -76,7 +76,7 @@
 .hero-proof-val {
     font-size: 1.75rem;
     font-weight: 800;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -159,14 +159,14 @@
 /* SVG axis labels */
 .axis-label {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 0.875rem;
     fill: var(--text-secondary);
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
 }
 .axis-label-dim {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 0.875rem;
     fill: rgba(255,255,255,0.18);
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards 1.3s;
@@ -177,7 +177,7 @@
 .mech-tick line { stroke: rgba(229,2,93,0.2); stroke-width: 1; }
 .mech-tick text {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 0.875rem;
     fill: rgba(229,2,93,0.4);
 }
 .mech-tick-1  { animation-delay: 1.0s; }
@@ -647,6 +647,9 @@
     .mvp-grid { grid-template-columns: 1fr; }
     .cta-proof { flex-wrap: wrap; gap: 1rem; }
 }
+@media (max-width: 768px) {
+    .t-hero { padding: 8rem 0 4rem; }
+}
 @media (max-width: 576px) {
     .t-hero h1 { font-size: 2rem; }
     .hero-proof { grid-template-columns: repeat(2, 1fr); }
@@ -719,7 +722,7 @@
 .mtw-pane-dot.ai { background: var(--accent-cyan); }
 .mtw-pane-label {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -747,7 +750,7 @@
 /* Mechanism labels inside panes */
 .mtw-mechanism {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.35rem 0.6rem;
@@ -782,7 +785,7 @@
 }
 .mtw-code-line {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     line-height: 1.6;
     white-space: nowrap;
@@ -812,7 +815,7 @@
 }
 .mtw-pendulum-text {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: var(--accent-pink);
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -984,15 +987,15 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--accent-pink-bg);
-    border: 1px solid var(--accent-pink-border);
+    background: rgba(139, 106, 175, 0.12);
+    border: 1px solid rgba(139, 106, 175, 0.25);
     padding: 0.3rem 0.75rem;
     border-radius: 100px;
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-pink);
+    color: var(--accent-purple);
     margin-bottom: 1.25rem;
 }
 .mvp-title {
@@ -1041,13 +1044,13 @@
     font-family: var(--font-mono);
     font-size: 1.5rem;
     font-weight: 800;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 .mvp-stat-lbl {
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -1082,7 +1085,7 @@
 /* ── Audience Card Additions ── */
 .audience-card-type {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-pink);
@@ -1090,7 +1093,7 @@
 }
 .audience-card-route {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--accent-pink);
     padding-top: 0.75rem;
     border-top: 1px solid var(--border-color);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Hub Template
+ * Hub Template (Insights Listing)
  *
  * Content listing page with card grid and pagination.
  * Used for: Insights hub, category pages, etc.
@@ -15,8 +15,9 @@
  *   $currentCategory     - Current category being viewed (optional)
  */
 
-$page['bodyClass'] = 'page-hub';
+$page['bodyClass'] = 'page-insights';
 $page['description'] = $page['metaDescription'] ?? $page['description'] ?? '';
+$page['head'] = ($page['head'] ?? '') . '<link rel="stylesheet" href="' . cdnUrl('css/insights.css') . '">';
 
 // Determine base URL for pagination
 $paginationBase = isset($currentCategory)
@@ -26,93 +27,98 @@ $paginationBase = isset($currentCategory)
 ob_start();
 ?>
 
-<div class="container py-5 mt-5">
-    <header class="mb-4">
-        <h1 class="display-5 fw-bold mb-2"><?= htmlspecialchars($page['heading'] ?? 'Insights') ?></h1>
+<!-- ════ HERO ════ -->
+<section class="ins-hero">
+    <div class="container-xl">
+        <h1><?= htmlspecialchars($page['heading'] ?? 'Insights') ?></h1>
         <?php if (!empty($page['headerDescription'])): ?>
-        <p class="lead text-secondary"><?= htmlspecialchars($page['headerDescription']) ?></p>
+        <p class="ins-hero-sub"><?= htmlspecialchars($page['headerDescription']) ?></p>
         <?php endif; ?>
-    </header>
 
-    <?php if (!empty($categories)): ?>
-    <nav class="mb-4 pb-4 border-bottom border-subtle">
-        <div class="d-flex flex-wrap gap-2 align-items-center">
+        <!-- Category Filter -->
+        <?php if (!empty($categories)): ?>
+        <div class="ins-filters">
             <a href="<?= siteUrl('insights') ?>"
-               class="btn btn-sm <?= !isset($currentCategory) ? 'btn-outline-pink' : 'btn-outline-secondary' ?>">
-                All
-            </a>
+               class="ins-filter <?= !isset($currentCategory) ? 'active' : '' ?>">All</a>
             <?php foreach ($categories as $cat): ?>
             <a href="<?= siteUrl('insights/category/' . htmlspecialchars($cat['slug'])) ?>"
-               class="btn btn-sm <?= (isset($currentCategory) && $currentCategory['id'] === $cat['id']) ? 'btn-outline-pink' : 'btn-outline-secondary' ?>">
+               class="ins-filter <?= (isset($currentCategory) && $currentCategory['id'] === $cat['id']) ? 'active' : '' ?>">
                 <?= htmlspecialchars($cat['name']) ?>
             </a>
             <?php endforeach; ?>
         </div>
-        <?php if (isset($pagination['count'])): ?>
-        <span class="text-muted small mt-2 d-block"><?= number_format($pagination['count']) ?> articles</span>
         <?php endif; ?>
-    </nav>
-    <?php endif; ?>
 
-    <?php if (!empty($posts)): ?>
-    <div class="row g-5">
-        <?php foreach ($posts as $post): ?>
-        <div class="col-md-6 col-lg-4">
-            <article class="card h-100 bg-card border-subtle overflow-hidden">
-                <img src="<?= htmlspecialchars($post['featured_image']) ?>"
-                     class="card-img-top img-h-180 img-cover"
-                     alt="<?= htmlspecialchars($post['title']) ?>"
-                     loading="lazy">
-                <div class="card-body d-flex flex-column">
+        <?php if (isset($pagination['count'])): ?>
+        <div class="ins-count mono"><?= number_format($pagination['count']) ?> articles</div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<!-- ════ GRID ════ -->
+<section class="ins-section">
+    <div class="container-xl">
+        <?php if (!empty($posts)): ?>
+        <div class="ins-grid">
+            <?php foreach ($posts as $i => $post): ?>
+            <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>"
+               class="ins-card fade-up">
+                <div class="ins-card-image">
+                    <img src="<?= htmlspecialchars($post['featured_image']) ?>"
+                         alt="<?= htmlspecialchars($post['title']) ?>"
+                         loading="<?= $i < 6 ? 'eager' : 'lazy' ?>">
+                </div>
+                <div class="ins-card-body">
                     <?php if (!empty($post['category'])): ?>
-                    <div class="mb-2 z-above">
-                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>"
-                           class="badge badge-category text-decoration-none">
-                            <?= htmlspecialchars($post['category']['name']) ?>
-                        </a>
-                    </div>
+                    <span class="ins-card-badge"><?= htmlspecialchars($post['category']['name']) ?></span>
                     <?php endif; ?>
-                    <h2 class="h5 card-title">
-                        <a href="<?= siteUrl('insights/' . htmlspecialchars($post['slug'])) ?>" class="text-decoration-none text-white stretched-link">
-                            <?= htmlspecialchars($post['title']) ?>
-                        </a>
-                    </h2>
+                    <h2 class="ins-card-title"><?= htmlspecialchars($post['title']) ?></h2>
                     <?php if (!empty($post['excerpt'])): ?>
-                    <p class="card-text text-secondary small flex-grow-1"><?= htmlspecialchars(substr($post['excerpt'], 0, 120)) ?>...</p>
+                    <p class="ins-card-excerpt"><?= htmlspecialchars(substr($post['excerpt'], 0, 120)) ?>...</p>
                     <?php endif; ?>
                     <?php if (!empty($post['published_at'])): ?>
-                    <time datetime="<?= $post['published_at'] ?>" class="text-muted small mt-auto">
+                    <time class="ins-card-date" datetime="<?= $post['published_at'] ?>">
                         <?= date('F j, Y', strtotime($post['published_at'])) ?>
                     </time>
                     <?php endif; ?>
                 </div>
-            </article>
+            </a>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
+
+        <!-- Pagination -->
+        <?php if (isset($pagination) && $pagination['total'] > 1): ?>
+        <nav class="ins-pagination">
+            <?php if ($pagination['current'] > 1): ?>
+            <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] - 1)) ?>"
+               class="ins-pagination-btn">&larr; Previous</a>
+            <?php endif; ?>
+
+            <span class="ins-pagination-info mono">
+                Page <?= $pagination['current'] ?> of <?= $pagination['total'] ?>
+            </span>
+
+            <?php if ($pagination['current'] < $pagination['total']): ?>
+            <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] + 1)) ?>"
+               class="ins-pagination-btn btn-glow">Next &rarr;</a>
+            <?php endif; ?>
+        </nav>
+        <?php endif; ?>
+
+        <?php else: ?>
+        <p class="text-secondary text-center py-5">No articles found.</p>
+        <?php endif; ?>
     </div>
+</section>
 
-    <?php if (isset($pagination) && $pagination['total'] > 1): ?>
-    <nav class="d-flex justify-content-center align-items-center gap-4 mt-5 pt-4 border-top border-subtle">
-        <?php if ($pagination['current'] > 1): ?>
-        <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] - 1)) ?>" class="btn btn-outline-pink">
-            &larr; Previous
-        </a>
-        <?php endif; ?>
-
-        <span class="text-muted">Page <?= $pagination['current'] ?> of <?= $pagination['total'] ?></span>
-
-        <?php if ($pagination['current'] < $pagination['total']): ?>
-        <a href="<?= siteUrl($paginationBase . '?page=' . ($pagination['current'] + 1)) ?>" class="btn btn-outline-pink">
-            Next &rarr;
-        </a>
-        <?php endif; ?>
-    </nav>
-    <?php endif; ?>
-
-    <?php else: ?>
-    <p class="text-secondary">No articles found.</p>
-    <?php endif; ?>
-</div>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 
 <?php
 $content = ob_get_clean();

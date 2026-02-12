@@ -26,23 +26,23 @@
     --bg-card: #161616;
 
     /* Text Hierarchy */
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
+    --text-primary: #e0e0e0;
+    --text-secondary: #9a9a9a;
     --text-muted: #6a6a6a;
 
     /* Accent Colors */
     --accent-pink: #d81362;
     --accent-pink-glow: rgba(255, 20, 114, 0.425);
-    --accent-purple: #6d4a8c;
+    --accent-purple: #8b6aaf;
     --accent-cyan: #22d3ee;
     --accent-green: #22c55e;
     --accent-red: #ef4444;
 
     /* Accent Pink — Derived */
-    --accent-pink-bg: rgba(229, 2, 93, 0.2);
-    --accent-pink-bg-light: rgba(229, 2, 93, 0.25);
-    --accent-pink-bg-medium: rgba(229, 2, 93, 0.35);
-    --accent-pink-bg-subtle: rgba(229, 2, 93, 0.1);
+    --accent-pink-bg: rgba(229, 2, 93, 0.12);
+    --accent-pink-bg-light: rgba(229, 2, 93, 0.18);
+    --accent-pink-bg-medium: rgba(229, 2, 93, 0.25);
+    --accent-pink-bg-subtle: rgba(229, 2, 93, 0.06);
     --accent-pink-border: rgba(229, 2, 93, 0.15);
     --accent-pink-border-medium: rgba(229, 2, 93, 0.2);
     --accent-pink-border-strong: rgba(229, 2, 93, 0.3);
@@ -57,6 +57,7 @@
 
     /* Gradients */
     --gradient-pink: linear-gradient(135deg, #e5025d 0%, #a00245 100%);
+    --gradient-purple: linear-gradient(135deg, #8b6aaf 0%, #6d4a8c 100%);
 
     /* Interaction States */
     --bg-hover: rgba(255, 255, 255, 0.06);
@@ -67,9 +68,9 @@
     --bg-browser-chrome: #111118;
 
     /* Accent Purple — Derived */
-    --accent-purple-bg: rgba(109, 74, 140, 0.2);
-    --accent-purple-border: rgba(109, 74, 140, 0.25);
-    --accent-purple-glow: rgba(109, 74, 140, 0.4);
+    --accent-purple-bg: rgba(139, 106, 175, 0.2);
+    --accent-purple-border: rgba(139, 106, 175, 0.25);
+    --accent-purple-glow: rgba(139, 106, 175, 0.4);
 
     /* Shadows */
     --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
@@ -167,9 +168,9 @@ a:hover {
 }
 
 .badge-category {
-    background: var(--accent-pink-bg) !important;
-    border: 1px solid var(--accent-pink-border);
-    color: var(--accent-pink) !important;
+    background: rgba(139, 106, 175, 0.12) !important;
+    border: 1px solid rgba(139, 106, 175, 0.25);
+    color: var(--accent-purple) !important;
     font-family: var(--font-mono);
     font-size: 0.875rem;
     font-weight: 500;
@@ -369,7 +370,7 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 6rem;
+    padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -492,6 +493,12 @@ section {
     position: relative;
 }
 
+/* No-hero page standard — clears navbar */
+.page-content {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
 .page-legal section {
     padding: 0;
 }
@@ -557,7 +564,7 @@ section {
 .portfolio-card-badge {
     display: inline-block;
     background: var(--bg-tertiary);
-    color: var(--accent-pink);
+    color: var(--accent-purple);
     padding: 0.25rem 0.75rem;
     border-radius: 100px;
     font-size: 0.875rem;
@@ -1181,7 +1188,11 @@ section {
    ======================================== */
 @media (max-width: 768px) {
     .hero {
-        padding: 7rem 0 4rem;
+        padding: 8rem 0 4rem;
+    }
+
+    .page-content {
+        padding-top: 6rem;
     }
 
     .hero-title {

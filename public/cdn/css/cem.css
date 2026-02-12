@@ -20,7 +20,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
     position: relative;
     overflow: hidden;
 }
@@ -822,7 +822,7 @@
     font-family: var(--font-mono);
     font-size: 1.75rem;
     font-weight: 700;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1126,7 +1126,7 @@
 /* ========================================
    RESPONSIVE
    ======================================== */
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .core-rules { grid-template-columns: 1fr; }
     .framework-cards-3 { grid-template-columns: 1fr; }
     .tactics-strip { grid-template-columns: 1fr; }
@@ -1152,7 +1152,7 @@
 }
 
 @media (max-width: 768px) {
-    .cem-hero { padding: 6rem 0 3rem; min-height: auto; }
+    .cem-hero { padding: 8rem 0 3rem; min-height: auto; }
     .cem-hero h1 { font-size: 2.5rem; }
     .cem-stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .cem-stat-val { font-size: 1.5rem; }

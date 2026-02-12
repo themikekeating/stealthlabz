@@ -20,8 +20,10 @@ $page['type'] = 'article';
 
 $readTime = Post::getReadTime($post['content'] ?? '');
 
-// Article + BreadcrumbList Schema
+// CSS + Article + BreadcrumbList Schema
 $page['head'] = '
+<link rel="stylesheet" href="' . cdnUrl('css/insights.css') . '">
+<link rel="stylesheet" href="' . cdnUrl('css/article.css') . '">
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -82,91 +84,105 @@ $page['head'] = '
 ob_start();
 ?>
 
-<div class="container py-5 mt-5">
-    <div class="row">
-        <!-- Main Content -->
-        <div class="col-lg-8">
-            <article>
-                <img src="<?= htmlspecialchars($post['featured_image']) ?>"
-                     class="w-100 rounded mb-4 img-h-400 img-cover"
-                     alt="<?= htmlspecialchars($post['title']) ?>"
-                     loading="eager"
-                     fetchpriority="high">
+<article class="art-page">
+    <div class="container-xl">
 
-                <header class="mb-4 pb-4 border-bottom border-subtle">
+        <!-- Breadcrumb -->
+        <nav class="art-breadcrumb mono">
+            <a href="<?= siteUrl('insights') ?>">Insights</a>
+            <?php if (!empty($post['category'])): ?>
+            <span class="art-breadcrumb-sep">/</span>
+            <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>">
+                <?= htmlspecialchars($post['category']['name']) ?>
+            </a>
+            <?php endif; ?>
+        </nav>
+
+        <!-- Hero Image -->
+        <?php if (!empty($post['featured_image'])): ?>
+        <div class="art-hero-image">
+            <img src="<?= htmlspecialchars($post['featured_image']) ?>"
+                 alt="<?= htmlspecialchars($post['title']) ?>"
+                 loading="eager"
+                 fetchpriority="high">
+        </div>
+        <?php endif; ?>
+
+        <div class="art-layout">
+            <!-- Main Content -->
+            <div class="art-main">
+                <header class="art-header">
                     <?php if (!empty($post['category'])): ?>
-                    <div class="mb-3">
-                        <a href="<?= siteUrl('insights/category/' . htmlspecialchars($post['category']['slug'])) ?>"
-                           class="badge badge-category text-decoration-none">
-                            <?= htmlspecialchars($post['category']['name']) ?>
-                        </a>
-                    </div>
+                    <span class="ins-card-badge"><?= htmlspecialchars($post['category']['name']) ?></span>
                     <?php endif; ?>
-                    <h1 class="display-5 fw-bold mb-3"><?= htmlspecialchars($post['title']) ?></h1>
-                    <div class="d-flex align-items-center gap-3 text-muted small">
+                    <h1 class="art-title"><?= htmlspecialchars($post['title']) ?></h1>
+                    <div class="art-meta mono">
                         <?php if (!empty($post['published_at'])): ?>
                         <time datetime="<?= $post['published_at'] ?>">
                             <?= date('F j, Y', strtotime($post['published_at'])) ?>
                         </time>
                         <?php endif; ?>
+                        <span class="art-meta-sep">&middot;</span>
                         <span><?= $readTime ?> min read</span>
                     </div>
                 </header>
 
-                <div class="post-content text-secondary">
+                <div class="post-content">
                     <?= $post['content'] ?>
                 </div>
 
-                <footer class="mt-5 pt-4 border-top border-subtle">
-                    <a href="<?= siteUrl('insights') ?>" class="text-accent-pink text-decoration-none fw-medium">
-                        &larr; Back to Insights
+                <footer class="art-footer">
+                    <a href="<?= siteUrl('insights') ?>" class="art-back">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                        Back to Insights
                     </a>
                 </footer>
-            </article>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-lg-4 mt-5 mt-lg-0">
-            <div class="article-sidebar">
-                <?php include ROOT_PATH . '/views/components/newsletter-signup.php'; ?>
-                <?php
-                if (!empty($relatedPosts)) {
-                    include ROOT_PATH . '/views/components/related-posts.php';
-                }
-                ?>
-                <?php include ROOT_PATH . '/views/components/cta-card.php'; ?>
             </div>
+
+            <!-- Sidebar -->
+            <aside class="art-sidebar">
+                <div class="art-sidebar-inner">
+                    <?php include ROOT_PATH . '/views/components/newsletter-signup.php'; ?>
+                    <?php
+                    if (!empty($relatedPosts)) {
+                        include ROOT_PATH . '/views/components/related-posts.php';
+                    }
+                    ?>
+                    <?php include ROOT_PATH . '/views/components/cta-card.php'; ?>
+                </div>
+            </aside>
         </div>
     </div>
-</div>
+</article>
 
 <!-- More Articles -->
 <?php if (!empty($relatedPosts)): ?>
-<section class="container pb-5">
-    <h2 class="h4 text-accent-pink mb-4">More Articles</h2>
-    <div class="row g-4">
-        <?php foreach (array_slice($relatedPosts, 0, 3) as $related): ?>
-        <div class="col-md-4">
-            <article class="card h-100 bg-card border-subtle overflow-hidden">
-                <img src="<?= htmlspecialchars($related['featured_image']) ?>"
-                     class="card-img-top img-h-160 img-cover"
-                     alt="<?= htmlspecialchars($related['title']) ?>"
-                     loading="lazy">
-                <div class="card-body d-flex flex-column">
-                    <h3 class="h6 card-title">
-                        <a href="<?= siteUrl('insights/' . htmlspecialchars($related['slug'])) ?>" class="text-decoration-none text-white stretched-link">
-                            <?= htmlspecialchars($related['title']) ?>
-                        </a>
-                    </h3>
+<section class="art-more">
+    <div class="container-xl">
+        <h2 class="art-more-title">More Articles</h2>
+        <div class="ins-grid ins-grid-3">
+            <?php foreach (array_slice($relatedPosts, 0, 3) as $related): ?>
+            <a href="<?= siteUrl('insights/' . htmlspecialchars($related['slug'])) ?>"
+               class="ins-card">
+                <div class="ins-card-image">
+                    <img src="<?= htmlspecialchars($related['featured_image']) ?>"
+                         alt="<?= htmlspecialchars($related['title']) ?>"
+                         loading="lazy">
+                </div>
+                <div class="ins-card-body">
+                    <?php if (!empty($related['category'])): ?>
+                    <span class="ins-card-badge"><?= htmlspecialchars($related['category']['name']) ?></span>
+                    <?php endif; ?>
+                    <h3 class="ins-card-title"><?= htmlspecialchars($related['title']) ?></h3>
                     <?php if (!empty($related['published_at'])): ?>
-                    <time datetime="<?= $related['published_at'] ?>" class="text-muted small mt-auto">
+                    <time class="ins-card-date" datetime="<?= $related['published_at'] ?>">
                         <?= date('M j, Y', strtotime($related['published_at'])) ?>
                     </time>
                     <?php endif; ?>
                 </div>
-            </article>
+            </a>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
     </div>
 </section>
 <?php endif; ?>

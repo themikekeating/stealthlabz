@@ -47,7 +47,7 @@
    00 — HERO
    ═══════════════════════════════════════ */
 .sol-hero {
-    padding: 8rem 0 6rem;
+    padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -109,7 +109,7 @@
 .hero-proof-val {
     font-size: 1.75rem;
     font-weight: 800;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -193,14 +193,14 @@
 /* SVG axis labels */
 .axis-label {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 0.875rem;
     fill: var(--text-secondary);
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
 }
 .axis-label-avg {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 0.875rem;
     fill: rgba(255,255,255,0.2);
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
@@ -238,7 +238,7 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -258,7 +258,7 @@
 /* Chart Y-axis labels */
 .y-axis-label {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 0.75rem;
     fill: rgba(255,255,255,0.15);
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
@@ -390,12 +390,12 @@
     align-items: center;
     gap: 0.35rem;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent-pink);
-    background: rgba(229, 2, 93, 0.08);
-    border: 1px solid rgba(229, 2, 93, 0.15);
+    background: var(--accent-pink-bg-subtle);
+    border: 1px solid var(--accent-pink-border);
     padding: 0.2rem 0.6rem;
     border-radius: 100px;
     margin-bottom: 1.5rem;
@@ -413,7 +413,7 @@
 /* Row group label */
 .deploy-row-label {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -579,7 +579,7 @@
 }
 .trust-strip-label {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -669,9 +669,9 @@
     border: 1px solid var(--border-color);
 }
 .sol-compare-col.us .sol-compare-col-tag {
-    background: rgba(229, 2, 93, 0.1);
+    background: var(--accent-pink-bg-subtle);
     color: var(--accent-pink);
-    border: 1px solid rgba(229, 2, 93, 0.2);
+    border: 1px solid var(--accent-pink-border);
     font-weight: 500;
 }
 
@@ -899,6 +899,9 @@
     .deploy-foundation { flex-direction: column; align-items: flex-start; }
     .trust-strip-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .trust-strip-items { flex-wrap: wrap; }
+}
+@media (max-width: 768px) {
+    .sol-hero { padding: 8rem 0 4rem; }
 }
 @media (max-width: 576px) {
     .sol-hero .hero-visual { height: 320px; }

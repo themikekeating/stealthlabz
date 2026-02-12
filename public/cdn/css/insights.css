@@ -1,0 +1,225 @@
+/* ========================================
+   Insights Listing Page
+   ======================================== */
+
+/* ── Hero ── */
+.ins-hero {
+    padding: 10rem 0 2rem;
+    position: relative;
+}
+.ins-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100%;
+    background: radial-gradient(ellipse at center top, var(--accent-pink-glow) 0%, transparent 60%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+.ins-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.ins-hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* ── Category Filters ── */
+.ins-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.ins-filter {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.ins-filter:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+.ins-filter.active {
+    background: var(--accent-pink);
+    border-color: var(--accent-pink);
+    color: white;
+}
+.ins-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+/* ── Grid ── */
+.ins-section {
+    padding: 2rem 0 6rem;
+}
+.ins-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ── Card ── */
+.ins-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+.ins-card:hover {
+    border-color: var(--accent-pink-border-strong);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-sm);
+    color: inherit;
+}
+.ins-card:hover .ins-card-title {
+    color: var(--accent-pink);
+}
+
+/* Card image */
+.ins-card-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+}
+.ins-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.ins-card:hover .ins-card-image img {
+    transform: scale(1.03);
+}
+
+/* Card body */
+.ins-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.ins-card-badge {
+    display: inline-block;
+    background: rgba(139, 106, 175, 0.12);
+    color: var(--accent-purple);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    width: fit-content;
+    margin-bottom: 0.75rem;
+}
+.ins-card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+}
+.ins-card-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    flex: 1;
+}
+.ins-card-date {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: auto;
+}
+
+/* ── Pagination ── */
+.ins-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+.ins-pagination-info {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+.ins-pagination-btn {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-pink-border-strong);
+    color: var(--accent-pink);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.ins-pagination-btn:hover {
+    background: var(--accent-pink-bg);
+    color: var(--accent-pink);
+}
+.ins-pagination-btn.btn-glow {
+    border: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+    .ins-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .ins-hero {
+        padding: 8rem 0 1.5rem;
+    }
+    .ins-hero h1 {
+        font-size: 2.25rem;
+    }
+    .ins-grid {
+        grid-template-columns: 1fr;
+    }
+    .ins-card-image {
+        height: 160px;
+    }
+}
+@media (max-width: 576px) {
+    .ins-filters {
+        gap: 0.35rem;
+    }
+    .ins-filter {
+        font-size: 0.875rem;
+        padding: 0.3rem 0.65rem;
+    }
+}

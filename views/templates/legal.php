@@ -17,7 +17,7 @@ $page['bodyClass'] = 'page-legal';
 ob_start();
 ?>
 
-<div class="container container-narrow py-5 mt-5">
+<div class="container container-narrow page-content">
     <header class="mb-5">
         <h1 class="display-5 fw-bold mb-2"><?= htmlspecialchars($page['heading'] ?? $page['title'] ?? 'Legal') ?></h1>
         <?php if (!empty($page['effectiveDate'])): ?>

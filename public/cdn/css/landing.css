@@ -8,7 +8,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 6rem;
+    padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -106,7 +106,7 @@
 .hero-stat-val {
     font-size: 1.85rem;
     font-weight: 800;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -114,7 +114,7 @@
 }
 .hero-stat-lbl {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -136,7 +136,7 @@
 }
 .scroll-hint span {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -246,7 +246,7 @@
 }
 .vc-info { display: flex; flex-direction: column; gap: 2px; }
 .vc-name { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
-.vc-detail { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.03em; }
+.vc-detail { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); letter-spacing: 0.03em; }
 .vc-status { display: flex; align-items: center; gap: 5px; }
 .vc-dot {
     width: 6px; height: 6px;
@@ -254,7 +254,7 @@
     background: var(--accent-green);
     animation: statusPulse 2.5s ease-in-out infinite;
 }
-.vc-live { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.vc-live { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
 
 @keyframes statusPulse {
     0%, 100% { opacity: 1; }
@@ -328,7 +328,7 @@
 
 .node-label {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 0.75rem;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     fill: rgba(255,255,255,0.55);
@@ -343,7 +343,7 @@
 
 .hub-label {
     font-family: var(--font-mono);
-    font-size: 9px;
+    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     fill: rgba(255,255,255,0.5);
@@ -371,7 +371,7 @@
 }
 .geo-badge span {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-secondary);
@@ -403,7 +403,7 @@
 }
 .eco-summary-lbl {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -457,7 +457,7 @@
 
 .dc-top { display: flex; flex-direction: column; gap: 0.5rem; }
 .dc-domain { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
-.dc-depth { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.02em; line-height: 1.5; }
+.dc-depth { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); letter-spacing: 0.02em; line-height: 1.5; }
 .dc-metric {
     font-family: var(--font-mono);
     font-size: 1.35rem;
@@ -513,15 +513,15 @@
     font-family: var(--font-mono);
     font-size: 2.25rem;
     font-weight: 800;
-    background: var(--gradient-pink);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
     margin-bottom: 0.5rem;
 }
-.pb-label { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; }
-.pb-context { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.03em; line-height: 1.5; }
+.pb-label { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; }
+.pb-context { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); letter-spacing: 0.03em; line-height: 1.5; }
 
 .method-context {
     display: flex;
@@ -564,7 +564,7 @@
 }
 .method-cta-note {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     color: var(--text-muted);
     letter-spacing: 0.03em;
 }
@@ -617,7 +617,7 @@
     margin-bottom: 1.5rem;
 }
 .oc-icon svg { width: 20px; height: 20px; color: #e5025d; }
-.oc-type { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
+.oc-type { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
 .oc-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; }
 .oc-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.75rem; flex: 1; }
 .oc-link {
@@ -683,7 +683,7 @@
 }
 .blog-card-date {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     color: var(--text-muted);
     letter-spacing: 0.04em;
     margin-bottom: 0.5rem;
@@ -752,7 +752,7 @@
     .blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 576px) {
-    .home-hero { padding: 7rem 0 4rem; }
+    .home-hero { padding: 8rem 0 4rem; }
     .home-hero h1 { font-size: 2rem; }
     .hero-stats-bar { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
     .hero-cta-row { flex-direction: column; }
