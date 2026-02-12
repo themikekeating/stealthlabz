@@ -48,7 +48,7 @@
         "name": "Stealth Labz",
         "url": "https://stealthlabz.com",
         "logo": "https://stealthlabz.com/cdn/images/logo.png",
-        "description": "AI-native infrastructure company. Lead generation, SaaS platforms, DTC brands, and content systems.",
+        "description": "AI-native operating company. We build, own, and operate revenue-generating systems across lead generation, SaaS, DTC, and content — spanning two continents.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "1225 W Beaver St. Ste 205-1 #1135",
@@ -64,8 +64,6 @@
         }
     }
     </script>
-
-    <link rel="stylesheet" href="/cdn/css/landing.css">
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -73,7 +71,7 @@
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <!-- ════════════════════════════════════════
-         HERO
+         HERO — What Stealth Labz IS
          ════════════════════════════════════════ -->
     <section class="home-hero">
         <div class="container-xl">
@@ -81,42 +79,42 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="dot"></span>
-                        Execution Framework
+                        AI-Native Operating Company
                     </div>
 
                     <h1>
-                        What happens when<br>
-                        <span class="highlight">execution compounds.</span>
+                        We build, own, and operate<br>
+                        <span class="highlight">revenue systems.</span>
                     </h1>
 
                     <p class="home-hero-sub">
-                        A methodology that turns AI-native builders into infrastructure companies. 10 production systems shipped in 74 days. A 9.6% defect rate while output multiplied 13.4×. This is what the Compounding Execution Method produces.
+                        Stealth Labz is the operating company behind 7 brands across lead generation, SaaS, DTC, and content — all in production, all generating revenue, across two continents. Built on 20+ years of compounding expertise in direct response, engineering, and product development.
                     </p>
 
                     <div class="hero-cta-row">
-                        <a href="<?= siteUrl('cem') ?>" class="btn-glow">
-                            See the Method
+                        <a href="<?= siteUrl('ecosystem') ?>" class="btn-glow">
+                            See the Ecosystem
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
-                        <a href="<?= siteUrl('ecosystem') ?>" class="btn-outline-home">See the Results</a>
+                        <a href="<?= siteUrl('cem') ?>" class="btn-outline-home">See the Method</a>
                     </div>
 
                     <div class="hero-stats-bar">
                         <div class="hero-stat-item">
-                            <div class="hero-stat-val">2,561</div>
-                            <div class="hero-stat-lbl">Production Commits</div>
+                            <div class="hero-stat-val">$75M+</div>
+                            <div class="hero-stat-lbl">Scaled Revenue</div>
                         </div>
                         <div class="hero-stat-item">
                             <div class="hero-stat-val">10</div>
-                            <div class="hero-stat-lbl">Systems Shipped</div>
+                            <div class="hero-stat-lbl">Production Systems</div>
                         </div>
                         <div class="hero-stat-item">
-                            <div class="hero-stat-val">9.6%</div>
-                            <div class="hero-stat-lbl">Defect Rate</div>
+                            <div class="hero-stat-val">20+</div>
+                            <div class="hero-stat-lbl">Years Compounding</div>
                         </div>
                         <div class="hero-stat-item">
-                            <div class="hero-stat-val">13.4×</div>
-                            <div class="hero-stat-lbl">Compounding Multiplier</div>
+                            <div class="hero-stat-val">2</div>
+                            <div class="hero-stat-lbl">Continents</div>
                         </div>
                     </div>
                 </div>
@@ -124,24 +122,24 @@
                 <div class="hero-visual">
                     <div class="home-viz">
 
-                        <!-- Floating Stat Cards -->
+                        <!-- Floating Stat Cards — ecosystem-focused -->
                         <div class="float-card card-mvp">
                             <div class="fc-header">
                                 <div class="fc-indicator"></div>
-                                <span class="fc-tag">Peak Velocity</span>
+                                <span class="fc-tag">Lead Generation</span>
                             </div>
-                            <div class="fc-val">5-day</div>
-                            <div class="fc-sub">MVP to production</div>
-                            <div class="fc-delta">P10 — fastest system shipped</div>
+                            <div class="fc-val">22K+</div>
+                            <div class="fc-sub">Leads generated</div>
+                            <div class="fc-delta">12 verticals · US + ZA</div>
                         </div>
 
                         <div class="float-card card-multiplier">
                             <div class="fc-header">
                                 <div class="fc-indicator"></div>
-                                <span class="fc-tag">Compounding Output</span>
+                                <span class="fc-tag">DTC &amp; Commerce</span>
                             </div>
-                            <div class="fc-val">13.4×</div>
-                            <div class="fc-sub">Velocity multiplier</div>
+                            <div class="fc-val">11K+</div>
+                            <div class="fc-sub">Orders processed</div>
                             <div class="mini-spark">
                                 <div class="spark-bar sb-1"></div>
                                 <div class="spark-bar sb-2"></div>
@@ -328,156 +326,28 @@
     </section>
 
     <!-- ════════════════════════════════════════
-         THREE PILLARS
-         ════════════════════════════════════════ -->
-    <section class="pillars-section">
-        <div class="container-xl">
-            <div class="section-label">What We Do</div>
-            <h2 class="section-title">Three Pillars</h2>
-            <p class="section-desc">A methodology, a portfolio, and a way to work with us.</p>
-
-            <div class="pillars-grid">
-
-                <!-- CEM -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-label">Methodology</div>
-                    <div class="pillar-title">The Compounding Execution Method</div>
-                    <div class="pillar-desc">The operating system behind everything we build. 12 mechanisms, 4 applications, and a tactical escalation chain — AI-native, compounding-first, validated across 10 production systems.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">2,561</div>
-                            <div class="pillar-stat-lbl">Commits</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">9.6%</div>
-                            <div class="pillar-stat-lbl">Defect Rate</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">5 days</div>
-                            <div class="pillar-stat-lbl">Fastest MVP</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('cem') ?>" class="pillar-link">
-                        Explore CEM
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
-                    </a>
-                </div>
-
-                <!-- ECOSYSTEM -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-label">Portfolio</div>
-                    <div class="pillar-title">The Ecosystem</div>
-                    <div class="pillar-desc">7 owned brands across lead gen, content, DTC, and SaaS. All in production, all connected through one platform, all generating revenue across two continents.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">7</div>
-                            <div class="pillar-stat-lbl">Brands</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">$938K</div>
-                            <div class="pillar-stat-lbl">Revenue</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">4</div>
-                            <div class="pillar-stat-lbl">Verticals</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('ecosystem') ?>" class="pillar-link">
-                        View Ecosystem
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
-                    </a>
-                </div>
-
-                <!-- SOLUTIONS -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-label">Services</div>
-                    <div class="pillar-title">Solutions</div>
-                    <div class="pillar-desc">Custom builds and proven systems — deployed in days. The same methodology and Foundation behind our portfolio, available for your project. Same methodology. Same Foundation. Applied to your project.</div>
-                    <div class="pillar-stats">
-                        <div>
-                            <div class="pillar-stat-val">195K</div>
-                            <div class="pillar-stat-lbl">Largest Build</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">74d</div>
-                            <div class="pillar-stat-lbl">Full Platform</div>
-                        </div>
-                        <div>
-                            <div class="pillar-stat-val">13.4×</div>
-                            <div class="pillar-stat-lbl">Velocity</div>
-                        </div>
-                    </div>
-                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
-                        Explore Solutions
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════
-         HOW WE WORK
+         ECOSYSTEM PROOF — What we built for ourselves
          ════════════════════════════════════════ -->
     <section class="about-section">
         <div class="container-xl">
-            <div class="section-label">About</div>
-            <h2 class="section-title">How We Work</h2>
+            <div class="section-label">The Portfolio</div>
+            <h2 class="section-title">Everything we build, we operate.</h2>
 
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Stealth Labz is the operating company behind a portfolio of SaaS platforms, lead generation systems, and DTC brands — all in production, all connected through Portal.</p>
+                    <p>Every system in the Stealth Labz ecosystem was built to serve our own businesses — lead generation, DTC brands, SaaS platforms, and content properties running across the US and South Africa.</p>
 
-                    <p>The playbook took <strong>15+ years</strong> to develop across affiliate networks, DTC scale-ups, subscription brands, and SEO — <strong>$35M+ in revenue impact</strong> and <strong>300K+ paid subscribers</strong> across multiple ventures.</p>
+                    <p>This isn't a services portfolio. It's a <strong>living infrastructure</strong> that generates revenue daily. 10 production systems, 596K+ lines of code, 11K+ orders processed, 22K+ leads generated across 12 verticals.</p>
 
-                    <p>Then AI changed the math. What used to require teams now ships at <strong>13.4× velocity</strong> — <strong>10 production systems</strong>, <strong>596,903 lines of code</strong>, two continents. The methodology behind it: the Compounding Execution Method.</p>
-
-                    <p>This isn't an agency. <strong>It's infrastructure for scale.</strong></p>
+                    <p>The ecosystem is the proof. <strong>Everything we offer, we run ourselves first.</strong></p>
                 </div>
 
                 <div class="capability-list">
                     <div class="capability-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         <div class="capability-content">
-                            <span class="capability-name">Affiliate &amp; Lead Gen</span>
-                            <span class="capability-metric">22K+ leads · 16 verticals</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">Full-Stack Development</span>
-                            <span class="capability-metric">Laravel/PHP · 596K+ LOC</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">AI-Native Development</span>
-                            <span class="capability-metric">13.4× velocity · 10 systems</span>
-                        </div>
-                    </div>
-                    <div class="capability-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                        <div class="capability-content">
-                            <span class="capability-name">Global Operations</span>
-                            <span class="capability-metric">US + ZA · 24/7</span>
+                            <span class="capability-name">Lead Generation</span>
+                            <span class="capability-metric">22K+ leads · 12 verticals · US + ZA</span>
                         </div>
                     </div>
                     <div class="capability-item">
@@ -487,31 +357,228 @@
                             <span class="capability-metric">$938K revenue · 11K+ orders</span>
                         </div>
                     </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">SaaS Platforms</span>
+                            <span class="capability-metric">Custom-built · Multi-tenant · Production</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">Full-Stack Engineering</span>
+                            <span class="capability-metric">596K+ LOC · Laravel/PHP · 10 systems</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">International Operations</span>
+                            <span class="capability-metric">US + ZA · Dual compliance · Dual currency</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="about-stats-row">
+    <!-- ════════════════════════════════════════
+         THE FOUNDATION — Experience as organizational DNA
+         ════════════════════════════════════════ -->
+    <section class="pillars-section">
+        <div class="container-xl">
+            <div class="section-label">The Foundation</div>
+            <h2 class="section-title">20+ years of execution density.</h2>
+            <p class="section-desc">Stealth Labz was built on a foundation that spans direct response marketing at $75M+ scale, full-stack engineering across 596K+ lines of production code, multi-vertical lead generation across 12 industries, subscription commerce with 300K+ paid subscribers, affiliate network management, and international operations. That depth compounds — it's why one team operates what normally requires 8–15 specialists.</p>
+
+            <div class="about-stats-row" style="margin-top: 3rem;">
                 <div class="about-stat-item">
-                    <div class="about-stat-value">$35M+</div>
-                    <div class="about-stat-label">Career Revenue Impact</div>
+                    <div class="about-stat-value">$75M+</div>
+                    <div class="about-stat-label">Direct Response Scale</div>
                 </div>
                 <div class="about-stat-item">
                     <div class="about-stat-value">596K+</div>
                     <div class="about-stat-label">Lines of Production Code</div>
                 </div>
                 <div class="about-stat-item">
-                    <div class="about-stat-value">13.4×</div>
-                    <div class="about-stat-label">Velocity Multiplier</div>
+                    <div class="about-stat-value">300K+</div>
+                    <div class="about-stat-label">Paid Subscribers</div>
                 </div>
                 <div class="about-stat-item">
-                    <div class="about-stat-value">$938K</div>
-                    <div class="about-stat-label">Revenue Through Systems</div>
+                    <div class="about-stat-value">10+</div>
+                    <div class="about-stat-label">Disciplines</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog -->
+    <!-- ════════════════════════════════════════
+         THE METHOD — CEM
+         ════════════════════════════════════════ -->
+    <section class="about-section">
+        <div class="container-xl">
+            <div class="section-label">The Method</div>
+            <h2 class="section-title">The Compounding Execution Method.</h2>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>CEM is the operating system behind everything we build. 12 mechanisms, 4 applications, and a tactical escalation chain — AI-native, compounding-first, validated across every system in the ecosystem.</p>
+
+                    <p>It's how <strong>596K lines of code shipped in 74 days</strong> at a <strong>9.6% defect rate</strong> while output multiplied <strong>13.4×</strong>. It's how one team builds and operates what traditional companies staff 8–15 specialists to handle.</p>
+
+                    <p>The method isn't theoretical. It's extracted from the work — and the ecosystem is the proof it works.</p>
+                </div>
+
+                <div class="capability-list">
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">13.4× Velocity Multiplier</span>
+                            <span class="capability-metric">Output compounds with each system shipped</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">9.6% Defect Rate</span>
+                            <span class="capability-metric">Quality maintained as velocity scaled</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">5-Day Fastest MVP</span>
+                            <span class="capability-metric">From concept to production deployment</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                        <div class="capability-content">
+                            <span class="capability-name">2,561 Production Commits</span>
+                            <span class="capability-metric">Across 10 systems in 74 days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="<?= siteUrl('cem') ?>" class="btn-glow">
+                    Explore CEM
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         WORK WITH US — Commercial offer
+         ════════════════════════════════════════ -->
+    <section class="pillars-section">
+        <div class="container-xl">
+            <div class="section-label">Work With Us</div>
+            <h2 class="section-title">The same infrastructure, applied to your business.</h2>
+            <p class="section-desc">The methodology and systems behind our ecosystem are available three ways.</p>
+
+            <div class="pillars-grid">
+
+                <!-- Custom Builds -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-label">Build</div>
+                    <div class="pillar-title">Custom Builds</div>
+                    <div class="pillar-desc">We build it for you. Same method, same foundation, same velocity — applied to your project. Production-grade systems deployed in days, not months.</div>
+                    <div class="pillar-stats">
+                        <div>
+                            <div class="pillar-stat-val">195K</div>
+                            <div class="pillar-stat-lbl">Largest Build</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">74d</div>
+                            <div class="pillar-stat-lbl">Full Ecosystem</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">13.4×</div>
+                            <div class="pillar-stat-lbl">Velocity</div>
+                        </div>
+                    </div>
+                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                        Learn More
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
+                    </a>
+                </div>
+
+                <!-- White Label -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-label">License</div>
+                    <div class="pillar-title">White Label</div>
+                    <div class="pillar-desc">License what we've already built. Proven systems across lead gen, DTC, and SaaS — deployed under your brand, backed by production-tested infrastructure.</div>
+                    <div class="pillar-stats">
+                        <div>
+                            <div class="pillar-stat-val">10</div>
+                            <div class="pillar-stat-lbl">Systems</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">596K</div>
+                            <div class="pillar-stat-lbl">LOC</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">4</div>
+                            <div class="pillar-stat-lbl">Verticals</div>
+                        </div>
+                    </div>
+                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                        Learn More
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
+                    </a>
+                </div>
+
+                <!-- Training -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e5025d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-label">Learn</div>
+                    <div class="pillar-title">Training</div>
+                    <div class="pillar-desc">Learn the method. CEM applied to your team, your stack, your business model. The same operating system that drives our ecosystem — transferred to yours.</div>
+                    <div class="pillar-stats">
+                        <div>
+                            <div class="pillar-stat-val">12</div>
+                            <div class="pillar-stat-lbl">Mechanisms</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">4</div>
+                            <div class="pillar-stat-lbl">Applications</div>
+                        </div>
+                        <div>
+                            <div class="pillar-stat-val">$82K</div>
+                            <div class="pillar-stat-lbl">vs $2.9M Build</div>
+                        </div>
+                    </div>
+                    <a href="<?= siteUrl('solutions') ?>" class="pillar-link">
+                        Learn More
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10m0 0L9 4m4 4L9 12"/></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         INSIGHTS — Blog
+         ════════════════════════════════════════ -->
     <section id="blog" class="section-dark">
         <div class="container-xl">
             <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 fade-up">
