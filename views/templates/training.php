@@ -477,37 +477,12 @@
             <h2>Ready to <span class="highlight">start?</span></h2>
             <p>Tell us what you're building and how you work. We'll scope the right engagement.</p>
 
-            <div class="cta-form-wrap">
-                <form class="cta-form" action="mailto:info@stealthlabz.com" method="POST" enctype="text/plain">
-                    <div class="cta-form-row">
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="cta-form-row">
-                        <select name="format" required>
-                            <option value="" disabled selected>What interests you?</option>
-                            <option value="mvp">MVP Deployment Training</option>
-                            <option value="coaching">1-on-1 Coaching</option>
-                            <option value="embedded">Embedded Team Training</option>
-                            <option value="unsure">Not sure yet</option>
-                        </select>
-                        <select name="team_size" required>
-                            <option value="" disabled selected>Team size</option>
-                            <option value="solo">Solo / Founder</option>
-                            <option value="2-5">2–5 people</option>
-                            <option value="6-10">6–10 people</option>
-                            <option value="10+">10+</option>
-                        </select>
-                    </div>
-                    <textarea name="message" placeholder="What are you building? What's the biggest bottleneck?"></textarea>
-                    <button type="submit" class="cta-btn">
-                        Let's Talk
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-                </form>
-            </div>
+            <a href="mailto:info@stealthlabz.com" class="cta-btn">
+                Let's Talk
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
+                </svg>
+            </a>
 
             <div class="cta-proof">
                 <div class="cta-proof-item"><span>10</span> production systems</div>
