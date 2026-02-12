@@ -55,7 +55,7 @@ ob_start();
     <?php endif; ?>
 
     <?php if (!empty($posts)): ?>
-    <div class="row g-4">
+    <div class="row g-5">
         <?php foreach ($posts as $post): ?>
         <div class="col-md-6 col-lg-4">
             <article class="card h-100 bg-card border-subtle overflow-hidden">
