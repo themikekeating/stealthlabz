@@ -98,7 +98,7 @@
                 <div class="hero-stats-bar">
                     <div class="hero-stat-item">
                         <div class="hero-stat-val">$4.5M</div>
-                        <div class="hero-stat-lbl">Proprietary Software</div>
+                        <div class="hero-stat-lbl">Proprietary IP</div>
                     </div>
                     <div class="hero-stat-item">
                         <div class="hero-stat-val">$75M+</div>
@@ -106,11 +106,11 @@
                     </div>
                     <div class="hero-stat-item">
                         <div class="hero-stat-val">20+</div>
-                        <div class="hero-stat-lbl">Years Compounding</div>
+                        <div class="hero-stat-lbl">Years Executing</div>
                     </div>
                     <div class="hero-stat-item">
                         <div class="hero-stat-val">2</div>
-                        <div class="hero-stat-lbl">Continents</div>
+                        <div class="hero-stat-lbl">Continents Conquered</div>
                     </div>
                 </div>
             </div>
