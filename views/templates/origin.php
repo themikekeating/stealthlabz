@@ -80,10 +80,10 @@
                         <div class="origin-phase-content">
                             <div class="origin-phase-date">2007 – 2017</div>
                             <h3>The Systems Builder</h3>
-                            <p>Founded, scaled to 50 people, acquired. One operating principle: systematize everything, then scale. Every engagement produced reusable assets. The pattern was there — unnamed.</p>
+                            <p>Founded, scaled to 50 people, rolled sleeves up. One operating principle: systematize everything, then scale. Every engagement produced reusable assets. The pattern was there — unnamed.</p>
                             <div class="origin-evidence">
-                                <span>70+ projects</span>
-                                <span>Acquired 2017</span>
+                                <span>80+ projects</span>
+                                <span>$75 million</span>
                                 <span>11-50 employees</span>
                             </div>
                         </div>
@@ -207,7 +207,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="prog-context">Operator share of commits. Remaining percentage = external dev shop. New projects launched at 100% solo.</div>
             </div>
 
             <!-- KEY METRICS -->
