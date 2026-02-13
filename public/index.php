@@ -45,6 +45,7 @@ $router = new Router();
 // Routes
 $router->get('/', [LandingController::class, 'index']);
 $router->get('/method', [LandingController::class, 'cem']);
+$router->get('/method/origin', [LandingController::class, 'origin']);
 $router->get('/solutions', [LandingController::class, 'solutions']);
 $router->get('/ecosystem', [LandingController::class, 'ecosystem']);
 $router->get('/training', [LandingController::class, 'training']);

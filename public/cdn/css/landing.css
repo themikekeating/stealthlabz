@@ -766,7 +766,7 @@
     .home-hero { padding: 7rem 0 3rem; }
     .home-hero h1 { font-size: 2rem; }
     .hero-stat-val { font-size: 1.5rem; }
-    .hero-stats-bar { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    .hero-stats-bar { grid-template-columns: 1fr; max-width: 100%; }
     .hero-cta-row { flex-direction: column; }
     .ecosystem-section,
     .foundation-section,
@@ -774,11 +774,11 @@
     .offer-section,
     .insights-section { padding: 3rem 0; }
     .home-cta { padding: 4rem 0; }
-    .discipline-grid { grid-template-columns: repeat(2, 1fr); }
+    .discipline-grid { grid-template-columns: 1fr; }
     .discipline-cell { min-height: 150px; }
-    .proof-strip { grid-template-columns: repeat(2, 1fr); }
+    .proof-strip { grid-template-columns: 1fr; }
     .pb-value { font-size: 1.75rem; }
-    .eco-summary { grid-template-columns: repeat(2, 1fr); }
+    .eco-summary { grid-template-columns: 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
     .cta-title { font-size: 2rem; }
     .method-cta { flex-direction: column; align-items: flex-start; }

@@ -667,7 +667,7 @@
     .t-hero { padding: 7rem 0 3rem; }
     .t-hero h1 { font-size: 2rem; }
     .hero-proof-val { font-size: 1.25rem; }
-    .hero-proof { grid-template-columns: repeat(2, 1fr); }
+    .hero-proof { grid-template-columns: 1fr; }
     .hero-facts { flex-direction: column; gap: 0.75rem; }
     .section-title { font-size: 2rem; }
     .t-cta h2 { font-size: 2rem; }

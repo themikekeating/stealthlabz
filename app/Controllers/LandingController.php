@@ -28,11 +28,22 @@ class LandingController
     {
         $page = [
             'title' => 'The Compounding Execution Method (CEM) | Stealth Labz',
-            'description' => 'Refined over 18 years across 70+ projects and 8 verticals. The execution framework behind 10 production systems and a 13.4× compounding multiplier.',
+            'description' => 'A framework for compounding execution in the AI era. How solo operators and micro teams produce output that used to require full departments.',
             'keywords' => 'CEM, Compounding Execution Method, execution framework, AI development methodology, solo operator'
         ];
 
         include ROOT_PATH . '/views/templates/cem.php';
+    }
+
+    public function origin(): void
+    {
+        $page = [
+            'title' => 'The Origin Story — CEM | Stealth Labz',
+            'description' => 'Built through execution. Named in hindsight. 18 years of compounding systems across 70+ projects, 8 verticals, and 2 continents — extracted into a formal framework.',
+            'keywords' => 'CEM origin, execution methodology, compounding execution method, AI development, production systems'
+        ];
+
+        include ROOT_PATH . '/views/templates/origin.php';
     }
 
     public function solutions(): void

@@ -1,0 +1,432 @@
+/* ========================================
+   CEM Origin Page — Styles
+
+   Loaded AFTER cem.css (shared section,
+   comparison, and CTA styles).
+
+   Contains: origin hero, timeline, progression,
+   proof metrics, tactics, book tease.
+   ======================================== */
+
+
+/* ========================================
+   HERO (Narrative — Light)
+   ======================================== */
+.origin-hero {
+    padding: 10rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.origin-hero::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -10%;
+    width: 60%; height: 120%;
+    background:
+        radial-gradient(ellipse at 40% 50%, var(--accent-pink-glow) 0%, transparent 50%);
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.origin-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.origin-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 2rem;
+}
+
+.origin-breadcrumb a {
+    color: var(--accent-pink);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.origin-breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.origin-breadcrumb svg {
+    color: var(--text-muted);
+}
+
+.origin-breadcrumb span {
+    color: var(--text-muted);
+}
+
+.origin-hero h1 {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+}
+
+.origin-hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 600px;
+}
+
+
+/* ========================================
+   READING COLUMN
+   Narrower max-width for editorial feel
+   ======================================== */
+.origin-reading-col {
+    max-width: 760px;
+}
+
+
+/* ========================================
+   TIMELINE
+   ======================================== */
+.origin-timeline {
+    position: relative;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+.origin-phase {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.origin-phase:last-child { padding-bottom: 0; }
+.origin-phase:last-child .origin-phase-line { display: none; }
+
+.origin-phase-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.origin-phase-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    border: 2px solid var(--text-muted);
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.origin-phase-dot.dot-pink {
+    background: var(--accent-pink);
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 12px rgba(229, 2, 93, 0.4);
+}
+
+.origin-phase-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--border-color), rgba(229, 2, 93, 0.15));
+    margin-top: 0.5rem;
+}
+
+.origin-phase-content {
+    position: relative;
+}
+
+.origin-phase-date {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+}
+
+.origin-phase-highlight .origin-phase-date {
+    color: var(--accent-pink);
+}
+
+.origin-phase-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.origin-phase-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+}
+
+.origin-phase-content p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.origin-evidence {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.origin-evidence span {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.6rem;
+    border-radius: 5px;
+    letter-spacing: 0.02em;
+}
+
+/* Highlight phase — subtle glow background */
+.origin-phase-highlight > .origin-phase-content {
+    background: linear-gradient(135deg, rgba(229, 2, 93, 0.04), rgba(109, 74, 140, 0.02));
+    border: 1px solid var(--accent-pink-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-left: -0.5rem;
+}
+
+
+/* ========================================
+   OPERATOR PROGRESSION
+   ======================================== */
+.origin-proof-block {
+    margin-bottom: 3rem;
+}
+
+.origin-proof-block h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.origin-proof-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.progression-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.prog-month {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.prog-bar {
+    height: 120px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.prog-bar::after {
+    content: '';
+    width: 100%;
+    height: var(--fill);
+    background: var(--gradient-pink);
+    border-radius: 0 0 7px 7px;
+    transition: height 0.8s ease;
+}
+
+.prog-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prog-pct {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.prog-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.prog-context {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+
+/* ========================================
+   PROOF METRICS — 3×2 grid
+   ======================================== */
+.proof-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.proof-metric {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-card);
+}
+
+.proof-metric:hover {
+    border-color: var(--accent-pink-border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.proof-metric-val {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--gradient-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+}
+
+.proof-metric-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.proof-metric-context {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+
+/* ========================================
+   TACTICS STRIP (Escalation Chain)
+   ======================================== */
+.tactics-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.tactic-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tactic-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 12px 12px 0 0;
+}
+
+.tactic-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.tactic-level-1::before { background: linear-gradient(90deg, rgba(109, 74, 140, 0.4), rgba(109, 74, 140, 0.2)); }
+.tactic-level-2::before { background: linear-gradient(90deg, rgba(229, 2, 93, 0.5), rgba(109, 74, 140, 0.3)); }
+.tactic-level-3::before { background: var(--gradient-pink); }
+
+.tactic-level {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+}
+
+.tactic-level-1 .tactic-level { color: var(--accent-purple); }
+.tactic-level-2 .tactic-level { color: rgba(229, 2, 93, 0.7); }
+.tactic-level-3 .tactic-level { color: var(--accent-pink); }
+
+.tactic-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.tactic-item p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BOOK TEASE / NOTIFY
+   ======================================== */
+.origin-notify {
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.origin-notify .newsletter-form {
+    max-width: 440px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 991px) {
+    .tactics-strip { grid-template-columns: 1fr; }
+    .proof-metrics { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .origin-hero { padding: 8rem 0 3rem; }
+    .origin-hero h1 { font-size: 2.25rem; }
+    .progression-strip { grid-template-columns: repeat(2, 1fr); }
+    .proof-metrics { grid-template-columns: 1fr 1fr; }
+    .origin-phase-content p { font-size: 0.95rem; }
+    .origin-phase-highlight > .origin-phase-content { margin-left: 0; }
+}
+
+@media (max-width: 576px) {
+    .origin-hero { padding: 7rem 0 2rem; }
+    .origin-hero h1 { font-size: 1.85rem; }
+    .proof-metrics { grid-template-columns: 1fr; }
+    .progression-strip { grid-template-columns: 1fr; }
+    .origin-phase { grid-template-columns: 32px 1fr; gap: 1rem; }
+}
