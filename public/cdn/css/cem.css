@@ -1127,6 +1127,9 @@
    RESPONSIVE
    ======================================== */
 @media (max-width: 991px) {
+    .cem-section { padding: 4rem 0; }
+    .cem-cta { padding: 5rem 0; }
+    .cem-stats-bar { grid-template-columns: repeat(2, 1fr); }
     .core-rules { grid-template-columns: 1fr; }
     .framework-cards-3 { grid-template-columns: 1fr; }
     .tactics-strip { grid-template-columns: 1fr; }
@@ -1154,19 +1157,29 @@
 @media (max-width: 768px) {
     .cem-hero { padding: 8rem 0 3rem; min-height: auto; }
     .cem-hero h1 { font-size: 2.5rem; }
+    .cem-section { padding: 3rem 0; }
+    .cem-cta { padding: 4rem 0; }
     .cem-stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .cem-stat-val { font-size: 1.5rem; }
     .cem-section h2 { font-size: 2rem; }
+    .proof-metric-val { font-size: 1.5rem; }
     .progression-strip { grid-template-columns: repeat(2, 1fr); }
     .proof-metrics { grid-template-columns: 1fr 1fr; }
+    .comp-row { grid-template-columns: 100px 1fr 1fr; }
     .system-flow-chain { gap: 0.35rem; }
     .flow-node { font-size: 0.75rem; padding: 0.3rem 0.6rem; }
     .origin-phase-highlight > .origin-phase-content { margin-left: 0; }
 }
 
 @media (max-width: 576px) {
+    .cem-hero { padding: 7rem 0 2rem; }
+    .cem-hero h1 { font-size: 2rem; }
+    .cem-stat-val { font-size: 1.25rem; }
+    .cem-section h2 { font-size: 1.75rem; }
     .cem-stats-bar { grid-template-columns: 1fr 1fr; }
     .proof-metrics { grid-template-columns: 1fr; }
+    .proof-metric-val { font-size: 1.25rem; }
+    .progression-strip { grid-template-columns: 1fr; }
     .comp-row { grid-template-columns: 1fr; }
     .comp-label { border-right: none; border-bottom: 1px solid var(--border-color); }
     .comp-old { border-right: none; }

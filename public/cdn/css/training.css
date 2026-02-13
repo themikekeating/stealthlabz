@@ -635,27 +635,44 @@
 
 /* ── Responsive ── */
 @media (max-width: 991px) {
-    .t-hero .hero-grid { grid-template-columns: 1fr; }
+    .t-section { padding: 4rem 0; }
+    .t-hero .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
     .t-hero .hero-visual { height: auto; }
     .t-hero h1 { font-size: 2.75rem; }
+    .t-cta h2 { font-size: 2.5rem; }
     .hero-proof { grid-template-columns: repeat(2, 1fr); }
+    .hero-proof-val { font-size: 1.5rem; }
     .learn-grid { grid-template-columns: 1fr; }
     .formats-grid { grid-template-columns: 1fr; }
     .audience-grid { grid-template-columns: 1fr; }
     .contrast-grid { grid-template-columns: 1fr; }
     .deliverables-grid { grid-template-columns: 1fr; }
-    .mvp-grid { grid-template-columns: 1fr; }
+    .mvp-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .mvp-card-inner { padding: 2rem; }
+    .learn-grid,
+    .formats-grid,
+    .audience-grid,
+    .contrast-grid,
+    .deliverables-grid { margin-top: 2rem; }
     .cta-proof { flex-wrap: wrap; gap: 1rem; }
 }
 @media (max-width: 768px) {
     .t-hero { padding: 8rem 0 4rem; }
+    .t-section { padding: 3rem 0; }
+    .mvp-title { font-size: 1.5rem; }
+    .mvp-stat-val { font-size: 1.25rem; }
+    .format-meta { grid-template-columns: 1fr; }
 }
 @media (max-width: 576px) {
+    .t-hero { padding: 7rem 0 3rem; }
     .t-hero h1 { font-size: 2rem; }
+    .hero-proof-val { font-size: 1.25rem; }
     .hero-proof { grid-template-columns: repeat(2, 1fr); }
     .hero-facts { flex-direction: column; gap: 0.75rem; }
     .section-title { font-size: 2rem; }
     .t-cta h2 { font-size: 2rem; }
+    .mvp-card-inner { padding: 1.5rem; }
+    .mvp-title { font-size: 1.35rem; }
     .mtw-mockup { grid-template-columns: 1fr; min-height: auto; }
 }
 

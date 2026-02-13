@@ -520,6 +520,10 @@
     }
 }
 @media (max-width: 576px) {
+    .eco-hero { padding: 7rem 0 2rem; }
+    .eco-hero h1 { font-size: 2rem; }
+    .eco-hero-stat-val { font-size: 1.25rem; }
+    .eco-hero-stats { gap: 1rem; }
     .eco-stats {
         flex-direction: column;
     }
