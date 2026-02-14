@@ -413,6 +413,7 @@
 @media (max-width: 991px) {
     .tactics-strip { grid-template-columns: 1fr; }
     .proof-metrics { grid-template-columns: repeat(2, 1fr); }
+    .progression-strip { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {

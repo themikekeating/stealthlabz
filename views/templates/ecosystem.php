@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#d90158">
+    <meta name="theme-color" content="#e5025d">
     <title><?= htmlspecialchars($page['title']) ?></title>
     <meta name="description" content="<?= htmlspecialchars($page['description']) ?>">
     <link rel="canonical" href="https://stealthlabz.com/ecosystem">
@@ -289,7 +289,7 @@
         <div class="container-xl">
             <div class="eco-foundation-inner">
                 <div class="eco-foundation-item">
-                    <span class="eco-foundation-val">20+</span>
+                    <span class="eco-foundation-val">18+</span>
                     <span class="eco-foundation-lbl">Years Compounding</span>
                 </div>
                 <div class="eco-foundation-divider"></div>

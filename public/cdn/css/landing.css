@@ -762,11 +762,16 @@
     .cta-title { font-size: 2.25rem; }
     .pb-value { font-size: 2rem; }
 }
+@media (max-width: 768px) {
+    .discipline-grid { grid-template-columns: repeat(2, 1fr); }
+    .proof-strip { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 576px) {
     .home-hero { padding: 7rem 0 3rem; }
     .home-hero h1 { font-size: 2rem; }
     .hero-stat-val { font-size: 1.5rem; }
     .hero-stats-bar { grid-template-columns: 1fr; max-width: 100%; }
+    .eco-visual { overflow: hidden; }
     .hero-cta-row { flex-direction: column; }
     .ecosystem-section,
     .foundation-section,

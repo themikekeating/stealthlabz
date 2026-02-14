@@ -18,7 +18,7 @@ $ogImage = $page['image'] ?? 'https://stealthlabz.com/cdn/images/og-default.png'
 $ogType = $page['type'] ?? 'website';
 ?>
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,6 +101,7 @@ $ogType = $page['type'] ?? 'website';
     <?= $page['head'] ?? '' ?>
 </head>
 <body class="<?= htmlspecialchars($page['bodyClass'] ?? '') ?>">
+    <div class="grid-bg"></div>
     <?php include ROOT_PATH . '/views/components/header.php'; ?>
 
     <main>

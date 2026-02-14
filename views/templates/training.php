@@ -487,7 +487,7 @@
             <div class="cta-proof">
                 <div class="cta-proof-item"><span>10</span> production systems</div>
                 <div class="cta-proof-item"><span>596K+</span> LOC</div>
-                <div class="cta-proof-item"><span>12</span> mechanisms</div>
+                <div class="cta-proof-item"><span>11</span> mechanisms</div>
                 <div class="cta-proof-item"><span>18</span> years refined</div>
             </div>
         </div>

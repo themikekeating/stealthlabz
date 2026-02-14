@@ -909,6 +909,9 @@
     .sol-hero { padding: 8rem 0 4rem; }
     .sol-section { padding: 3rem 0; }
     .sol-cta { padding: 4rem 0; }
+    .deploy-grid { grid-template-columns: 1fr; }
+    .process-stepper { grid-template-columns: 1fr; }
+    .hero-proof { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 576px) {
     .sol-hero { padding: 7rem 0 3rem; }

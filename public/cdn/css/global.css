@@ -94,6 +94,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg-primary);
@@ -319,6 +323,12 @@ a:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px var(--accent-pink-glow);
     color: white;
+}
+
+.btn-glow svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
 }
 
 .btn-outline {
@@ -1300,5 +1310,9 @@ section {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .btn-glow {
+        white-space: normal;
     }
 }

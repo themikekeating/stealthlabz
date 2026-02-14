@@ -76,8 +76,8 @@
                             <div class="hero-proof-lbl">Systems Shipped</div>
                         </div>
                         <div class="hero-proof-item">
-                            <div class="hero-proof-val">9.6%</div>
-                            <div class="hero-proof-lbl">Defect Rate</div>
+                            <div class="hero-proof-val">12.1%</div>
+                            <div class="hero-proof-lbl">Product Bug Rate</div>
                         </div>
                     </div>
                 </div>
@@ -516,7 +516,7 @@
                         </div>
                         <div class="sol-compare-row">
                             <div class="sol-compare-row-label">Rework</div>
-                            <div class="sol-compare-row-val"><span class="compare-highlight">Sub-10%</span> defect rate across 10 production systems. Patterns compound, quality increases.</div>
+                            <div class="sol-compare-row-val"><span class="compare-highlight">12.1%</span> product bug rate across 10 production systems. Patterns compound, quality increases.</div>
                             <div class="sol-compare-row-indicator"><span class="win-dot"></span></div>
                         </div>
                         <div class="sol-compare-row">

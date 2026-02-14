@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#d90158">
+    <meta name="theme-color" content="#e5025d">
     <title><?= htmlspecialchars($page['title']) ?></title>
     <meta name="description" content="<?= htmlspecialchars($page['description']) ?>">
     <link rel="canonical" href="https://stealthlabz.com/method/origin">
@@ -80,10 +80,10 @@
                         <div class="origin-phase-content">
                             <div class="origin-phase-date">2007 – 2017</div>
                             <h3>The Systems Builder</h3>
-                            <p>Founded, scaled to 50 people, rolled sleeves up. One operating principle: systematize everything, then scale. Every engagement produced reusable assets. The pattern was there — unnamed.</p>
+                            <p>Three promotions. Scaled teams to 50. Rolled sleeves up. One operating principle: systematize everything, then scale. Every engagement produced reusable assets. The pattern was there — unnamed.</p>
                             <div class="origin-evidence">
-                                <span>80+ projects</span>
-                                <span>$75 million</span>
+                                <span>40+ clients</span>
+                                <span>3 promotions</span>
                                 <span>11-50 employees</span>
                             </div>
                         </div>
@@ -117,11 +117,11 @@
                         <div class="origin-phase-content">
                             <div class="origin-phase-date">Jan 2024 – Sep 2025</div>
                             <h3>E-Commerce & Lead Gen at Scale</h3>
-                            <p>Full operations across two continents. An external dev shop was engaged: $82,521 over 22 months, producing 22 database tables. That became the baseline.</p>
+                            <p>Full operations across two continents. An external dev shop was engaged: $65,054 over ~18 months, producing 22 database tables in ~4 months of active output. That became the baseline.</p>
                             <div class="origin-evidence">
                                 <span>71K+ transactions</span>
                                 <span>11 verticals</span>
-                                <span>$82K dev shop spend</span>
+                                <span>$65K dev shop spend</span>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                         <div class="origin-phase-content">
                             <div class="origin-phase-date">Oct 2025 – Feb 2026</div>
                             <h3>The Build Period</h3>
-                            <p>AI dissolved the constraints that had required teams. An operator with zero software engineering experience — who couldn't use git in September 2025 — shipped 10 production systems, 596K lines of code, and 2,561 commits in 119 days.</p>
+                            <p>AI dissolved the constraints that had required teams. An operator with zero software engineering experience — who couldn't use git in September 2025 — shipped 10 production systems, 596K lines of code, and 2,561 commits in 116 days.</p>
                             <p>October: 70% external, 30% operator. January: 93% operator, 7% external. New projects at 100% solo. The dev shop's 22 tables in 4 months became 135 tables in 33 days. Velocity: 4.6 → 61.5 commits/day. Rework dropped 40%.</p>
                             <div class="origin-evidence">
                                 <span>596K LOC</span>
@@ -186,16 +186,16 @@
                         </div>
                     </div>
                     <div class="prog-month">
-                        <div class="prog-bar" style="--fill: 55%;"></div>
+                        <div class="prog-bar" style="--fill: 44%;"></div>
                         <div class="prog-data">
-                            <span class="prog-pct">~55%</span>
+                            <span class="prog-pct">~44%</span>
                             <span class="prog-label">Nov 2025</span>
                         </div>
                     </div>
                     <div class="prog-month">
-                        <div class="prog-bar" style="--fill: 78%;"></div>
+                        <div class="prog-bar" style="--fill: 73%;"></div>
                         <div class="prog-data">
-                            <span class="prog-pct">~78%</span>
+                            <span class="prog-pct">~73%</span>
                             <span class="prog-label">Dec 2025</span>
                         </div>
                     </div>
@@ -213,7 +213,7 @@
             <div class="proof-metrics">
                 <div class="proof-metric">
                     <div class="proof-metric-val">13.4×</div>
-                    <div class="proof-metric-label">Velocity Multiplier</div>
+                    <div class="proof-metric-label">Output Multiplier</div>
                     <div class="proof-metric-context">4.6 → 61.5 commits/day</div>
                 </div>
                 <div class="proof-metric">
@@ -222,9 +222,9 @@
                     <div class="proof-metric-context">100% solo, functional product with market test</div>
                 </div>
                 <div class="proof-metric">
-                    <div class="proof-metric-val">785×</div>
+                    <div class="proof-metric-val">620×</div>
                     <div class="proof-metric-label">Cost Reduction</div>
-                    <div class="proof-metric-context">$82K dev shop → ~$105/mo AI tools</div>
+                    <div class="proof-metric-context">$65K dev shop → ~$105/mo AI tools</div>
                 </div>
                 <div class="proof-metric">
                     <div class="proof-metric-val">40%</div>
@@ -232,9 +232,9 @@
                     <div class="proof-metric-context">45.2% → 27.0% as patterns solidified</div>
                 </div>
                 <div class="proof-metric">
-                    <div class="proof-metric-val">89</div>
+                    <div class="proof-metric-val">132</div>
                     <div class="proof-metric-label">Peak Day Commits</div>
-                    <div class="proof-metric-context">January 1, 2026</div>
+                    <div class="proof-metric-context">Oct 21, 2025 — 4 projects parallel</div>
                 </div>
                 <div class="proof-metric">
                     <div class="proof-metric-val">3.7%</div>
@@ -262,7 +262,7 @@
                     </div>
                     <div class="comp-row">
                         <div class="comp-cell comp-label">Cost</div>
-                        <div class="comp-cell comp-old">$82,521</div>
+                        <div class="comp-cell comp-old">$65,054</div>
                         <div class="comp-cell comp-new">~$105</div>
                     </div>
                     <div class="comp-row">

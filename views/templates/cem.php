@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#d90158">
+    <meta name="theme-color" content="#e5025d">
     <title><?= htmlspecialchars($page['title']) ?></title>
     <meta name="description" content="<?= htmlspecialchars($page['description']) ?>">
     <link rel="canonical" href="https://stealthlabz.com/method">
@@ -265,7 +265,7 @@
                     </div>
                     <div class="comp-row">
                         <div class="comp-cell comp-label">Cost</div>
-                        <div class="comp-cell comp-old">$82,521</div>
+                        <div class="comp-cell comp-old">$65,054</div>
                         <div class="comp-cell comp-new">~$105</div>
                     </div>
                     <div class="comp-row">

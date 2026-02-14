@@ -84,7 +84,7 @@
                 <h1>Built on AI.<br><span class="highlight">Operating at scale.</span></h1>
 
                 <p class="home-hero-sub">
-                    Stealth Labz builds, owns, and operates $4.5M in proprietary revenue systems — across lead generation, SaaS, DTC, and content, spanning 12 verticals and two continents. Built on 20+ years of compounding execution depth. This is what an AI-native operating company looks like.
+                    Stealth Labz builds, owns, and operates $795K–$2.9M in proprietary revenue systems — across lead generation, SaaS, DTC, and content, spanning 12 verticals and two continents. Built on 18+ years of compounding execution depth. This is what an AI-native operating company looks like.
                 </p>
 
                 <div class="hero-cta-row">
@@ -97,15 +97,15 @@
 
                 <div class="hero-stats-bar">
                     <div class="hero-stat-item">
-                        <div class="hero-stat-val">$4.5M</div>
-                        <div class="hero-stat-lbl">Proprietary IP</div>
+                        <div class="hero-stat-val">$795K–$2.9M</div>
+                        <div class="hero-stat-lbl">Replacement Value</div>
                     </div>
                     <div class="hero-stat-item">
                         <div class="hero-stat-val">$75M+</div>
                         <div class="hero-stat-lbl">Revenue Scaled</div>
                     </div>
                     <div class="hero-stat-item">
-                        <div class="hero-stat-val">20+</div>
+                        <div class="hero-stat-val">18+</div>
                         <div class="hero-stat-lbl">Years Executing</div>
                     </div>
                     <div class="hero-stat-item">
@@ -354,7 +354,7 @@
     <section class="foundation-section section-dark">
         <div class="container-xl">
             <div class="section-label">The Foundation</div>
-            <h2 class="section-title">20+ years of execution density.</h2>
+            <h2 class="section-title">18+ years of execution density.</h2>
             <p class="section-desc">Ten disciplines. Each at production depth. All compounding inside one operating company.</p>
 
             <div class="discipline-grid">
@@ -377,7 +377,7 @@
                         <div class="dc-domain">E-Commerce</div>
                         <div class="dc-depth">Subscription + one-time, multi-processor, churn &amp; LTV</div>
                     </div>
-                    <div class="dc-metric">300K+</div>
+                    <div class="dc-metric">60K subs</div>
                 </div>
                 <div class="discipline-cell">
                     <div class="dc-top">
@@ -426,13 +426,13 @@
                         <div class="dc-domain">AI-Native Development</div>
                         <div class="dc-depth">Pioneering CEM — documented, systematized, with evidence</div>
                     </div>
-                    <div class="dc-metric">$82K vs $2.9M</div>
+                    <div class="dc-metric">$65K vs $795K–$2.9M</div>
                 </div>
             </div>
 
             <div class="foundation-summary">
                 <div class="fs-text">
-                    Sequentially, these disciplines represent <strong>41–64 years</strong> of professional experience. Compounded inside Stealth Labz, they operate as <span class="pink">20+ years of execution density</span> — and the reason one operating company does what normally requires 8–15 specialists.
+                    Sequentially, these disciplines represent <strong>41–64 years</strong> of professional experience. Compounded inside Stealth Labz, they operate as <span class="pink">18+ years of execution density</span> — and the reason one operating company does what normally requires 8–15 specialists.
                 </div>
             </div>
         </div>
@@ -445,21 +445,21 @@
         <div class="container-xl">
             <div class="section-label">The Method</div>
             <h2 class="section-title">The Compounding Execution Method.</h2>
-            <p class="section-desc">CEM is the operating system behind every system in the ecosystem. 12 mechanisms, 4 applications, and a tactical escalation chain — <strong>AI-native, compounding-first, validated in production.</strong></p>
+            <p class="section-desc">CEM is the operating system behind every system in the ecosystem. 11 mechanisms and a tactical escalation chain — <strong>AI-native, compounding-first, validated in production.</strong></p>
 
             <div class="proof-strip">
                 <div class="proof-block">
                     <div class="pb-value">13.4×</div>
-                    <div class="pb-label">Velocity Multiplier</div>
+                    <div class="pb-label">Output Multiplier</div>
                     <div class="pb-context">Output compounds with each system shipped</div>
                 </div>
                 <div class="proof-block">
-                    <div class="pb-value">9.6%</div>
-                    <div class="pb-label">Defect Rate</div>
+                    <div class="pb-value">12.1%</div>
+                    <div class="pb-label">Product Bug Rate</div>
                     <div class="pb-context">Quality maintained as velocity scaled</div>
                 </div>
                 <div class="proof-block">
-                    <div class="pb-value">74d</div>
+                    <div class="pb-value">116d</div>
                     <div class="pb-label">Full Ecosystem</div>
                     <div class="pb-context">10 systems to production</div>
                 </div>
@@ -469,20 +469,20 @@
                     <div class="pb-context">Concept to production deployment</div>
                 </div>
                 <div class="proof-block">
-                    <div class="pb-value">$82K</div>
+                    <div class="pb-value">$65K</div>
                     <div class="pb-label">Actual Build Cost</div>
-                    <div class="pb-context">vs $2.9M traditional estimate</div>
+                    <div class="pb-context">vs $795K–$2.9M replacement value</div>
                 </div>
             </div>
 
             <div class="method-context">
                 <div class="mc-block pink">
                     <div class="mc-eyebrow">What it does</div>
-                    <div class="mc-statement">CEM turns 20+ years of compounding expertise into a repeatable execution system. It's how <strong>596K lines of code shipped in 74 days</strong> at a 9.6% defect rate — and how one operating company builds and runs what traditional companies staff 8–15 specialists to handle.</div>
+                    <div class="mc-statement">CEM turns 18+ years of compounding expertise into a repeatable execution system. It's how <strong>596K lines of code shipped in 116 days</strong> at a 12.1% product bug rate — and how one operating company builds and runs what traditional companies staff 8–15 specialists to handle.</div>
                 </div>
                 <div class="mc-block purple">
                     <div class="mc-eyebrow">Why it matters</div>
-                    <div class="mc-statement">The method isn't theoretical. It's extracted from the work — validated across every system in the ecosystem. <strong>$4.5M in proprietary software built for $82K.</strong> The ecosystem is the proof CEM works.</div>
+                    <div class="mc-statement">The method isn't theoretical. It's extracted from the work — validated across every system in the ecosystem. <strong>$795K–$2.9M in proprietary software built for $65K.</strong> The ecosystem is the proof CEM works.</div>
                 </div>
             </div>
 
@@ -491,7 +491,7 @@
                     Explore the Full Method
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
-                <span class="method-cta-note">12 mechanisms · 4 applications · Full documentation</span>
+                <span class="method-cta-note">11 mechanisms · Full documentation</span>
             </div>
         </div>
     </section>
